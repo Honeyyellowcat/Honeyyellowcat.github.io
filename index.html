@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicity Cundiff Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p> Aeronautics and Astronautics Engineer</p>
+            <h1> Hi, I'm <span>Felicity</span> 
+                <br>A Current Senior at the 
+                <br>University of Washington. </h1>
+        </div>
+    </div>
+</div>
+<!--
+    About me 
+-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user_2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>
+                    Passionate about Aeronautics & Astronautics 
+                    Engineering, I thrive on coding for aerospace 
+                    innovation. Proficient in MATLAB, Arduino UNO, 
+                    Python, and exploring C/C++, I enthusiastically 
+                    explore embedded systems. With a Bachelor’s 
+                    from the University of Washington, my expertise 
+                    spans space system design, propulsion, programming 
+                    and heat transfer.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experiences')">Experiences</p>
+                    <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                </div>
+                <!-- skills -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br> Proficient in MATLAB, Arduino UNO, 
+                            Python, and exploring C/C++</li>
+                        <li><span>Computer-Aided Design and Simulation Software</span><br> 
+                            LabVIEW (Moderate),
+                            SOLIDWORKS (Moderate),
+                            ANSYS (Moderate),
+                            Blender (Moderate),
+                            XFOIL (Moderate).</li>
+                        <li><span>Languages</span><br>
+                            English (Proficient), 
+                            Arabic (Beginner), 
+                            German (Beginner),
+                            Korean (Beginner).</li>
+                    </ul>
+                </div>
+                <!-- Education -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington - Bachelors degree, Aeronautics and Astronautics</li>
+                        <li><span>2020 - 2022</span><br>Pierce College - Associates of Science, Aeronautics and Astronautics</li>
+                        <li><span>Scholarships and awards</span><br> 
+                            UW: NASA Space Grant 2020-2022, 
+                            UW: NASA Space Grant 2020-2022, 
+                            A&A: Robert Max Reynolds Endowed,
+                            A&A: Joseph F. Sutter Endowed,
+                            A&A: Lace Erik,
+                            Boeing Scholarship,
+                            Pierce College: Dean's list (2020-2022).
+                    </ul>
+                </div>
+                <!-- Experience -->
+                <div class="tab-contents" id="experiences">
+                    <ul>
+                        <li><span>January - Current</span><br>SPACE Lab: PPT Thrust Stand - Software Specialist (Python)</li>
+                        <li><span>August 2023 - Current</span><br>A&A, Undergraduate Student Advisory Council (uSAC) - Senior Class Rep</li>
+                        <li><span>January  - June. 2024</span><br>Nonlinear Dynamics and Control Lab: Blue Origin RPO - Team Member (Software)</li>
+                        <li><span>March - June 2023</span><br>Cryogenic Boiling - Purchasing Officer/Heat Transfer expert</li>
+                    </ul>
+                </div>
+                <!-- Projects -->
+                <div class="tab-contents" id="projects">
+                    <ul>
+                        <li><span>Dec. 2022 - Current</span><br>Aerospace Design - Personal Project</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Projects -->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">My projects</h1>
+        <div class="project-list">
+            <div>
+                <h2>Aerospace Design</h2>
+                <p>3D printing of designs, development, and construction of airfoils</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
+
