@@ -92,7 +92,7 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font: size 60px;
+    font-size: 60px;
     font-weight: 600;
     color: #ffa1a1;
 }
@@ -158,3 +158,108 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
+.project-list div{
+    background: #672f0ab0;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition:  0.5s, transform 0.5s;
+}
+.project-list div i{
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+.project-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.project-list div a{
+    text-decoration: none;
+    color: #fe8ea8c5; /* Help Project: color of learn more   */
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.project-list div:hover{
+    background: #fa87a244; /* Help Project: color glow change  #fa87a244 */
+    transform: translate(-10px);
+}
+/* 
+    Experience   
+*/
+#experiences{
+    padding: 50px 0;
+}
+ .experience-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+ }
+ .experiences{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+ }
+ .experiences img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+ }
+ .layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #672f0af1);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 18px;
+    transition: height 0.5s;
+ }
+ .layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+ }
+ .layer a{
+    margin-top: 20px;
+    color: #fe8ea8;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+ }
+ .experiences:hover img{
+    transform: scale(1.1);
+ }
+ .experiences:hover .layer{
+    height: 100%;
+ }
+ .btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #fe8ea850;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fe8ea8;
+ }
+ .btn:hover{
+    background: #fe8ea8;
+    color: #fff;
+ }

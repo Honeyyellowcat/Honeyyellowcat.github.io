@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity Cundiff Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/708e44dfd7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -28,9 +29,8 @@
         </div>
     </div>
 </div>
-<!--
-    About me 
--->
+
+<!-- About me -->
 <div id="about">
     <div class="container">
         <div class="row">
@@ -107,18 +107,71 @@
         </div>
     </div>
 </div>
+
 <!-- Projects -->
 <div id="project">
     <div class="container">
         <h1 class="sub-title">My projects</h1>
         <div class="project-list">
             <div>
+                <i class="fa-solid fa-plane"></i>
                 <h2>Aerospace Design</h2>
                 <p>3D printing of designs, development, and construction of airfoils</p>
-                <a href="#">Learn more</a>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
-
+            <div>
+                <i class="fa-solid fa-atom"></i>
+                <h2>Investigating Plasma Waves and Turbulence in Space Plasma Using Langmuir Probes</h2>
+                <p>The report contributes to understanding plasma dynamics and space weather phenomena. 
+                    Langmuir probes play a pivotal role in exploring space plasma.</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div>
+                <i class="fa-solid fa-rocket"></i>
+                <h2>NASA ARTEMIS Challenge</h2>
+                <p>I managed supplies and led coding for UW's M01-Skylight-Entry rover, integrating 
+                    3D-printed parts and Raspberry Pi for terrain navigation and real-time imaging, 
+                    collaborating closely with teammates for seamless competition performance</p>
+                <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
         </div>
+    </div>
+</div>
+
+<!-- Experience -->
+<div id="experiences">
+    <div class="container">>
+        <h1 class="sub-title">My Experience</h1>
+        <div class="experience-list">
+            <div class="experiences">
+                <img src="images/ex_01.png">
+                <div class="layer">
+                    <h3>SPACE Lab: PPT Thrust Stand</h3>
+                    <p>Python-based data acquisition, calibrating the thrust stand system.
+                        Embedded serial communication setup with Arduino UNO</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="experiences">
+                <img src="images/ex_2.png">
+                <div class="layer">
+                    <h3>Cryogenic Boiling</h3>
+                    <p>Uncovered: Boiling characteristics, rapid cool-down times, and heat transfer 
+                        dynamics by immersing aluminum cylinders, along with precise quantitative data 
+                        on heat transfer during liquid nitrogen quenching</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="experiences">
+                <img src="images/ex_3.png">
+                <div class="layer">
+                    <h3>Nonlinear Dynamics and Control Lab: Blue Origin RPO</h3>
+                    <p>Blender, Python, and C++ utilized for the design of robot arms and underwater robots</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div> 
+        <a href="#" class="btn" >  See more</a>
     </div>
 </div>
 
@@ -137,7 +190,6 @@
         event.currentTarget.classList.add("active-link"); 
         document.getElementById(tabname).classList.add("active-tab");
     }
-
 </script>
 
 </body>
