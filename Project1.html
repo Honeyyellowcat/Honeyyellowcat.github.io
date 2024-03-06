@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Felicity: NASA ARTEMIS</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="icon" type="image/png" href="images/F.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Felicity Cundiff</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="project1.html" class="active">Project Information</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<section id="main" class="wrapper">
+					<div class="inner">  
+						<h1 class="major">Aerospace Design Project</h1>
+						<span class="image fit"><img src="images/ADP_2.jpg" alt="" /></span>
+                        <h2>Summary</h2>
+                        <p>PARAGRAPH<p>
+                    </div>
+				</section>
+			</div>
+            <!-- Photo Album Section -->  
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            #photo-album {
+                padding: 20px 0;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center; /* Adjusted to center vertically */
+                align-items: center;
+            }
+
+            .photo-grid {
+                display: flex; /* Set the container to use flexbox */
+                justify-content: center; /* Center the items horizontally */
+                gap: 10px; /* Add gap between items */
+                margin-bottom: 20px; /* Add margin at the bottom */
+                flex-wrap: wrap; /* Allow items to wrap to the next line */
+            }
+
+
+            .photo img {
+                max-width: 100px; /* Adjust the size of the images */
+                height: auto;
+                cursor: pointer; /* Change cursor to pointer when hovering over images */
+                transition: transform 0.3s ease; /* Add transition for smooth effect */
+            }
+
+            .photo video {
+                max-width: 100px; /* Adjust the size of the video in its default state */
+                height: auto;
+                cursor: pointer; /* Change cursor to pointer when hovering over the video */
+                transition: transform 0.3s ease; /* Add transition for smooth effect */
+            }
+
+            .photo img.expanded {
+                max-width: 30vw; /* Adjust the size of the expanded images */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+                transition: none; /* Remove the transition effect */
+            }
+
+            .photo video.expanded {
+                max-width: 20vw; /* Adjust the size of the expanded video */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 9999;
+                transition: none; /* Remove the transition effect */
+            }
+        </style>
+        </head>
+        <body>
+
+        <section id="photo-album">
+            <h2>Photo Album</h2>
+            <div class="photo-grid">
+                <div class="photo">
+                    <img src="images/pic05.jpg" alt="Photo 1">
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const mediaElements = document.querySelectorAll('.photo img, .photo video');
+
+            mediaElements.forEach(media => {
+                media.addEventListener('click', () => {
+                    mediaElements.forEach(m => {
+                        if (m !== media) {
+                            m.classList.remove('expanded');
+                        }
+                    });
+                    media.classList.toggle('expanded');
+                });
+            });
+        </script>
+        </body>
+ 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -2223,6 +2223,21 @@ MAIN Page Button and the colors --------------------------------
 				}
 
 		}
+/* Help here added button */
+.small-button {
+    padding: 5px 10px;
+    background-color: rgba(255, 185, 218, 0.418); /* Translucent */
+    border: 6px solid #ff0074; /* Pink border */
+    border-radius: 20px; /* Increased border-radius for more curve */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Add smooth transitions */
+}
+
+.small-button:hover {
+    background-color: #fff1ef63; /* when hovering */
+    color: #ffbee6; /* Text color on hover */
+    border-color: #ffbee6; /* Lighter pink border on hover */
+}
 
 /* Form */
 
