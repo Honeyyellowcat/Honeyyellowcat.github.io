@@ -37,12 +37,35 @@
 
 -->
 <head>
-    <title>Felicity Cundiff Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Felicity Cundiff Portfolio</title>
     <link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="icon" type="image/png" href="images/F.png">
+    <link rel="icon" type="image/png" href="images/F.png">
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* For WebKit/Blink browsers */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: pink; /* You can change this color to any color you prefer */
+            border-radius: 6px;
+        }
+
+        /* For Firefox */
+        /* Note: Firefox doesn't support styling the scrollbar track */
+        /* So, the scrollbar track will not be pink in Firefox */
+        ::-moz-scrollbar {
+            width: 12px;
+        }
+
+        ::-moz-scrollbar-thumb {
+            background-color: pink; /* You can change this color to any color you prefer */
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
@@ -74,12 +97,11 @@
 									<ul>                                            
 										<li>University of Washington, Seattle, WA	Jun. 2022 - (Exp. grad) Jun. 2024</li>
 										<li>Bachelor’s of Science in Aeronautics and Astronautics, Senior</li>
-										<li>Winter Courses: January 2024 - Present </li>
+										<li>Spring Courses: March 2024 - Present </li>
 										<ul>
-											<li>Space System Design I: SPACE Lab PPT Thrust Stand (Software) </li>
-											<li>Air Breathing Propulsion</li>
-											<li>Rocket Propulsion </li>
-											<li>Aerospace Heat transfer</li>
+											<li>Space System Design II: SPACE Lab PPT Thrust Stand (Software) </li>
+											<li>Introduction Into Public Speaking</li>
+											<li>Data Programing</li>
 										</ul>
 									</ul>
 								</u1>
@@ -298,9 +320,9 @@
 				</section>
 					
 				<!-- Three Project -->
-				<section id="three" class="wrapper style2 spotlights">
+				<section id="three" class="project-list">
 					<section>
-						<a href="#" class="image"><img src="images/ADP_1.jpg" alt="" data-position="25% 25%" /></a>
+						<a href="#" class="image"><img src="images/ADP_1.jpg" alt="" data-position="25% 25%" data-position="top center" style="max-width: 100%; height: auto;" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>Aerospace Design Project</h2>
@@ -324,7 +346,7 @@
 						</div>
 					</section>
 					<section>
-						<a href="#" class="image"><img src="images/RP_1.jpg" alt="" data-position="top center" /></a>
+						<a href="#" class="image"><img src="images/RP_1.jpg" alt="" data-position="top center" data-position="top center" style="max-width: 100%; height: auto;" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>NovaTech Space Systems: Rocket Design</h2>
@@ -352,7 +374,7 @@
 						</div>
 					</section>
 					<section>
-						<a href="#" class="image"><img src="images/WT_4.jpg" alt="" data-position="top center" /></a>
+						<a href="#" class="image"><img src="images/WT_4.jpg" alt="" data-position="top center" data-position="top center" style="max-width: 100%; height: auto;" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>Finite Wing Analysis in the Kirsten Wind Tunnel (KWT)</h2>
@@ -378,7 +400,7 @@
 						</div>
 					</section>
 					<section>
-						<a href="#" class="image"><img src="images/DBB_1.jpg" alt="" data-position="top center" /></a>
+						<a href="#" class="image"><img src="images/DBB_1.jpg" alt="" data-position="top center" data-position="top center" style="max-width: 100%; height: auto;" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>Drag on Bluff Bodies using the 3’ x 3’ wind tunnel</h2>
@@ -405,7 +427,7 @@
 						</div>
 					</section>
 					<section>
-						<a href="#" class="image"><img src="images/PP_1.jpg" alt="" data-position="top center" /></a>
+						<a href="#" class="image"><img src="images/PP_1.jpg" alt="" data-position="top center" data-position="top center" style="max-width: 100%; height: auto;" /></a>
 						<div class="content">
 							<div class="inner">
 								<h2>Propeller Preformance using the 3x3 wind tunnel</h2>
@@ -627,9 +649,6 @@
 		<!-- Footer -->
 		<footer id="footer" class="wrapper style1-alt">
 			<div class="inner">
-				<ul class="menu">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
 			</div>
 		</footer>
 <!--
