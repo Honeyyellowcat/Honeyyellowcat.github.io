@@ -1845,10 +1845,10 @@ about actual!!
 }
 .tab-titles{
 	display: flex;
-	margin: 20px 0 40px;
+    margin: 20px 0 5px; /* Reduce the bottom margin */
 }
 .tab-links{
-	margin-right: 50px;
+    margin-right: 15px; /* Reduce the right margin */
 	font-size: 18px;
 	font-weight: 500;
 	cursor: pointer;
@@ -1863,7 +1863,6 @@ about actual!!
 	left: 0;
 	bottom: -8px;
 	transition: 0.5s;
-
 }
 .tab-links.active-link::after{
 	width: 50%;
@@ -1876,14 +1875,13 @@ about actual!!
     color: #fe8ea8;
     font-size: 16px;
 }
-.tab-contents{
-	display: none;
+.tab-contents {
+    display: none;
 }
 
 .tab-contents.active-tab{
 	display: block;
 }
-
 
 /* 
 About me: little list below the ski edu exp pro 
@@ -1982,6 +1980,29 @@ Project:
 }
 */
 
+/* TRY BUTTON - FOR PROJECTS Style for the small button */
+/* Style for the small button */
+.button.small {
+    padding: 15px 25px; /* Adjust padding as needed */
+    font-size: 50px; /* Adjust font size as needed */
+    border-radius: 30px; /* Adjust border radius as needed */
+    background-color: #f5dcdc; /* Adjust background color as needed */
+    color: #fff; /* Adjust text color as needed */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border */
+    transition: background-color 0.5s, color 0.5s; /* Add transition for smoother hover effect */
+    display: inline-block; /* Display as block element */
+    margin: 0 auto; /* Center horizontally */
+    line-height: 1; /* Reset line height */
+}
+
+/* Hover effect */
+.button.small:hover {
+    background-color: #fde3c6; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
 /* 
 
 MAIN Page Button and the colors --------------------------------
@@ -2036,7 +2057,7 @@ MAIN Page Button and the colors --------------------------------
 			-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
 			-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
 			transition: opacity 0.2s ease, transform 0.2s ease;
-			background: #ff0074;
+			background: #b6b6b6;
 			border-radius: 3em;
 			content: '';
 			height: 100%;

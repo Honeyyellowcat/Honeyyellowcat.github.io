@@ -102,14 +102,17 @@
 						</ul>
 					</div>
 				</section>
-
 				<!-- About me -->
 				<div id="about">
 					<div class="container">
 						<div class="row">
 							<div class="about-col-1">
 								<div class="profile-image-container">
-									<img src="images/user.png" class="profile-image">
+									<!-- Add an ID to the image for easier access -->
+									<img src="images/user.png" class="profile-image" id="profile-image">
+									<!-- Arrow icons -->
+									<div class="arrow-left" onclick="changeProfileImage(-1)">&#10094;</div>
+									<div class="arrow-right" onclick="changeProfileImage(1)">&#10095;</div>
 								</div>
 							</div>
 							<div class="about-col-2">
@@ -126,7 +129,7 @@
 								<!-- skills -->
 								<div class="tab-contents active-tab" id="education">
 									<ul>
-										<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington - Bachelors degree, Aeronautics and Astronautics</li>
+										<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington, Seattle, WA - Bachelors degree, Aeronautics and Astronautics, Senior</li>
 										<li><span>2020 - 2022</span><br>Pierce College - Associates of Science, Aeronautics and Astronautics</li>
 										<li><span>Scholarships and awards</span><br> UW: NASA Space Grant 2022-2023
 											<br>UW: NASA Space Grant 2023-2024, <br>A&A: Robert Max Reynolds Endowed 
@@ -149,7 +152,7 @@
 									<ul>
 										<li><span>Pacific Northwest Aerospace Alliance (PNAA) Advance 2024: Febuary 2024</span><br>Session Title: Next Generation Workforce Panel</li>
 										<li><span>Washington NASA Space Grant: March 2024</span><br> Selected to be featured on the NASA Space Grant instagram for Womans History Month. 
-											<a href="images/SG_Feature.png" target="_blank" class="btn btn2">View the feature here!</a></li>
+											<br><a href="images/SG_Feature.png" target="_blank" class="btn btn2">View the feature here!</a></li>
 									</ul>
 								</div>
 							</div>
@@ -355,7 +358,7 @@
 									</u1>
 								</p>
 								<ul class="actions">
-									<li><a href="Project1.html" class="button">Learn more</a></li>
+									<li><a href="Project1.html" class="button small">Learn more</a></li>
 								</ul>
 							</div>
 						</div>
@@ -383,7 +386,7 @@
 									</u1>
 								</p>
 								<ul class="actions">
-									<li><a href="Project5.html" class="button">Learn more</a></li>
+									<li><a href="Project5.html" class="button small">Learn more</a></li>
 								</ul>
 							</div>
 						</div>
@@ -409,7 +412,7 @@
 									</u1>
 								</p>
 								<ul class="actions">
-									<li><a href="Project2.html" class="button">Learn more</a></li>
+									<li><a href="Project2.html" class="button small">Learn more</a></li>
 								</ul>
 							</div>
 						</div>
@@ -436,7 +439,7 @@
 									</u1>
 								</p>
 								<ul class="actions">
-									<li><a href="Project3.html" class="button">Learn more</a></li>
+									<li><a href="Project3.html" class="button small">Learn more</a></li>
 								</ul>
 							</div>
 						</div>
@@ -463,7 +466,7 @@
 									</u1>
 								</p>
 								<ul class="actions">
-									<li><a href="Project4.html" class="button">Learn more</a></li>
+									<li><a href="Project4.html" class="button small">Learn more</a></li>
 								</ul>
 							</div>
 						</div>
@@ -700,6 +703,46 @@
 				event.currentTarget.classList.add("active-link"); 
 				document.getElementById(tabname).classList.add("active-tab");
 			}
+			</script>
+			<script>
+				// Array of image sources
+				var images = ['images/user.png', 'images/PNAA_1.jpg', 'images/PNAA_2.jpeg', 'images/SG_Feature.png', 'images/Me_2.jpg']; // Add paths to additional images as needed
+			
+				// Variable to keep track of the current image index
+				var currentImageIndex = 0;
+			
+				// JavaScript function to handle image change
+				function changeProfileImage(step) {
+					// Get the profile image element
+					var profileImage = document.getElementById('profile-image');
+					
+					// Increment the image index by the step (1 or -1)
+					currentImageIndex += step;
+					
+					// If the index is out of bounds, loop to the other end
+					if (currentImageIndex >= images.length) {
+						currentImageIndex = 0;
+					} else if (currentImageIndex < 0) {
+						currentImageIndex = images.length - 1;
+					}
+					
+					// Set the source of the image to the new image in the array
+					profileImage.src = images[currentImageIndex];
+				}
+			
+				// Add event listeners to arrow clicks
+				document.querySelector('.arrow-left').addEventListener('click', function() {
+					changeProfileImage(-1);
+				});
+			
+				document.querySelector('.arrow-right').addEventListener('click', function() {
+					changeProfileImage(1);
+				});
+			
+				// Automatically change image after a certain time
+				setInterval(function() {
+					changeProfileImage(1);
+				}, 2000); // Change every 5 seconds
 			</script>
 	</body>
 </html>
