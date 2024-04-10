@@ -1816,15 +1816,78 @@ input, select, textarea {
 			padding: 0;
 		}
 /*
-about 
+about actual!!
 */
 #about{ 
-	padding: 80px 0;
-	color: #f30606;
+    padding: 80px 0;
+    color: #FFA1A1;
 }
+.row{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.about-col-1 {
+    flex-basis: 40%;
+}
+.about-col-1 img{
+	width: 100%;
+	border-radius: 15px;
+	padding-left: 20px;
+}
+.about-col-2{
+	flex-basis: 60%;
+}
+.sub-title{
+	font-size: 60px;
+    font-weight: 600;
+    color: #fe8ea8;
+}
+.tab-titles{
+	display: flex;
+	margin: 20px 0 40px;
+}
+.tab-links{
+	margin-right: 50px;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+}
+.tab-links::after{
+	content: '';
+	width: 0;
+	height: 3px;
+	background: #ffba66c4;
+	position: absolute;
+	left: 0;
+	bottom: -8px;
+	transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+	width: 50%;
+}
+.tab-contents ul li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #fe8ea8;
+    font-size: 16px;
+}
+.tab-contents{
+	display: none;
+}
+
+.tab-contents.active-tab{
+	display: block;
+}
+
+
 /* 
-    About me: little list below the ski edu exp pro 
-*/
+About me: little list below the ski edu exp pro 
+
 .tab-contents ul li{
     list-style-type: none;
     margin: 10px 0;
@@ -1839,12 +1902,14 @@ about
 .tab-contents.active-tab{
     display: block;
 }
-/* 
-    About me: little list below the ski edu exp pro click feature
 */
 /* 
-    Project: 
+About me: little list below the ski edu exp pro click feature
 */
+
+/* 
+Project: 
+
 #projects{
     padding: 30px 0;
 }
@@ -1873,15 +1938,49 @@ about
 }
 .project-list div a{
     text-decoration: none;
-    color: #fe8ea8c5; /* Help Project: color of learn more   */
+    color: #fe8ea8c5;
     font-size: 18px;
     margin-top: 20px;
     display: inline-block;
 }
 .project-list div:hover{
-    background: #672f0aa4; /* Help Project: color glow change  #fa87a244 */
+    background: #672f0aa4; 
     transform: translate(-10px);
 }
+*/
+/* Adjustments for the About me section */
+/* 
+.about-col-1 {
+    float: left;
+    width: 30%; Adjust the width of the image column 
+}
+*/
+/* 
+.profile-image-container {
+    padding-left: 20px; Add padding to the left of the image 
+}
+*/
+/* 
+.profile-image {
+    max-width: 100%; Ensure the image stays within its container 
+    height: auto;  Maintain aspect ratio 
+    border-radius: 10px;  Add rounded corners to the image 
+}
+*/
+/* 
+.about-col-2 {
+    float: right;
+    width: 70%; Adjust the width of the text column 
+}
+*/
+/*
+.profile-image {
+    max-width: 100%;  Ensure the image stays within its container 
+    height: auto; Maintain aspect ratio
+    border-radius: 10px;  Add rounded corners to the image 
+    width: 80%; Set the width of the image to 80% of its container 
+}
+*/
 
 /* 
 
@@ -3257,7 +3356,7 @@ ul.contact > li:not(:last-child) {
 }
 
 .project {
-    background: #672f0ab0;
+    background: #ffbb66;
     padding: 20px; /* Reduced padding */
     font-size: 15px;
     font-weight: 300;
@@ -3267,7 +3366,7 @@ ul.contact > li:not(:last-child) {
 }
 
 .project:hover {
-    background: #672f0aa4;
+    background: 	#fde3c6;
     transform: translate(-10px);
 }
 
@@ -3277,7 +3376,7 @@ ul.contact > li:not(:last-child) {
 }
 
 .project-list div {
-    background: #672f0ab0;
+    background: #ffeddc;
     padding: 15px; /* Reduced padding */
     font-size: 15px;
     font-weight: 300;
@@ -3305,7 +3404,7 @@ ul.contact > li:not(:last-child) {
 }
 
 .project-list div:hover {
-    background: #672f0abd;
+    background: #ffe1b6;
     transform: translate(-10px);
 }
 

@@ -99,100 +99,68 @@
 						<ul>
 							<li>University of Washington, Seattle, WA - Jun. 2022 - (Exp. grad) Jun. 2024</li>
 							<li>Bachelor’s of Science in Aeronautics and Astronautics, Senior</li>
-							<li>Spring Courses: March 2024 - Present 
-								<ul>
-									<li>Space System Design II: SPACE Lab PPT Thrust Stand (Software)</li>
-									<li>Introduction Public Speaking</li>
-									<li>Data Programming</li>
-								</ul>
-							</li>
 						</ul>
 					</div>
 				</section>
-				
+
 				<!-- About me -->
-					<div id="about">
-    					<div class="container">
-        					<div class="row">
-            					<div class="about-col-1">
-                					<img src="images/user_2.png">
-            					</div>
-            					<div class="about-col-2">
-                					<h1 class="sub-title">About me</h1>
-                					<p>
-                    					Passionate about Aeronautics & Astronautics 
-                    					Engineering, I thrive on coding for aerospace 
-                    					innovation. Proficient in MATLAB, Arduino UNO, 
-                    					Python, and exploring C/C++, I enthusiastically 
-                    					explore embedded systems. With a Bachelor’s 
-                    					from the University of Washington, my expertise 
-                    					spans space system design, propulsion, programming 
-                    					and heat transfer.
-                					</p>
-                					<div class="tab-titles">
-                    					<p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-										<p class="tab-links" onclick="opentab('education')">Education</p>
-										<p class="tab-links" onclick="opentab('experiences')">Experiences</p>
-										<p class="tab-links" onclick="opentab('projects')">Projects</p>
-									</div>
-									<!-- skills -->
-									<div class="tab-contents active-tab" id="skills">
-										<ul>
-											<li><span>Programming</span><br> Proficient in MATLAB, Arduino UNO, 
-												Python, and exploring C/C++</li>
-											<li><span>Computer-Aided Design and Simulation Software</span><br> 
-												LabVIEW (Moderate),
-												SOLIDWORKS (Moderate),
-												ANSYS (Moderate),
-												Blender (Moderate),
-												XFOIL (Moderate).</li>
-											<li><span>Languages</span><br>
-												English (Proficient), 
-												Arabic (Beginner), 
-												German (Beginner),
-												Korean (Beginner).</li>
-										</ul>
-									</div>
-									<!-- Education -->
-									<div class="tab-contents" id="education">
-										<ul>
-											<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington - Bachelors degree, Aeronautics and Astronautics</li>
-											<li><span>2020 - 2022</span><br>Pierce College - Associates of Science, Aeronautics and Astronautics</li>
-											<li><span>Scholarships and awards</span><br> 
-												UW: NASA Space Grant 2020-2022, 
-												UW: NASA Space Grant 2020-2022, 
-												A&A: Robert Max Reynolds Endowed,
-												A&A: Joseph F. Sutter Endowed,
-												A&A: Lace Erik,
-												Boeing Scholarship,
-												Pierce College: Dean's list (2020-2022).
-										</ul>
-									</div>
-									<!-- Experience -->
-									<div class="tab-contents" id="experiences">
-										<ul>
-											<li><span>January - Current</span><br>SPACE Lab: PPT Thrust Stand - Software Specialist (Python)</li>
-											<li><span>August 2023 - Current</span><br>A&A, Undergraduate Student Advisory Council (uSAC) - Senior Class Rep</li>
-											<li><span>January  - June. 2024</span><br>Nonlinear Dynamics and Control Lab: Blue Origin RPO - Team Member (Software)</li>
-											<li><span>March - June 2023</span><br>Cryogenic Boiling - Purchasing Officer/Heat Transfer expert</li>
-										</ul>
-									</div>
-									<!-- Projects -->
-									<div class="tab-contents" id="projects">
-										<ul>
-											<li><span>Dec. 2022 - Current</span><br>Aerospace Design - Personal Project</li>
-										</ul>
-									</div>
+				<div id="about">
+					<div class="container">
+						<div class="row">
+							<div class="about-col-1">
+								<div class="profile-image-container">
+									<img src="images/user.png" class="profile-image">
+								</div>
+							</div>
+							<div class="about-col-2">
+								<h1 class="sub-title">About me</h1>
+								<p>
+									Passionate about Aeronautics & Astronautics Engineering, I thrive on coding for aerospace innovation. Proficient in MATLAB, Arduino UNO, Python, and exploring C/C++, I enthusiastically explore embedded systems. With a Bachelor’s from the University of Washington, my expertise spans space system design, propulsion, programming, and heat transfer.
+								</p>
+								<div class="tab-titles">
+									<p class="tab-links active-link" onclick="opentab('education', event)">Education</p>
+									<p class="tab-links" onclick="opentab('courses', event)">Current Courses</p>
+									<p class="tab-links" onclick="opentab('features', event)">Scholarships and Features</p>
+								</div>
+								<!-- tabs contents -->
+								<!-- skills -->
+								<div class="tab-contents active-tab" id="education">
+									<ul>
+										<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington - Bachelors degree, Aeronautics and Astronautics</li>
+										<li><span>2020 - 2022</span><br>Pierce College - Associates of Science, Aeronautics and Astronautics</li>
+										<li><span>Scholarships and awards</span><br> UW: NASA Space Grant 2022-2023
+											<br>UW: NASA Space Grant 2023-2024, <br>A&A: Robert Max Reynolds Endowed 
+											<br>A&A: Joseph F. Sutter Endowed
+											<br>A&A: Lace Erik
+											<br>Boeing Scholarship
+											<br>Pierce College: Dean's list (2020-2022)</li>
+									</ul>
+								</div>
+								<!-- Education -->
+								<div class="tab-contents" id="courses">
+									<ul> 
+										<li><span>Spring Courses: March 2024 - Present</span><br> Space System Design II: SPACE Lab PPT Thrust Stand (Software) 
+											<br> Introduction Public Speaking
+											<br> Data Programming</li>
+									</ul>
+								</div>
+								<!-- Experience -->
+								<div class="tab-contents" id="features">
+									<ul>
+										<li><span>Pacific Northwest Aerospace Alliance (PNAA) Advance 2024: Febuary 2024</span><br>Session Title: Next Generation Workforce Panel</li>
+										<li><span>Washington NASA Space Grant: March 2024</span><br> Selected to be featured on the NASA Space Grant instagram for Womans History Month. 
+											<a href="images/SG_Feature.png" target="_blank" class="btn btn2">View the feature here!</a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 
 				<!-- One Skills and Awards --> 
 					<section id="one" class="wrapper style3 fade-up">
 						<div class="inner">
-							<h2>Skills and Awards</h2>
+							<h2>Skills</h2>
 							<p>
 								<u1>											
 									<li>Aeronautics & Astronautics Engineering, with a focus on coding, embedded systems, and simulation.</li>
@@ -230,25 +198,6 @@
 									</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Education</h3>
-									<p>
-										<ul>
-											<li>University of Washington, Seattle WA
-												<ul>
-													<li>Aeronautics and Asteronautics</li>
-													<li>June 2022 - June 2024</li>
-													<li>Senior</li>
-												</ul>
-											</li>
-											<li>Pierce Commiunity College, Pyuallup WA
-												<ul>
-													<li>Aerospace Engineering</li>
-													<li>January 2020 - June 2022</li>
-										</ul>
-									</p>
-								</section>
-								<section>
 									<span class="icon major fa-gem"></span>
 									<h3>A&A, Undergraduate Student Advisory Council (uSAC)</h3><p>
 										<ul>                                            
@@ -271,28 +220,6 @@
 											<li>Korean (Beginner)</li>
 										</u1>
 									</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Scholarships and Features</h3>
-									<p>
-										<ul>
-											<li>UW: NASA Space Grant 22-23</li>
-											<li>UW: NASA Space Grant 23-24</li>
-											<li>A&A: Robert Max Reynolds Endowed</li>
-											<li>A&A: Joseph F. Sutter Endowed</li>
-											<li>A&A: Lace Erik</li>
-											<li>Boeing Scholarship</li>
-											<li>Pierce College: Dean's list (20-22)</li>
-											<li>Space Grant: Women's History Month</li>
-											<li>Pacific Northwest Aerospace Alliance (PNAA) ADVANCE 2024 Conference
-												<ul>
-													<li>Session Title: Next Generation Workforce Panel</li>
-												</ul>
-											</li>
-										</ul>
-									</p>
-										 
 								</section>
 							</div>
 						</div>
@@ -655,7 +582,7 @@
 					<div class="inner">
 						<div class="contact-info">
 							<h1>Contact</h1>
-							<p>Feel free to reach out and <a href="doc/Felicity_Cundiff_CV.pdf" target="_blank" class="btn btn2">view my CV</a>!</p>
+							<p>Feel free to reach out and <a href="doc/Felicity_C_24Resume.pdf" target="_blank" class="btn btn2">view my CV</a>!</p>
 						</div>
 						<div class="split style1">
 							<section>
@@ -751,12 +678,28 @@
 
 -->
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+			var tablinks = document.getElementsByClassName("tab-links");
+			var tabcontents = document.getElementsByClassName("tab-contents");
+
+			function opentab(tabname, event){
+				for(tablink of tablinks){
+					tablink.classList.remove("active-link");
+				}
+				for(tabcontent of tabcontents){
+					tabcontent.classList.remove("active-tab");
+				}
+				event.currentTarget.classList.add("active-link"); 
+				document.getElementById(tabname).classList.add("active-tab");
+			}
+			</script>
 	</body>
 </html>
