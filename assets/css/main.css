@@ -1815,6 +1815,73 @@ input, select, textarea {
 			border-radius: 0;
 			padding: 0;
 		}
+/*
+about 
+*/
+#about{ 
+	padding: 80px 0;
+	color: #f30606;
+}
+/* 
+    About me: little list below the ski edu exp pro 
+*/
+.tab-contents ul li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #fe8ea8;
+    font-size: 20px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* 
+    About me: little list below the ski edu exp pro click feature
+*/
+/* 
+    Project: 
+*/
+#projects{
+    padding: 30px 0;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.project-list div{
+    background: #672f0ab0;
+    padding: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition:  0.5s, transform 0.5s;
+}
+.project-list div i{
+    font-size: 60px;
+    margin-bottom: 35px;
+}
+.project-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.project-list div a{
+    text-decoration: none;
+    color: #fe8ea8c5; /* Help Project: color of learn more   */
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.project-list div:hover{
+    background: #672f0aa4; /* Help Project: color glow change  #fa87a244 */
+    transform: translate(-10px);
+}
 
 /* 
 
