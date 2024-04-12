@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
 <!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<!--
 <html>
 	<head>
 		<title>Felicity Cundiff Portfolio</title>
@@ -34,7 +29,6 @@
 		<script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>		
 	</head>
 	<body class="is-preload">
-
 -->
 <head>
     <meta charset="utf-8" />
@@ -97,8 +91,7 @@
 							<br>University of Washington.
 						</h1>
 					</div>
-				</section>
-				<!-- About me -->
+				</section><!-- About me -->
 				<div id="about">
 					<div class="container">
 						<div class="row">
@@ -109,6 +102,18 @@
 									<!-- Arrow icons -->
 									<div class="arrow-left" onclick="changeProfileImage(-1)">&#10094;</div>
 									<div class="arrow-right" onclick="changeProfileImage(1)">&#10095;</div>
+								</div>
+								<!-- Thumbnail images -->
+								<div class="thumbnail-container">
+									<!-- Generate thumbnails dynamically -->
+									<div class="thumbnail" onclick="changeProfileImage(0)"><img src="images/am_me_1.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(1)"><img src="images/am_PNAA_1.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(2)"><img src="images/am_PNAA_2.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(3)"><img src="images/am_SG_Feature.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(4)"><img src="images/am_me_2.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(4)"><img src="images/am_me_3.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(4)"><img src="images/am_me_4.jpg"></div>
+									<div class="thumbnail" onclick="changeProfileImage(4)"><img src="images/am_me_5.png"></div>
 								</div>
 							</div>
 							<div class="about-col-2">
@@ -125,15 +130,16 @@
 								<!-- skills -->
 								<div class="tab-contents active-tab" id="education">
 									<ul>
-										<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington, Seattle, WA 
+										<li><span>2022 - (exp. grad 6/2024)</span><br>University of Washington, Seattle, WA
 											<br>Bachelor’s of Science in Aeronautics and Astronautics, Senior</li>
 										<li><span>2020 - 2022</span><br>Pierce College, Puyallup, WA
 											<br>Associates of Science, Aeronautics and Astronautics</li>
+									</ul>
 								</div>
 								<!-- Education -->
 								<div class="tab-contents" id="courses">
-									<ul> 
-										<li><span>Spring Courses: March 2024 - Present</span><br> Space System Design II: SPACE Lab PPT Thrust Stand (Software) 
+									<ul>
+										<li><span>Spring Courses: March 2024 - Present</span><br> Space System Design II: SPACE Lab PPT Thrust Stand (Software)
 											<br> Introduction Public Speaking
 											<br> Data Programming</li>
 									</ul>
@@ -141,22 +147,20 @@
 								<!-- Experience -->
 								<div class="tab-contents" id="features">
 									<ul>
-										<li><span>Pacific Northwest Aerospace Alliance (PNAA) Advance 2024: Febuary 2024</span><br>Session Title: Next Generation Workforce Panel</li>
-										<li><span>Washington NASA Space Grant: March 2024</span><br> Selected to be featured on the NASA Space Grant instagram for Womans History Month. 
+										<li><span>Pacific Northwest Aerospace Alliance (PNAA) Advance 2024: February 2024</span><br>Session Title: Next Generation Workforce Panel</li>
+										<li><span>Washington NASA Space Grant: March 2024</span><br> Selected to be featured on the NASA Space Grant Instagram for Women's History Month.
 											<br><a href="images/SG_Feature.png" target="_blank" class="btn btn2">View the feature here!</a></li>
 										<li><span>Scholarships and awards</span>
-											<br>UW: NASA Space Grant 2022-2023 and 2023-2024, 
+											<br>UW: NASA Space Grant 2022-2023 and 2023-2024,
 											<br>A&A: Robert Max Reynolds Endowed, Joseph F. Sutter Endowed, and Lace Erik
 											<br>Boeing Scholarship
 											<br>Pierce College: Dean's list (2020-2022)</li>
-										</ul>
 									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-
 				<!-- One Skills and Awards --> 
 					<section id="one" class="wrapper style3 fade-up">
 						<div class="inner">
@@ -257,7 +261,7 @@
 						<a href="#" class="image"><img src="images/NDCL_1.jpg" alt="" data-position="top center" /></a>
 						<div class="content">
 							<div class="inner">
-								<h2>Nonlinear Dynamics and Control Lab: Blue Origin RPO</h2>
+								<h2>Nonlinear Dynamics and Control Lab: Blue Origin RSO</h2>
 								<p>
 									<u1>
 										<ul>
@@ -674,72 +678,16 @@
 		<script src="{{ url_for('static', filename='assets/js/breakpoints.min.js') }}"></script>
 		<script src="{{ url_for('static', filename='assets/js/util.js') }}"></script>
 		<script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
-	
-
 -->
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<script>
-			var tablinks = document.getElementsByClassName("tab-links");
-			var tabcontents = document.getElementsByClassName("tab-contents");
-
-			function opentab(tabname, event){
-				for(tablink of tablinks){
-					tablink.classList.remove("active-link");
-				}
-				for(tabcontent of tabcontents){
-					tabcontent.classList.remove("active-tab");
-				}
-				event.currentTarget.classList.add("active-link"); 
-				document.getElementById(tabname).classList.add("active-tab");
-			}
-			</script>
-			<script>
-				// Array of image sources
-				var images = ['images/user.png', 'images/PNAA_1.jpg', 'images/PNAA_2.jpeg', 'images/SG_Feature.png', 'images/me_2.jpg']; // Add paths to additional images as needed
-			
-				// Variable to keep track of the current image index
-				var currentImageIndex = 0;
-			
-				// JavaScript function to handle image change
-				function changeProfileImage(step) {
-					// Get the profile image element
-					var profileImage = document.getElementById('profile-image');
-					
-					// Increment the image index by the step (1 or -1)
-					currentImageIndex += step;
-					
-					// If the index is out of bounds, loop to the other end
-					if (currentImageIndex >= images.length) {
-						currentImageIndex = 0;
-					} else if (currentImageIndex < 0) {
-						currentImageIndex = images.length - 1;
-					}
-					
-					// Set the source of the image to the new image in the array
-					profileImage.src = images[currentImageIndex];
-				}
-			
-				// Add event listeners to arrow clicks
-				document.querySelector('.arrow-left').addEventListener('click', function() {
-					changeProfileImage(-1);
-				});
-			
-				document.querySelector('.arrow-right').addEventListener('click', function() {
-					changeProfileImage(1);
-				});
-			
-				// Automatically change image after a certain time
-				setInterval(function() {
-					changeProfileImage(1);
-				}, 2000); // Change every 5 seconds
-			</script>
+		<script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/photos.js"></script>
+        <script src="assets/js/aboutme.js"></script>
 	</body>
 </html>

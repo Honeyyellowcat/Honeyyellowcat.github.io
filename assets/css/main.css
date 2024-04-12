@@ -1819,24 +1819,49 @@ input, select, textarea {
 about actual!!
 */
 #about{ 
-    padding: 80px 0;
+    padding: 50px 0;
     color: #FFA1A1;
 }
-.row{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+.container {
+    padding: 0 10px; /* Add padding to the sides */
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -20px; /* Add negative margin to counter the padding of container */
 }
 .about-col-1 {
     flex-basis: 40%;
+    margin-right: 10px; /* Add margin to the right side of the image */
 }
-.about-col-1 img{
-	width: 100%;
-	border-radius: 15px;
-	padding-left: 20px;
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
 }
-.about-col-2{
-	flex-basis: 60%;
+.about-col-2 {
+    flex-basis: calc(60% - 20px); /* Adjusted width considering margin */
+}
+/* Add these styles to your existing CSS code */
+.profile-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: rgba(254, 175, 193, 0.979); /* Adjust the transparency here */
+    cursor: pointer;
+    z-index: 1;
+}#FDFCF3
+.arrow-left {
+    left: 10px; /* Adjust the left position */
+}
+.arrow-right {
+    right: 10px; /* Adjust the right position */
 }
 .sub-title{
 	font-size: 60px;
@@ -1845,10 +1870,10 @@ about actual!!
 }
 .tab-titles{
 	display: flex;
-    margin: 20px 0 5px; /* Reduce the bottom margin */
+    margin: 10px 0 5px; /* Reduce the bottom margin */
 }
 .tab-links{
-    margin-right: 15px; /* Reduce the right margin */
+    margin-right: 10px; /* Reduce the right margin */
 	font-size: 18px;
 	font-weight: 500;
 	cursor: pointer;
@@ -1861,7 +1886,7 @@ about actual!!
 	background: #ffba66c4;
 	position: absolute;
 	left: 0;
-	bottom: -8px;
+	bottom: -2px;
 	transition: 0.5s;
 }
 .tab-links.active-link::after{
@@ -1869,18 +1894,55 @@ about actual!!
 }
 .tab-contents ul li{
     list-style-type: none;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 .tab-contents ul li span{
     color: #fe8ea8;
     font-size: 16px;
 }
 .tab-contents {
+    display: none; /* Hide all tab contents by default */
+}
+.tab-contents.active-tab {
+    display: block; /* Show the active tab content */
+}
+/* Styles for thumbnail images */
+.thumbnail-container {
+    display: flex;
+    overflow-x: auto; /* Add overflow-x for horizontal scroll */
+    white-space: nowrap; /* Prevent thumbnails from wrapping */
+    margin-top: 5px;
+    max-height: 1150px; /* Set a maximum height for the thumbnail container */
+	max-width: 355px;
+}
+.thumbnail {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.thumbnail img {
+    width: 50px;
+    height: auto;
+}
+/* Thin scrollbar */
+.thumbnail-container::-webkit-scrollbar {
+    width: 5px; /* Adjust scrollbar width */
+    height: 5px; /* Adjust scrollbar height */
+}
+
+/* Handle */
+.thumbnail-container::-webkit-scrollbar-thumb {
+    background: #fe8ea8; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Round the corners of the handle */
+}
+
+/* Make scrollbar buttons invisible */
+.thumbnail-container::-webkit-scrollbar-button {
     display: none;
 }
 
-.tab-contents.active-tab{
-	display: block;
+/* Track */
+.thumbnail-container::-webkit-scrollbar-track {
+    background: transparent; /* Make scrollbar track transparent */
 }
 
 /* 
