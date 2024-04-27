@@ -5,18 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Drag on Bluff Bodies</title>
-    <!--icon-->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!--slider-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
-    <!--tailwind.css-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--parallax-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <!--main CSS-->
-    <link rel="stylesheet" href="assets\css\style.css">
-    <style>
+   <!--icon-->
+   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="icon" type="image/png" href="img/F.png">
+   <!--slider-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
+   <!--tailwind.css-->
+   <script src="https://cdn.tailwindcss.com"></script>
+   <!--parallax-->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+   <!--main CSS-->
+   <link rel="stylesheet" href="assets\css\style.css">
+   <style>
+       /* For WebKit/Blink browsers */
+       ::-webkit-scrollbar {
+           width: 12px;
+       }
+
+       ::-webkit-scrollbar-thumb {
+           background-color: pink; /* You can change this color to any color you prefer */
+           border-radius: 6px;
+       }
+
+       /* For Firefox */
+       /* Note: Firefox doesn't support styling the scrollbar track */
+       /* So, the scrollbar track will not be pink in Firefox */
+       ::-moz-scrollbar {
+           width: 12px;
+       }
+
+       ::-moz-scrollbar-thumb {
+           background-color: pink; /* You can change this color to any color you prefer */
+           border-radius: 6px;
+       }
+       
+       /* Header for exterier pages */ 
+       *{ 
+       margin: 0;
+       padding: 0;
+       list-style: none ;
+       text-decoration: none;
+       }
+
+       .header {
+       height: 80px;;
+       width: 100%;
+       display: block;
+       background: pink;
+       }
+
+       /* Experiences */
+       .inner {
+       padding: 20px; /* Adjust as needed */
+       text-align: rigleftht;
+       }
+       .text-pink {
+       color: #FE8EA8;
+       }
+
+   </style>
+   <style>
+
         ul {
             list-style-type: disc;
             margin-left: 20px;
@@ -44,7 +94,7 @@
 <section id="main" class="wrapper text-pink">
     <div class="inner">  
         <h1 class="text-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">Aerospace Laboratory I: Propeller Performance using the 3x3 wind tunnel</h1>
-        <span class="image fit"><img src="assets\img\PP_2.jpg" alt="" /></span>
+        <span class="image fit"><img src=assets\img\PP_2.jpg" alt="" /></span>
         <h1 class="text-3xl">Summary:</h1>
         <p>The experiment delved into the impact of propeller geometry and pitch on performance metrics, highlighting a strong correlation between propeller geometry, advance ratio, and performance. Further analysis is warranted to discern the individual effects of diameter and pitch.</p>
         <!-- Button to open PDF -->
