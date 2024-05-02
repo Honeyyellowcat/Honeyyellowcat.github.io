@@ -268,3 +268,10 @@
 .text-pink {
   color: #FE8EA8;
 }
+
+.footer__copy{
+  display: block;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: .813rem;
+}
