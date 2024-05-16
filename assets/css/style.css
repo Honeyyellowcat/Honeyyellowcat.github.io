@@ -66,7 +66,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #FDFCF3;
+    background-color: #fdfcf300;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -274,4 +274,245 @@
   margin-top: 6rem;
   text-align: center;
   font-size: .813rem;
+}
+
+/* -------------- Experience portal */
+/* For WebKit/Blink browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FE8EA8;
+  border-radius: 6px;
+}
+
+/* Header for exterior pages */ 
+* { 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #212121;
+  color: #FDFCF3;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #864C5A;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li a {
+  color: #212121;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header nav ul li a:hover {
+  color: #FDFCF3;
+}
+
+.header .name {
+  color: #212121;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-left: auto;
+}
+
+.inner {
+  padding: 20px;
+  text-align: center;
+}
+
+.text-pink {
+  color: #FE8EA8;
+}
+
+.section-title {
+  color: #FE8EA8;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: 'Experiences';
+  font-size: 4rem;
+  color: rgba(254, 142, 168, 0.1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.portal-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.portal-card:hover {
+  transform: scale(1.05);
+}
+
+.portal-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.experience-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(33, 33, 33, 0.8);
+  color: #FDFCF3;
+  padding: 10px;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.experience-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.8);
+  color: #FDFCF3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.portal-card:hover .experience-overlay {
+  opacity: 1;
+}
+
+footer {
+  background-color: #212121;
+  color: #FDFCF3;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 1px solid #FE8EA8;
+}
+.text-container-list ul {
+  list-style-position: outside;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.text-container-list li {
+  text-align: left;
+}
+
+.text-container {
+  padding: 0 20px; /* Adjust the padding as needed */
+}
+
+.text-container {
+  padding: 0 20px; /* Adjust the padding as needed */
+}
+.text-container ul {
+  list-style-type: disc; /* Use disc style for bullet points */
+  padding-left: 20px; /* Add some padding to the left of the bulleted points */
+}
+.text-container ul li {
+  margin-bottom: 10px; /* Add margin between bulleted points */
+}
+
+.text-container {
+  padding: 0 20px; /* Adjust the padding as needed */
+}
+.text-container ul {
+  list-style-type: disc; /* Use disc style for bullet points */
+  padding-left: 20px; /* Add some padding to the left of the bulleted points */
+}
+.text-container ul li {
+  margin-bottom: 10px; /* Add margin between bulleted points */
+}
+/* Style for "Here" links */
+.text-container a {
+  color: pink; /* Change the color to blue (or your desired color) */
+}
+
+.padded-heading {
+  padding: 20px; /* Adjust the padding value as needed */
+  text-align: center; /* Centers the text horizontally */
+}
+
+/* ---------- Projects */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#photo-album {
+  padding: 20px 0;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.photo img {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photo video {
+  max-width: 100px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photo img.expanded,
+.photo video.expanded {
+  max-width: 30vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: none;
+}
+
+.photo video.expanded {
+  max-width: 20vw;
 }

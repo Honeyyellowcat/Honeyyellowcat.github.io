@@ -20,74 +20,23 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
    <!--main CSS-->
    <link rel="stylesheet" href="assets\css\style.css">
-   <style>
-       /* For WebKit/Blink browsers */
-       ::-webkit-scrollbar {
-           width: 12px;
-       }
-
-       ::-webkit-scrollbar-thumb {
-           background-color: pink; /* You can change this color to any color you prefer */
-           border-radius: 6px;
-       }
-
-       /* For Firefox */
-       /* Note: Firefox doesn't support styling the scrollbar track */
-       /* So, the scrollbar track will not be pink in Firefox */
-       ::-moz-scrollbar {
-           width: 12px;
-       }
-
-       ::-moz-scrollbar-thumb {
-           background-color: pink; /* You can change this color to any color you prefer */
-           border-radius: 6px;
-       }
-       
-       /* Header for exterier pages */ 
-       *{ 
-       margin: 0;
-       padding: 0;
-       list-style: none ;
-       text-decoration: none;
-       }
-
-       .header {
-       height: 80px;;
-       width: 100%;
-       display: block;
-       background: pink;
-       }
-
-       /* Experiences */
-       .inner {
-       padding: 20px; /* Adjust as needed */
-       text-align: rigleftht;
-       }
-       .text-pink {
-       color: #FE8EA8;
-       }
-
-   </style>
 </head>
+<body>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experiences</a></li>
+            </ul>
+        </nav>
+    </div>
 
-	<body>
-
-		<!-- Header -->
-            <div class="header text-[#FDFCF3] text-lg font-bold p-6 mx-auto pb-5 pt-5lg:p-14 lg:pt-8 lg:pb-8">
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-					</ul>
-				</nav>
-            </div>
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper text-pink">
-						<div class="inner">
-							<h1 class="text-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">Cryogenic Boiling: Heat Transfer</h1>
-							<span class="image fit"><img src="assets\img\CBHT_2.jpg" alt="" /></span>
+    <div class="wrapper">
+        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Cryogenic Boiling: Heat Transfer</h1>
+        <div class="image-container">
+            <img src="assets/img/CBHT_2.jpg" alt="Pulsed Plasma Thruster Stand">
+        </div>
+        <div class="text-container">
                             <h2 class="text-4xl">Summary: </h2>
                             <ul>
                                 <li>- Theoretically calculated properties for enhanced understanding of heat transfer & cooling in liquid nitrogen</li>
@@ -383,5 +332,16 @@
                 transition: none; /* Remove the transition effect */
             }
         </style>
+    <footer>
+        <nav class="foot-nav">
+            <ul>
+              <li>
+                <a href="https://github.com/Honeyyellowcat"> felicitycundiff@gmail.com </a>
+                <a href="https://github.com/Honeyyellowcat"> (206) 353-3425 </a></li>
+                <li><a href="https://www.linkedin.com/in/felicity-cundiff/"> Linkedin </a> 
+                <a href="https://github.com/Honeyyellowcat"> Github </a></li>
+            </ul>
+          </nav>
+    </footer>
 	</body>
 </html>

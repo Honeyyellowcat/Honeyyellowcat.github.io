@@ -20,84 +20,30 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
    <!--main CSS-->
    <link rel="stylesheet" href="assets\css\style.css">
-   <style>
-	   /* For WebKit/Blink browsers */
-	   ::-webkit-scrollbar {
-		   width: 12px;
-	   }
-
-	   ::-webkit-scrollbar-thumb {
-		   background-color: pink; /* You can change this color to any color you prefer */
-		   border-radius: 6px;
-	   }
-
-	   /* For Firefox */
-	   /* Note: Firefox doesn't support styling the scrollbar track */
-	   /* So, the scrollbar track will not be pink in Firefox */
-	   ::-moz-scrollbar {
-		   width: 12px;
-	   }
-
-	   ::-moz-scrollbar-thumb {
-		   background-color: pink; /* You can change this color to any color you prefer */
-		   border-radius: 6px;
-	   }
-	   
-	   /* Header for exterier pages */ 
-	   *{ 
-	   margin: 0;
-	   padding: 0;
-	   list-style: none ;
-	   text-decoration: none;
-	   }
-
-	   .header {
-	   height: 80px;;
-	   width: 100%;
-	   display: block;
-	   background: pink;
-	   }
-
-	   /* Experiences */
-	   .inner {
-	   padding: 20px; /* Adjust as needed */
-	   text-align: rigleftht;
-	   }
-	   .text-pink {
-	   color: #FE8EA8;
-	   }
-
-   </style>
 </head>
-
-
 <body>
-
-		<!-- Header -->
-			<header id="header">
-				<div class="header text-[#FDFCF3] text-lg font-bold p-6 mx-auto pb-5 pt-5lg:p-14 lg:pt-8 lg:pb-8">
-					<nav>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-						</ul>
-					</nav>
-				</div>
-			</header>
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-				<section id="main" class="wrapper text-pink">
-					<div class="inner">
-						<h1 class="ext-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">Nonlinear Dynamics and Control Lab: Blue Origin RPO</h1>
-						<span class="image fit"><img src="assets\img\NDCL_2.jpg" alt="" /></span>
-						<p>
-							<h2 class="text-3xl">Summary</h2>
+	<body>
+		<div class="header">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="current.html">Current Work </a></li>
+				</ul>
+			</nav>
+		</div>
+	
+		<div class="wrapper">
+			<h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Nonlinear Dynamics and Control Lab: Blue Origin RPO</h1>
+			<div class="image-container">
+				<img src="assets/img/PPT_2.jpg" alt="Pulsed Plasma Thruster Stand">
+			</div>
+			<div class="text-container">
+				<h2 class="text-3xl">Summary:</h2>
 							<ul>
-								<li>C++ used for autonomous vehicle systems (fixed-wing aircraft, underwater gliders, space launch vehicles)</li>
-								<li>Robot arms involving, underwater robots, and autonomous vehicles through embedded systems expertise</li>
-								<li>Blender, Python, and C++ utilized for the design of robot arms and underwater robots for overall objectives</li>
-								<li>Studied birds, bats, fish, and insects as precise sensing machines in dynamic environments, gaining insight</li>
+								<li>C++ used for autonomous vehicle systems (fixed-wing aircraft, underwater gliders, space launch vehicles)
+								Robot arms involving, underwater robots, and autonomous vehicles through embedded systems expertise
+								Blender, Python, and C++ utilized for the design of robot arms and underwater robots for overall objectives
+								Studied birds, bats, fish, and insects as precise sensing machines in dynamic environments, gaining insight</li>
 							</ul>
 						</p>
 						<h2 class="text-2xl">Detailed Information:</h2>
@@ -106,15 +52,15 @@
 						</p>
 						<h2 class="text-2xl">Utilizes technologies such as:</h2>
 						<p>
-							<li>- Interbotix X-Series ViperX 300 Robot Arm 6DOF.</li>
-							<li>- Ubuntu 20.04.6 LTS (Focal Fossa).</li>
-							<li>- ROS Noetic Ninjemys (current) and ROS 2 Galactic Geochelone (upcoming).</li>
+							<li>Interbotix X-Series ViperX 300 Robot Arm 6DOF.</li>
+							<li>Ubuntu 20.04.6 LTS (Focal Fossa).</li>
+							<li>ROS Noetic Ninjemys (current) and ROS 2 Galactic Geochelone (upcoming).</li>
 						</p>
 						<h2 class="text-2xl">Recommended Setup:</h2>
 						<p>
-							<li>- Dual boot of Windows/Ubuntu Linux.</li>
-							<li>- GitHub Desktop on Linux.</li>
-							<li>- Anaconda for Python package management.</li>
+							<li>Dual boot of Windows/Ubuntu Linux.</li>
+							<li>GitHub Desktop on Linux.</li>
+							<li>Anaconda for Python package management.</li>
 						</p>
 						<h2 class="text-2xl">Software Installation:</h2>
 						<p>
@@ -122,29 +68,40 @@
 						</p>
 						<h2 class="text-2xl">Usage:</h2>
 						<p>
-							<li>- Virtual launches in RViz and Gazebo.</li>
-							<li>- Physical launches with RViz.</li>
-							<li>- MoveIt launches.</li>
-							<li>- Python demos.</li>
+							<li>Virtual launches in RViz and Gazebo.</li>
+							<li>Physical launches with RViz.</li>
+							<li>MoveIt launches.</li>
+							<li>Python demos.</li>
 						</p>
 						<h2 class="text-2xl">Uninstall/Reinstall:</h2>
 						<p>
-							<li>- Delete the Interbotix workspace.</li>
-							<li>- Purge ROS Noetic installation.</li>
+							<li>Delete the Interbotix workspace.</li>
+							<li>Purge ROS Noetic installation.</li>
 						</p> 
 						<h2 class="text-2xl">Blender Experimentation:</h2>
 						<p>
-							<li>- Utilizes bpy (Blender Python) package.</li>
-							<li>- Script rotates a Blender-made object and captures pictures at fixed intervals.</li>
+							<li>Utilizes bpy (Blender Python) package.</li>
+							<li>Script rotates a Blender-made object and captures pictures at fixed intervals.</li>
 						</p> 
 						<h2 class="text-2xl">Robotics with Python:</h2>
 						<p>
-							<li>- Users typically build Python scripts with predetermined movements for the arms.</li>
-							<li>- Initial steps involve experimenting with basic movements.</li>
-							<li>- Ultimate goal: Provide trajectory data as input, such as a mathematical expression for a curve along with start/end points, to generate an output script that the arm can execute to produce the desired trajectory.</li>
+							<li>Users typically build Python scripts with predetermined movements for the arms.</li>
+							<li>Initial steps involve experimenting with basic movements.</li>
+							<li>Ultimate goal: Provide trajectory data as input, such as a mathematical expression for a curve along with start/end points, to generate an output script that the arm can execute to produce the desired trajectory.</li>
 						</p>
 					</div>
 				</section>
 			</div>
-	</body>
+			<footer>
+				<nav class="foot-nav">
+					<ul>
+					  <li>
+						<a href="https://github.com/Honeyyellowcat"> felicitycundiff@gmail.com </a>
+						<a href="https://github.com/Honeyyellowcat"> (206) 353-3425 </a></li>
+						<li><a href="https://www.linkedin.com/in/felicity-cundiff/"> Linkedin </a> 
+						<a href="https://github.com/Honeyyellowcat"> Github </a></li>
+					</ul>
+				  </nav>
+			</footer>
+</body>
 </html>

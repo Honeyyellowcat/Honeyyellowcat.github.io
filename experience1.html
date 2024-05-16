@@ -23,111 +23,54 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
    <!--main CSS-->
    <link rel="stylesheet" href="assets\css\style.css">
-   <style>
-       /* For WebKit/Blink browsers */
-       ::-webkit-scrollbar {
-           width: 12px;
-       }
-
-       ::-webkit-scrollbar-thumb {
-           background-color: pink; /* You can change this color to any color you prefer */
-           border-radius: 6px;
-       }
-
-       /* For Firefox */
-       /* Note: Firefox doesn't support styling the scrollbar track */
-       /* So, the scrollbar track will not be pink in Firefox */
-       ::-moz-scrollbar {
-           width: 12px;
-       }
-
-       ::-moz-scrollbar-thumb {
-           background-color: pink; /* You can change this color to any color you prefer */
-           border-radius: 6px;
-       }
-       
-       /* Header for exterier pages */ 
-       *{ 
-       margin: 0;
-       padding: 0;
-       list-style: none ;
-       text-decoration: none;
-       }
-
-       .header {
-       height: 80px;;
-       width: 100%;
-       display: block;
-       background: pink;
-       }
-
-       /* Experiences */
-       .inner {
-       padding: 20px; /* Adjust as needed */
-       text-align: rigleftht;
-       }
-       .text-pink {
-       color: #FE8EA8;
-       }
-
-   </style>
+   <!--custom CSS-->
+   <link rel="stylesheet" href="custom.css">
 </head>
-
-
-
 <body>
-    <div class="header text-[#FDFCF3] text-lg font-bold p-6 mx-auto pb-5 pt-5lg:p-14 lg:pt-8 lg:pb-8">
+    <div class="header">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="experience.html">Experiences</a></li>
             </ul>
         </nav>
     </div>
-    <!-- Wrapper -->
-    <div id="wrapper">
-        <!-- Main -->
-        <section id="bg-[#FDFCF3] text-[#FE8EA8] p-6 mx-auto pb-5 pt-5 lg:pd-14 lg:pt-32 lg:pb-28">
-            <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
-                    <h1 class="text-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">NASA ARTEMIS</h1>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <img src="assets\img\NASA_2.jpg" class="img-fluid" alt="NASA Image">
-                </div>
-            </div>
-            <div class="inner"> 
-                <h1 class="text-pink">Summary: </3>
-                <p class="text-pink">As the main purchaser of supplies for the UW NASA Artemis Lava Tube 
-                    challenge, I played a pivotal role in the successful execution of 
-                    our team's entry, the M01-Skylight-Entry rover. We strategically 
-                    incorporated 3D-printed parts to enhance the rover's capability to 
-                    navigate the rough terrain of the obstacle course. Additionally, I 
-                    led the coding efforts for the Raspberry Pi, enabling the rover with a 
-                    camera for real-time navigation and photo documentation. Collaborating 
-                    closely with team members, we addressed design challenges, coding 
-                    complexities, and procured essential supplies to ensure the seamless 
-                    functioning of our rover throughout the competition.</p>
-                <h2 class="text-pink">Experience Details</h2>
-                <ul class="text-pink">
-                    <li>Collaborated closely to meticulously design and 3D print critical parts of the rover, optimizing its design</li>
-                    <li>Utilized CAD and Simulink to create highly efficient and innovative components for the project</li>
-                    <li>Resolved code complications during rover assembly, demonstrating expertise in problem-solving</li>
-                    <li>Identified and addressed design deficiencies during assembly, implementing effective solutions for project success</li>
-                </ul>
-            </div>
-        </section>
-        <!-- Photo Album Section -->
-        <section id="photo-album" class="photo-album text-pink inner">
-            <h2>Photo Album:</h2>
-            <div class="photo-grid">
-                <div class="photo">
-                    <img src="assets\img\NASA_3.jpg" alt="Photo 1">
-                </div>
-            </div>
-        </section>
+
+    <div class="wrapper">
+    <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">NASA ARTEMIS</h1>
+        <div class="image-container">
+            <img src="assets/img/NASA_2.jpg" alt="Pulsed Plasma Thruster Stand">
+        </div>
+        <div class="text-container">
+            <h1 class="text-3xl">Summary: </h1>
+            <p class="text-2xl">As the main purchaser of supplies for the UW NASA Artemis Lava Tube 
+                challenge, I played a pivotal role in the successful execution of 
+                our team's entry, the M01-Skylight-Entry rover. We strategically 
+                incorporated 3D-printed parts to enhance the rover's capability to 
+                navigate the rough terrain of the obstacle course. Additionally, I 
+                led the coding efforts for the Raspberry Pi, enabling the rover with a 
+                camera for real-time navigation and photo documentation. Collaborating 
+                closely with team members, we addressed design challenges, coding 
+                complexities, and procured essential supplies to ensure the seamless 
+                functioning of our rover throughout the competition.</p>
+            <h2 class="text-3xl">Experience Details</h2>
+            <ul class="text-2xl">
+                <li>Collaborated closely to meticulously design and 3D print critical parts of the rover, optimizing its design</li>
+                <li>Utilized CAD and Simulink to create highly efficient and innovative components for the project</li>
+                <li>Resolved code complications during rover assembly, demonstrating expertise in problem-solving</li>
+                <li>Identified and addressed design deficiencies during assembly, implementing effective solutions for project success</li>
+            </ul>
+        </div>
     </div>
+
+    <section id="photo-album">
+        <h2>Photo Album</h2>
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets\img\NASA_3.jpg" alt="Photo 1">
+            </div>
+        </div>
+    </section>
     <script>
         const mediaElements = document.querySelectorAll('.photo img, .photo video');
 
@@ -142,5 +85,16 @@
             });
         });
     </script>
+    <footer>
+        <nav class="foot-nav">
+            <ul>
+            <li>
+                <a href="https://github.com/Honeyyellowcat"> felicitycundiff@gmail.com </a>
+                <a href="https://github.com/Honeyyellowcat"> (206) 353-3425 </a></li>
+                <li><a href="https://www.linkedin.com/in/felicity-cundiff/"> Linkedin </a> 
+                <a href="https://github.com/Honeyyellowcat"> Github </a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

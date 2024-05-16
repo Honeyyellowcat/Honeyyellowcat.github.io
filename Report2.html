@@ -1,109 +1,71 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Felicity: Vortex Panel</title>
-    <!--icon-->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Felicity: Vortex Panel</title>
+    <!-- Icon and Font -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/img/F.png">
-    <!--slider-->
+    <link rel="icon" type="image/png" href="img/F.png">
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
-    <!--tailwind.css-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--parallax-->
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Parallax JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <!--main CSS-->
-    <link rel="stylesheet" href="assets\css\style.css">
-    <style>
-        /* For WebKit/Blink browsers */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: pink; /* You can change this color to any color you prefer */
-            border-radius: 6px;
-        }
-
-        /* For Firefox */
-        /* Note: Firefox doesn't support styling the scrollbar track */
-        /* So, the scrollbar track will not be pink in Firefox */
-        ::-moz-scrollbar {
-            width: 12px;
-        }
-
-        ::-moz-scrollbar-thumb {
-            background-color: pink; /* You can change this color to any color you prefer */
-            border-radius: 6px;
-        }
-        
-        /* Header for exterier pages */ 
-        *{ 
-        margin: 0;
-        padding: 0;
-        list-style: none ;
-        text-decoration: none;
-        }
-
-        .header {
-        height: 80px;;
-        width: 100%;
-        display: block;
-        background: pink;
-        }
-
-        /* Experiences */
-        .inner {
-        padding: 20px; /* Adjust as needed */
-        text-align: rigleftht;
-        }
-        .text-pink {
-        color: #FE8EA8;
-        }
-
-    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="header text-[#FDFCF3] text-lg font-bold p-6 mx-auto pb-5 pt-5lg:p-14 lg:pt-8 lg:pb-8">
+    <div class="header">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Reports</a></li>
             </ul>
         </nav>
     </div>
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Main -->
-				<section id="main" class="wrapper text-pink">
-					<div class="inner">
-						<h1 class="text-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">Incompressible Aerodynamics: Vortex Panel Project</h1>
-						<span class="image fit"><img src="assets\img\AS_2.jpg" alt="" /></span>
-						<p>
-							<h2 class="text-2xl">Summary</h2>
-							<ul>
-								<p>In the Vortex Panel Mini-Project, aerodynamic characteristics of four airfoils (NACA 0010, NACA 1410, NACA 2410, and NACA 6409) were analyzed using MATLAB and XFOIL software, generating graphs for lift, drag, moment coefficients, and pressure distribution at different angles of attack.</p>
-							</ul>
-						</p>
-						<!-- Button to open PDF -->
-           				<li class="text-2xl">1. Vortex Panel Mini Report: <a href="doc\Vortex_Panel_Mini_Project_Felicity_C.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></li>
-						<h2 class="text-2xl">Main Points:</h2>
-					<ul>
-						<li>- Gathered aerodynamic data for four airfoils: NACA 0010, NACA 1410, NACA 2410, and NACA 6409.</li>
-						<li>- Reynolds number (Re) set to 3000000 and Mach number (Ma) to 0.1 as instructed.</li>
-						<li>- Generated eight graphs depicting lift coefficient, drag coefficient, moment coefficient, and pressure coefficient for each airfoil at angles of attack α = 0, 5, 10 degrees.</li>
-						<li>- NACA 0010: Symmetric airfoil with lower camber, showing good lift and low drag, suitable for high-speed designs.</li>
-						<li>- NACA 1410: Symmetric airfoil with larger lift coefficient but slightly higher drag, reaches stall at a lower angle of attack compared to NACA 0010.</li>
-						<li>- NACA 2410: Lower camber and thin body, reducing drag force and allowing higher speed.</li>
-						<li>- NACA 6409: Thick and cambered, generates more lift but also more drag than NACA 0010.</li>
-						<li>- Compared pressure distribution along airfoils using Cp vs x/c plots, observing differences in pressure buildup and gradients.</li>
-					</ul>
-					</div>
-				</section>
-			</div>
-	</body>
+    <div class="wrapper">
+        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Incompressible Aerodynamics: Vortex Panel Project</h1>
+        <div class="image-container">
+            <img src="assets/img/AS_2.jpg" alt="Pulsed Plasma Thruster Stand">
+        </div>
+        <div class="text-container">
+            <h2 class="text-2xl">Summary</h2>
+            <p>In the Vortex Panel Mini-Project, aerodynamic characteristics of four airfoils (NACA 0010, NACA 1410, NACA 2410, and NACA 6409) were analyzed using MATLAB and XFOIL software, generating graphs for lift, drag, moment coefficients, and pressure distribution at different angles of attack.</p>
+            <!-- Button to open PDF -->
+            <p class="text-2xl">1. Vortex Panel Mini Report: <a href="doc/Vortex_Panel_Mini_Project_Felicity_C.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
+            <h2 class="text-2xl">Main Points:</h2>
+            <ul>
+                <li>Gathered aerodynamic data for four airfoils: NACA 0010, NACA 1410, NACA 2410, and NACA 6409.</li>
+                <li>Reynolds number (Re) set to 3000000 and Mach number (Ma) to 0.1 as instructed.</li>
+                <li>Generated eight graphs depicting lift coefficient, drag coefficient, moment coefficient, and pressure coefficient for each airfoil at angles of attack α = 0, 5, 10 degrees.</li>
+                <li>NACA 0010: Symmetric airfoil with lower camber, showing good lift and low drag, suitable for high-speed designs.</li>
+                <li>NACA 1410: Symmetric airfoil with larger lift coefficient but slightly higher drag, reaches stall at a lower angle of attack compared to NACA 0010.</li>
+                <li>NACA 2410: Lower camber and thin body, reducing drag force and allowing higher speed.</li>
+                <li>NACA 6409: Thick and cambered, generates more lift but also more drag than NACA 0010.</li>
+                <li>Compared pressure distribution along airfoils using Cp vs x/c plots, observing differences in pressure buildup and gradients.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <nav class="foot-nav">
+            <ul>
+                <li>
+                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
+                    <a href="tel:+12063533425">(206) 353-3425</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a>
+                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
 </html>

@@ -1,132 +1,85 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Arduino</title>
-    <!--icon-->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- Icon and Font -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="assets/img/F.png">
-    <!--slider-->
+    <link rel="icon" type="image/png" href="img/F.png">
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
-    <!--tailwind.css-->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!--parallax-->
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Parallax JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <!--main CSS-->
-    <link rel="stylesheet" href="assets\css\style.css">
-    <style>
-        /* For WebKit/Blink browsers */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: pink; /* You can change this color to any color you prefer */
-            border-radius: 6px;
-        }
-
-        /* For Firefox */
-        /* Note: Firefox doesn't support styling the scrollbar track */
-        /* So, the scrollbar track will not be pink in Firefox */
-        ::-moz-scrollbar {
-            width: 12px;
-        }
-
-        ::-moz-scrollbar-thumb {
-            background-color: pink; /* You can change this color to any color you prefer */
-            border-radius: 6px;
-        }
-        
-        /* Header for exterier pages */ 
-        *{ 
-        margin: 0;
-        padding: 0;
-        list-style: none ;
-        text-decoration: none;
-        }
-
-        .header {
-        height: 80px;;
-        width: 100%;
-        display: block;
-        background: pink;
-        }
-
-        /* Experiences */
-        .inner {
-        padding: 20px; /* Adjust as needed */
-        text-align: rigleftht;
-        }
-        .text-pink {
-        color: #FE8EA8;
-        }
-
-    </style>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-
 <body>
-    <div class="header text-[#FDFCF3] text-lg font-bold p-6 mx-auto pb-5 pt-5lg:p-14 lg:pt-8 lg:pb-8">
+    <div class="header">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="report.html">Reports</a></li>
             </ul>
         </nav>
     </div>
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Main -->
-				<section id="main" class="wrapper text-pink">
-					<div class="inner">  
-						<h1 class="text-pink font-bold select-none inline-block uppercase text-3xl md:text-5xl lg:text-6xl py-4">Arduino Setup and Ohm's Law</h1>
-						<span class="image fit"><img src="assets\img\AS_2.jpg" alt="" /></span>
-                        <h2 class="text-3xl">Summary</h2>
-                        <p>- During the experiment, voltage, amperage, and resistance values were 
-                            measured and analyzed according to Ohm's Law, considering uncertainties 
-                            in measurements and resistor tolerances.</p>
-						<!-- Button to open PDF -->
-                        <li class="text-2xl">1. Arduino Setup and Ohm's Law Report: <a href="doc\Arduino_Setup_and_Ohm's Law.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></li>
-                        <h2 class="text-2xl">Abstract:</h2>
-                        <ul>
-                            <li>- Explored the influence of propeller geometry and pitch on 
-                                propeller capability.</li>
-                            <li>- Compared the performance metrics of four propellers of 
-                                varying geometries and pitches 
-                                in a 3x3 wind tunnel.</li>
-                            <li>- Found performance metrics are dependent on propeller 
-                                geometry and advance ratio.</li>
-                        </ul>
-                        <h2 class="text-2xl">Uncertainty and Graph</h2>
-                        <ul>
-                            <li>- Uncertainty calculations were conducted considering device 
-                                error and resistor manufacturing tolerance.</li>
-                            <li>- Uncertainties due to measuring devices do not propagate 
-                                into other values.</li>
-                        </ul>
-                        <h2 class="text-2xl">Discussion of Results</h2>
-                        <ul>
-                            <li>- Voltage drop across the 10kΩ resistor was measured to be 4.980V, 
-                                slightly outside the expected value.</li>
-                            <li>- Uncertainties in measurements were attributed to device error 
-                                and resistor manufacturing tolerances.</li>
-                            <li>- The measured voltage from the Digital Multi-meter was 4.980V, 
-                                within the tolerance rate of the 10kΩ resistor.</li>
-                            <p>- Graph: The results of the 10kΩ and 20kΩ from experiment.</p>
-                        </ul>
-                        <h2 class="text-2xl">Diagrams</h2>
-                        <ul>
-                            <li>- Figure 1: Diagram of circuit with one 10kΩ resistor</li>
-                            <li>- Figure 2: Diagram of circuit with 10kΩ and 20kΩ resistors 
-                                wired in series</li>
-                            <li>- Figure 3: Diagram of 10kΩ resistor and LED wired in series</li>
-                            <li>- Figure 4: Diagram of 10kΩ resistor, potentiometer, and LED 
-                                wired in series</li>
-                        </ul>
-                    </div>
-				</section>
-			</div>
-	</body>
+
+    <div class="wrapper">
+        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Arduino Setup and Ohm's Law</h1>
+        <div class="image-container">
+            <img src="assets/img/AS_2.jpg" alt="Pulsed Plasma Thruster Stand">
+        </div>
+        <div class="text-container">
+            <h2 class="text-3xl">Summary</h2>
+            <p>- During the experiment, voltage, amperage, and resistance values were measured and analyzed according to Ohm's Law, considering uncertainties in measurements and resistor tolerances.</p>
+            <!-- Button to open PDF -->
+            <p class="text-2xl">1. Arduino Setup and Ohm's Law Report: <a href="doc\Arduino_Setup_and_Ohm's Law.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
+            <h2 class="text-2xl">Abstract:</h2>
+            <ul>
+                <li>- Explored the influence of propeller geometry and pitch on propeller capability.</li>
+                <li>- Compared the performance metrics of four propellers of varying geometries and pitches in a 3x3 wind tunnel.</li>
+                <li>- Found performance metrics are dependent on propeller geometry and advance ratio.</li>
+            </ul>
+            <h2 class="text-2xl">Uncertainty and Graph</h2>
+            <ul>
+                <li>- Uncertainty calculations were conducted considering device error and resistor manufacturing tolerance.</li>
+                <li>- Uncertainties due to measuring devices do not propagate into other values.</li>
+            </ul>
+            <h2 class="text-2xl">Discussion of Results</h2>
+            <ul>
+                <li>- Voltage drop across the 10kΩ resistor was measured to be 4.980V, slightly outside the expected value.</li>
+                <li>- Uncertainties in measurements were attributed to device error and resistor manufacturing tolerances.</li>
+                <li>- The measured voltage from the Digital Multi-meter was 4.980V, within the tolerance rate of the 10kΩ resistor.</li>
+            </ul>
+            <p>- Graph: The results of the 10kΩ and 20kΩ from experiment.</p>
+            <h2 class="text-2xl">Diagrams</h2>
+            <ul>
+                <li>- Figure 1: Diagram of circuit with one 10kΩ resistor</li>
+                <li>- Figure 2: Diagram of circuit with 10kΩ and 20kΩ resistors wired in series</li>
+                <li>- Figure 3: Diagram of 10kΩ resistor and LED wired in series</li>
+                <li>- Figure 4: Diagram of 10kΩ resistor, potentiometer, and LED wired in series</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <nav class="foot-nav">
+            <ul>
+                <li>
+                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
+                    <a href="tel:+12063533425">(206) 353-3425</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a>
+                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
 </html>
