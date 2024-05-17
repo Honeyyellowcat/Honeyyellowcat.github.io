@@ -25,6 +25,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="current.html">Current Work </a></li>
+                <li><a href="experience.html">Experiences</a></li>
             </ul>
         </nav>
     </div>
@@ -35,74 +36,307 @@
             <img src="assets/img/PPT_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl">Summary:</h2>
+            <h2 class="text-3xl text-pink">Summary:</h2>
             <ul>
-                <li>Python: nidaqmx & PySerial to record and calibrate deflection, ensuring accuracy within embedded systems</li>
-                <li>Embedded serial communication with Arduino UNO using PySerial for precise motor control in our system</li>
-                <li>SPACE Labs vacuum chambers are utilized to test and explore plasma physics in PPT electric thrusters</li>
-                <li>ANSYS/FEA software to analyze and optimize overall designs for enhanced performance and efficiency</li>
-                <li>Collaborated in the strategic optimization and design of the thruster stand using 3D printing technology</li>
+                <li>Python: nidaqmx & PySerial to record and calibrate deflection, ensuring accuracy within embedded systems
+                    Embedded serial communication with Arduino UNO using PySerial for precise motor control in our system
+                    SPACE Labs vacuum chambers are utilized to test and explore plasma physics in PPT electric thrusters
+                    ANSYS/FEA software to analyze and optimize overall designs for enhanced performance and efficiency
+                    Collaborated in the strategic optimization and design of the thruster stand using 3D printing technology</li>
             </ul>
-            <ul class="text-2xl">
+            <ul class="text-2xl ">
                 <li>1. Preliminary Design Review (PDR): <a href="doc/CDR.pdf" target="_blank">Here</a></li>
                 <li>2. Critical Design Review (CDR): <a href="doc/PDR.pdf" target="_blank">Here</a></li>
+                <li>3. Test Readyness Review (TRR): <a href="#" target="_blank">Will Update</a></li>
+                <li>4. Aceptance Review (AR): <a href="#" target="_blank">Will Update</a></li>
             </ul>
-            <h2 class="text-2xl">Mission Objective:</h2>
-            <p>To design and build an operational, minimally conductive, inverted pendulum test stand for the University of Washington’s SPACE Lab. The stand should accurately resolve impulses from pulsed plasma thrusters within a range of 10 μN*s to 100 mN*s.</p>
-            <h2 class="text-3xl">Structure -</h2>
-            <h3 class="text-2xl">Chamber Interface</h3>
+            <h2 class="text-2xl text-pink">Mission Objective:</h2>
+                <ul>
+                    <p>To design and build an operational, minimally conductive, inverted pendulum test stand for the University of Washington’s SPACE Lab. The stand should accurately resolve impulses from pulsed plasma thrusters within a range of 10 μN*s to 100 mN*s.</p>
+                </ul>
+            <h3 class="text-2xl text-pink">Chamber Interface</h3>
             <ul>
-                <li>Base of adjustable feet will be made of rubber to isolate stands from external vibrations and protect chamber walls.</li>
-                <li>Once the final stand is designed, the material and geometry of rubber isolators can be chosen to isolate vibration. Vibration frequency at the chamber wall will also have to be measured.</li>
+                <li>- Base of adjustable feet will be made of rubber to isolate stands from external vibrations and protect chamber walls.</li>
+                <li>- Once the final stand is designed, the material and geometry of rubber isolators can be chosen to isolate vibration. Vibration frequency at the chamber wall will also have to be measured.</li>
             </ul>
-            <h3 class="text-2xl">Leveling System:</h3>
+            <h3 class="text-2xl text-pink">Thrust Measurement:</h3>
             <ul>
-                <li>Base of the test stand will be leveled by way of a stepper motor.</li>
-                <li>Base will be allowed to pivot through a TBD angle on nylon bushings.</li>
+                <li>The design parameters for the thruster's flexures are established based on a thrust range of 10 μN to 100 mN and a 
+                    thruster position height of 0.25 m, necessitating spring constants between 0.700 Nm < k < 7.81E4 Nm for an 8 kg 
+                    thruster with a rangefinder precision of 10E-6 m. Opting for an 8 flexure design, the DawgStar’s PPT configuration 
+                    (5 kg) with an average thrust of 5.68E-5 N and a moment arm of 0.25 m corresponds to k = 42.8 N*m. Ansys FEA was 
+                    conducted for a single leg of the pendulum due to software limitations on the student version, revealing a total 
+                    displacement of 0.0227 inches (0.576 mm) using 0.01-inch thick spring steel flexure. The IL-100 rangefinder offers 
+                    a minimum resolution of 60 μm, and Requirement St.7 is fulfilled at the low end of the scale, with flexibility to 
+                    adjust flexure thickness for the upper end. A simple design utilizing 4 bolts secures the flexures in place, 
+                    facilitating easy removal and installation when the test stand is fully assembled. Flexures of various thicknesses, 
+                    ranging from 0.01 inches to 0.6 inches, will be manufactured to meet the design requirements, ensuring the fulfillment 
+                    of Requirement St.8 through this strategic approach.
+                </li>
             </ul>
-            <h3 class="text-2xl">Thrust Measurement:</h3>
+            <h2 class="text-2xl text-pink">GUI (DAQ)</h2>
             <ul>
-                <li>Based on the given thrust range of 10 μN to 100 mN and a 0.25 m height thruster position, the flexures’ spring constants must all fall between 0.700 N*m < k < 7.81E4 N*m for an 8 kg thruster with a rangefinder precision of 10E-6 m.</li>
-                <li>An 8 flexure design was selected.</li>
-                <li>For the DawgStar’s PPT design (5 kg) with an average thrust of 5.68E-5 N and moment arm of 0.25 m, this would correspond to k = 42.8 N*m.</li>
-                <li>Ansys FEA was performed for a single leg of the pendulum due to software restrictions on the student version.</li>
-                <li>Total displacement of 0.0227 inches (0.576 mm) using 0.01 in thick spring steel flexure.</li>
-                <li>The IL-100 rangefinder’s minimum resolution is 60 μm.</li>
-                <li>Requirement St.7 is met on the low end of the scale, flexure thickness can be changed to meet the upper end.</li>
-                <li>Simple design using 4 bolts to hold flexures in place.</li>
-                <li>Flexure bolts easily accessed when the test stand fully assembled, making for easy removal and installation.</li>
-                <li>Flexures of many thicknesses ranging from 0.01 inches to 0.6 inches will be manufactured.</li>
-                <li>Requirement St.8 will be met by utilizing this design strategy.</li>
+                <li>The deflection data is initially recorded using ni-daqmx, and the acquired data is stored in the global variable 
+                    deflection_data. This raw data is then processed to derive thrust measurements by calibrating with known force and 
+                    deflection values, and the resulting data is stored in global variables. Subsequently, a graphical display is generated 
+                    to visualize the deflection measurements along with their uncertainties, represented by error bars. Matplotlib is 
+                    utilized for this graphical representation. Additionally, export options are provided for both figures (saved as .png 
+                    files) and raw data (exported as .csv files), facilitated by pandas.
+                </li>
             </ul>
-            <h2 class="text-3xl">Data Analysis: DAQ</h2>
+        </div>
+
+            <div class="text-container">
+                <h3 class="text-2xl text-pink">Calibration and Testing Code:</h3> 
+                <pre class="code-box small">
+                    <code>
+                        import pandas as pd
+                        import matplotlib.pyplot as plt
+                        import seaborn as sns
+                        from sklearn.linear_model import LinearRegression
+    
+                        sns.set(style="whitegrid")
+    
+                        def detect_max_voltage(csv_files, voltage_column, start_row):
+                            max_voltages = []  # List to store maximum voltages
+                            
+                            for csv_file in csv_files:
+                                print("Processing file:", csv_file)
+                                df = pd.read_csv(csv_file)  # Load CSV file into a DataFrame
+                                voltage_data = df.loc[start_row:, voltage_column]  # Select the 'CH4' column starting from row 17
+                                voltage_data = pd.to_numeric(voltage_data, errors='coerce')  # Convert voltage data to numeric type
+                                voltage_data.dropna(inplace=True)  # Drop rows with NaN values in the voltage data
+                                max_voltage = voltage_data.max()  # Find maximum voltage value
+                                max_voltages.append(max_voltage)  # Append maximum voltage to the list
+                                print("Maximum voltage:", max_voltage)  # Print maximum voltage value
+                                print()
+    
+                            return max_voltages
+    
+                        def plot_vmax_vs_impulses(known_impulses, max_voltages, subplot_index):
+                            plt.subplot(2, 1, subplot_index)  # Use the provided subplot index
+                            plt.plot(known_impulses, max_voltages, marker='o', linestyle='-', color='#ff5733', linewidth=3, markersize=10)  # Adjust line and marker styles
+                            plt.xlabel('Number of Known Impulse Plot', fontsize=14, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.ylabel('Maximum Voltage', fontsize=14, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.title('Linear Impulses', fontsize=16, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.grid(True, linestyle='--', alpha=0.7, color='#aaaaaa')  # Adjust grid style
+                            plt.xticks(fontsize=12, color='#555555')  # Adjust tick labels
+                            plt.yticks(fontsize=12, color='#555555')  # Adjust tick labels
+                            plt.tight_layout()  # Adjust layout
+                            plt.gca().set_facecolor('#f0f0f0')  # Set background color of plot face
+    
+                        # I_bit = v_max / c ------------------------------------------------------------------------------------------------------------------------------
+                        def plot_ibit_vs_vmax(max_voltages, slope, subplot_index):
+                            plt.subplot(2, 1, subplot_index)  # Use the provided subplot index
+                            bit_impulses = [v / slope for v in max_voltages]
+                            plt.plot(bit_impulses, max_voltages, marker='s', linestyle='--', color='blue', linewidth=2, markersize=8)  # Adjust line and marker styles
+                            plt.xlabel('Time (s)', fontsize=14, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.ylabel('Maximum Voltage', fontsize=14, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.title('Impulse Plot', fontsize=16, fontweight='bold', color='#333333')  # Adjust font size and style
+                            plt.grid(True, linestyle='--', alpha=0.7, color='#aaaaaa')  # Adjust grid style
+                            plt.xticks(fontsize=12, color='#555555')  # Adjust tick labels
+                            plt.yticks(fontsize=12, color='#555555')  # Adjust tick labels
+                            plt.tight_layout()  # Adjust layout
+                            plt.gca().set_facecolor('#f0f0f0')  # Set background color of plot face
+    
+                        # File
+                        csv_files = ['C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0298.csv', 'C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0299.csv', 'C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0299_2.csv']
+                        new_csv_files = ['C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0298_I_bit.csv', 'C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0299_I_bit.csv', 'C:/Users/every/OneDrive/Desktop/CODE/4 - PPT/CALI/T0299_2.csv']
+    
+                        voltage_column = "CH4"  # Adjust column name as needed
+                        start_row = 17  # Adjust the starting row as needed
+    
+                        known_impulses = [1, 2, 3, 4]  # Extend known impulses to 3 and 4
+    
+                        # Detect maximum voltages for the initial CSV files
+                        max_voltages = detect_max_voltage(csv_files, voltage_column, start_row)
+    
+                        # Calculate the slope using linear regression
+                        model = LinearRegression()
+                        X = pd.DataFrame(known_impulses[:len(max_voltages)])  # Ensure known impulses match the length of max_voltages
+                        y = pd.DataFrame(max_voltages)
+                        model.fit(X, y)
+                        slope = model.coef_[0][0]
+    
+                        # Print the slope
+                        print("Slope value:", slope)
+    
+                        # Plot both graphs on the same figure
+                        plt.figure(figsize=(10, 12))  # Adjust figure size
+    
+                        # Plot V_max vs Known Impulses in the first subplot
+                        plot_vmax_vs_impulses(known_impulses[:len(max_voltages)], max_voltages, 1)
+    
+                        # Detect maximum voltages for the new CSV files (if different from initial)
+                        new_max_voltages = detect_max_voltage(new_csv_files, voltage_column, start_row)
+    
+                        # Plot I_bit vs V_max in the second subplot
+                        plot_ibit_vs_vmax(new_max_voltages, slope, 2)
+    
+                        plt.show()
+                    </code>
+                </pre>
+            </div>
+
+        <div class="text-container">
+            <h3 class="text-2xl text-pink">Leveling System:</h3>
             <ul>
-                <li>NI-DAQmx Driver Software: Verify the DAQ device is recognized by the computer. Python Integration with NI-DAQmx Driver & PySerial.</li>
-                <li>Data Acquisition and Analysis with NI-DAQmx Driver and PySerial.</li>
-                <li>Recording Deflection Data: record_deflection() reads raw deflection data from the DAQs.</li>
-                <li>Conversion of Measurements: Sensitivity based on the measured deflection and a calibration force. Facilitating the conversion of deflection measurements into thrust measurements.</li>
-                <li>Calculation of Uncertainties: Thrust uncertainty is estimated by scaling the standard deviation of deflection. Error propagation techniques ensure reliable estimation of thrust uncertainties during conversion.</li>
-                <li>Calibration: convert_to_thrust() function is used to calibrate raw deflection measurements to thrust. Raw deflection is calibrated to thrust by defining a 10 micronewton calibration force. Sensitivity is calculated as the ratio of measured deflection to the calibration force.</li>
+                <li>- Base of the test stand will be leveled by way of a stepper motor.</li>
+                <li>- Base will be allowed to pivot through a TBD angle on nylon bushings.</li>
             </ul>
-            <h2 class="text-2xl">GUI (Arduino)</h2>
+            <h2 class="text-2xl text-pink">GUI (Arduino)</h2>
             <ul>
-                <li>Serial Communication Setup: PySerial send commands to the Arduino, instructing it on how to control the stepper motor.</li>
-                <li>Data Acquisition and Analysis with NI-DAQmx Driver and PySerial.</li>
-                <li>Sending Data to Serial Port: sendData: Sends motor control data to the Arduino. low_pass_filter: Smoothing motor speed changes.</li>
-                <li>Conversion of Measurements: Sensitivity based on the measured deflection and a calibration force. Facilitating the conversion of deflection measurements into thrust measurements.</li>
-                <li>Calculation of Uncertainties: Thrust uncertainty is estimated by scaling the standard deviation of deflection. Error propagation techniques ensure reliable estimation of thrust uncertainties during conversion.</li>
-                <li>Calibration: convert_to_thrust() function is used to calibrate raw deflection measurements to thrust. Raw deflection is calibrated to thrust by defining a 10 micronewton calibration force. Sensitivity is calculated as the ratio of measured deflection to the calibration force.</li>
-                <li>GUI Integration: Constructs a Tkinter window and designs GUI elements. Visual: Clockwise/Anticlockwise buttons, Speed (RPM) sliders, and angle (deg).</li>
-            </ul>
-            <h2 class="text-2xl">GUI (DAQ)</h2>
-            <ul>
-                <li>Recording Deflection: Raw deflection data using the ni-daqmx. Data acquisition is stored in the global variable deflection_data.</li>
-                <li>Convert to Thrust: Converts deflection to thrust measurements by calibrating with known force and deflection values, storing the resulting data in global variables.</li>
-                <li>Graphical Display: Deflection measurements and their uncertainties. Error bars representing the uncertainties. Generated using Matplotlib.</li>
-                <li>Export Options: Both figures (as .png) and raw data (as .csv). Acquired using pandas.</li>
+                <li>The project entails establishing serial communication using PySerial to command an Arduino in controlling a stepper 
+                    motor. Data acquisition and analysis are conducted through the NI-DAQmx Driver and PySerial, facilitating functions 
+                    like sendData for transmitting motor control data and low_pass_filter for smooth speed adjustments. Measurements are 
+                    converted into thrust values, ensuring accuracy by considering deflection sensitivity and a calibration force. Thrust 
+                    uncertainties are estimated by scaling the standard deviation of deflection, employing reliable error propagation 
+                    techniques. Calibration is achieved using the convert_to_thrust() function, which calibrates raw deflection to thrust 
+                    based on a predefined calibration force and sensitivity calculation. The GUI integration involves constructing a Tkinter
+                    window with intuitive elements such as clockwise/anticlockwise buttons, RPM sliders for speed adjustment, and angle 
+                    indicators in degrees for user-friendly interaction and visualization.
+                </li>
             </ul>
         </div>
     </div>
+    <div class="text-container">
+        <h3 class="text-2xl text-pink">Leveling Systems Python Code:</h3> 
+        <pre class="code-box small">
+            <code>
+                
+import serial
+import serial.tools.list_ports
+import tkinter as tk
 
+def move_custom(direction, steps):
+    global current_position, step_counter_label  # variables global
+    if direction == 'Forward':  # Check if the direction is forward
+        current_position += steps  # Increment the current position by the number of steps
+        ser.write(b'A' + str(steps).encode())  # Command for forward movement
+    else:
+        current_position -= steps 
+        ser.write(b'B' + str(steps).encode())  # Command for backward movement
+    step_counter_label.config(text=f"Step Count: {current_position}")  # Update the step counter
+
+# Function to stop everything immediately
+def stop_all():
+   ser.write(b'S')  # Send the stop command to Arduino
+   ser.flush()  # Flush the serial buffer to ensure the command is sent immediately
+
+#Function to move motor to zero position
+def move_to_zero():
+    global current_position  # variable global
+    steps_to_zero = -current_position  # Calculate the number of steps needed to move to position zero
+    if steps_to_zero != 0:  # Check if there are steps needed to move to zero
+        steps_to_zero -= current_position  # Decrement the current position by the number of steps
+        ser.write(b'B' + str(abs(steps_to_zero)).encode())  # Command to move backward to zero position
+        step_counter_label.config(text="Step Count: 0")
+
+#Function to quit
+def quit_app():
+    move_to_zero() 
+    ser.close()
+    root.quit()
+#GUI setup
+def create_gui():
+    global root, current_position, step_counter_label  # Declare root as a global variable
+    root = tk.Tk()
+    root.title("Stepper Motor Control")
+    current_position = 0
+
+    forward_button = tk.Button(root, text="Forward 100 steps", command=lambda: move_custom('Forward', 100))
+    forward_button.grid(row=0, column=0, padx=10, pady=10)
+
+    backward_button = tk.Button(root, text="Backward 100 steps", command=lambda: move_custom('Backward', 100))
+    backward_button.grid(row=0, column=1, padx=10, pady=10)
+
+    custom_button = tk.Button(root, text="Custom Steps", command=custom_steps)
+    custom_button.grid(row=1, columnspan=2, padx=10, pady=10)
+
+    quit_button = tk.Button(root, text="Quit", command=quit_app)
+    quit_button.grid(row=2, columnspan=2, padx=10, pady=10)
+
+    step_counter_label = tk.Label(root, text="Step Count: 0")
+    step_counter_label.grid(row=3, columnspan=2, padx=10, pady=10)
+
+    root.mainloop()
+
+#Function for custom steps input
+def custom_steps():
+    custom_window = tk.Toplevel(root)
+    custom_window.title("Custom Steps")
+
+    direction_label = tk.Label(custom_window, text="Direction:")
+    direction_label.grid(row=0, column=0, padx=10, pady=10)
+
+    direction_var = tk.StringVar(value="Forward")
+    direction_menu = tk.OptionMenu(custom_window, direction_var, "Forward", "Backward")
+    direction_menu.grid(row=0, column=1, padx=10, pady=10)
+
+    steps_label = tk.Label(custom_window, text="Steps:")
+    steps_label.grid(row=1, column=0, padx=10, pady=10)
+
+    steps_entry = tk.Entry(custom_window)
+    steps_entry.grid(row=1, column=1, padx=10, pady=10)
+
+    confirm_button = tk.Button(custom_window, text="Move", command=lambda: move_custom(direction_var.get(), int(steps_entry.get())))
+    confirm_button.grid(row=2, columnspan=2, padx=10, pady=10)
+#Arduino port
+def get_arduino_port():
+    ports = serial.tools.list_ports.comports()
+    for port in ports:
+        if 'COM3' in port.device: 
+            return port.device
+    return None
+
+#Main
+arduino_port = get_arduino_port()
+if arduino_port:
+    ser = serial.Serial(arduino_port, baudrate=9600, timeout=1)
+    create_gui()
+else:
+    print('Arduino not found on any port!')
+            </code>
+        </pre>
+    </div>
+    <div class="text-container">
+        <h3 class="text-2xl text-pink">Leveling Systems Arduino Code:</h3> 
+        <pre class="code-box small">
+            <code>
+                #include <AccelStepper.h>
+
+                    const int stepPin = 2; // Step pin connected to Arduino digital pin 2
+                    const int dirPin = 3;  // Direction pin connected to Arduino digital pin 3
+                    
+                    AccelStepper stepper(AccelStepper::DRIVER, stepPin, dirPin); // Stepper motor object
+                    
+                    void setup() {
+                      stepper.setMaxSpeed(1000); // Set maximum speed
+                      Serial.begin(9600); // Initialize serial communication
+                    }
+                    
+                    void loop() {
+                      if (Serial.available() >= 2) { // Check if there are enough bytes available
+                        char command = Serial.read(); // Read the command sent from Python
+                        
+                        // Check the command received
+                        switch (command) {
+                          case 'A': // Forward movement
+                          case 'B': // Backward movement
+                            {
+                              int steps = Serial.parseInt(); // Read the number of steps
+                              if (command == 'B') // If backward, make steps negative
+                                steps = -steps;
+                              stepper.move(steps); // Move the stepper motor
+                              stepper.runToPosition(); // Execute the movement
+                              break;
+                            }
+                        }
+                      }
+                    }
+            </code>
+        </pre>
+    </div>
 
     <section id="photo-album">
         <h2>Photo Album</h2>
@@ -116,107 +350,68 @@
             <div class="photo">
                 <img src="assets\img\PPT_6.jpg" alt="Photo 2">
             </div>
+            <div class="photo">
+                <img src="assets\img\PPT_7.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets\img\PPT_8.jpg" alt="Photo 2">
+            </div>
         </div>
     </section>
-<!-- scripts -->
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-    }
 
-    #photo-album {
-        padding: 20px 0;
-        text-align: center;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Adjusted to center vertically */
-        align-items: center;
-    }
-
-    .photo-grid {
-        display: flex; /* Set the container to use flexbox */
-        justify-content: center; /* Center the items horizontally */
-        gap: 10px; /* Add gap between items */
-        margin-bottom: 20px; /* Add margin at the bottom */
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-    }
-
-
-    .photo img {
-        max-width: 100px; /* Adjust the size of the images */
-        height: auto;
-        cursor: pointer; /* Change cursor to pointer when hovering over images */
-        transition: transform 0.3s ease; /* Add transition for smooth effect */
-    }
-
-    .photo video {
-        max-width: 100px; /* Adjust the size of the video in its default state */
-        height: auto;
-        cursor: pointer; /* Change cursor to pointer when hovering over the video */
-        transition: transform 0.3s ease; /* Add transition for smooth effect */
-    }
-
-    .photo img.expanded {
-        max-width: 30vw; /* Adjust the size of the expanded images */
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-        transition: none; /* Remove the transition effect */
-    }
-
-    .photo video.expanded {
-        max-width: 20vw; /* Adjust the size of the expanded video */
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-        transition: none; /* Remove the transition effect */
-    }
-</style>
-<script>
-    const mediaElements = document.querySelectorAll('.photo img, .photo video');
-
-    mediaElements.forEach(media => {
-        media.addEventListener('click', () => {
-            mediaElements.forEach(m => {
-                if (m !== media) {
-                    m.classList.remove('expanded');
-                }
+    <footer>
+        <div class="footer-container">
+            <nav class="foot-nav">
+                <ul>
+                    <li>
+                        <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
+                        <a href="tel:+12063533425">(206) 353-3425</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/felicity-cundiff/">Linkedin</a>
+                        <a href="https://github.com/Honeyyellowcat">Github</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    
+    <!-- scripts -->
+    <script>
+        document.querySelectorAll('.code-box').forEach(box => {
+            box.addEventListener('click', () => {
+                box.classList.toggle('expanded');
             });
-            media.classList.toggle('expanded');
         });
-    });
-</script>
-<script>
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link")
-    }
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab")
-    }
-    event.currentTarget.classList.add("active-link"); 
-    document.getElementById(tabname).classList.add("active-tab");
-}
-</script>
-<footer>
-    <nav class="foot-nav">
-        <ul>
-          <li>
-            <a href="https://github.com/Honeyyellowcat"> felicitycundiff@gmail.com </a>
-            <a href="https://github.com/Honeyyellowcat"> (206) 353-3425 </a></li>
-            <li><a href="https://www.linkedin.com/in/felicity-cundiff/"> Linkedin </a> 
-            <a href="https://github.com/Honeyyellowcat"> Github </a></li>
-        </ul>
-      </nav>
-</footer>
-</body>
-</html>
+    </script>
+    <script>
+        const mediaElements = document.querySelectorAll('.photo img, .photo video');
+    
+        mediaElements.forEach(media => {
+            media.addEventListener('click', () => {
+                mediaElements.forEach(m => {
+                    if (m !== media) {
+                        m.classList.remove('expanded');
+                    }
+                });
+                media.classList.toggle('expanded');
+            });
+        });
+    </script>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    </body>
+    </html>

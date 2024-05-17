@@ -1,107 +1,130 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Felicity: NDCL</title>
-    <!--icon-->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Felicity: NDCL</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-   <!--icon-->
-   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-   <link rel="icon" type="image/png" href="assets/img/F.png">
-   <!--slider-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
-   <!--tailwind.css-->
-   <script src="https://cdn.tailwindcss.com"></script>
-   <!--parallax-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-   <!--main CSS-->
-   <link rel="stylesheet" href="assets\css\style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/F.png">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Parallax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	<body>
-		<div class="header">
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="current.html">Current Work </a></li>
-				</ul>
-			</nav>
-		</div>
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="current.html">Current Work</a></li>
+                <li><a href="experience.html">Experiences</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Nonlinear Dynamics and Control Lab: Blue Origin RPO</h1>
+        <div class="image-container">
+            <img src="assets/img/NDCL_2.jpg" alt="Pulsed Plasma Thruster Stand">
+        </div>
+        <div class="text-container">
+            <h2 class="text-3xl text-pink">Summary:</h2>
+            <ul>
+                <li>C++ is a programming language commonly employed in various cutting-edge technologies like autonomous vehicles such as 
+					fixed-wing aircraft, underwater gliders, and space launch vehicles. It's also used for creating robot arms, underwater 
+					robots, and other autonomous systems, leveraging expertise in embedded systems. Additionally, tools like Blender, Python, 
+					and C++ are utilized for designing these robot arms and underwater robots to meet specific goals. Researchers also delve
+					 into studying animals like birds, bats, fish, and insects to learn from their precise sensing abilities in ever-changing 
+					 environments, offering valuable insights for advancing technology.
+				</li>
+            </ul>
+            <ul class="text-2xl">
+                <li>1. AprilTag Applications to Autonomous Spacecraft Docking: <a href="doc/Cheng_Furey-Soper_Hudson_AA_Sharc_2023.pdf" target="_blank">Here</a></li>
+            </ul>
+            <h2 class="text-2xl text-pink">Past Work: Fiducial Markers</h2>
+            <p>AprilTag is a type of fiducial marker, a specific collection of 2D barcodes. When placed on a known object, observation of the markers can be used to calculate relative distance and orientation of the object.</p>
+            <p>AprilTag accuracies were tested with several variables to predict spacecraft applicability:</p>
+            <ul>
+                <li>- Surface curvature affects the accuracy of AprilTag detection.</li>
+                <li>- The distance from the camera impacts the precision of AprilTag recognition.</li>
+                <li>- The size of the AprilTag influences its detectability.</li>
+                <li>- The orientation relative to the camera affects the reliability of AprilTag readings.</li>
+                <li>- Shadow obfuscation can degrade the performance of AprilTag detection.</li>
+            </ul>
+            <h2 class="text-2xl text-pink">Testbed & Robot Operating System (ROS)</h2>
+            <h3 class="text-2xl text-pink">ROS: Background</h3>
+            <ul>
+                <li>The control system will be bench-tested using 6DOF robotic manipulator arms to carry camera-equipped spacecraft models through simulated orbital trajectories.</li>
+                <li>ROS, or Robot Operating System, is an open-source collection of software libraries which is being used to program the robotic arms.</li>
+            </ul>
+            <h3 class="text-2xl text-pink">ROS: Physical System</h3>
+            <ul>
+                <li>The objective is to set up a pair of robotic manipulators that can carry a camera (observer) and a spacecraft model 
+					with AprilTags attached (target). The trajectory of the observer could then be controlled through a feedback loop 
+					using data from the AprilTag-camera system.</li>
+                <li>Over the last year, the adaptation of existing single-arm configurations to a dual-arm configuration has been under 
+					development. This involves adapting existing Xacro/UDRF models for dual-arm, adapting launch files for dual-arm, and 
+					visualization of the dual-arm system in RViz.</li>
+            </ul>
+            <h3 class="text-2xl text-pink">ROS: Simulation</h3>
+            <ul>
+                <li>Before running physical tests, planned trajectories will be demonstrated in virtual simulations. This will help prevent unwanted collisions during testing. Motion planning tools interface with the ROS simulation platform, Gazebo.</li>
+            </ul>
+            <h2 class="text-2xl text-pink">Future Work</h2>
+            <ul>
+                <h3 class="text-2xl text-pink">Next Steps for Robot Programming</h3>
+                <li>- Development of the Gazebo model.</li>
+                <li>- Development of the inverse kinematics model (MoveIt).</li>
+                <li>- Implementation of a feedback loop into robotic controls.</li>
+            </ul>
+            <ul>
+                <h3 class="text-2xl text-pink">Improving AprilTag Characterization</h3>
+                <li>To fully grasp the capabilities of AprilTags, we need to delve deeper into their accuracy through an expanded 
+					preliminary study. This entails figuring out the right size of tags relative to distance for optimal performance 
+					in various missions and considering the curvature of modern spacecraft fleets. Gathering ample data within these 
+					parameters is crucial. Additionally, we aim to establish guidelines for placing AprilTags on spacecraft to ensure
+					 precise motion tracking from every angle.
+				</li>
+            </ul>
+            <h2 class="text-2xl text-pink">Blender</h2>
+            <ul>
+                <li>- Blender experimentation involves utilizing the bpy (Blender Python) package.</li>
+                <li>- A script is developed to rotate a Blender-made object and capture pictures at fixed intervals.</li>
+            </ul>
+            <h2 class="text-2xl text-pink">Robotics with Python</h2>
+            <ul>
+                <li>In robotics using Python, people usually create Python scripts to make the robot arms move in specific ways. 
+					They start by trying out simple movements to understand how it all works. The main aim is to give the robot 
+					precise instructions, like a mathematical formula describing a curve and where it should start and finish. 
+					These instructions help generate a script that the arm follows to move exactly as desired.
+				</li>
+            </ul>
+        </div>
+
 	
-		<div class="wrapper">
-			<h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Nonlinear Dynamics and Control Lab: Blue Origin RPO</h1>
-			<div class="image-container">
-				<img src="assets/img/PPT_2.jpg" alt="Pulsed Plasma Thruster Stand">
-			</div>
-			<div class="text-container">
-				<h2 class="text-3xl">Summary:</h2>
-							<ul>
-								<li>C++ used for autonomous vehicle systems (fixed-wing aircraft, underwater gliders, space launch vehicles)
-								Robot arms involving, underwater robots, and autonomous vehicles through embedded systems expertise
-								Blender, Python, and C++ utilized for the design of robot arms and underwater robots for overall objectives
-								Studied birds, bats, fish, and insects as precise sensing machines in dynamic environments, gaining insight</li>
-							</ul>
-						</p>
-						<h2 class="text-2xl">Detailed Information:</h2>
-						<p>
-							<li>- Investigating AprilTag for spacecraft control.</li>
-						</p>
-						<h2 class="text-2xl">Utilizes technologies such as:</h2>
-						<p>
-							<li>Interbotix X-Series ViperX 300 Robot Arm 6DOF.</li>
-							<li>Ubuntu 20.04.6 LTS (Focal Fossa).</li>
-							<li>ROS Noetic Ninjemys (current) and ROS 2 Galactic Geochelone (upcoming).</li>
-						</p>
-						<h2 class="text-2xl">Recommended Setup:</h2>
-						<p>
-							<li>Dual boot of Windows/Ubuntu Linux.</li>
-							<li>GitHub Desktop on Linux.</li>
-							<li>Anaconda for Python package management.</li>
-						</p>
-						<h2 class="text-2xl">Software Installation:</h2>
-						<p>
-							<li>- ROS Noetic and Interbotix workspace setup.</li>
-						</p>
-						<h2 class="text-2xl">Usage:</h2>
-						<p>
-							<li>Virtual launches in RViz and Gazebo.</li>
-							<li>Physical launches with RViz.</li>
-							<li>MoveIt launches.</li>
-							<li>Python demos.</li>
-						</p>
-						<h2 class="text-2xl">Uninstall/Reinstall:</h2>
-						<p>
-							<li>Delete the Interbotix workspace.</li>
-							<li>Purge ROS Noetic installation.</li>
-						</p> 
-						<h2 class="text-2xl">Blender Experimentation:</h2>
-						<p>
-							<li>Utilizes bpy (Blender Python) package.</li>
-							<li>Script rotates a Blender-made object and captures pictures at fixed intervals.</li>
-						</p> 
-						<h2 class="text-2xl">Robotics with Python:</h2>
-						<p>
-							<li>Users typically build Python scripts with predetermined movements for the arms.</li>
-							<li>Initial steps involve experimenting with basic movements.</li>
-							<li>Ultimate goal: Provide trajectory data as input, such as a mathematical expression for a curve along with start/end points, to generate an output script that the arm can execute to produce the desired trajectory.</li>
-						</p>
-					</div>
-				</section>
-			</div>
-			<footer>
-				<nav class="foot-nav">
-					<ul>
-					  <li>
-						<a href="https://github.com/Honeyyellowcat"> felicitycundiff@gmail.com </a>
-						<a href="https://github.com/Honeyyellowcat"> (206) 353-3425 </a></li>
-						<li><a href="https://www.linkedin.com/in/felicity-cundiff/"> Linkedin </a> 
-						<a href="https://github.com/Honeyyellowcat"> Github </a></li>
-					</ul>
-				  </nav>
-			</footer>
+        <footer>
+            <nav class="foot-nav">
+                <ul>
+                    <li>
+                        <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
+                        <a href="tel:+12063533425">(206) 353-3425</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/felicity-cundiff/">Linkedin</a>
+                        <a href="https://github.com/Honeyyellowcat">Github</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 </html>
+

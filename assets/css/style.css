@@ -276,6 +276,98 @@
   font-size: .813rem;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#photo-album {
+  padding: 20px 0;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Adjusted to center vertically */
+  align-items: center;
+}
+
+.photo-grid {
+  display: flex; /* Set the container to use flexbox */
+  justify-content: center; /* Center the items horizontally */
+  gap: 10px; /* Add gap between items */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+
+.photo img {
+  max-width: 100px; /* Adjust the size of the images */
+  height: auto;
+  cursor: pointer; /* Change cursor to pointer when hovering over images */
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.photo video {
+  max-width: 100px; /* Adjust the size of the video in its default state */
+  height: auto;
+  cursor: pointer; /* Change cursor to pointer when hovering over the video */
+  transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.photo img.expanded {
+  max-width: 30vw; /* Adjust the size of the expanded images */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: none; /* Remove the transition effect */
+}
+
+.photo video.expanded {
+  max-width: 20vw; /* Adjust the size of the expanded video */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: none; /* Remove the transition effect */
+}
+/* Y
+our existing CSS styles */
+    /* Style for the code box */
+    .code-box {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace; /* Optional: Specify a fixed-width font */
+  }
+
+  /* Style for the code text */
+  .code-box code {
+      font-size: 14px;
+      color: #333; /* Optional: Change the text color */
+  }
+  /* Your existing CSS styles */
+    /* Style for the code box */
+    .code-box {
+      background-color: #FFC0CB;
+      padding: 20px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace; /* Optional: Specify a fixed-width font */
+      transition: max-height 0.3s ease; /* Add transition for smooth expansion */
+      max-height: 100px; /* Set initial height */
+      overflow: hidden; /* Hide overflow content */
+      cursor: pointer;
+  }
+
+  /* Style for the expanded box */
+  .code-box.expanded {
+      max-height: none; /* Remove max-height to expand */
+  }
+
 /* -------------- Experience portal */
 /* For WebKit/Blink browsers */
 ::-webkit-scrollbar {
@@ -461,6 +553,17 @@ footer {
 .padded-heading {
   padding: 20px; /* Adjust the padding value as needed */
   text-align: center; /* Centers the text horizontally */
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ---------- Projects */
