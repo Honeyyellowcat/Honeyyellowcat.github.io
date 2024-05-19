@@ -89,7 +89,7 @@
     </header>
 
     <!--::::::::::::::::::- Hero Section -::::::::::::::::::-->
-    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-20 lg:pt-36 overflow-hidden" id="home">
+    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-20 lg:pt-36 overflow-hidden" id="home" style="height: 1180px;">
       <div class="max-w-7xl relative flex justify-center mx-auto flex-col-reverse lg:flex-row lg:justify-between">
           <div class="flex flex-col mt-8 justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
               <h1 class="text-2xl font-normal leading-none lg:text-5xl text-[#fff] sr01">
@@ -144,7 +144,7 @@
     </section>
 
     <!--::::::::::::::::::- About me Section -::::::::::::::::::-->
-<section class="bg-[#000000] p-6 mx-auto pb-14 pt-20 lg:px-14 lg:pt-32 lg:pb-28" id="about">
+<section class="bg-[#000000] p-6 mx-auto pb-14 pt-20 lg:px-14 lg:pt-32 lg:pb-28" id="about" style="height: 1180px;">
     <div class="flex justify-center text-center mb-20 mt-4 mx-auto">
         <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-xl md:text-4xl z-10 sr01">
             About
@@ -269,11 +269,9 @@
                     <span class="transition-transform transform" id="icon-projects">▼</span>
                 </button>
                 <ul id="projects" class="hidden">
-                    <li>A&A Senior Class Rep</li>
-                    <li>Seattle, WA</li>
-                    <li>August 2023 - Present</li>
-                    <li>Planning events and improving staff-student communication. Striving to enhance the student experience.</li>
-                    <li>Most recent USAC event flyer: <a href="assets/img/USAC_FLYER.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></li>
+                    <li>A&A Senior Class Rep - Seattle, WA (August 2023 - Present)</li>
+                    <li>- Planning events and improving staff-student communication. Striving to enhance the student experience.</li>
+                    <li>- Most recent USAC event flyer: <a href="assets/img/USAC_FLYER.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></li>
                 </ul>
             </div>
             <div class="bg-[#212121] rounded-md p-4 mb-8">
@@ -391,15 +389,6 @@
         <li><a href="https://github.com/Honeyyellowcat">Github</a></li>
       </ul>
     </nav> -->
-    <script>
-        function toggleSection(id) {
-            const section = document.getElementById(id);
-            const icon = document.getElementById(`icon-${id}`);
-            section.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        }
-    </script>
-        
         <!---scrollreveal--->
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         <!---slider js--->
@@ -407,5 +396,7 @@
         <!---main js--->
         <script src="assets/js/js.js"></script>
         <script src="assets/js/photos.js"></script>
+        <script src="assets/js/nav.js"></script>
+        <script src="assets/js/skilltog.js"></script>
   </body>
 </html>

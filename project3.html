@@ -111,20 +111,6 @@
         </div>
     </section>
 
-    <script>
-        const mediaElements = document.querySelectorAll('.photo img, .photo video');
-
-        mediaElements.forEach(media => {
-            media.addEventListener('click', () => {
-                mediaElements.forEach(m => {
-                    if (m !== media) {
-                        m.classList.remove('expanded');
-                    }
-                });
-                media.classList.toggle('expanded');
-            });
-        });
-    </script>
 	<footer>
         <nav class="foot-nav">
             <ul>
@@ -139,5 +125,9 @@
             </ul>
         </nav>
     </footer>
+
+
+        <!---main js--->
+        <script src="assets/js/photos2.js"></script>
 </body>
 </html>

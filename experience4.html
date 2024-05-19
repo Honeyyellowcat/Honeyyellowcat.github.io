@@ -203,137 +203,149 @@
         <h3 class="text-2xl text-pink">Leveling Systems Python Code:</h3> 
         <pre class="code-box small">
             <code>
+                import serial
+                import serial.tools.list_ports
+                import tkinter as tk
+                import math
                 
-import serial
-import serial.tools.list_ports
-import tkinter as tk
-
-def move_custom(direction, steps):
-    global current_position, step_counter_label  # variables global
-    if direction == 'Forward':  # Check if the direction is forward
-        current_position += steps  # Increment the current position by the number of steps
-        ser.write(b'A' + str(steps).encode())  # Command for forward movement
-    else:
-        current_position -= steps 
-        ser.write(b'B' + str(steps).encode())  # Command for backward movement
-    step_counter_label.config(text=f"Step Count: {current_position}")  # Update the step counter
-
-# Function to stop everything immediately
-def stop_all():
-   ser.write(b'S')  # Send the stop command to Arduino
-   ser.flush()  # Flush the serial buffer to ensure the command is sent immediately
-
-#Function to move motor to zero position
-def move_to_zero():
-    global current_position  # variable global
-    steps_to_zero = -current_position  # Calculate the number of steps needed to move to position zero
-    if steps_to_zero != 0:  # Check if there are steps needed to move to zero
-        steps_to_zero -= current_position  # Decrement the current position by the number of steps
-        ser.write(b'B' + str(abs(steps_to_zero)).encode())  # Command to move backward to zero position
-        step_counter_label.config(text="Step Count: 0")
-
-#Function to quit
-def quit_app():
-    move_to_zero() 
-    ser.close()
-    root.quit()
-#GUI setup
-def create_gui():
-    global root, current_position, step_counter_label  # Declare root as a global variable
-    root = tk.Tk()
-    root.title("Stepper Motor Control")
-    current_position = 0
-
-    forward_button = tk.Button(root, text="Forward 100 steps", command=lambda: move_custom('Forward', 100))
-    forward_button.grid(row=0, column=0, padx=10, pady=10)
-
-    backward_button = tk.Button(root, text="Backward 100 steps", command=lambda: move_custom('Backward', 100))
-    backward_button.grid(row=0, column=1, padx=10, pady=10)
-
-    custom_button = tk.Button(root, text="Custom Steps", command=custom_steps)
-    custom_button.grid(row=1, columnspan=2, padx=10, pady=10)
-
-    quit_button = tk.Button(root, text="Quit", command=quit_app)
-    quit_button.grid(row=2, columnspan=2, padx=10, pady=10)
-
-    step_counter_label = tk.Label(root, text="Step Count: 0")
-    step_counter_label.grid(row=3, columnspan=2, padx=10, pady=10)
-
-    root.mainloop()
-
-#Function for custom steps input
-def custom_steps():
-    custom_window = tk.Toplevel(root)
-    custom_window.title("Custom Steps")
-
-    direction_label = tk.Label(custom_window, text="Direction:")
-    direction_label.grid(row=0, column=0, padx=10, pady=10)
-
-    direction_var = tk.StringVar(value="Forward")
-    direction_menu = tk.OptionMenu(custom_window, direction_var, "Forward", "Backward")
-    direction_menu.grid(row=0, column=1, padx=10, pady=10)
-
-    steps_label = tk.Label(custom_window, text="Steps:")
-    steps_label.grid(row=1, column=0, padx=10, pady=10)
-
-    steps_entry = tk.Entry(custom_window)
-    steps_entry.grid(row=1, column=1, padx=10, pady=10)
-
-    confirm_button = tk.Button(custom_window, text="Move", command=lambda: move_custom(direction_var.get(), int(steps_entry.get())))
-    confirm_button.grid(row=2, columnspan=2, padx=10, pady=10)
-#Arduino port
-def get_arduino_port():
-    ports = serial.tools.list_ports.comports()
-    for port in ports:
-        if 'COM3' in port.device: 
-            return port.device
-    return None
-
-#Main
-arduino_port = get_arduino_port()
-if arduino_port:
-    ser = serial.Serial(arduino_port, baudrate=9600, timeout=1)
-    create_gui()
-else:
-    print('Arduino not found on any port!')
+                def move_custom(direction, degrees):
+                    global current_steps, step_counter_label, current_degrees  # Declare variables as global
+                    steps_per_revolution = 200 #confirm this empirically
+                    mm_per_revolution = 1.37 #confirm this empirically
+                    lever_arm = 20 #inches
+                    inch_to_mm = 25.4
+                    degress_to_rad = math.pi/180
+                    
+                    steps=math.sin(degrees*degress_to_rad)*lever_arm/(mm_per_revolution/inch_to_mm)*steps_per_revolution
+                    
+                    if direction == 'Up':  # Check if the direction is forward
+                        current_steps += steps  # Increment the current position by the number of steps
+                        current_degrees +=degrees
+                        command = 'A' + str(steps) + '\n'  # Command for forward movement
+                    elif direction == 'Down':
+                        current_steps -= steps  # Decrement the current position by the number of steps
+                        current_degrees -=degrees
+                        command = 'B' + str(steps) + '\n'  # Command for backward movement
+                    #print(f"Sending command: {command}")  # Debug print
+                    ser.write(command.encode())  # Send the command to Arduino
+                    step_counter_label.config(text=f"Angular position: {current_degrees}")  # Update the step counter
+                
+                # Function to stop everything immediately
+                def stop_all():
+                    ser.write(b'S\n')  # Send the stop command to Arduino
+                    ser.flush()  # Flush the serial buffer to ensure the command is sent immediately
+                
+                # Function to move motor to zero position
+                def move_to_zero():
+                    global current_steps, current_degrees  # variable global
+                    if current_steps >=0:  # Check if there are steps needed to move to zero
+                        command= 'B' + str(abs(current_steps)) + '\n'  # Command to move backward to zero position
+                        ser.write(command.encode())
+                    elif current_steps <0:
+                        command= 'A' + str(abs(current_steps)) + '\n' # Command to move backward to zero position
+                        ser.write(command.encode())
+                    current_steps = 0  # Reset current position
+                    current_degrees = 0
+                    step_counter_label.config(text="Angular position: 0")  
+                
+                # Function to quit
+                def quit_app():
+                    move_to_zero() 
+                    ser.close()  
+                    root.quit()  
+                
+                # GUI setup
+                def create_gui():
+                    global root, current_steps, step_counter_label, current_degrees  # Declare root as a global variable
+                    root = tk.Tk()
+                    root.title("Stepper Motor Control")
+                    current_steps = 0
+                    current_degrees=0
+                
+                    custom_button = tk.Button(root, text="Move (degrees)", command=custom_steps)
+                    custom_button.grid(row=0, columnspan=2, padx=10, pady=10)
+                
+                    quit_button = tk.Button(root, text="Quit", command=quit_app)
+                    quit_button.grid(row=1, columnspan=2, padx=10, pady=10)
+                
+                    step_counter_label = tk.Label(root, text="Angular position: 0")
+                    step_counter_label.grid(row=2, columnspan=2, padx=10, pady=10)
+                
+                    root.mainloop()
+                
+                # Function for custom steps input
+                def custom_steps():
+                    custom_window = tk.Toplevel(root)
+                    custom_window.title("Move (degrees)")
+                
+                    direction_label = tk.Label(custom_window, text="Direction:")
+                    direction_label.grid(row=0, column=0, padx=10, pady=10)
+                
+                    direction_var = tk.StringVar(value="Up")
+                    direction_menu = tk.OptionMenu(custom_window, direction_var, "Up", "Down")
+                    direction_menu.grid(row=0, column=1, padx=10, pady=10)
+                
+                    steps_label = tk.Label(custom_window, text="Degrees:")
+                    steps_label.grid(row=1, column=0, padx=10, pady=10)
+                
+                    steps_entry = tk.Entry(custom_window)
+                    steps_entry.grid(row=1, column=1, padx=10, pady=10)
+                
+                    confirm_button = tk.Button(custom_window, text="Move", command=lambda: move_custom(direction_var.get(), int(steps_entry.get())))
+                    confirm_button.grid(row=2, columnspan=2, padx=10, pady=10)
+                
+                # Arduino port
+                def get_arduino_port():
+                    ports = serial.tools.list_ports.comports()
+                    for port in ports:
+                        if 'COM3' in port.device: 
+                            return port.device
+                    return None
+                
+                # Main
+                arduino_port = get_arduino_port()
+                if arduino_port:
+                    ser = serial.Serial(arduino_port, baudrate=9600, timeout=1)
+                    create_gui()
+                else:
+                    print('Arduino not found on any port!')
             </code>
         </pre>
     </div>
+    
     <div class="text-container">
         <h3 class="text-2xl text-pink">Leveling Systems Arduino Code:</h3> 
         <pre class="code-box small">
             <code>
-                #include <AccelStepper.h>
-
-                    const int stepPin = 2; // Step pin connected to Arduino digital pin 2
-                    const int dirPin = 3;  // Direction pin connected to Arduino digital pin 3
-                    
-                    AccelStepper stepper(AccelStepper::DRIVER, stepPin, dirPin); // Stepper motor object
-                    
-                    void setup() {
-                      stepper.setMaxSpeed(1000); // Set maximum speed
-                      Serial.begin(9600); // Initialize serial communication
-                    }
-                    
-                    void loop() {
-                      if (Serial.available() >= 2) { // Check if there are enough bytes available
-                        char command = Serial.read(); // Read the command sent from Python
-                        
-                        // Check the command received
-                        switch (command) {
-                          case 'A': // Forward movement
-                          case 'B': // Backward movement
-                            {
-                              int steps = Serial.parseInt(); // Read the number of steps
-                              if (command == 'B') // If backward, make steps negative
-                                steps = -steps;
-                              stepper.move(steps); // Move the stepper motor
-                              stepper.runToPosition(); // Execute the movement
-                              break;
-                            }
-                        }
+                const int stepPin = 2; // Step pin connected to Arduino digital pin 2
+                const int dirPin = 3;  // Direction pin connected to Arduino digital pin 3
+                const int enPin = 4; // Enable pin
+                
+                void setup() {
+                  stepper.setMaxSpeed(3000); // Set maximum speed
+                  Serial.begin(9600); // Initialize serial communication
+                  digitalWrite(dirPin, HIGH);
+                  //digitalWrite(4, HIGH); //LOW is on?
+                }
+                
+                void loop() {
+                  if (Serial.available() >= 2) { // Check if there are enough bytes available
+                    String str = Serial.readString(); // Read the command sent from Python
+                    String command = str.substring(0,1);
+                    String stepsstr= str.substring(1,str.length());
+                    int steps=stepsstr.toInt();
+                    if (command == "A") //set dirPin based on direction input
+                      digitalWrite(dirPin, HIGH);
+                    if (command == "B")
+                      digitalWrite(dirPin, LOW);
+                    for (int i=0; i<=steps; i++) {
+                      igitalWrite(stepPin, HIGH);
+                      delay(1); //change the delay value to adjust motor speed
+                      digitalWrite(stepPin, LOW);
+                      delay(1);
                       }
                     }
+                  }
             </code>
         </pre>
     </div>
@@ -376,42 +388,10 @@ else:
         </div>
     </footer>
     
-    <!-- scripts -->
-    <script>
-        document.querySelectorAll('.code-box').forEach(box => {
-            box.addEventListener('click', () => {
-                box.classList.toggle('expanded');
-            });
-        });
-    </script>
-    <script>
-        const mediaElements = document.querySelectorAll('.photo img, .photo video');
-    
-        mediaElements.forEach(media => {
-            media.addEventListener('click', () => {
-                mediaElements.forEach(m => {
-                    if (m !== media) {
-                        m.classList.remove('expanded');
-                    }
-                });
-                media.classList.toggle('expanded');
-            });
-        });
-    </script>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link")
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+
+        <!---main js--->
+        <script src="assets/js/codebox.js"></script>
+        <script src="assets/js/photos2.js"></script>
+        <script src="assets/js/tablink.js"></script>
     </body>
     </html>
