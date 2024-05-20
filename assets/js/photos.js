@@ -1,9 +1,9 @@
 // Array of image sources
 var images = [
-    'assets/img/me_1.jpg', 
+    'assets/img/SpaceTeam.jpeg',
     'assets/img/am_PNAA_1.jpg', 
     'assets/img/am_PNAA_2.jpg', 
-    'assets/img/SG_Feature.png', 
+    'assets/img/SG_Feature.png',
     'assets/img/me_2.jpg',
     'assets/img/me_3.jpg', 
     'assets/img/me_4.jpg', 
