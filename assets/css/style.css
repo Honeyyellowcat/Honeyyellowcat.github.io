@@ -388,7 +388,7 @@ our existing CSS styles */
 }
 
 body {
-  background-color: #212121;
+  background-color: #000000;
   color: #FDFCF3;
   font-family: Arial, sans-serif;
 }
@@ -618,4 +618,144 @@ body {
 
 .photo video.expanded {
   max-width: 20vw;
+}
+
+/* General styling for the sections */
+section {
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-section {
+  background-color: #000000;
+}
+
+.skill-section {
+  background-color: #000000;
+}
+
+/* Responsive styles to prevent overlap */
+@media (max-width: 768px) {
+  .about-section, .skill-section {
+      padding: 2rem 1rem;
+  }
+  
+  .skill-section {
+      margin-top: 2rem;
+  }
+}
+
+/* Specific styling for the toggle buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FE8EA8;
+  font-size: 1rem;
+  font-weight: medium;
+}
+
+button span {
+  transition: transform 0.3s;
+}
+
+button span.rotate {
+  transform: rotate(180deg);
+}
+
+/* Hidden sections */
+.hidden {
+  display: none;
+}
+/* Set a fixed size for the image container */
+.profile-image-container {
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ensure images fill the container */
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+        /* General styling for the sections */
+        section {
+          padding: 4rem 1rem;
+          margin-bottom: 2rem;
+      }
+
+      .about-section {
+          background-color: #000000;
+      }
+
+      .skill-section {
+          background-color: #000000;
+      }
+
+      /* Image container styling */
+      .profile-image-container {
+          width: 300px; /* Adjust width as needed */
+          height: 300px; /* Adjust height as needed */
+          overflow: hidden;
+          position: relative;
+      }
+
+      /* Ensure images fill the container */
+      .profile-image-container img {
+        width: 100%; /* Ensure the image fills the container horizontally */
+        height: 100%; /* Ensure the image fills the container vertically */
+        object-fit: cover; /* Maintain aspect ratio while filling the container */
+    }
+
+
+      /* Responsive styles to prevent overlap */
+      @media (max-width: 768px) {
+          .about-section, .skill-section {
+              padding: 2rem 1rem;
+          }
+          
+          .skill-section {
+              margin-top: 2rem;
+          }
+      }
+
+      /* Specific styling for the toggle buttons */
+      button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #FE8EA8;
+          font-size: 1rem;
+          font-weight: medium;
+      }
+
+      button span {
+          transition: transform 0.3s;
+      }
+
+      button span.rotate {
+          transform: rotate(180deg);
+      }
+
+      /* Hidden sections */
+      .hidden {
+          display: none;
+      }
+/* Adjusted width for the text column */
+.profile-text {
+  flex: 1; /* Allow the text column to grow */
+}
+
+/* Adjusted height for the image container */
+.profile-image-container {
+  width: 100%; /* Take up the full width of the container */
+  max-width: 400px; /* Limit the maximum width of the image */
+  height: 400px; /* Adjust the height of the image container */
 }
