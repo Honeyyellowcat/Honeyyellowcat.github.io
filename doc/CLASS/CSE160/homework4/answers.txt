@@ -1,0 +1,15 @@
+These questions are for Part 2 and assume that you've finished implementing and running analysis.py.
+
+1. What happened to all the centroids? Why are there fewer than the 10 initial centroids?
+
+Answer: One possibility for this could be that during the kmeans.py clustering process, some centroids 
+might have ended up without any data points assigned to them. Another possibility could be that some 
+centroids might have merged during the clustering process, and due to this, there could be fewer centroids overall.
+
+2. What's the accuracy of the algorithm for the MNIST dataset? By looking at the
+centroids, which digits are easier to be distinguished by the algorithm,
+and which are harder?
+
+Answer: To determine the accuracy of the algorithm for the dataset, we can run the accuracy function from 
+kmeans.py. The accuracy would be the ratio of correctly classified data points to the total number of data 
+points. We can ascertain which digits are easier or harder to distinguish by observing each digit class.

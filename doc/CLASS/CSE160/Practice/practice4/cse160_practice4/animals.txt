@@ -1,0 +1,10 @@
+cows
+sheep
+pigs
+goats
+cats
+dogs
+chickens
+horses
+rats
+mice
