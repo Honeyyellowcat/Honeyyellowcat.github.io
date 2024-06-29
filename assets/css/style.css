@@ -122,10 +122,24 @@
   .btn__hover:hover::before {
     transform: scaleX(1);
   }
+/* HERE front Button Add styles to increase text size */
+.content h4 {
+  font-size: 24px; /* Increase as needed */
+}
+
+.content h2 {
+  font-size: 36px; /* Increase as needed */
+}
+
+.btn {
+  font-size: 18px; /* Increase as needed */
+  padding: 10px 20px; /* Increase padding for larger button */
+}
+
 
   /***slider button**/
   .swiper-pagination-bullet {
-    width: 40px !important;
+    width: 0px !important;
     height: 1.5px !important;
     border-radius: 20px !important;
     background: #fff !important;
