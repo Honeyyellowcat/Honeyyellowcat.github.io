@@ -35,80 +35,250 @@
         <div class="image-container">
             <img src="assets/img/NDCL_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
-        <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary:</h2>
+        <div class="text-container"><h2 class="text-3xl text-pink">Summary:</h2>
             <ul>
-                <li>C++ is a programming language commonly employed in various cutting-edge technologies like autonomous vehicles such as 
-					fixed-wing aircraft, underwater gliders, and space launch vehicles. It's also used for creating robot arms, underwater 
-					robots, and other autonomous systems, leveraging expertise in embedded systems. Additionally, tools like Blender, Python, 
-					and C++ are utilized for designing these robot arms and underwater robots to meet specific goals. Researchers also delve
-					 into studying animals like birds, bats, fish, and insects to learn from their precise sensing abilities in ever-changing 
-					 environments, offering valuable insights for advancing technology.
-				</li>
+                <li>- C++ is used in cutting-edge technologies such as autonomous vehicles (fixed-wing aircraft, underwater gliders, space launch vehicles), robot arms, and underwater robots. It's crucial for embedded systems expertise.</li>
+                <li>- Tools like Blender, Python, and C++ are essential for designing these systems to meet specific goals.</li>
+                <li>- Researchers study animals like birds, bats, fish, and insects for insights into precise sensing abilities in changing environments, aiding technology advancement.</li>
             </ul>
+            
             <ul class="text-2xl">
                 <li>1. AprilTag Applications to Autonomous Spacecraft Docking: <a href="doc/Cheng_Furey-Soper_Hudson_AA_Sharc_2023.pdf" target="_blank">Here</a></li>
+                <li>2. Revolutionizing space rendezvous: Testing a groundbreaking precision tool for Blue Origin: <a href="https://www.aa.washington.edu/news/article/2024-05-13/revolutionizing-space-rendezvous" target="_blank">Here</a></li>
             </ul>
-            <h2 class="text-2xl text-pink">Past Work: Fiducial Markers</h2>
-            <p>AprilTag is a type of fiducial marker, a specific collection of 2D barcodes. When placed on a known object, observation of the markers can be used to calculate relative distance and orientation of the object.</p>
-            <p>AprilTag accuracies were tested with several variables to predict spacecraft applicability:</p>
+            <h2 class="text-3xl text-pink">Testbed & Robot Operating System (ROS)</h2>
             <ul>
-                <li>- Surface curvature affects the accuracy of AprilTag detection.</li>
-                <li>- The distance from the camera impacts the precision of AprilTag recognition.</li>
-                <li>- The size of the AprilTag influences its detectability.</li>
-                <li>- The orientation relative to the camera affects the reliability of AprilTag readings.</li>
-                <li>- Shadow obfuscation can degrade the performance of AprilTag detection.</li>
-            </ul>
-            <h2 class="text-2xl text-pink">Testbed & Robot Operating System (ROS)</h2>
-            <h3 class="text-2xl text-pink">ROS: Background</h3>
-            <ul>
+                <h3 class="text-2xl text-pink">Background</h3>
+                <ul>
                 <li>The control system will be bench-tested using 6DOF robotic manipulator arms to carry camera-equipped spacecraft models through simulated orbital trajectories.</li>
                 <li>ROS, or Robot Operating System, is an open-source collection of software libraries which is being used to program the robotic arms.</li>
+                </ul>
             </ul>
-            <h3 class="text-2xl text-pink">ROS: Physical System</h3>
             <ul>
-                <li>The objective is to set up a pair of robotic manipulators that can carry a camera (observer) and a spacecraft model 
-					with AprilTags attached (target). The trajectory of the observer could then be controlled through a feedback loop 
-					using data from the AprilTag-camera system.</li>
-                <li>Over the last year, the adaptation of existing single-arm configurations to a dual-arm configuration has been under 
-					development. This involves adapting existing Xacro/UDRF models for dual-arm, adapting launch files for dual-arm, and 
-					visualization of the dual-arm system in RViz.</li>
+                <h3 class="text-2xl text-pink">Physical System</h3>
+                <ul>
+                    <li>The goal is to use two robotic arms: one carries a camera (observer), and the other carries a spacecraft model 
+                        with AprilTags attached (target). The camera's path can be controlled using feedback from the AprilTag-camera system.</li>
+                    <li>Over the past year, we've been modifying single-arm setups to work with dual arms. This includes adjusting Xacro/URDF models,
+                        launch files, and visualizing the dual-arm system in RViz.</li>
+                </ul>
+                
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/robot5.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/arm.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">
+                                </div>
+                        </div>
+                    </div>
+                <div class="text-container">
+                    <h3 class="text-2xl text-pink">AprilTag Code:</h3> 
+                    <pre class="code-box small">
+                        <code>
+                            import apriltag
+                            import argparse
+                            import cv2
+                            
+                            # Argument parser setup
+                            ap = argparse.ArgumentParser()
+                            ap.add_argument("-i", "--image", required=True, help="path to input image containing AprilTag")
+                            args = ap.parse_args()
+                            
+                            # Load and preprocess image
+                            image = cv2.imread(args.image)
+                            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+                            
+                            # Detect AprilTags
+                            detector = apriltag.Detector(apriltag.DetectorOptions(families="tag36h11"))
+                            results = detector.detect(gray)
+                            print(f"[INFO] {len(results)} total AprilTags detected")
+                            
+                            # Draw results
+                            for r in results:
+                                (ptA, ptB, ptC, ptD) = map(tuple, map(lambda p: (int(p[0]), int(p[1])), r.corners))
+                                for (start, end) in zip([ptA, ptB, ptC, ptD], [ptB, ptC, ptD, ptA]):
+                                    cv2.line(image, start, end, (0, 255, 0), 2)
+                                
+                                cv2.circle(image, tuple(map(int, r.center)), 5, (0, 0, 255), -1)
+                                tagFamily = r.tag_family.decode("utf-8")
+                                cv2.putText(image, tagFamily, (ptA[0], ptA[1] - 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                                print(f"[INFO] tag family: {tagFamily}")
+                            
+                            # Display the output image
+                            cv2.imshow("Image", image)
+                            cv2.waitKey(0)
+                        </code>
+                    </pre>
+                </div>
             </ul>
-            <h3 class="text-2xl text-pink">ROS: Simulation</h3>
             <ul>
+                <h3 class="text-3xl text-pink">Simulation</h3>
                 <li>Before running physical tests, planned trajectories will be demonstrated in virtual simulations. This will help prevent unwanted collisions during testing. Motion planning tools interface with the ROS simulation platform, Gazebo.</li>
+                </li>
+                <ul>
+                    <h3 class="text-2xl text-pink">Blender</h3>
+                    <li>- Blender experimentation involves utilizing the bpy (Blender Python) package.</li>
+                    <li>- A script is developed to rotate a Blender-made object and capture pictures at fixed intervals.</li>
+                </ul>
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <video src="assets/img/robot3.mov" autoplay loop muted class="rounded-image"></video>
+                        <div class="caption"></div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/blender2.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption"></div>
+                    </div>
+                </div>
+                
             </ul>
-            <h2 class="text-2xl text-pink">Future Work</h2>
+            <div class="text-container">
+            <h3 class="text-2xl text-pink">Camera moving Code:</h3> 
+            <pre class="code-box small">
+                <code>
+                        import bpy
+                        import os
+                        import csv
+                        import mathutils
+                        import math
+                        
+                        # Directory for output files
+                        output_dir = 'C:\'
+                        input_file = 'C:\'
+                        
+                        def convert_to_gif():
+                            os.system(f"ffmpeg -f image2 -i {output_dir}\\render%d.png video.avi")
+                            os.system(f"ffmpeg -i video.avi -pix_fmt rgb8 {output_dir}\\out.gif")
+                        
+                        def camera_step():
+                            global step, steps, point, pos_data, start_point, end_point, start_rot, end_rot, image_num
+                            
+                            # Set camera rotation and translation
+                            scene.camera.rotation_quaternion = start_rot.slerp(end_rot, step / steps)
+                            scene.camera.location = start_point.lerp(end_point, step / steps)
+                            
+                            # Render the current frame
+                            bpy.context.scene.render.filepath = os.path.join(output_dir, f'render{image_num}.png')
+                            bpy.ops.render.render(write_still=True)
+                            
+                            # Update step and image number
+                            step += 1
+                            image_num += 1
+                            
+                            if step == steps:
+                                if point < len(pos_data) - 2:  # Move to the next point
+                                    step = 0
+                                    point += 1
+                                    update_points_and_rotations()
+                                else:  # Finished last segment
+                                    convert_to_gif()
+                                    return None
+                        
+                            return 0.00
+                        
+                        def update_points_and_rotations():
+                            global start_point, end_point, start_rot, end_rot
+                            
+                            start = pos_data[point]
+                            end = pos_data[point + 1]
+                            
+                            bpy.data.objects['Start Point'].location = mathutils.Vector(start[:3])
+                            bpy.data.objects['End Point'].location = mathutils.Vector(end[:3])
+                            
+                            start_rot = mathutils.Euler(map(math.radians, start[3:]), 'XYZ').to_quaternion()
+                            end_rot = mathutils.Euler(map(math.radians, end[3:]), 'XYZ').to_quaternion()
+                            
+                            bpy.data.objects['Start Point'].rotation_quaternion = start_rot
+                            bpy.data.objects['End Point'].rotation_quaternion = end_rot
+                            
+                            start_point = bpy.data.objects['Start Point'].location
+                            end_point = bpy.data.objects['End Point'].location
+                        
+                        # Load positions from CSV file
+                        pos_data = []
+                        with open(input_file, newline='', encoding='utf-8-sig') as csvfile:
+                            reader = csv.reader(csvfile)
+                            pos_data = [list(map(float, row)) for row in reader]
+                        
+                        # Initialize scene and camera settings
+                        scene = bpy.context.scene
+                        scene.render.resolution_x = 512
+                        scene.render.resolution_y = 512
+                        scene.camera.data.angle = math.radians(75.0)
+                        scene.camera.rotation_mode = 'QUATERNION'
+                        
+                        # Set initial points and rotations
+                        point = 0
+                        update_points_and_rotations()
+                        
+                        # Initialize step counters
+                        steps = 1
+                        step = 0
+                        image_num = 0
+                        
+                        # Register the camera step function to run on a timer
+                        bpy.app.timers.register(camera_step)
+                    </code>
+                </pre>
+            </div><div>
+                <h2 class="text-3xl text-pink">Spacecraft Docking Applications</h2>
+                
+                <p>In response to the rapid growth of the spaceflight industry, the Nonlinear Dynamics and Control Laboratory, in collaboration with Blue Origin, is developing an advanced control system. This system integrates fiducial markers to enhance spacecraft docking by improving:</p>
+            
+                <ul>
+                    <li>- Localization, guidance, and navigation for autonomous docking</li>
+                    <li>- Efficiency in personnel transport, supply exchange, and refueling operations</li>
+                    <li>- Effectiveness in repair, maintenance, and debris removal tasks</li>
+                </ul>
+            
+                <p>This initiative aims to optimize spacecraft maneuvers, ensuring safer and more reliable mission profiles across various applications within the space industry.</p>
+            
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/docking.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Making docking of the future safer and more precise. Photo: Blue Origin.
+                            </div>
+                    </div>
+                </div>
+            </div>
+        <div><h2 class="text-3xl text-pink">Future Work</h2>
             <ul>
-                <h3 class="text-2xl text-pink">Next Steps for Robot Programming</h3>
-                <li>- Development of the Gazebo model.</li>
-                <li>- Development of the inverse kinematics model (MoveIt).</li>
-                <li>- Implementation of a feedback loop into robotic controls.</li>
+                <li>
+                    <h3 class="text-2xl text-pink">Next Steps for Robot Programming</h3>
+                    <ul>
+                        <li>Development of the Gazebo model.</li>
+                        <li>Development of the inverse kinematics model (MoveIt).</li>
+                        <li>Implementation of a feedback loop into robotic controls.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="text-2xl text-pink">Improving AprilTag Characterization</h3>
+                    <ul>
+                        <li>To fully understand AprilTags' capabilities, we need to:</li>
+                        <li>Conduct an expanded preliminary study to determine the optimal tag size relative to distance for better performance in various missions.</li>
+                        <li>Consider the curvature of modern spacecraft fleets in our accuracy assessments.</li>
+                        <li>Gather ample data within these parameters to enhance our understanding.</li>
+                        <li>Establish guidelines for placing AprilTags on spacecraft to ensure precise motion tracking from every angle.</li>
+                    </ul>
+                </li>
             </ul>
-            <ul>
-                <h3 class="text-2xl text-pink">Improving AprilTag Characterization</h3>
-                <li>To fully grasp the capabilities of AprilTags, we need to delve deeper into their accuracy through an expanded 
-					preliminary study. This entails figuring out the right size of tags relative to distance for optimal performance 
-					in various missions and considering the curvature of modern spacecraft fleets. Gathering ample data within these 
-					parameters is crucial. Additionally, we aim to establish guidelines for placing AprilTags on spacecraft to ensure
-					 precise motion tracking from every angle.
-				</li>
-            </ul>
-            <h2 class="text-2xl text-pink">Blender</h2>
-            <ul>
-                <li>- Blender experimentation involves utilizing the bpy (Blender Python) package.</li>
-                <li>- A script is developed to rotate a Blender-made object and capture pictures at fixed intervals.</li>
-            </ul>
-            <h2 class="text-2xl text-pink">Robotics with Python</h2>
-            <ul>
-                <li>In robotics using Python, people usually create Python scripts to make the robot arms move in specific ways. 
-					They start by trying out simple movements to understand how it all works. The main aim is to give the robot 
-					precise instructions, like a mathematical formula describing a curve and where it should start and finish. 
-					These instructions help generate a script that the arm follows to move exactly as desired.
-				</li>
-            </ul>
+            
+            
         </div>
-
+        <h2 class="text-2xl text-pink">Past Work: Fiducial Markers</h2>
+        <p>AprilTag is a type of fiducial marker, a specific collection of 2D barcodes. When placed on a known object, observation of the markers can be used to calculate relative distance and orientation of the object.</p>
+        <p>AprilTag accuracies were tested with several variables to predict spacecraft applicability:</p>
+        <ul>
+            <li>- Surface curvature affects the accuracy of AprilTag detection.</li>
+            <li>- The distance from the camera impacts the precision of AprilTag recognition.</li>
+            <li>- The size of the AprilTag influences its detectability.</li>
+            <li>- The orientation relative to the camera affects the reliability of AprilTag readings.</li>
+            <li>- Shadow obfuscation can degrade the performance of AprilTag detection.</li>
+        </ul>
 	
         <footer>
             <nav class="foot-nav">
@@ -125,6 +295,12 @@
             </nav>
         </footer>
     </div>
+
+    
+        <!---main js--->
+        <script src="assets/js/codebox.js"></script>
+        <script src="assets/js/photos2.js"></script>
+        <script src="assets/js/tablink.js"></script>
 </body>
 </html>
 
