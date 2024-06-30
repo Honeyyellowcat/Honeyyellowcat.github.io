@@ -36,14 +36,24 @@
         <div class="image-container">
             <img src="assets/img/CBHT_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
-        <div class="text-container"><h2 class="text-3xl text-pink">Summary:</h2>
+        <div class="text-container">
+            <h2 class="text-3xl text-pink">Summary:</h2>
             <ul>
-                <li>- Investigated the use of liquid nitrogen as a cryogenic fuel, focusing on its low freezing and boiling points, abundance in the atmosphere, and inert nature</li>
+              <li style="font-size: 20px;"><strong>Cryogenic Team Charlie's Mentor:</strong> <a href="https://www.aa.washington.edu/facultyfinder/jim-hermanson">Jim Hermanson</a></li>
+              <li>
+                <span style="font-size: larger;"><strong>Cryogenic Team Charlie's:</strong> 
+                  <a href="https://www.linkedin.com/in/felicity-cundiff/">Felicity Cundiff</a>, 
+                  <a href="https://www.linkedin.com/in/adam-delbow/">Adam Delbow</a>, 
+                  <a href="https://www.linkedin.com/in/evelynm7/">Evelyn Madewell</a>, and 
+                  <a href="https://www.linkedin.com/in/emi-peterson/">Emi Peterson</a>
+                </span>
+              </li>          
+              <li>- Investigated the use of liquid nitrogen as a cryogenic fuel, focusing on its low freezing and boiling points, abundance in the atmosphere, and inert nature</li>
                 <li>- Addressed challenges in implementation due to the lack of consistent pool boiling data, crucial for safe storage and usage as a fuel</li>
                 <li>- Conducted experimental research by immersing aluminum cylinders in liquid nitrogen to study boiling characteristics and heat transfer dynamics</li>
                 <li>- Quantitatively measured temperature changes over time using thermocouples, providing insights into rapid cool-down times and heat flux during quenching</li>
                 <li>- Contributed to enhancing understanding of cryogenic propellants for long-term space travel through comparative analysis with existing published data</li>
-            <li class="text-2xl">1. Cryogenic Team Charlie's Final Report: <a href="doc\Cryo-TeamCharlieFinalReport.pdf" target="_blank"><span >Here</span></a></li>
+                <li class="text-2xl">1. Cryogenic Team Charlie's Final Report: <a href="doc\Cryo-TeamCharlieFinalReport.pdf" target="_blank"><span >Here</span></a></li>
                 <li class="text-2xl">2. Cryogenic Team Charlie's Proposal Report: <a href="doc\Cryo-Proposal.pdf" target="_blank"><span >Here</span></a></li>
                 <li class="text-2xl">3. Cryogenic Team Charlie's Manufacturing Report: <a href="doc\Cryo-ManufacturingPlan.pdf" target="_blank"><span >Here</span></a></li>
             </ul>
@@ -111,24 +121,24 @@
             <div class="shadow-box">
                 <div class="image-wrapper">
                     <img src="assets/img/eq.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Equation 2 - 5
                         </div>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/img/eq2.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Equation 6 - 7
                         </div>
                 </div>
             </div>
             <div class="shadow-box">
                 <div class="image-wrapper">
                     <img src="assets/img/cryolay.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Experiment Set up
                         </div>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/img/cryosphere.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption"> Cylinders manufactured and experimented
                         </div>
                 </div>
             </div>
@@ -144,12 +154,12 @@
             <div class="shadow-box">
                 <div class="image-wrapper">
                     <img src="assets/img/cryosphere2.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Hole diagram for the Thermocouples to slide into 
                         </div>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/img/cryosphere3.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">2D Hole diagram for the Thermocouples to slide into 
                         </div>
                 </div>
             </div>
@@ -169,12 +179,12 @@
             <div class="shadow-box">
                 <div class="image-wrapper">
                     <img src="assets/img/thermo.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Thermocouple 
                         </div>
                 </div>
                 <div class="image-wrapper">
                     <img src="assets/img/CBHT_5.jpg" alt="Space Team" class="rounded-image">
-                    <div class="caption">
+                    <div class="caption">Cylinder 2 displayed
                         </div>
                 </div>
             </div>
@@ -192,16 +202,78 @@
                         <li>Detailed procedures and parameters in Appendices E and F for further insights.</li>
                     </ul>
                 </li>
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <video src="assets/img/cryolay.mov" autoplay loop muted class="rounded-image"></video>
+                        <div class="caption">Cylinder after dipped in liquid nitrogen bucket </div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/cryolay2.jpg" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Cylinder after dipped in liquid nitrogen bucket </div>
+                    </div>
+                </div>
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <video src="assets/img/cryotest.mov" autoplay loop muted class="rounded-image"></video>
+                        <div class="caption">Cylinder being dipped in liquid nitrogen bucket</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/cryotest2.jpg" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Cylinder dipped in liquid nitrogen bucket</div>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <h3 class="text-2xl text-pink">Heat Flux Code:</h3> 
+                    <pre class="code-box small">
+                    <code>
+    close all
+
+
+    T4= table2array(readtable('Test4C2.xlsx'));
+    T6= table2array(readtable('Test6C2.xlsx'));
+    
+    
+    T= T4(1:342,2)+273; %temperature at center, convert to K
+    k=0.29*T+70;    %k changes as temp changes
+    d=( T4(1:342,3) - T4(1:342,2)) / 0.0143; 
+    % d=dT/dr so (temp at center - temp at 3/4) / radius difference
+    q= -k.*d; %heat flux eq
+    
+    % change in temperature of object from ambient
+    
+    dT=abs( (T4(1:342,2)+273) - (294) );
+    
+    figure(1)
+    plot(dT,q)
+    
+    %%
+    
+    
+    T= T4(1:342,2)+273; %temperature at center, convert to K
+    k=0.29*T+70;    %k changes as temp changes
+    d=( T4(1:342,2)+273 - T4(1:342,3)+273) / 0.0143; 
+    % d=dT/dr so (temp at center - temp at 3/4) / radius difference
+    q= -k.*d; %heat flux eq
+    
+    % change in temperature of object from ambient
+    
+    dT=abs( (T4(1:342,2)+273) - (294) );
+    
+    figure(2)
+    plot(dT,q)
+                    </code>
+                    </pre>
+                </div>
             </ul>
             <h2 class="text-2xl text-pink">Results and Discussions</h2>
             <ul>
-                <li>In this experiment, we explored heat transfer and boiling dynamics at extremely low temperatures using two cylinders:
+                <li><strong>In this experiment, we explored heat transfer and boiling dynamics at extremely low temperatures using two cylinders:</strong>
                     <ul>
                         <li>Cylinder 1: Average cooling time of 382 seconds.</li>
                         <li>Cylinder 2: Average cooling time of 310 seconds, 21% faster than expected.</li>
                     </ul>
                 </li>
-                <li>The setup differences:
+                <li><strong>The setup differences:</strong>
                     <ul>
                         <li>Cylinder 1 had a central hole.</li>
                         <li>Cylinder 2 had an additional hole halfway to the surface.</li>
@@ -211,12 +283,28 @@
                 <div class="shadow-box">
                     <div class="image-wrapper">
                         <img src="assets/img/3testsoncylinder1.png" alt="Space Team" class="rounded-image">
-                        <div class="caption">
+                        <div class="caption"> Separate Plots of Temperature vs. Time for the three tests conducted on Cylinder 1, using the raw data
+                            collected.                            
                             </div>
                     </div>
                     <div class="image-wrapper">
                         <img src="assets/img/3testsoncylinder2center.png" alt="Space Team" class="rounded-image">
-                        <div class="caption">
+                        <div class="caption">Separate Plots of Temperature vs. Time for the three tests conducted on Cylinder 2, using the raw data
+                            collected.
+                            </div>
+                    </div>
+                </div>
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/cryoheatflux.png" alt="Space Team" class="rounded-image">
+                        <div class="caption"> Plot of heat flux data from experiments compared to data from the NASA report
+                            </div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/cryosom.png" alt="Space Team" class="rounded-image">
+                        <div class="caption">(Left) Plot of thermal conductivity vs. temperature from published data. (Rigjt) Linearized plot of thermal
+                            conductivity vs. temperature used in this report to calculate heat flux.
+                            
                             </div>
                     </div>
                 </div>
@@ -224,7 +312,8 @@
                 <h2 class="text-2xl text-pink">Conclusions</h2>
                 <ul>
                     <li>
-                        The project focused on studying heat transfer and cooling using liquid nitrogen, crucial for handling cryogenic propellants. Researchers:
+                        The project focused on studying heat transfer and cooling using liquid nitrogen, crucial for handling cryogenic propellants. <br>
+                    <strong>Researchers:</strong> 
                         <ul>
                             <li> Immersed aluminum cylinders in liquid nitrogen to measure cooling times and heat flow.</li>
                             <li> Observed one cylinder cooled in 390 seconds, matching expectations.</li>
@@ -232,7 +321,8 @@
                         </ul>
                     </li>
                     <li>
-                        Experimental data generally aligned with predictions but showed discrepancies with published sources. Future research suggestions:
+                        Experimental data generally aligned with predictions but showed discrepancies with published sources. <br>
+                        <strong>Future research suggestions:</strong> 
                         <ul>
                             <li> Use improved equipment and techniques for better accuracy.</li>
                             <li> Test various shapes and materials to optimize heat transfer.</li>
@@ -243,9 +333,16 @@
                 </ul>
             </div>
         </div>
+        <div class="text-container">
+            <h3 class="text-2xl text-pink">Other material:</h3> 
+            <ul>
+                <li>1. Data Test Test4C2: <a href="doc/cryo/Test4C2.xlsx" target="_blank">Here</a></li>
+                <li>2. Data Test Test5C1: <a href="doc/cryo/Test5C1.xlsx" target="_blank">Here</a></li>
+                <li>3. Data Test Test6C2: <a href="doc/cryo/Test6C2.xlsx" target="_blank">Here</a></li>
+            </ul>
+        </div>
         
-
-			</div>
+		</div>
         <section id="photo-album">
             <h2>Photo Album</h2>
             <div class="photo-grid">
