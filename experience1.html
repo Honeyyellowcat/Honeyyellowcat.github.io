@@ -42,35 +42,227 @@
             <img src="assets/img/NASA_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
         <div class="text-container">
-            <h1 class="text-3xl text-pink">Summary: </h1>
-            <p class="text-2xl">As the main purchaser of supplies for the UW NASA Artemis Lava Tube 
-                challenge, I played a pivotal role in the successful execution of 
-                our team's entry, the M01-Skylight-Entry rover. We strategically 
-                incorporated 3D-printed parts to enhance the rover's capability to 
-                navigate the rough terrain of the obstacle course. Additionally, I 
-                led the coding efforts for the Raspberry Pi, enabling the rover with a 
-                camera for real-time navigation and photo documentation. Collaborating 
-                closely with team members, we addressed design challenges, coding 
-                complexities, and procured essential supplies to ensure the seamless 
-                functioning of our rover throughout the competition.</p>
-            <h2 class="text-3xl text-pink">Experience Details</h2>
-            <ul class="text-2xl">
-                <li>Collaborated closely to meticulously design and 3D print critical parts of the rover, optimizing its design</li>
-                <li>Utilized CAD and Simulink to create highly efficient and innovative components for the project</li>
-                <li>Resolved code complications during rover assembly, demonstrating expertise in problem-solving</li>
-                <li>Identified and addressed design deficiencies during assembly, implementing effective solutions for project success</li>
+            <ul>
+              <li style="font-size: 20px;"><strong>NASA ARTEMIS Mentor:</strong> <a href="https://www.pierce.ctc.edu/staff-directory/alan-man">Alan Man</a></li>
+              <li style="font-size: 20px;"><strong>Team Mentor:</strong> <a href="https://www.linkedin.com/in/harrylfs/">Harry Furey-Soper</a></li>
+              <li style="font-size: 20px;"><strong>UW to host college students for NASA-funded lunar rover challenge:</strong> <a href="https://www.washington.edu/news/2022/08/15/uw-to-host-college-students-for-nasa-funded-lunar-rover-challenge/">NASA’s Artemis Student Challenge</a></li>
+              <li>
+                <span style="font-size: larger;"><strong>Megamind Team:</strong> 
+                  <a href="https://www.linkedin.com/in/felicity-cundiff/">Felicity Cundiff</a>, 
+                  <a href="https://www.linkedin.com/in/chris-copans/">Chris Copans</a>, 
+                  <a href="https://www.linkedin.com/in/vincent-leuzzi/">Vincent Leuzzi</a>,  
+                  <a href="https://www.linkedin.com/in/brandon-rousso/">Brandon Rousso</a>, and 
+                  <a href="https://www.linkedin.com/in/conrad-m/">Conrad M</a>
+                </span>
+              </li>
             </ul>
-        </div>
-    </div>
+          
+            <h2 class="text-3xl text-pink">Summary:</h2>
+            <ul>
+              <li><strong>Key Role in UW NASA Artemis Lava Tube Challenge:</strong></li>
+              <ul>
+                <li>Procured high-performance materials and components for the M01-Skylight-Entry rover.</li>
+                <li>Integrated Raspberry Pi, camera, and sensor systems for real-time navigation and documentation.</li>
+                <li>Collaborated cross-functionally to address technical challenges and ensure rover functionality.</li>
+                <li>Ensured compliance with NASA’s mission objectives throughout the competition.</li>
+              </ul>
+            </ul>
+          
+            <h2 class="text-3xl text-pink">Rover Design and Fabrication</h2>
+            <ul>
+              <li>Collaborated on rover design, 3D printing critical parts for terrain adaptability.</li>
+              <li>Utilized CAD and Simulink for precise component design and integration.</li>
+              <li>Resolved technical challenges during software integration for optimal performance.</li>
+              <li>Optimized design for durability and operational reliability under lunar conditions.</li>
+            </ul>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/rover.jpg" alt="Partially Assembled Rover" class="rounded-image">
+                <div class="caption">Partial assembly of the rover</div>
+              </div>
+              <div class="image-wrapper">
+                <video src="assets/img/nasa/drop.mov" autoplay loop muted class="rounded-image"></video>
+                <div class="caption">Drop test simulation of the rover</div>
+              </div>
+            </div>
+          
+            <h2 class="text-3xl text-pink">Electrical Systems Integration</h2>
+            <ul>
+              <li>Designed and integrated Raspberry Pi and sensor systems for autonomous rover operations.</li>
+              <li>Developed robust circuitry solutions for power management and telemetry.</li>
+              <li>Implemented redundancy strategies to ensure mission-critical reliability.</li>
+              <li>Adhered to NASA safety and operational standards during system development.</li>
+            </ul>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/circuit.png" alt="Electrical Circuit Design" class="rounded-image">
+                <div class="caption">Detailed electrical circuit design</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/cam.jpg" alt="Camera Installation on Rover" class="rounded-image">
+                <div class="caption">Installation of camera system on the rover</div>
+              </div>
+            </div>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/elec.jpg" alt="Electrical Component Integration" class="rounded-image">
+                <div class="caption">Integration of electrical components</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/elec2.jpg" alt="Electrical Testing" class="rounded-image">
+                <div class="caption">Testing of electrical systems</div>
+              </div>
+            </div>
+          
+            <h2 class="text-3xl text-pink">Software Development and Control Systems</h2>
+            <ul>
+              <li>Developed control algorithms using Python and C++ for rover navigation and operation.</li>
+              <li>Optimized software performance for real-time data processing and decision-making.</li>
+              <li>Integrated sensor systems for enhanced perception and environmental awareness.</li>
+              <li>Developed graphical user interfaces for rover control and telemetry monitoring.</li>
+            </ul>
+          
+            <div class="text-container">
+              <h3 class="text-2xl text-pink">Camera Code:</h3>
+              <pre class="code-box small">
+                <code>
+          from picamera import PiCamera
+          import time
+          
+          camera = PiCamera()
+          time.sleep(2)
+          camera.capture("/home/pi/Pictures/img.jpg")
+          print("Image capture completed.")
+                </code>
+              </pre>
+            </div>
+          
+            <h2 class="text-3xl text-pink">Mechanical Design and Structural Analysis</h2>
+            <ul>
+              <li>Designed and simulated rover chassis and frame structures for durability and performance.</li>
+              <li>Utilized lightweight materials and additive manufacturing techniques for weight efficiency.</li>
+              <li>Resolved mechanical design challenges to ensure robust performance in lunar environments.</li>
+              <li>Collaborated closely with team members to integrate mechanical components seamlessly.</li>
+            </ul>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/frame3.png" alt="Rover Frame Design" class="rounded-image">
+                <div class="caption">Design and simulation of rover frame</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/frame4.png" alt="Final Assembly of Rover Frame" class="rounded-image">
+                <div class="caption">Final assembly of rover frame</div>
+              </div>
+            </div>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/chas3.png" alt="Rover Chassis Design" class="rounded-image">
+                <div class="caption">Design and simulation of rover chassis</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/chas.png" alt="Rover Chassis Integration" class="rounded-image">
+                <div class="caption">Integration of rover chassis components</div>
+              </div>
+            </div>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/chas2.png" alt="Rover Chassis Assembly" class="rounded-image">
+                <div class="caption">Assembly process of rover chassis</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/chas5.jpg" alt="Completed Rover Chassis" class="rounded-image">
+                <div class="caption">Completed assembly of rover chassis</div>
+              </div>
+            </div>
+          
+            <div class="shadow-box">
+              <div class="image-wrapper">
+                <img src="assets/img/NASA_3.jpg" alt="Rover Testing Phase" class="rounded-image">
+                <div class="caption">Testing phase of the rover</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/img/nasa/frame8.png" alt="Frame Design and Simulation" class="rounded-image">
+                <div class="caption">Design and simulation of rover frame</div>
+              </div>
+            </div>
+          </div>
+          
 
+    
     <section id="photo-album">
-        <h2>Photo Album</h2>
+        <h2>Frame Photo Album</h2>
         <div class="photo-grid">
             <div class="photo">
                 <img src="assets\img\NASA_3.jpg" alt="Photo 1">
             </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame3.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame4.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame5.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame6.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame8.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/frame7.jpg" alt="Photo 2">
+            </div>
+            <!-- Video added in the same level as photos -->
+            <div class="photo">
+                <video controls>
+                    <source src="assets/img/nasa/drop.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </section>
+    <section id="photo-album">
+        <h2>Chas Photo Album</h2>
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/img/nasa/chas.png" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/chas2.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/chas3.png" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/chas4.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/chas5.jpg" alt="Photo 2">
+            </div>
+        </div>
+    </section>
+    <section id="photo-album">
+        <h2>Electrical Photo Album</h2>
+        <div class="photo-grid">
+            <div class="photo">
+                <img src="assets/img/nasa/elec.jpg" alt="Photo 1">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/elec2.jpg" alt="Photo 2">
+            </div>
+            <div class="photo">
+                <img src="assets/img/nasa/circuit.png" alt="Photo 2">
+            </div>
+        </div>
+    </section>
+
     <script>
         const mediaElements = document.querySelectorAll('.photo img, .photo video');
 
