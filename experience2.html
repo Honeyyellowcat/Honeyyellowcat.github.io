@@ -36,22 +36,102 @@
         <div class="image-container">
             <img src="assets/img/CBHT_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
-        <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary:</h2>
+        <div class="text-container"><h2 class="text-3xl text-pink">Summary:</h2>
             <ul>
-                <li>- Theoretically calculated properties for enhanced understanding of heat transfer & cooling in liquid nitrogen</li>
-                <li>- Participated in group-based experimental research to explore and confirm the validity of theoretical findings</li>
-                <li>- Uncovered: Boiling characteristics, rapid cool-down times, and heat transfer dynamics by immersing aluminum cylinders, along with precise quantitative data on heat transfer during liquid nitrogen quenching</li>
-                <li class="text-2xl">1. Cryogenic Team Charlie's Final Report: <a href="doc\Cryo-TeamCharlieFinalReport.pdf" target="_blank"><span >Here</span></a></li>
+                <li>- Investigated the use of liquid nitrogen as a cryogenic fuel, focusing on its low freezing and boiling points, abundance in the atmosphere, and inert nature</li>
+                <li>- Addressed challenges in implementation due to the lack of consistent pool boiling data, crucial for safe storage and usage as a fuel</li>
+                <li>- Conducted experimental research by immersing aluminum cylinders in liquid nitrogen to study boiling characteristics and heat transfer dynamics</li>
+                <li>- Quantitatively measured temperature changes over time using thermocouples, providing insights into rapid cool-down times and heat flux during quenching</li>
+                <li>- Contributed to enhancing understanding of cryogenic propellants for long-term space travel through comparative analysis with existing published data</li>
+            <li class="text-2xl">1. Cryogenic Team Charlie's Final Report: <a href="doc\Cryo-TeamCharlieFinalReport.pdf" target="_blank"><span >Here</span></a></li>
                 <li class="text-2xl">2. Cryogenic Team Charlie's Proposal Report: <a href="doc\Cryo-Proposal.pdf" target="_blank"><span >Here</span></a></li>
                 <li class="text-2xl">3. Cryogenic Team Charlie's Manufacturing Report: <a href="doc\Cryo-ManufacturingPlan.pdf" target="_blank"><span >Here</span></a></li>
             </ul>
-    
             <h2 class="text-2xl text-pink">Theory / Analysis</h2>
             <ul>
-                <li>- This section delves into the analysis of heat transfer dynamics and the cooling process of aluminum cylinders submerged in liquid nitrogen. The analysis begins with establishing initial temperatures and calculating the Biot number to determine convective heat transfer's significant influence on cylinder temperature. Utilizing equations and data from sources like "Heat Transfer: A Practical Approach" by Yunus A. Cengel, the analysis computes the cool-down time of the cylinder to be approximately 6.5 minutes.</li>
-                <li>- Moreover, the discussion explores heat conduction and convective heat transfer equations to understand cooling dynamics. Thermal properties such as mass, volume, density, and specific heat capacity of the aluminum cylinder are considered. The thermal diffusivity of the material is defined and plays a crucial role in determining temperature changes over time. Theoretical predictions based on heat transfer equations will be compared with experimental data to validate the setup's accuracy and refine understanding of cooling dynamics.</li>
+                <li>
+                    This section analyzes heat transfer dynamics and the cooling process of aluminum cylinders in liquid nitrogen.
+                    <ul>
+                        <li>Initial room temperature: 298 K (25°C), liquid nitrogen temperature: 77 K (-196°C).</li>
+                        <li>Biot number (Bi) calculated to assess convective heat transfer's impact using Equation 2.</li>
+                        <li>Biot number of 9 indicates significant convective heat transfer influence.</li>
+                        <li>Using "Heat Transfer: A Practical Approach" by Yunus A. Cengel, the cool-down time is calculated to be about 6.5 minutes.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Calculation details:</strong>
+                    <ul>
+                        <li>Equation 2: Biot number calculation: \( \text{Bi} = \frac{h r}{k} = 9 \) implies \( h = 70015 \, \text{W/m}^2\text{K} \).</li>
+                        <li>Equation 3: Thermal diffusivity (\( \alpha \)): \( \alpha = \frac{k}{\rho c_p} = 9.7 \times 10^{-5} \, \text{m}^2/\text{s} \).</li>
+                        <li>Equation 4: Relationship between temperatures and time constant (\( \tau \)): \( \frac{T_i - T_\infty}{T_s - T_\infty} = A_1 e^{-\lambda_1^2 \tau} \) where \( \tau = 0.18819 \).</li>
+                        <li>Equation 5: Cool-down time calculation: \( t = \frac{\tau V}{\alpha} = 393 \, \text{seconds} \) (approximately 6.5 minutes).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Insights into cooling dynamics:</strong>
+                    <ul>
+                        <li>Heat conduction and convective heat transfer equations are explored to understand cooling dynamics.</li>
+                        <li>Thermal properties like mass, volume, density, and specific heat capacity of the aluminum cylinder are considered.</li>
+                        <li>Thermal diffusivity (\( \alpha \)) is defined and crucial for determining temperature changes over time.</li>
+                        <li>The mass of the cylinder is calculated: \( m = \rho \pi r^2 L = 5.1835 \, \text{kg} \).</li>
+                        <li>Maximum heat transfer (\( Q_{\text{Max}} \)) is calculated: \( Q_{\text{Max}} = m c_p (T_i - T_\infty) = 674.024 \, \text{kJ} \).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Experimental validation:</strong>
+                    <ul>
+                        <li>Theoretical predictions based on heat transfer equations are compared with experimental data.</li>
+                        <li>Validates the accuracy of the experimental setup and refines understanding of cooling dynamics.</li>
+                    </ul>
+                </li>
+                <strong>Nomenclature:</strong>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <ul style="flex: 1 0 50%;">
+                        <li><b>Bi:</b> Biot number</li>
+                        <li><b>h:</b> Heat transfer coefficient (W/m²K)</li>
+                        <li><b>k:</b> Thermal conductivity (W/mK)</li>
+                        <li><b>r:</b> Radius (m)</li>
+                        <li><b>\( \alpha \):</b> Thermal diffusivity (m²/s)</li>
+                        <li><b>\( \rho \):</b> Density (kg/m³)</li>
+                        <li><b>c_p:</b> Specific heat capacity (J/kgK)</li>
+                    </ul>
+                    <ul style="flex: 1 0 50%;">
+                        <li><b>T_i:</b> Initial temperature (K)</li>
+                        <li><b>T_\infty:</b> Ambient temperature (K)</li>
+                        <li><b>T_s:</b> Surface temperature (K)</li>
+                        <li><b>\( \tau \):</b> Time constant</li>
+                        <li><b>V:</b> Volume (m³)</li>
+                        <li><b>m:</b> Mass (kg)</li>
+                        <li><b>Q_{\text{Max}}:</b> Maximum heat transfer (kJ)</li>
+                    </ul>
+                </div>
             </ul>
+            
+            
+            <div class="shadow-box">
+                <div class="image-wrapper">
+                    <img src="assets/img/eq.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/eq2.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+            </div>
+            <div class="shadow-box">
+                <div class="image-wrapper">
+                    <img src="assets/img/cryolay.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/cryosphere.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+            </div>
     
             <h2 class="text-2xl text-pink">Design of Testing Cylinders</h2>
             <ul>
@@ -61,61 +141,104 @@
                 <li>- The project timeline was divided into design, manufacturing, testing, and analysis phases. Challenges arose in cool-down time calculations, sourcing materials, and unexpected difficulties in manufacturing. Member-specific roles and a detailed budget were outlined, with a focus on conservation due to budget constraints.</li>
                 <li>- Overall, meticulous planning and adaptation were essential to overcome challenges and execute the project within the allotted timeframe and budget.</li>
             </ul>
+            <div class="shadow-box">
+                <div class="image-wrapper">
+                    <img src="assets/img/cryosphere2.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/cryosphere3.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+            </div>
     
             <h2 class="text-2xl text-pink">Testing Objectives</h2>
             <ul>
-                <li>Cryogenic Boiling Team 1, affectionately known as Charlie, is on a mission to deepen our understanding of how liquid nitrogen cools. 
-                    By placing thermocouples at various points on the same plane along the radius of individual spheres, they aim to measure temperature 
-                    gradients. This knowledge is vital for enhancing the storage and transfer of cryogenic propellants such as hydrogen and oxygen, 
-                    especially for prolonged space missions where propellant loss due to boiling is a significant concern.
+                <li>
+                    <strong>Cryogenic Boiling Team 1 (Charlie):</strong>
+                    <ul>
+                        <li>Deepening understanding of liquid nitrogen cooling by placing thermocouples along spheres' radius to measure temperature gradients.</li>
+                        <li>Addressing inconsistency from nitrogen vapor envelope by measuring temperatures within the cylinder's surface plane.</li>
+                        <li>Analyzing temperature gradients across spheres to enhance precision using the heat transfer equation.</li>
+                        <li>Improving uncertainty analysis for cryogenic propellant storage and transfer systems.</li>
+                    </ul>
                 </li>
-                <li>To achieve their goal, Charlie's team is tackling the challenge of inconsistency caused by the nitrogen vapor envelope around 
-                    the cylinder. They plan to measure temperatures within the cylinder's surface plane and compare results across different runs to
-                     minimize uncertainty in boiling data. Additionally, they aim to assess temperature gradients throughout the sphere to enhance 
-                     precision. Armed with these insights, they will employ the heat transfer equation to analyze the data, aiming to offer improved 
-                     uncertainty analysis of sphere quenching in cryogenic storage and transfer systems, crucial for long-term space missions.
+            </ul>
+            <div class="shadow-box">
+                <div class="image-wrapper">
+                    <img src="assets/img/thermo.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/CBHT_5.jpg" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <strong>Testing Process:</strong>
+                    <ul>
+                        <li>Dipped aluminum cylinders in liquid nitrogen, monitored temperature shifts with thermocouples.</li>
+                        <li>Cylinder 1 focused on core temperature change; Cylinder 2 measured core and surface temperatures.</li>
+                        <li>Monitored temperature gradient and cooling time to 2% of liquid nitrogen's temperature (about 77 Kelvin).</li>
+                        <li>Considered factors like liquid nitrogen temperature, cylinder size, container conditions.</li>
+                        <li>Recorded room temperature, liquid nitrogen depth, and maintained consistent initial volume.</li>
+                        <li>Varied cylinder hole configurations to test impact on cooling rates.</li>
+                        <li>Detailed procedures and parameters in Appendices E and F for further insights.</li>
+                    </ul>
                 </li>
-                </ul>
-        
-                <h2 class="text-2xl text-pink">Testing</h2>
-                <ul>
-                    <li> During testing, we dipped aluminum cylinders into containers filled with super cold liquid nitrogen and tracked temperature 
-                        shifts using special sensors called thermocouples. Cylinder 1 focused on the temperature change at its core to establish a 
-                        reference point, whereas Cylinder 2 measured temperatures both at its core and halfway to the surface, across its width.
-                    </li>
-                    <li> We kept an eye on two main factors: the temperature difference across the cylinder (known as temperature gradient) and how 
-                        long it took for the cylinder to cool down to 2% of the liquid nitrogen's temperature (which is around 77 Kelvin). We had to 
-                        consider various factors like the temperature of the liquid nitrogen, the size of the cylinders, and the containers they were 
-                        in. To ensure precise results, we meticulously recorded the room temperature, the depth of the liquid nitrogen, and maintained 
-                        a consistent initial volume of liquid nitrogen in the container. Additionally, we played around with variables like the number 
-                        of holes in the cylinders; Cylinder 1 had one hole drilled to its core, while Cylinder 2 had two holes and underwent testing thrice.
-                         You can find detailed step-by-step procedures and specific parameters in Appendices E and F for more insight.
-                    </li>
-                </ul>
-        
-                <h2 class="text-2xl text-pink">Results and Discussions</h2>
-                <ul>
-                    <li> In this experiment, we delved into how heat moves and liquids boil at super low temperatures. We examined two cylinders, each 
-                        with a different setup. Cylinder 1 took about 382 seconds to cool down on average, while Cylinder 2 cooled in just 310 seconds, 
-                        surprising us by being 21% faster than anticipated.
-                    </li>
-                    <li> The difference? Well, Cylinder 1 had a hole right in the middle, whereas Cylinder 2 had an extra hole halfway to the surface. 
-                        This setup helped us peek into how heat spreads across these cylinders. We found that the outer parts were a bit colder than the
-                        center, which was what we expected. Despite some challenges with our equipment and data accuracy, especially for quick temperature 
-                        changes, our results generally lined up with what we predicted, especially when temperatures shifted by more than 10 degrees.
-                    </li>
-                </ul>
+            </ul>
+            <h2 class="text-2xl text-pink">Results and Discussions</h2>
+            <ul>
+                <li>In this experiment, we explored heat transfer and boiling dynamics at extremely low temperatures using two cylinders:
+                    <ul>
+                        <li>Cylinder 1: Average cooling time of 382 seconds.</li>
+                        <li>Cylinder 2: Average cooling time of 310 seconds, 21% faster than expected.</li>
+                    </ul>
+                </li>
+                <li>The setup differences:
+                    <ul>
+                        <li>Cylinder 1 had a central hole.</li>
+                        <li>Cylinder 2 had an additional hole halfway to the surface.</li>
+                    </ul>This configuration allowed us to observe temperature distribution across the cylinders. Outer regions were cooler than the center, aligning with our predictions despite challenges in equipment and data accuracy, especially during rapid temperature changes (>10 degrees).
+                </li>
+            </ul>
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/3testsoncylinder1.png" alt="Space Team" class="rounded-image">
+                        <div class="caption">
+                            </div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/3testsoncylinder2center.png" alt="Space Team" class="rounded-image">
+                        <div class="caption">
+                            </div>
+                    </div>
+                </div>
         
                 <h2 class="text-2xl text-pink">Conclusions</h2>
                 <ul>
-                    <li> The project focused on studying how substances like liquid nitrogen transfer heat and cool down, which is crucial for better 
-                        handling of cryogenic propellants. By immersing aluminum cylinders in liquid nitrogen and measuring their cooling times and heat 
-                        flow, researchers aimed to improve storage and transfer systems for these substances. One cylinder cooled down in 390 seconds, 
-                        matching expectations, while another, with more measurement points, cooled down 21% faster, possibly due to surface irregularities.           </li>
-                    <li> Although the experimental data generally aligned with predictions, there were discrepancies with published sources. Suggestions 
-                        for future research include using better equipment, testing various shapes and materials, and refining temperature-to-heat flux
-                        calculations. Another proposed project involves testing different materials and shapes with improved measurement techniques to 
-                        enhance accuracy and efficiency, ultimately aiming for clearer comparisons with existing data.
+                    <li>
+                        The project focused on studying heat transfer and cooling using liquid nitrogen, crucial for handling cryogenic propellants. Researchers:
+                        <ul>
+                            <li> Immersed aluminum cylinders in liquid nitrogen to measure cooling times and heat flow.</li>
+                            <li> Observed one cylinder cooled in 390 seconds, matching expectations.</li>
+                            <li> Found another cylinder, with more measurements, cooled 21% faster, potentially due to surface irregularities.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Experimental data generally aligned with predictions but showed discrepancies with published sources. Future research suggestions:
+                        <ul>
+                            <li> Use improved equipment and techniques for better accuracy.</li>
+                            <li> Test various shapes and materials to optimize heat transfer.</li>
+                            <li> Refine temperature-to-heat flux calculations for more precise results.</li>
+                            <li> Propose projects to compare different materials and shapes, aiming for clearer data comparisons.</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -159,8 +282,13 @@
             </ul>
           </nav>
     </footer>
+
     
+<!-- Load MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <!---main js--->
+        
         <script src="assets/js/photos2.js"></script>
 	</body>
 </html>
