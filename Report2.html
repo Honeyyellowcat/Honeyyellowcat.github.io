@@ -1,19 +1,17 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Vortex Panel</title>
-    <!-- Icon and Font -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="icon" href="assets/img/F.png" />
-    <!-- Swiper CSS -->
+    <link rel="icon" href="assets/img/F.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
-    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Parallax JS -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -35,24 +33,143 @@
             <img src="assets/img/AS_2.jpg" alt="Pulsed Plasma Thruster Stand">
         </div>
         <div class="text-container">
-            <h2 class="text-2xl text-pink">Summary</h2>
-            <p>In the Vortex Panel Mini-Project, aerodynamic characteristics of four airfoils (NACA 0010, NACA 1410, NACA 2410, and NACA 6409) were analyzed using MATLAB and XFOIL software, generating graphs for lift, drag, moment coefficients, and pressure distribution at different angles of attack.</p>
-            <!-- Button to open PDF -->
-            <p class="text-2xl">1. Vortex Panel Mini Report: <a href="doc/Vortex_Panel_Mini_Project_Felicity_C.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
-            <h2 class="text-2xl text-pink">Main Points:</h2>
+            <div class="text-container">
+            <h2 class="text-3xl text-pink">Summary:</h2>
+                <ul>
+                    <li style="font-size: 20px;"><strong>UW Incompressible Aerodynamics Mentor:</strong> <a href="https://www.aa.washington.edu/facultyfinder/dana-dabiri">Dana Dabiri</a></li>
+                    <p>In the Vortex Panel Mini-Project, aerodynamic characteristics of four airfoils (NACA 0010, NACA 1410, NACA 2410, and NACA 6409) were analyzed using MATLAB and XFOIL software, generating graphs for lift, drag, moment coefficients, and pressure distribution at different angles of attack.</p>
+                    <p class="text-2xl">1. Vortex Panel Mini Report: <a href="doc/Vortex_Panel_Mini_Project_Felicity_C.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
+                </ul>
+            <h2 class="text-2xl text-pink">Theory / Analysis</h2>
             <ul>
-                <li>Gathered aerodynamic data for four airfoils: NACA 0010, NACA 1410, NACA 2410, and NACA 6409.</li>
-                <li>Reynolds number (Re) set to 3000000 and Mach number (Ma) to 0.1 as instructed.</li>
-                <li>Generated eight graphs depicting lift coefficient, drag coefficient, moment coefficient, and pressure coefficient for each airfoil at angles of attack α = 0, 5, 10 degrees.</li>
-                <li>NACA 0010: Symmetric airfoil with lower camber, showing good lift and low drag, suitable for high-speed designs.</li>
-                <li>NACA 1410: Symmetric airfoil with larger lift coefficient but slightly higher drag, reaches stall at a lower angle of attack compared to NACA 0010.</li>
-                <li>NACA 2410: Lower camber and thin body, reducing drag force and allowing higher speed.</li>
-                <li>NACA 6409: Thick and cambered, generates more lift but also more drag than NACA 0010.</li>
-                <li>Compared pressure distribution along airfoils using Cp vs x/c plots, observing differences in pressure buildup and gradients.</li>
+            <p>In the Vortex Panel Mini-Project, I analyzed the aerodynamic characteristics of four NACA airfoils: NACA 0010, NACA 1410, NACA 2410, and NACA 6409. Reynolds number (Re) was set to 3,000,000 and Mach number (Ma) to 0.1 for consistency.</p>
+            <p><strong>Graphs Generated:</strong></p>
+            <ul>
+                <li>Generated eight graphs for each airfoil at angles of attack (α) = 0°, 5°, 10°, illustrating lift coefficient, drag coefficient, moment coefficient, and pressure coefficient.</li>
+            </ul>
+                <p><strong>Nomenclature:</strong></p>
+                <div style="display: flex; flex-wrap: wrap;">
+                    <ul style="flex: 1 0 50%;">
+                        <li><b>\( C_D \):</b> Drag coefficient</li>
+                        <li><b>\( C_L \):</b> Lift coefficient</li>
+                        <li><b>\( C_M \):</b> Moment coefficient</li>
+                    </ul>
+                    <ul style="flex: 1 0 50%;">
+                        <li><b>\( C_p \):</b> Pressure coefficient</li>
+                        <li><b>α:</b> Angle of attack</li>
+                        <li><b>\( \frac{X}{C} \):</b> x - location normalized to chord</li>
+                    </ul>
+                </div>
+            </ul>
+            <h2 class="text-2xl text-pink">Airfoil Characteristics</h2>
+            <ul>
+                <li>
+                    <strong>NACA 0010:</strong> 
+                    <ul>
+                        <li>Symmetric airfoil with lower camber. Shows sensitivity to changes in angle of attack (α). Suitable for high-speed applications due to low drag and good lift efficiency.</li>
+                        <li>Lift coefficient \( C_l \) versus α plot (fig:2-b) shows good lift with low drag, ideal for high-speed designs.</li>
+                        <li>Moment coefficient \( C_m \) versus α plot (fig:1-a) indicates higher sensitivity to α changes.</li>
+                        <li>Pressure coefficient \( C_p \) distribution (fig:3-1) is symmetric with high pressure near the leading edge.</li>
+                        <li>Smooth transition through stall with gradual lift degradation at high α.</li>
+                        <li>Optimal for applications requiring precise control and stability across varying speeds.</li>
+                    </ul>
+                </li>
+
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/pressure coefficient (CP) verses the NACA 0010.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 3: (A) Graph of pressure coefficient (CP) versus x/c of the NACA 0010 airfoil.</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/momcofvsAQA.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 1: (A) Graph of moment coefficient versus angle of attack, showing the pitching moment of each airfoil.</div>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>NACA 1410:</strong> 
+                    <ul>
+                        <li>Symmetric airfoil with higher lift coefficient than NACA 0010 but slightly higher drag. Offers stable lift behavior across α range.</li>
+                        <li>Cl versus α curve shows higher maximum lift coefficient than NACA 0010 but reaches stall at lower α.</li>
+                        <li>Lower peak Cp near leading edge compared to NACA 0010 (fig:3-b), indicating more gradual pressure distribution.</li>
+                        <li>Stable behavior at higher α with minimal lift degradation and moderate drag increase.</li>
+                        <li>Suitable for applications needing consistent lift performance over a wide range of angles.</li>
+                    </ul>
+                </li>
+
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/pressure coefficient (CP) verses the NACA 1410.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 3: (B) Graph of pressure coefficient (CP) versus x/c of the NACA 1410 airfoil.</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/lifcofvsAQA.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 1: (B) Graph of lift coefficient versus angle of attack, showing the lift coefficient of each airfoil.</div>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>NACA 2410:</strong> 
+                    <ul>
+                        <li>Lower camber airfoil with thin body, suitable for high-speed applications but with increased drag due to camber.</li>
+                        <li>Generates lower drag compared to cambered airfoils like NACA 6409, suitable for applications requiring higher speeds.</li>
+                        <li>Pressure distribution (fig:4-a) shows a slightly asymmetric Cp curve with rapid pressure gradient along the upper surface.</li>
+                        <li>Stable lift characteristics at moderate α with efficient performance in varying airspeeds.</li>
+                        <li>Ideal for designs where reduced drag and consistent performance across speed ranges are critical.</li>
+                    </ul>
+                </li>
+
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/pressure coefficient (CP) verses the NACA 2410.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 4: (A) Graph of pressure coefficient (CP) versus x/c of the NACA 2410 airfoil.</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/drag coefficient versus alpha.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 2: (A) Graph of drag coefficient versus angle of attack, showing the drag coefficient of each airfoil.</div>
+                    </div>
+                </div>
+
+                <li>
+                    <strong>NACA 6409:</strong> 
+                    <ul>
+                        <li>Thick, cambered airfoil with high lift coefficient but also higher drag compared to NACA 0010 and NACA 1410.</li>
+                        <li>Highest maximum lift coefficient among the four airfoils, suitable for applications requiring high lift.</li>
+                        <li>Pressure distribution (fig:4-b) exhibits an asymmetric Cp curve with rapid pressure decrease along the upper surface, indicating strong pressure buildup near the leading edge.</li>
+                        <li>Significant increase in drag at higher α due to cambered design, limiting performance at extreme angles.</li>
+                        <li>Optimal for applications where maximizing lift outweighs considerations of drag, such as short take-off scenarios.</li>
+                    </ul>
+                </li>
+
+                <div class="shadow-box">
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/pressure coefficient (CP ) verses the NACA 6409.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 4: (B) Graph of pressure coefficient (CP) versus x/c of the NACA 6409 airfoil.</div>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="assets/img/vortex/lift coefficient versus drag coefficient.png" alt="Space Team 2" class="rounded-image">
+                        <div class="caption">Fig. 2: (B) Graph of lift coefficient versus drag coefficient, showing the lift-to-drag ratio of each airfoil.</div>
+                    </div>
+                </div>
+            </ul>
+
+            <h2 class="text-2xl text-pink">Conclusion</h2>
+            <ul>
+                <li>The analysis of NACA airfoils—NACA 0010, NACA 1410, NACA 2410, and NACA 6409—reveals distinct aerodynamic characteristics crucial for aerospace design.</li>
+                <li>NACA 0010: Symmetric profile with low drag, ideal for high-speed applications needing efficient lift.</li>
+                <li>NACA 1410: Offers higher lift coefficients but with increased drag, maintaining stable performance across various angles of attack.</li>
+                <li>NACA 2410: Balances speed and stability with lower drag, suitable for consistent performance in varying airspeeds.</li>
+                <li>NACA 6409: Maximizes lift but exhibits higher drag, suitable for scenarios prioritizing lift over drag considerations.</li>
+                <li>Understanding these profiles is crucial for designing aerospace components tailored to specific operational requirements.</li>
+                <li>Optimal performance across different flight conditions can be achieved by leveraging the unique aerodynamic traits of each airfoil.</li>
             </ul>
         </div>
     </div>
-    
+
+    <!-- Load MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <footer>
         <nav class="foot-nav">
             <ul>
