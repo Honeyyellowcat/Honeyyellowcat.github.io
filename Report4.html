@@ -35,46 +35,301 @@
             <img src="assets/img/AB_2.png" alt="Pulsed Plasma Thruster Stand">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary</h2>
-            <p>A group of venture capitalists expressed interest in funding a network of small satellites to 
+            <h2 class="text-3xl text-pink">Summary:</h2>
+            <ul>
+              <li style="font-size: 20px;"><strong>Aeroengine Design Mentor:</strong> <a href="https://www.aa.washington.edu/facultyfinder/jim-hermanson">Jim Hermanson</a></li>
+              <li>
+                <span style="font-size: larger;"><strong>Aeroengine Design project team:</strong> 
+                  <a href="https://www.linkedin.com/in/felicity-cundiff/">Felicity Cundiff</a> and 
+                  <a href="https://www.linkedin.com/in/angelina-dos-remedios/">Angelina dos Remedios</a>
+                </span>
+              </li>          
+              <li>A group of venture capitalists expressed interest in funding a network of small satellites to 
                 provide satellite internet coverage globally. They tasked our team with designing a low-cost 
                 rocket featuring a reusable first stage capable of deploying a single 1,000 kg satellite into 
                 a 500 km altitude low-Earth orbit (LEO). Key design requirements included delivering the payload 
-                efficiently, minimizing costs, and ensuring reusability of the first stage.</p>
+                efficiently, minimizing costs, and ensuring reusability of the first stage.</li>
+                <li>Airbreathing Propulsion project, student teams are challenged to design a gas
+                    turbine engine core comprising a compressor, combustor, and turbine, focusing on performance,
+                    maintaining acceptable numbers, identifying cost-efficient designs, and managing specified mass
+                    flow rates under defined inlet conditions. Utilizing tools such as CEARUN to analyze compressor,
+                    and TURBN & COMPR to analyze the turbine, and combustion.
+                </li>
+                <p class="text-2xl">1. Aeroengine Design Report: <a href="doc\AIRBREATHING_PROPULSION_PROJECT.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
+            </ul>
 
-            <!-- Button to open PDF -->
-            <p class="text-2xl">1. Aeroengine Design Report: <a href="doc\AIRBREATHING_PROPULSION_PROJECT.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
             <h2 class="text-2xl text-pink">Introduction and Background:</h2>
             <p>The project entails designing a gas turbine engine core for airbreathing propulsion, emphasizing 
                 performance optimization and maintaining acceptable turbine inlet temperatures. The compressor, 
                 combustor, and turbine collectively influence engine efficiency and emissions. Design decisions 
                 are justified based on efficiency, cost, and performance at the designated design point.</p>
 
-            <h2 class="text-2xl text-pink">Compressor:</h2>
-            <p>In the compressor design section, maximizing total compressor ratio while considering exit 
-                temperature and efficiency is crucial. Parameters like solidity, inlet angle, and number of 
-                stages significantly impact pressure and temperature behaviors. Analysis justifications involve 
-                equations for total efficiency, specific work, outlet temperature, and pressure.</p>
+                <h2 class="text-2xl text-pink">Compressor:</h2>
+                <ul>
+                    <li>In the compressor design section of this project, the primary objective is to maximize the total compressor ratio while considering exit temperature and total compressor efficiency.</li>
+                    <li>Parameters like solidity, inlet angle (α1), and number of stages significantly impact pressure and temperature behaviors:</li>
+                    <ul>
+                        <li><strong>COMPR Program:</strong>  
+                            <ul>
+                                <li>The analysis was conducted using the COMPR program, which allows for variation of parameters such as number of stages, inlet angle (α1), and solidity to explore their effects on compressor performance metrics like pressure ratio, temperature ratio, and efficiency.</li>
+                            </ul>
+                        </li>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TABLE I. Fixed COMPR Program Inputs.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Fixed COMPR Program Inputs                        
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TABLE II. Compressor Results.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Results
+                                    </div>
+                            </div>
+                        </div>
+                        <li><strong>Equations and Parameters: </strong> 
+                            <ul>
+                                <li class="equation">Total Compressor Efficiency (η<sub>total</sub>): \( \frac{W_{actual}}{W_{isentropic}} \)</li>
+                                <li class="equation">Specific Work (W): \( \frac{h_{exit} - h_{inlet}}{\eta_{total}} \)</li>
+                                <li class="equation">Outlet Temperature (T<sub>exit</sub>) and Pressure (P<sub>exit</sub>) behaviors.</li>
+                            </ul>
+                        </li>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TABLE III. Jet-A(L) CHAMBER.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Jet-A(L) CHAMBER
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TABLE IV. Jet-A(L) THROAT.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Jet-A(L) THROAT
+                                    </div>
+                            </div>
+                        </div>
+                        <li><strong>Key Findings and Analysis:</strong>  
+                            <ul>
+                                <li>Relationship between compressor pressure ratio and solidity: As solidity increases, pressure ratio also increases.</li>
+                                <li>Relationship between compressor temperature ratio and solidity: Increasing solidity leads to higher temperature ratios, affecting efficiency and thermal management.</li>
+                                <li>Effect of inlet angle (α1) on pressure and temperature ratios: Higher inlet angles correlate with increased pressure and temperature ratios.</li>
+                                <li>Influence of number of stages on pressure and temperature ratios: Increasing stages generally improves pressure ratio but may increase temperature ratio, impacting thermal loads and efficiency.</li>
+                                <li>Impact of number of stages on compressor efficiency: Efficiency tends to decrease as the number of stages increases, indicating potential design or operational considerations for optimization.</li>
+                            </ul>
+                            
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/Compressor Pressure with Angle..png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Pressure with Angle                           
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/Compressor Temperature with Angle.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Temperature with Angle
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/Compressor Pressure with stages.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Pressure with stages                          
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/Compressor Temperature with Number of Stages.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Temperature with Number of Stages
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/Compressor Efficiency with Number of Stages.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Compressor Efficiency with Number of Stages                          
+                                    </div>
+                            </div>
+                        </div>
+                    </ul>
+                    </ul>
+                    </li><h2 class="text-2xl text-pink">Combustor:</h2>
+                    <p>The heart of the engine, the combustor, transforms fuel and air into high-temperature gases. 
+                        Analysis involves selecting fuel type, combustion strategy, and equivalence ratio while 
+                        maintaining temperature constraints. Plots depict temperature profiles, emissions levels, and 
+                        pressure variations.</p>
+                    <strong>CEARUN Program: </strong>
+                    <ul>
+                        <li>The CEARUN program provides a graphical user interface for engineers to create and analyze combustion plots.</li>
+                        <li>The program allows for the selection of fuel type, combustion strategy, and equivalence ratio.</li>
+                        <li>Temperature profiles, emissions levels, and pressure variations are displayed.</li>
+                        <li>The choice of Jet-A(L) fuel was based on its availability, energy density, safety, and industry standardization. A fuel-lean approach with a ratio of 0.39 was selected to maximize efficiency and minimize emissions.</li>
+                    </ul>
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/CEARUN Sketch.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">CEARUN Sketch                        
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/CEARUN Compressor Cross Section.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">CEARUN Compressor Cross Section
+                                </div>
+                        </div>
+                    </div>
+                    <strong>Equations and Parameters: </strong>
+                    <ul>
+                        <li><strong>Fuel Requirements:</strong> A fuel-air mix between 0.3 and 0.4 ensures efficient combustion and minimal emissions.</li>
+                        <li><strong>Exit Temperature:</strong> The combustor exit temperature was found to be 1494 K, close to the maximum limit of 1500 K.</li>
+                        <li><strong>Exhaust Emissions:</strong> The mole fractions of CO and NO were determined to be \(2.00 \times 10^{-7}\) and \(9.00 \times 10^{-4}\) respectively.</li>
+                    </ul>
+                    <p style="text-align: center;">
+                        \( \text{Mole Fraction of CO} = 2.00 \times 10^{-7} \)
+                    </p>
+                    <p style="text-align: center;">
+                        \( \text{Mole Fraction of NO} = 9.00 \times 10^{-4} \)
+                    </p>
+                    <strong>Key Findings and Analysis: </strong>
+                    <ul>
+                        <li><strong>Fuel Type and Combustion Strategy:</strong> The choice of fuel type and combustion strategy impacts efficiency, temperature distribution, and emissions.</li>
+                        <li><strong>Fuel-Air Ratio:</strong> The fuel-air ratio varied from 0.1 to 2.0 with increments of 0.1, and from 0.30 to 0.40 with increments of 0.01. The optimal ratio was found to be between 0.3 and 0.4.</li>
+                        <li><strong>Combustor Inlet Conditions:</strong> The compressor performance affects combustor inlet temperature and pressure.</li>
+                        <li><strong>Temperature Ratio:</strong> Increasing the fuel-air ratio leads to a rise in temperature ratio. Optimal fuel-air ratio is between 0.3 and 0.4 to maximize the temperature ratio while keeping the throat temperature under 1500 K.</li>
+                        <li><strong>Pressure Variations:</strong> Chamber and throat pressure ratios vary with the fuel-air ratio, providing insights into pressure changes within the combustor.</li>
+                        <li><strong>Emissions Levels:</strong> Lower fuel-air ratios are associated with smaller CO and NO emissions.</li>
+                    </ul>
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Chamber Mole Fraction CO with FuelAir Ratio.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Chamber Mole Fraction CO with FuelAir Ratio                        
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Chamber Mole Fraction NO with FuelAir Ratio.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Chamber Mole Fraction NO with FuelAir Ratio
+                                </div>
+                        </div>
+                    </div>
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Chamber Pressure Ratio with Fuel-air.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Chamber Pressure Ratio with Fuel-air                          
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Temperature Ratio with Fuel-air Ratio.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Temperature Ratio with Fuel-air Ratio
+                                </div>
+                        </div>
+                    </div>
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Throat Pressure Ratio with Fuel-air Ratio.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Throat Pressure Ratio with Fuel-air Ratio                  
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Combustor Throat Temperature Ratio with Fuel-air.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Throat Temperature Ratio with Fuel-air
+                                </div>
+                        </div>
+                    </div>   
+                    <h2 class="text-2xl text-pink">Turbine</h2>
+                    <p>Efficient operation, cost minimization, and compressor-turbine matching are focal points in turbine design. Plots illustrate pressure, temperature, efficiency, work output, and mass flow rate across turbine stages. Considerations include work output, turbine efficiency, and mass flow rate calculations to ensure optimal turbine performance.</p>
+                    <h3>CEARUN Program:</h3>
+                    <ul>
+                        <li>Analysis of total turbine work output to determine the necessary number of turbine stages for driving the compressor efficiently.</li>
+                        <li>Calculation of turbine efficiency using data from the TURBN program, with observed efficiencies ranging from 90.22% to 90.44%.</li>
+                        <li>Observation of mass flow rate through the turbine, indicating a decrease from 60 kg/s at the compressor to 45 kg/s at the turbine, suggesting efficient energy conversion.</li>
+                    </ul>
+                    <div class="shadow-box">
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/Turbine Parameters.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Turbine Parameters                  
+                                </div>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/img/air/TURBN Sketch Pad.png" alt="Space Team" class="rounded-image">
+                            <div class="caption">Combustor Throat Temperature Ratio with Fuel-air
+                                </div>
+                        </div>
+                        </div>
+                        <h3>Equations and Parameters:</h3>
+                        <ul>
+                            <li>Work output (\(W_{\text{out}}\)) is determined by the change in enthalpy (\(\Delta h\)) of the working fluid:
+                                <div style="text-align:center;">
+                                    \(W_{\text{out}} = C_p \times (T_{t1} - T_{t3})\)
+                                </div>
+                            </li>
+                            <li>Total temperature ratio (\(T_{\text{tratio}}\)) represents the ratio of outlet to inlet temperature:
+                                <div style="text-align:center;">
+                                    \(T_{\text{tratio}} = \frac{T_{\text{outlet}}}{T_{\text{inlet}}}\)
+                                </div>
+                            </li>
+                            <li>Total pressure ratio (\(P_{\text{tratio}}\)) shows the ratio of outlet to inlet pressure:
+                                <div style="text-align:center;">
+                                    \(P_{\text{tratio}} = \frac{P_{\text{outlet}}}{P_{\text{inlet}}}\)
+                                </div>
+                            </li>
+                            <li>Turbine efficiency (\(\eta_{\text{turbine}}\)) is the ratio of actual work output to the ideal work output:
+                                <div style="text-align:center;">
+                                    \(\eta_{\text{turbine}} = \frac{C_p \times (T_{t1} - T_{t3})}{R \times T_{\text{inlet}} \times \left(\frac{P_{t1}}{P_{t3}}\right)}\)
+                                </div>
+                            </li>
+                            <li>Turbine outlet temperature (\(T_{t\text{outlet}}\)) is calculated as:
+                                <div style="text-align:center;">
+                                    \(T_{t\text{outlet}} = T_{t1} - (T_{t1} - T_{t3}) \times \left(\frac{P_{t1}}{P_{t3}}\right)\)
+                                </div>
+                            </li>
+                            <li>Turbine outlet pressure (\(P_{t\text{outlet}}\)) is calculated as:
+                                <div style="text-align:center;">
+                                    \(P_{t\text{outlet}} = P_{03} \times \left(\frac{P_{04}}{P_{03}}\right)\)
+                                </div>
+                            </li>
+                            <li>Mass flow rate (\(\dot{m}\)) through the turbine:
+                                <div style="text-align:center;">
+                                    \(\dot{m} = M_1 \times \frac{P_{t1}}{R \times T_{t1}} \times \sqrt{C_p \times R \times T_{t1}}\)
+                                </div>
+                            </li>
+                        </ul>
+                        <h3>Key Findings and Analysis:</h3>
+                        <ul>
+                            <li>The turbine stages consistently show high efficiency, ranging from 90.22% to 90.44%.</li>
+                            <li>Mass flow, temperature, and pressure increase through the stages, indicating effective energy addition to the fluid.</li>
+                            <li>Steady velocity ratio of 1.0000 is maintained through adjustments in vane and blade counts.</li>
+                            <li>Pressure ratio (Pt3/Pt1) and temperature ratio (Tt3/Tt1) increase as the fluid moves through the turbine stages.</li>
+                            <li>Efficiency trends across different turbine stages show increasing efficiency with values between 90.22% and 90.44%.</li>
+                            <li>Work output decreases as the fluid moves through the turbine, with a mass flow rate decreasing from 60 kg/s at the compressor to 45 kg/s at the turbine.</li>
+                        </ul>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TURBN Pressure Ratio vs Stage.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Pressure ratio (Pt3/Pt1) changes as the fluid moves through the turbine stages               
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TURBN Temperature Ratio vs Stage.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">Temperature ratio (Tt3/Tt1) changes throughout the turbine stages
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="shadow-box">
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TURBN Work Output vs Stage.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">The yellow line illustrates the work done by the turbine at each stage, indicating the amount of energy extracted from the fluid as it progresses through each stage                
+                                    </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/img/air/TURBN Turbine Efficiency vs Stage.png" alt="Space Team" class="rounded-image">
+                                <div class="caption">The turbine’s efficiency at different stages of operation
+                                    </div>
+                            </div>
+                        </div>
+                        <h2 class="text-2xl text-pink">Aeroengine Design Project Conclusion:</h2>
+                        <p>The project provides insights into gas turbine engine core design and analysis, addressing 
+                            specific requirements and constraints. Leveraging analytical tools and thorough evaluations, 
+                            the project aims to enhance engine efficiency, performance, and cost-effectiveness.</p>
+                    </div>
+                </div>
+       
+<!-- Load MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-            <h2 class="text-2xl text-pink">Combustor:</h2>
-            <p>The heart of the engine, the combustor, transforms fuel and air into high-temperature gases. 
-                Analysis involves selecting fuel type, combustion strategy, and equivalence ratio while 
-                maintaining temperature constraints. Plots depict temperature profiles, emissions levels, and 
-                pressure variations.</p>
-
-            <h2 class="text-2xl text-pink">Turbine:</h2>
-            <p>Efficient operation, cost minimization, and compressor-turbine matching are focal points in 
-                turbine design. Plots illustrate pressure, temperature, efficiency, work output, and mass flow 
-                rate across turbine stages. Considerations include work output, turbine efficiency, and mass 
-                flow rate calculations to ensure optimal turbine performance.</p>
-
-            <h2 class="text-2xl text-pink">Aeroengine Design Project Conclusion:</h2>
-            <p>The project provides insights into gas turbine engine core design and analysis, addressing 
-                specific requirements and constraints. Leveraging analytical tools and thorough evaluations, 
-                the project aims to enhance engine efficiency, performance, and cost-effectiveness.</p>
-        </div>
-    </div>
-    
     <footer>
         <nav class="foot-nav">
             <ul>
