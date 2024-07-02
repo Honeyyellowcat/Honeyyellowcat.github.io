@@ -7,6 +7,7 @@
     box-sizing: content-box;
     font-family: "Poppins", sans-serif;
   }
+
   /* Define the animation */
 @keyframes gridUp {
   0% {
@@ -25,7 +26,7 @@
   transform: translate(-50%, -50%);
 }
 
-  /* Apply the animation to the desired elements */
+/* Apply the animation to the desired elements */
   .sr01 {
     animation: gridUp 1s ease forwards;
   }
@@ -40,7 +41,7 @@
   }
 
   body {
-    /* background: #070d1f; */
+/* background: #070d1f; */
     background: #FDFCF3;
     transition: all 0.475s;
   }
@@ -60,7 +61,7 @@
     color: #fff;
   }
 
-  /* Scrollbar Styling */
+/* Scrollbar Styling */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -122,13 +123,14 @@
   .btn__hover:hover::before {
     transform: scaleX(1);
   }
-/* HERE front Button Add styles to increase text size */
+
+/* front Button Add styles to increase text size */
 .content h4 {
-  font-size: 24px; /* Increase as needed */
+  font-size: 24px; 
 }
 
 .content h2 {
-  font-size: 36px; /* Increase as needed */
+  font-size: 36px; 
 }
 
 .btn {
@@ -136,8 +138,7 @@
   padding: 10px 20px; /* Increase padding for larger button */
 }
 
-
-  /***slider button**/
+/** slider button **/
   .swiper-pagination-bullet {
     width: 0px !important;
     height: 1.5px !important;
@@ -169,17 +170,14 @@
     height: auto;
 }
 
-/* Ensure thumbnails are visible on top of other content */
 .thumbnail {
     z-index: 9999;
 }
 
-/* Ensure thumbnails are visible on top of other content */
 .thumbnail {
   z-index: 9999;
 }
 
-/* Position the thumbnail container under the profile image */
 .thumbnail-container {
   display: flex; /* Use flexbox to display thumbnails in a line */
   justify-content: center; /* Center thumbnails horizontally */
@@ -237,6 +235,7 @@
 .arrow-left {
   left: 10px; /* Adjust the left position */
 }
+
 .arrow-right {
   right: 10px; /* Adjust the right position */
 }
@@ -295,6 +294,7 @@ body {
   padding: 0;
 }
 
+/* photo-album  */
 #photo-album {
   padding: 20px 0;
   text-align: center;
@@ -312,7 +312,6 @@ body {
   margin-bottom: 20px; /* Add margin at the bottom */
   flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
-
 
 .photo img {
   max-width: 100px; /* Adjust the size of the images */
@@ -347,30 +346,28 @@ body {
   z-index: 9999;
   transition: none; /* Remove the transition effect */
 }
-/* Y
-our existing CSS styles */
+
+/* CSS styles */
     /* Style for the code box */
     .code-box {
       background-color: #f4f4f4;
       padding: 20px;
       border-radius: 5px;
       overflow-x: auto;
-      font-family: 'Courier New', Courier, monospace; /* Optional: Specify a fixed-width font */
+      font-family: 'Courier New', Courier, monospace; 
   }
 
-  /* Style for the code text */
   .code-box code {
       font-size: 14px;
       color: #333; /* Optional: Change the text color */
   }
-  /* Your existing CSS styles */
-    /* Style for the code box */
+
     .code-box {
       background-color: #FFC0CB;
       padding: 20px;
       border-radius: 5px;
       overflow-x: auto;
-      font-family: 'Courier New', Courier, monospace; /* Optional: Specify a fixed-width font */
+      font-family: 'Courier New', Courier, monospace; 
       transition: max-height 0.3s ease; /* Add transition for smooth expansion */
       max-height: 100px; /* Set initial height */
       overflow: hidden; /* Hide overflow content */
@@ -382,7 +379,7 @@ our existing CSS styles */
       max-height: none; /* Remove max-height to expand */
   }
 
-/* -------------- Experience portal */
+/* -------------- Experience portal --------------*/
 /* For WebKit/Blink browsers */
 ::-webkit-scrollbar {
   width: 12px;
@@ -393,7 +390,7 @@ our existing CSS styles */
   border-radius: 6px;
 }
 
-/* Header for exterior pages */ 
+/* --------------Header for exterior pages --------------*/ 
 * { 
   margin: 0;
   padding: 0;
@@ -559,7 +556,8 @@ footer {
 .text-container ul li {
   margin-bottom: 10px; /* Add margin between bulleted points */
 }
-/* Style for "Here" links */
+
+/* --------------Style for "Here" links --------------*/
 .text-container a {
   color: pink; /* Change the color to blue (or your desired color) */
 }
@@ -580,7 +578,7 @@ footer {
   display: block;
 }
 
-/* ---------- Projects */
+/* ----------------- Projects --------------*/
 
 body {
   margin: 0;
@@ -724,7 +722,7 @@ body {
   color: #ffffff;
 }
 
-/* For larger screens */
+/* --------------For larger screens --------------*/
 @media (min-width: 769px) {
   .shadow-box {
     flex-direction: row; /* Arrange images in a row */
@@ -745,7 +743,7 @@ body {
 }
 
 
-/* General styling for the sections */
+/* --------------skills / about - General styling for the sections --------------*/
 section {
   padding: 4rem 1rem;
   margin-bottom: 2rem;
@@ -759,6 +757,19 @@ section {
   background-color: #000000;
 }
 
+.topic-header {
+  font-size: 1.8em; /* Adjust this size as needed */
+  text-transform: none; /* Ensure text is not in all caps */
+}
+.content-text {
+  font-size: 1em; /* Adjust this size as needed */
+  color: white; /* Set the content text color to white */
+  text-transform: none; /* Ensure text is not in all caps */
+}
+.pink-link {
+  color: #FE8EA8 !important; /* Set the link color to pink */
+  text-transform: none; /* Ensure text is not in all caps */
+}
 /* Responsive styles to prevent overlap */
 @media (max-width: 768px) {
   .about-section, .skill-section {
@@ -809,70 +820,70 @@ button span.rotate {
   top: 0;
   left: 0;
 }
+/* --------------General styling for the sections -------------- */
+section {
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
+}
 
-        /* General styling for the sections */
-        section {
-          padding: 4rem 1rem;
-          margin-bottom: 2rem;
-      }
+.about-section {
+  background-color: #000000;
+}
 
-      .about-section {
-          background-color: #000000;
-      }
+.skill-section {
+  background-color: #000000;
+}
 
-      .skill-section {
-          background-color: #000000;
-      }
+/* Image container styling */
+.profile-image-container {
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden;
+  position: relative;
+}
 
-      /* Image container styling */
-      .profile-image-container {
-          width: 300px; /* Adjust width as needed */
-          height: 300px; /* Adjust height as needed */
-          overflow: hidden;
-          position: relative;
-      }
-
-      /* Ensure images fill the container */
-      .profile-image-container img {
-        width: 100%; /* Ensure the image fills the container horizontally */
-        height: 100%; /* Ensure the image fills the container vertically */
-        object-fit: cover; /* Maintain aspect ratio while filling the container */
-    }
+/* Ensure images fill the container */
+.profile-image-container img {
+width: 100%; /* Ensure the image fills the container horizontally */
+height: 100%; /* Ensure the image fills the container vertically */
+object-fit: cover; /* Maintain aspect ratio while filling the container */
+}
 
 
-      /* Responsive styles to prevent overlap */
-      @media (max-width: 768px) {
-          .about-section, .skill-section {
-              padding: 2rem 1rem;
-          }
-          
-          .skill-section {
-              margin-top: 2rem;
-          }
-      }
+/* Responsive styles to prevent overlap */
+@media (max-width: 768px) {
+  .about-section, .skill-section {
+      padding: 2rem 1rem;
+  }
+  
+  .skill-section {
+      margin-top: 2rem;
+  }
+}
 
-      /* Specific styling for the toggle buttons */
-      button {
-          background: none;
-          border: none;
-          cursor: pointer;
-          color: #FE8EA8;
-          font-size: 1rem;
-          font-weight: medium;
-      }
+/* Specific styling for the toggle buttons */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #FE8EA8;
+  font-size: 1rem;
+  font-weight: medium;
+}
 
-      button span {
-          transition: transform 0.3s;
-      }
+button span {
+  transition: transform 0.3s;
+}
 
-      button span.rotate {
-          transform: rotate(180deg);
-      }
+button span.rotate {
+  transform: rotate(180deg);
+}
 
-      /* Hidden sections */
-      .hidden {
-          display: none;
-      }
+/* Hidden sections */
+.hidden {
+  display: none;
+}        
+
 /* Adjusted width for the text column */
 .profile-text {
   flex: 1; /* Allow the text column to grow */
