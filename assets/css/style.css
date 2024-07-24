@@ -1,584 +1,619 @@
+/* Importing the Poppins font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
 
+
+/* Global Colors for Light Mode */
+:root {
+  --section-padding: 4rem 1rem; /* Padding for sections */
+  --section-margin-bottom: 2rem; /* Margin bottom for sections */
+  
+  /* Default Dark Mode Colors */
+  --background-color: #000000; /* Background color for sections */
+  --text-color: #ffffff; /* Color for text */
+  --link-color: #FE8EA8; /* Color for links */
+  --button-color: #FE8EA8; /* Color for buttons */
+  --profile-image-width: 300px; /* Default width for profile image container */
+  --profile-image-height: 300px; /* Default height for profile image container */
+  --profile-image-max-width: 400px; /* Max width for profile image container */
+  --profile-image-height-large: 400px; /* Height for profile image container on larger screens */
+  
+  --photo-album-padding: 20px; /* Padding for photo album */
+  --photo-grid-gap: 10px; /* Gap between photos */
+  --photo-max-width: 100px; /* Max width for photos */
+  --photo-expanded-width: 30vw; /* Expanded width for photos */
+  --photo-expanded-video-width: 20vw; /* Expanded width for videos */
+  --shadow-box-bg-color: #ffc0cb73; /* Light pink background for shadow box */
+  --caption-color: #ffffff; /* White color for captions */
+  --shadow-box-border-radius: 15px; /* Border radius for shadow box */
+  --shadow-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for shadow box */
+  --rounded-image-max-height: 600px; /* Max height for rounded images */
+  
+  --code-box-bg-color: #FFC0CB; /* Light pink for code box */
+  --code-text-color: #333; /* Dark grey for code text */
+  --scrollbar-thumb-color: #FE8EA8; /* Light pink for scrollbar handle */
+  --body-bg-color: #000000; /* Black for body background */
+  --header-bg-color: #864C5A; /* Dark pink for header */
+  --nav-link-color: #212121; /* Dark grey for nav links */
+  --nav-link-hover-color: #FDFCF3; /* Off-white for nav link hover */
+  --name-color: #212121; /* Dark grey for name */
+  --text-pink-color: #FE8EA8; /* Light pink for text */
+  --footer-bg-color: #212121; /* Dark grey for footer */
+  
+  --active-link-bg-color: rgba(255, 100, 234, 0.161); /* Active link background color */
+  --active-link-color: #FEAFC2; /* Active link color */
+}
+
+/* Light Mode Colors */
+.light-mode {
+  --background-color: #ffffff; /* Background color for sections */
+  --text-color: #000000; /* Color for text */
+  --link-color: #FE8EA8; /* Color for links */
+  --button-color: #FE8EA8; /* Color for buttons */
+  
+  --photo-album-padding: 20px; /* Padding for photo album */
+  --photo-grid-gap: 10px; /* Gap between photos */
+  --photo-max-width: 100px; /* Max width for photos */
+  --photo-expanded-width: 30vw; /* Expanded width for photos */
+  --photo-expanded-video-width: 20vw; /* Expanded width for videos */
+  --shadow-box-bg-color: #fdfcf3; /* Light background color for shadow box */
+  --caption-color: #000000; /* Black color for captions */
+  --shadow-box-border-radius: 15px; /* Border radius for shadow box */
+  --shadow-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for shadow box */
+  --rounded-image-max-height: 600px; /* Max height for rounded images */
+  
+  --code-box-bg-color: #FFF; /* White for code box */
+  --code-text-color: #333; /* Dark grey for code text */
+  --scrollbar-thumb-color: #FE8EA8; /* Light pink for scrollbar handle */
+  --body-bg-color: #ffffff; /* White for body background */
+  --header-bg-color: #FFC0CB; /* Light pink for header */
+  --nav-link-color: #212121; /* Dark grey for nav links */
+  --nav-link-hover-color: #FE8EA8; /* Light pink for nav link hover */
+  --name-color: #212121; /* Dark grey for name */
+  --text-pink-color: #FE8EA8; /* Light pink for text */
+  --footer-bg-color: #e0e0e0; /* Light grey for footer */
+  
+  --active-link-bg-color: rgba(255, 100, 234, 0.161); /* Active link background color */
+  --active-link-color: #FEAFC2; /* Active link color */
+}
+
+
+/* Base layer styles */
 @layer base {
   * {
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
-    font-family: "Poppins", sans-serif;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: content-box; /* Set box-sizing to content-box */
+    font-family: "Poppins", sans-serif; /* Apply Poppins font to all elements */
   }
 
-  /* Define the animation */
-@keyframes gridUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+  /* Define the gridUp animation */
+  @keyframes gridUp {
+    0% {
+      opacity: 0; /* Start with no opacity */
+      transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+      transform: translateY(0); /* End at original position */
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .absolute-center {
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust to exact center */
   }
-}
 
-.absolute-center {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Apply the animation to the desired elements */
+  /* Apply gridUp animation to elements with these classes */
   .sr01 {
-    animation: gridUp 1s ease forwards;
+    animation: gridUp 1s ease forwards; /* Apply animation */
   }
   .sr02 {
-    animation: gridUp 1s ease forwards;
+    animation: gridUp 1s ease forwards; /* Apply animation */
   }
   .sr03 {
-    animation: gridUp 1s ease forwards;
+    animation: gridUp 1s ease forwards; /* Apply animation */
   }
   .sr04 {
-    animation: gridUp 1s ease forwards;
+    animation: gridUp 1s ease forwards; /* Apply animation */
   }
 
   body {
-/* background: #070d1f; */
-    background: #FDFCF3;
-    transition: all 0.475s;
+    background: var(--background-color); /* Use the defined background color */
+    transition: all 0.475s; /* Smooth transition for all changes */
   }
 
-  *,
-  html,
-  body,
-  a,
-  button,
-  span,
-  p {
-    font-family: "Poppins", sans-serif;
+  *, html, body, a, button, span, p {
+    font-family: "Poppins", sans-serif; /* Apply Poppins font to all elements */
   }
 
   ::selection {
-    background: pink;
-    color: #fff;
+    background: var(--pink-color); /* Background color for selected text */
+    color: var(--white-color); /* Text color for selected text */
   }
 
-/* Scrollbar Styling */
+  /* Scrollbar styling */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 8px; /* Width of the scrollbar */
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #fdfcf300;
+    background-color: transparent; /* Transparent track background */
   }
 
   ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background: pink;
+    border-radius: 10px; /* Rounded scrollbar thumb */
+    background: var(--pink-color); /* Thumb color */
   }
 
   .show {
-    left: 0;
-    transition: all 0.3s ease;
+    left: 0; /* Position to the left */
+    transition: all 0.3s ease; /* Smooth transition */
   }
 
   #nav-menu {
-    transition: 0.4s;
+    transition: 0.4s; /* Smooth transition */
   }
 
   .show_menu {
-    left: 0 !important;
+    left: 0 !important; /* Force position to the left */
   }
 
   a {
-    transition: all 0.5s ease;
-    width: max-content;
+    transition: all 0.5s ease; /* Smooth transition */
+    width: max-content; /* Adjust width to content */
   }
 
   .active-link {
-    background-color: rgba(255, 100, 234, 0.161);
-    color: #FEAFC2 !important;
-    transition: all 0.5s ease;
-    width: max-content;
+    background-color: var(--active-link-bg-color); /* Background color for active link */
+    color: var(--active-link-color) !important; /* Text color for active link */
+    transition: all 0.5s ease; /* Smooth transition */
+    width: max-content; /* Adjust width to content */
   }
 
   .btn__hover {
-    transition: all 0.475s;
+    transition: all 0.475s; /* Smooth transition */
   }
 
   .btn__hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    background: #fff;
-    transition: all 0.475s;
-    z-index: -1;
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    transform: scaleX(0); /* Initial scale */
+    transform-origin: 0 50%; /* Origin for transformation */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    border-radius: 0.5rem; /* Rounded corners */
+    background: var(--white-color); /* Background color */
+    transition: all 0.475s; /* Smooth transition */
+    z-index: -1; /* Position behind other elements */
   }
 
   .btn__hover:hover::before {
-    transform: scaleX(1);
+    transform: scaleX(1); /* Scale up on hover */
   }
 
-/* front Button Add styles to increase text size */
-.content h4 {
-  font-size: 24px; 
-}
-
-.content h2 {
-  font-size: 36px; 
-}
-
-.btn {
-  font-size: 18px; /* Increase as needed */
-  padding: 10px 20px; /* Increase padding for larger button */
-}
-
-/** slider button **/
-  .swiper-pagination-bullet {
-    width: 0px !important;
-    height: 1.5px !important;
-    border-radius: 20px !important;
-    background: #fff !important;
-    opacity: 0.9 !important;
+  /* Front Button Add styles to increase text size */
+  .content h4 {
+    font-size: 24px; /* Font size for h4 */
   }
 
-  .swiper-pagination-bullet-active {
-    height: 4.5px !important;
+  .content h2 {
+    font-size: 36px; /* Font size for h2 */
   }
 
-  .swiper-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .btn {
+    font-size: 18px; /* Font size for button */
+    padding: 10px 20px; /* Padding for button */
   }
-
-  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 0.5rem !important;
-  }
-}
-
-/* Styles for thumbnail images */
-/* Adjust width and height of thumbnails */
-.thumbnail img {
-    width: 40px;
-    height: auto;
-}
-
-.thumbnail {
-    z-index: 9999;
-}
-
-.thumbnail {
-  z-index: 9999;
-}
-
-.thumbnail-container {
-  display: flex; /* Use flexbox to display thumbnails in a line */
-  justify-content: center; /* Center thumbnails horizontally */
-  margin-top: 20px;
-}
-
-/* Handle */
-.thumbnail-container::-webkit-scrollbar-thumb {
-  background: #fe8ea8; /* Color of the scrollbar handle */
-  border-radius: 5px; /* Round the corners of the handle */
-}
-
-/* Make scrollbar buttons invisible */
-.thumbnail-container::-webkit-scrollbar-button {
-  display: none;
-}
-
-/* Track */
-.thumbnail-container::-webkit-scrollbar-track {
-  background: transparent; /* Make scrollbar track transparent */
-}
-
-/* Thin scrollbar */
-.thumbnail-container::-webkit-scrollbar {
-  width: 5px; /* Adjust scrollbar width */
-  height: 5px; /* Adjust scrollbar height */
-}
-
-/* Handle */
-.thumbnail-container::-webkit-scrollbar-thumb {
-  background: #fe8ea8; /* Color of the scrollbar handle */
-  border-radius: 5px; /* Round the corners of the handle */
-}
-
-/* Make scrollbar buttons invisible */
-.thumbnail-container::-webkit-scrollbar-button {
-  display: none;
-}
-
-/* Track */
-.thumbnail-container::-webkit-scrollbar-track {
-  background: transparent; /* Make scrollbar track transparent */
-}
-
-.arrow-left, .arrow-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: rgba(254, 175, 193, 0.979); /* Adjust the transparency here */
-  cursor: pointer;
-  z-index: 1;
-}
-
-.arrow-left {
-  left: 10px; /* Adjust the left position */
-}
-
-.arrow-right {
-  right: 10px; /* Adjust the right position */
-}
-
-/* Media query for smaller screens and desktop */
-@media screen and (max-width: 768px) {
-    .thumbnail-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-image-container {
-        width: 100%;
-        max-width: 400px;
-        height: 400px;
-    }
-
-    .md:w-2 {
-        width: 100%;
-    }
-}
-
-/* Header for exterier pages */ 
-*{ 
-  margin: 0;
-  padding: 0;
-  list-style: none ;
-  text-decoration: none;
-}
-
-.header {
-  height: 80px;;
-  width: 100%;
-  display: block;
-  background: pink;
-}
-
-/* Experiences */
-.inner {
-  padding: 20px; /* Adjust as needed */
-  text-align: rigleftht;
-}
-.text-pink {
-  color: #FE8EA8;
-}
-
-.footer__copy{
-  display: block;
-  margin-top: 6rem;
-  text-align: center;
-  font-size: .813rem;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-/* photo-album  */
-#photo-album {
-  padding: 20px 0;
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Adjusted to center vertically */
-  align-items: center;
-}
-
-.photo-grid {
-  display: flex; /* Set the container to use flexbox */
-  justify-content: center; /* Center the items horizontally */
-  gap: 10px; /* Add gap between items */
-  margin-bottom: 20px; /* Add margin at the bottom */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-}
-
-.photo img {
-  max-width: 100px; /* Adjust the size of the images */
-  height: auto;
-  cursor: pointer; /* Change cursor to pointer when hovering over images */
-  transition: transform 0.3s ease; /* Add transition for smooth effect */
-}
-
-.photo video {
-  max-width: 100px; /* Adjust the size of the video in its default state */
-  height: auto;
-  cursor: pointer; /* Change cursor to pointer when hovering over the video */
-  transition: transform 0.3s ease; /* Add transition for smooth effect */
-}
-
-.photo img.expanded {
-  max-width: 30vw; /* Adjust the size of the expanded images */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: none; /* Remove the transition effect */
-}
-
-.photo video.expanded {
-  max-width: 20vw; /* Adjust the size of the expanded video */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: none; /* Remove the transition effect */
 }
 
 /* CSS styles */
-    /* Style for the code box */
-    .code-box {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 5px;
-      overflow-x: auto;
-      font-family: 'Courier New', Courier, monospace; 
-  }
 
-  .code-box code {
-      font-size: 14px;
-      color: #333; /* Optional: Change the text color */
-  }
+/* Style for the code box */
+.code-box {
+  background-color: var(--code-box-bg-color); /* Use global color for background */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 5px; /* Rounded corners */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  transition: max-height 0.3s ease; /* Smooth expansion transition */
+  max-height: 100px; /* Set initial height */
+  overflow: hidden; /* Hide overflow content */
+  cursor: pointer; /* Pointer cursor on hover */
+}
 
-    .code-box {
-      background-color: #FFC0CB;
-      padding: 20px;
-      border-radius: 5px;
-      overflow-x: auto;
-      font-family: 'Courier New', Courier, monospace; 
-      transition: max-height 0.3s ease; /* Add transition for smooth expansion */
-      max-height: 100px; /* Set initial height */
-      overflow: hidden; /* Hide overflow content */
-      cursor: pointer;
-  }
+.code-box code {
+  font-size: 14px; /* Font size for code text */
+  color: var(--code-text-color); /* Use global color for text */
+}
 
-  /* Style for the expanded box */
-  .code-box.expanded {
-      max-height: none; /* Remove max-height to expand */
-  }
+/* Style for the expanded code box */
+.code-box.expanded {
+  max-height: none; /* Remove max-height to expand */
+}
 
-/* -------------- Experience portal --------------*/
+/* -------------- Experience portal -------------- */
 /* For WebKit/Blink browsers */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 12px; /* Width of scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #FE8EA8;
-  border-radius: 6px;
+  background-color: var(--scrollbar-thumb-color); /* Use global color for scrollbar handle */
+  border-radius: 6px; /* Rounded corners for scrollbar handle */
 }
 
-/* --------------Header for exterior pages --------------*/ 
-* { 
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
+/* -------------- Header for exterior pages -------------- */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  list-style: none; /* Remove list styles */
+  text-decoration: none; /* Remove text decorations */
 }
 
 body {
-  background-color: #000000;
-  color: #FDFCF3;
-  font-family: Arial, sans-serif;
+  background-color: var(--body-bg-color); /* Use global background color */
+  color: var(--text-color); /* Use global text color */
+  font-family: Arial, sans-serif; /* Font family */
 }
 
 .header {
-  background-color: #864C5A;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--header-bg-color); /* Use global background color */
+  padding: 20px; /* Padding inside header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for header */
 }
 
 .header nav ul {
-  display: flex;
-  gap: 20px;
+  display: flex; /* Use flexbox */
+  gap: 20px; /* Space between items */
 }
 
 .header nav ul li a {
-  color: #212121;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: var(--nav-link-color); /* Use global color for nav links */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
 }
 
 .header nav ul li a:hover {
-  color: #FDFCF3;
+  color: var(--nav-link-hover-color); /* Use global color on hover */
 }
 
 .header .name {
-  color: #212121;
-  font-weight: bold;
-  font-size: 1.25rem;
-  margin-left: auto;
+  color: var(--name-color); /* Use global color for name */
+  font-weight: bold; /* Bold text */
+  font-size: 1.25rem; /* Font size */
+  margin-left: auto; /* Push name to the right */
 }
 
 .inner {
-  padding: 20px;
-  text-align: center;
+  padding: 20px; /* Padding inside inner section */
+  text-align: center; /* Center align text */
 }
 
 .text-pink {
-  color: #FE8EA8;
+  color: var(--text-pink-color); /* Use global pink color */
 }
 
 .section-title {
-  color: #FE8EA8;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
-  display: inline-block;
+  color: var(--text-pink-color); /* Use global pink color */
+  font-size: 2rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align text */
+  position: relative; /* Relative positioning */
+  display: inline-block; /* Inline block display */
 }
 
 .section-title::after {
-  content: 'Experiences';
-  font-size: 4rem;
-  color: rgba(254, 142, 168, 0.1);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+  content: 'Experiences'; /* Text for overlay */
+  font-size: 4rem; /* Font size */
+  color: rgba(254, 142, 168, 0.1); /* Light pink overlay color */
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust to exact center */
+  z-index: -1; /* Send overlay behind title */
 }
 
 .portal-card {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  position: relative; /* Relative positioning */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  transition: transform 0.3s ease; /* Smooth transform transition */
 }
 
 .portal-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scale up on hover */
 }
 
 .portal-card img {
-  width: 100%;
-  border-radius: 15px;
+  width: 100%; /* Full width */
+  border-radius: 15px; /* Rounded corners */
 }
 
 .experience-info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(33, 33, 33, 0.8);
-  color: #FDFCF3;
-  padding: 10px;
-  text-align: center;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  background: rgba(33, 33, 33, 0.8); /* Dark overlay background */
+  color: var(--text-color); /* Use global text color */
+  padding: 10px; /* Padding inside info box */
+  text-align: center; /* Center align text */
+  border-bottom-left-radius: 15px; /* Rounded bottom-left corner */
+  border-bottom-right-radius: 15px; /* Rounded bottom-right corner */
 }
 
 .experience-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(33, 33, 33, 0.8);
-  color: #FDFCF3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  border-radius: 15px;
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(33, 33, 33, 0.8); /* Dark overlay background */
+  color: var(--text-color); /* Use global text color */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center align text */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+  border-radius: 15px; /* Rounded corners */
 }
 
 .portal-card:hover .experience-overlay {
-  opacity: 1;
+  opacity: 1; /* Show overlay on hover */
 }
 
 footer {
-  background-color: #212121;
-  color: #FDFCF3;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 20px;
-  border-top: 1px solid #FE8EA8;
+  background-color: var(--footer-bg-color); /* Use global footer background color */
+  color: var(--text-color); /* Use global text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Vertical padding */
+  margin-top: 20px; /* Margin at the top */
+  border-top: 1px solid var(--text-pink-color); /* Pink border on top */
 }
+
 .text-container-list ul {
-  list-style-position: outside;
-  text-align: left;
-  margin-left: 20px;
+  list-style-position: outside; /* Bullet points outside list */
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Margin on the left */
 }
 
 .text-container-list li {
-  text-align: left;
+  text-align: left; /* Align text to the left */
 }
 
 .text-container {
-  padding: 0 20px; /* Adjust the padding as needed */
+  padding: 0 20px; /* Horizontal padding */
 }
 
-.text-container {
-  padding: 0 20px; /* Adjust the padding as needed */
-}
 .text-container ul {
-  list-style-type: disc; /* Use disc style for bullet points */
-  padding-left: 20px; /* Add some padding to the left of the bulleted points */
+  list-style-type: disc; /* Disc style for bullet points */
+  padding-left: 20px; /* Padding on the left */
 }
+
 .text-container ul li {
-  margin-bottom: 10px; /* Add margin between bulleted points */
+  margin-bottom: 10px; /* Margin between items */
+}
+
+
+/* CSS styles */
+
+/* Style for the code box */
+.code-box {
+  background-color: var(--code-box-bg-color); /* Use global color for background */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 5px; /* Rounded corners */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font */
+  transition: max-height 0.3s ease; /* Smooth expansion transition */
+  max-height: 100px; /* Set initial height */
+  overflow: hidden; /* Hide overflow content */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.code-box code {
+  font-size: 14px; /* Font size for code text */
+  color: var(--code-text-color); /* Use global color for text */
+}
+
+/* Style for the expanded box */
+.code-box.expanded {
+  max-height: none; /* Remove max-height to expand */
+}
+
+/* -------------- Experience portal -------------- */
+/* For WebKit/Blink browsers */
+::-webkit-scrollbar {
+  width: 12px; /* Width of scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color); /* Use global color for scrollbar handle */
+  border-radius: 6px; /* Rounded corners for scrollbar handle */
+}
+
+/* -------------- Header for exterior pages -------------- */
+* {
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  list-style: none; /* Remove list styles */
+  text-decoration: none; /* Remove text decorations */
+}
+
+body {
+  background-color: var(--body-bg-color); /* Use global background color */
+  color: var(--text-color); /* Use global text color */
+  font-family: Arial, sans-serif; /* Font family */
+}
+
+.header {
+  background-color: var(--header-bg-color); /* Use global background color */
+  padding: 20px; /* Padding inside header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Box shadow for header */
+}
+
+.header nav ul {
+  display: flex; /* Use flexbox */
+  gap: 20px; /* Space between items */
+}
+
+.header nav ul li a {
+  color: var(--nav-link-color); /* Use global color for nav links */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+.header nav ul li a:hover {
+  color: var(--nav-link-hover-color); /* Use global color on hover */
+}
+
+.header .name {
+  color: var(--name-color); /* Use global color for name */
+  font-weight: bold; /* Bold text */
+  font-size: 1.25rem; /* Font size */
+  margin-left: auto; /* Push name to the right */
+}
+
+.inner {
+  padding: 20px; /* Padding inside inner section */
+  text-align: center; /* Center align text */
+}
+
+.text-pink {
+  color: var(--text-pink-color); /* Use global pink color */
+}
+
+.section-title {
+  color: var(--text-pink-color); /* Use global pink color */
+  font-size: 2rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align text */
+  position: relative; /* Relative positioning */
+  display: inline-block; /* Inline block display */
+}
+
+.section-title::after {
+  content: 'Experiences'; /* Text for overlay */
+  font-size: 4rem; /* Font size */
+  color: rgba(254, 142, 168, 0.1); /* Light pink overlay color */
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust to exact center */
+  z-index: -1; /* Send overlay behind title */
+}
+
+.portal-card {
+  position: relative; /* Relative positioning */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow content */
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.portal-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.portal-card img {
+  width: 100%; /* Full width */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.experience-info {
+  position: absolute; /* Absolute positioning */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  background: rgba(33, 33, 33, 0.8); /* Dark overlay background */
+  color: var(--text-color); /* Use global text color */
+  padding: 10px; /* Padding inside info box */
+  text-align: center; /* Center align text */
+  border-bottom-left-radius: 15px; /* Rounded bottom-left corner */
+  border-bottom-right-radius: 15px; /* Rounded bottom-right corner */
+}
+
+.experience-overlay {
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(33, 33, 33, 0.8); /* Dark overlay background */
+  color: var(--text-color); /* Use global text color */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center align text */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth opacity transition */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.portal-card:hover .experience-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+footer {
+  background-color: var(--footer-bg-color); /* Use global footer background color */
+  color: var(--text-color); /* Use global text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Vertical padding */
+  margin-top: 20px; /* Margin at the top */
+  border-top: 1px solid var(--text-pink-color); /* Pink border on top */
+}
+
+.text-container-list ul {
+  list-style-position: outside; /* Bullet points outside list */
+  text-align: left; /* Align text to the left */
+  margin-left: 20px; /* Margin on the left */
+}
+
+.text-container-list li {
+  text-align: left; /* Align text to the left */
 }
 
 .text-container {
-  padding: 0 20px; /* Adjust the padding as needed */
-}
-.text-container ul {
-  list-style-type: disc; /* Use disc style for bullet points */
-  padding-left: 20px; /* Add some padding to the left of the bulleted points */
-}
-.text-container ul li {
-  margin-bottom: 10px; /* Add margin between bulleted points */
+  padding: 0 20px; /* Horizontal padding */
 }
 
-/* --------------Style for "Here" links --------------*/
+.text-container ul {
+  list-style-type: disc; /* Disc style for bullet points */
+  padding-left: 20px; /* Padding on the left */
+}
+
+.text-container ul li {
+  margin-bottom: 10px; /* Margin between items */
+}
+
+/* --------------Style for "Here" links -------------- */
 .text-container a {
-  color: pink; /* Change the color to blue (or your desired color) */
+  color: var(--link-color); /* Use global link color */
 }
 
 .padded-heading {
-  padding: 20px; /* Adjust the padding value as needed */
-  text-align: center; /* Centers the text horizontally */
+  padding: 20px; /* Padding around heading */
+  text-align: center; /* Center align text */
 }
 
 .image-container {
-  width: 100%;
-  overflow: hidden;
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflow content */
 }
 
 .image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Full width */
+  height: auto; /* Auto height */
+  display: block; /* Block display */
 }
 
-/* ----------------- Projects --------------*/
+/* ----------------- Projects -------------- */
 
 body {
   margin: 0;
@@ -586,7 +621,7 @@ body {
 }
 
 #photo-album {
-  padding: 20px 0;
+  padding: var(--photo-album-padding); /* Use variable for padding */
   text-align: center;
   height: 100%;
   display: flex;
@@ -598,28 +633,20 @@ body {
 .photo-grid {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: var(--photo-grid-gap); /* Use variable for gap */
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
-.photo img {
-  max-width: 100px;
+.photo img, .photo video {
+  max-width: var(--photo-max-width); /* Use variable for max width */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.photo video {
-  max-width: 100px;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.photo img.expanded,
-.photo video.expanded {
-  max-width: 30vw;
+.photo img.expanded, .photo video.expanded {
+  max-width: var(--photo-expanded-width); /* Use variable for expanded width */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -629,13 +656,14 @@ body {
 }
 
 .photo video.expanded {
-  max-width: 20vw;
+  max-width: var(--photo-expanded-video-width); /* Use variable for video expanded width */
 }
+
 .shadow-box {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: var(--shadow-box-border-radius); /* Use variable for border radius */
+  box-shadow: var(--shadow-box-shadow); /* Use variable for box shadow */
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--shadow-box-bg-color); /* Use variable for background color */
   text-align: center;
   margin: 20px auto; /* Centers the box horizontally */
   max-width: 90%; /* Set a maximum width for larger screens */
@@ -651,61 +679,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.rounded-image {
-  border-radius: 15px;
-  width: 100%; /* Ensure images take full width of their container */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 600px; /* Set a max height to control image size */
-  object-fit: contain; /* Ensure images fit within their container without cropping */
-}
-
-.caption {
-  margin-top: 10px; /* Space between image and caption */
-  font-size: 16px;
-  color: #333;
-}
-
-/* For larger screens */
-@media (min-width: 769px) {
-  .shadow-box {
-    flex-direction: row; /* Arrange images in a row */
-    align-items: flex-start; /* Align items to the start vertically */
-    justify-content: space-between; /* Space between images */
-  }
-
-  .image-wrapper {
-    width: 48%; /* Control the size of images in the container */
-  }
-
-  .rounded-image {
-    height: auto; /* Maintain aspect ratio */
-    max-height: 600px; /* Set a max height to control image size */
-  }
-}
-
-.shadow-box {
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  background-color: #ffc0cb73;
-  text-align: center;
-  margin: 20px auto; /* Centers the box horizontally */
-  max-width: 90%; /* Set a maximum width for larger screens */
-  width: 100%; /* Full width in smaller viewports */
-  display: flex;
-  flex-direction: column; /* Column layout for smaller screens */
-  align-items: center; /* Center items horizontally */
-  gap: 20px; /* Space between images */
-}
-
-.image-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  border-radius: 15px; /* Ensure image containers have rounded corners */
+  border-radius: var(--shadow-box-border-radius); /* Use variable for border radius */
   overflow: hidden; /* Ensure images do not overflow their container */
 }
 
@@ -713,16 +687,17 @@ body {
   display: block; /* Display images as block elements */
   width: 100%; /* Ensure images take full width of their container */
   height: auto; /* Maintain aspect ratio */
+  max-height: var(--rounded-image-max-height); /* Use variable for max height */
   object-fit: cover; /* Ensure images cover the container */
 }
 
 .caption {
   margin-top: 10px; /* Space between image and caption */
   font-size: 16px;
-  color: #ffffff;
+  color: var(--caption-color); /* Use variable for caption color */
 }
 
-/* --------------For larger screens --------------*/
+/* For larger screens */
 @media (min-width: 769px) {
   .shadow-box {
     flex-direction: row; /* Arrange images in a row */
@@ -742,42 +717,40 @@ body {
   }
 }
 
-
-/* --------------skills / about - General styling for the sections --------------*/
+/* --------------skills / about - General styling for the sections -------------- */
 section {
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
+  padding: var(--section-padding); /* Use variable for padding */
+  margin-bottom: var(--section-margin-bottom); /* Use variable for margin bottom */
 }
 
-.about-section {
-  background-color: #000000;
-}
-
-.skill-section {
-  background-color: #000000;
+.about-section, .skill-section {
+  background-color: var(--background-color); /* Use variable for background color */
 }
 
 .topic-header {
   font-size: 1.8em; /* Adjust this size as needed */
   text-transform: none; /* Ensure text is not in all caps */
 }
+
 .content-text {
   font-size: 1em; /* Adjust this size as needed */
-  color: white; /* Set the content text color to white */
+  color: var(--text-color); /* Use variable for text color */
   text-transform: none; /* Ensure text is not in all caps */
 }
+
 .pink-link {
-  color: #FE8EA8 !important; /* Set the link color to pink */
+  color: var(--link-color) !important; /* Use variable for link color */
   text-transform: none; /* Ensure text is not in all caps */
 }
+
 /* Responsive styles to prevent overlap */
 @media (max-width: 768px) {
   .about-section, .skill-section {
-      padding: 2rem 1rem;
+      padding: 2rem 1rem; /* Adjust padding for smaller screens */
   }
   
   .skill-section {
-      margin-top: 2rem;
+      margin-top: 2rem; /* Margin top for skill section */
   }
 }
 
@@ -786,7 +759,7 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #FE8EA8;
+  color: var(--button-color); /* Use variable for button color */
   font-size: 1rem;
   font-weight: medium;
 }
@@ -803,86 +776,21 @@ button span.rotate {
 .hidden {
   display: none;
 }
-/* Set a fixed size for the image container */
+
+/* Profile image container styling */
 .profile-image-container {
-  width: 300px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
+  width: var(--profile-image-width); /* Use variable for width */
+  height: var(--profile-image-height); /* Use variable for height */
   overflow: hidden;
   position: relative;
 }
 
 /* Ensure images fill the container */
 .profile-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100%; /* Ensure the image fills the container horizontally */
+  height: 100%; /* Ensure the image fills the container vertically */
+  object-fit: cover; /* Maintain aspect ratio while filling the container */
 }
-/* --------------General styling for the sections -------------- */
-section {
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
-}
-
-.about-section {
-  background-color: #000000;
-}
-
-.skill-section {
-  background-color: #000000;
-}
-
-/* Image container styling */
-.profile-image-container {
-  width: 300px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
-  overflow: hidden;
-  position: relative;
-}
-
-/* Ensure images fill the container */
-.profile-image-container img {
-width: 100%; /* Ensure the image fills the container horizontally */
-height: 100%; /* Ensure the image fills the container vertically */
-object-fit: cover; /* Maintain aspect ratio while filling the container */
-}
-
-
-/* Responsive styles to prevent overlap */
-@media (max-width: 768px) {
-  .about-section, .skill-section {
-      padding: 2rem 1rem;
-  }
-  
-  .skill-section {
-      margin-top: 2rem;
-  }
-}
-
-/* Specific styling for the toggle buttons */
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #FE8EA8;
-  font-size: 1rem;
-  font-weight: medium;
-}
-
-button span {
-  transition: transform 0.3s;
-}
-
-button span.rotate {
-  transform: rotate(180deg);
-}
-
-/* Hidden sections */
-.hidden {
-  display: none;
-}        
 
 /* Adjusted width for the text column */
 .profile-text {
@@ -892,6 +800,6 @@ button span.rotate {
 /* Adjusted height for the image container */
 .profile-image-container {
   width: 100%; /* Take up the full width of the container */
-  max-width: 400px; /* Limit the maximum width of the image */
-  height: 400px; /* Adjust the height of the image container */
+  max-width: var(--profile-image-max-width); /* Use variable for max width */
+  height: var(--profile-image-height-large); /* Use variable for height on larger screens */
 }
