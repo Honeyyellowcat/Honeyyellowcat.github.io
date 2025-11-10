@@ -89,8 +89,8 @@
     </header>
 
     <!--::::::::::::::::::- Hero Section -::::::::::::::::::-->
-    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-20 lg:pt-36 overflow-hidden pb-10" id="home" style="height: 900px;">
-        <div class="max-w-7xl relative flex justify-center mx-auto flex-col-reverse lg:flex-row lg:justify-between">
+    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-20 lg:pt-36 overflow-hidden" id="home" style="height: 900px;">
+      <div class="max-w-7xl relative flex justify-center mx-auto flex-col-reverse lg:flex-row lg:justify-between">
           <div class="flex flex-col mt-8 justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
               <h1 class="text-2xl font-normal leading-none lg:text-5xl text-[#fff] sr01">
                 Graduate in Aeronautics and Astronautics
@@ -129,9 +129,6 @@
                   <a href="https://github.com/Honeyyellowcat" class="text-[#FE8EA8] hover:text-[#EC297B] transition duration-100">
                       <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="https://calendly.com/felicity-cundiff" class="text-[#FE8EA8] hover:text-[#EC297B] transition duration-100">
-                    <i class="fa-solid fa-calendar-days"></i>
-                  </a>
               </div>
           </div>
       </div>
@@ -154,14 +151,14 @@
                 <div class="profile-text p-5 md:p-0 md:pl-8 mt-8 md:mt-0">
                     <div class="text-[#fff] sr02">
                         <h3 class="text-lg font-medium mb-2.5 bg-[#FE8EA8] bg-opacity-[0.161] text-[#fff] rounded px-4 w-max">Bio</h3>
-                        <p class="leading-7 text-sm">Passionate about Aeronautics & Astronautics Engineering, I thrive on coding for aerospace innovation. Proficient in MATLAB, Arduino UNO, Python, and exploring C/C++, I enthusiastically explore embedded systems. With a Bachelor’s from the University of Washington, my expertise spans space system design, propulsion, programming, and heat transfer.</p>
+                        <p class="leading-7 text-sm">Passionate about Aeronautics & Astronautics Engineering, I thrive on coding for aerospace innovation. Experience in MATLAB, Arduino UNO, Python, and exploring C/C++, I enthusiastically explore embedded systems. With a Bachelor’s from the University of Washington, my expertise spans space system design, propulsion, programming, and heat transfer.</p>
                     </div>
                     <div class="text-[#FE8EA8] mt-6 sr03">
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="flex">
                                 <h5 class="text-[#fff] font-medium flex flex-col">
                                     <span class="text-[#FE8EA8] font-semibold md:text-lg text-base">University:</span>
-                                    University of Washington, Seattle: 2022 - (exp. grad 6/2024)
+                                    University of Washington, Seattle
                                 </h5>
                             </div>
                             <div class="flex">
@@ -201,6 +198,68 @@
         </div>
     </section>
 
+    <!-- :::::::::::::::::::- Blog & Features Section -::::::::::::::::::--> 
+    <section id="blog" class="bg-[#000000] p-6 pb-20 pt-24 lg:px-14 lg:pt-32 lg:pb-28 relative">
+    <!-- Blog Section Header -->
+    <div class="flex justify-center text-center mb-20 mt-4 mx-auto">
+        <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-xl md:text-4xl z-10 sr01">
+        Blog 
+        <span class="text-[#FE8EA8]">Features</span>
+        <span class="absolute left-2/4 top-2/4 text-5xl md:text-6xl lg:text-8xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">
+            Blog
+        </span>
+        </h2>
+    </div>
+    <!-- Slider Wrapper -->
+    <div id="blog-slider-wrapper" class="overflow-hidden relative w-full flex justify-center">
+        <div id="blog-slider" class="flex flex-nowrap gap-8 transition-transform duration-500 will-change-transform justify-start">
+        <!-- Panel 1: LinkedIn Rotator -->
+        <div class="panel min-w-[500px] max-w-sm bg-[#111] rounded-2xl overflow-hidden shadow-lg">
+            <div class="p-5 text-[#fff]">
+            <h3 class="font-semibold text-lg text-[#FE8EA8] mb-2">Latest on LinkedIn</h3>
+            <div id="linkedin-rotator" style="height: 400px; overflow: hidden;"></div>
+            </div>
+        </div>
+        <!-- Panel 2: KA-01 Launch News -->
+        <div class="panel min-w-[400px] max-w-sm bg-[#111] rounded-2xl overflow-hidden shadow-lg">
+            <img src="images/Amazon_1.jpg" alt="KA-01 Launch" class="h-64 w-full object-cover">
+            <div class="p-5 text-[#fff]">
+            <h3 class="font-semibold text-lg text-[#FE8EA8]">KA-01 Launch</h3>
+            <p class="text-sm text-gray-300 mt-2">
+                We launched KA-01, the first production satellites for Project Kuiper! Proud to be part of the front-line Flight Dynamics team helping make this mission a success.
+            </p>
+            <a href="https://www.linkedin.com/posts/marcoconcha_projectkuiper-amazon-activity-7322847927846981632-Shml"
+                target="_blank"
+                class="mt-3 inline-block text-[#FE8EA8] font-semibold hover:underline">
+                View Post →
+            </a>
+            </div>
+        </div>
+        <!-- Panel 3: Project Kuiper News -->
+        <div class="panel min-w-[300px] max-w-sm bg-[#111] rounded-2xl overflow-hidden shadow-lg">
+            <img src="images/AMAZON_KUIPER.jpg" alt="Project Kuiper News" class="h-64 w-full object-cover">
+            <div class="p-5 text-[#fff]">
+            <h3 class="font-semibold text-lg text-[#FE8EA8] mb-2">Project Kuiper News</h3>
+            <p class="text-sm text-gray-300 mt-2">
+                Stay up-to-date with the latest news on Amazon’s Project Kuiper satellite constellation.
+            </p>
+            <a href="https://www.aboutamazon.com/news/tag/project-kuiper"
+                target="_blank"
+                class="mt-3 inline-block text-[#FE8EA8] font-semibold hover:underline">
+                Read More →
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Slider Buttons -->
+    <button id="prevBtn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-[#FE8EA8] text-black rounded-full p-3 hover:bg-[#EC297B] transition z-20">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="nextBtn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#FE8EA8] text-black rounded-full p-3 hover:bg-[#EC297B] transition z-20">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    </section>
 
     <!-- :::::::::::::::::::- Skill section -:::::::::::::::: -->
     <section class="skill-section bg-black p-6 mx-auto pb-14 pt-20 lg:pd-14 lg:pt-32 lg:pb-28" id="skills">
@@ -212,110 +271,122 @@
             </h2>
         </div>
 
-        
-    <div class="text-[#FE8EA8] max-w-7xl mt-4 relative mx-auto">
-        <div class="max-w-md md:max-w-[50rem] mx-auto">
-            <div class="bg-[#212121] rounded-md p-4 mb-8">
-                <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center topic-header" onclick="toggleSection('programming')">
-                    <strong>Programming</strong> 
-                    <span class="transition-transform transform" id="icon-programming">▼</span>
-                </button>
-                <ul id="programming" class="hidden content-text" style="list-style-type: disc; padding-left: 20px;">
-                    <li>1. Python</li>
-                    <li>2. C/C++</li>
-                    <li>3. MATLAB</li>
-                    <li>4. Arduino UNO</li>
-                    <li>5. HTML</li>
-                    <li>6. Javascript</li>
-                    <li>7. CSS</li>
-                    <li>8. GO</li>
-                    <li>9. Linux</li>
-                    <strong><li>More on my linked: <a href="https://github.com/Honeyyellowcat" target="_blank" class="pink-link">GitHub.io</a></li></strong>
-                </ul>
-            </div>
-            <div class="bg-[#212121] rounded-md p-4 mb-8">
-                <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center topic-header" onclick="toggleSection('cad')">
-                    <strong>Computer-Aided Design and Simulation Software</strong> 
-                    <span class="transition-transform transform" id="icon-cad">▼</span>
-                </button>
-                <ul id="cad" class="hidden content-text" style="list-style-type: disc; padding-left: 20px;">
-                    <li>1. LabVIEW</li>    
-                    <li>2. SOLIDWORKS</li>                                
-                    <li>3. ANSYS</li>
-                    <li>4. Blender with and without python application</li>
-                    <li>5. XFOIL</li>
-                    <li>6. MS Office</li>
-                </ul>
-            </div><div class="bg-[#212121] rounded-md p-4 mb-8">
-                <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center topic-header" onclick="toggleSection('scholarships')">
-                    <strong>Scholarships and Features</strong> 
-                    <span class="transition-transform transform" id="icon-scholarships">▼</span>
-                </button>
-                <ul id="scholarships" class="hidden content-text" style="list-style-type: disc;">
-                    <strong><li>1. SPACE Lab: Pulsed Plasma Thruster Stand (Jan.  - Jun. 2024)</li></strong> 
-                        <li style=" padding-left: 20px;">- UW Capstone awards showcase top work feature: <a href="https://www.aa.washington.edu/news/article/2024-07-01/capstone-awards-showcase-top-work" target="_blank" class="pink-link">Innovation: SPACE Lab Pulsed Plasma Thruster (PPT) Balance</a></li>
-                        <li style=" padding-left: 20px;">- UW Aero Astro Youtube feature: <a href="https://www.youtube.com/watch?v=Vt_HU2nu_CM" target="_blank" class="pink-link">Here</a></li>
-                        <li style=" padding-left: 20px;">- UW Aero Astro Instagram feature: <a href="https://www.instagram.com/p/C7Pih_9y952/?img_index=1" target="_blank" class="pink-link">Here</a></li>
-                    <strong><li>2. Nonlinear Dynamics and Control Lab: Blue Origin RPO (Jan.  - Jun. 2024)</li></strong> 
-                        <li style=" padding-left: 20px;">- AprilTag Applications to Autonomous Spacecraft Docking: <a href="doc/Cheng_Furey-Soper_Hudson_AA_Sharc_2023.pdf" target="_blank" class="pink-link">Here</a></li>
-                        <li style=" padding-left: 20px;">- Revolutionizing space rendezvous: Testing a groundbreaking precision tool for Blue Origin: <a href="https://www.aa.washington.edu/news/article/2024-05-13/revolutionizing-space-rendezvous" target="_blank" class="pink-link">Here</a></li>
-                        <strong><li>These projects are in detail in the<a href="current.html" class="pink-link"> Current Work section!</a></li></strong> 
-                    <strong><li>3. Washington NASA Space Grant (Mar 2024)</li></strong> 
-                        <li style=" padding-left: 20px;">- Selected to be featured on the NASA Space Grant Instagram for <a href="assets/img/SG_Feature.png" target="_blank" class="pink-link">Women's History Month!</a></li>
-                    <strong><li>4. Pacific Northwest Aerospace Alliance (PNAA) Advance 2024 (Feb 2024)</li></strong> 
-                        <li style=" padding-left: 20px;">- Session Title: Next Generation Workforce Panel</li>
-                    <strong><li>5. Scholarships (Does not include all awards)</li> </strong> 
-                        <li style=" padding-left: 20px;"><strong>UW: </strong> NASA Space Grant 2022-2023 and 2023-2024, </li> 
-                        <li style=" padding-left: 20px;"><strong>A&A: </strong> Robert Max Reynolds Endowed, Joseph F. Sutter Endowed, and Lace Erik</li> 
-                        <li style=" padding-left: 20px;">Boeing Scholarship</li> 
-                        <li style=" padding-left: 20px;"><strong>Pierce College: </strong> Dean's list (2020-2022)</li>
-                </ul>
+        <div class="text-[#FE8EA8] max-w-7xl mt-4 relative mx-auto">
+            <div class="max-w-md md:max-w-[50rem] mx-auto">
+                <div class="bg-[#212121] rounded-md p-4 mb-8">
+                    <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center" style="text-transform: none;" onclick="toggleSection('programming')">
+                        Programming
+                        <span class="transition-transform transform" id="icon-programming">▼</span>
+                    </button>
+                    <ul id="programming" class="hidden" style="text-transform: none; list-style-type: disc; padding-left: 20px;">
+                        <li>1. Python</li>
+                        <li>2. C/C++</li>
+                        <li>3. MATLAB</li>
+                        <li>4. Arduino UNO</li>
+                        <li>5. HTML</li>
+                        <li>6. Javascript</li>
+                        <li>7. CSS</li>
+                        <li>8. GO</li>
+                        <li>9. Linux</li>
+                        <li>More on my linked: <a href="https://github.com/Honeyyellowcat" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">GitHub.io</span></a></li>
+                    </ul>
+                </div>
+                <div class="bg-[#212121] rounded-md p-4 mb-8">
+                    <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center" style="text-transform: none;" onclick="toggleSection('cad')">
+                        Computer-Aided Design and Simulation Software
+                        <span class="transition-transform transform" id="icon-cad">▼</span>
+                    </button>
+                    <ul id="cad" class="hidden" style="text-transform: none; list-style-type: disc; padding-left: 20px;">
+                        <li>1. LabVIEW</li>    
+                        <li>2. SOLIDWORKS</li>                                
+                        <li>3. ANSYS</li>
+                        <li>4. Blender with and without python application</li>
+                        <li>5. XFOIL</li>
+                        <li>6. MS Office</li>
+                    </ul>
+                </div>
+                <div class="bg-[#212121] rounded-md p-4 mb-8">
+                    <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center" style="text-transform: none;" onclick="toggleSection('projects')">
+                        Current Projects and Leadership
+                        <span class="transition-transform transform" id="icon-projects">▼</span>
+                    </button>
+                    <ul id="projects" class="hidden" style="text-transform: none; list-style-type: disc;">
+                        <li>1. SPACE Lab: Pulsed Plasma Thruster Stand - Seattle, WA (January 2024 - Present)</li>
+                        <li style=" padding-left: 20px;">UW Aero Astro Youtube feature: <a href="https://www.youtube.com/watch?v=Vt_HU2nu_CM" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                        <li style=" padding-left: 20px;">UW Aero Astro Instagram feature: <a href="https://www.instagram.com/p/C7Pih_9y952/?img_index=1" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                        <li>2. Nonlinear Dynamics and Control Lab: Blue Origin RPO - Seattle, WA (January 2024 - Present)</li>
+                        <li style=" padding-left: 20px;"> AprilTag Applications to Autonomous Spacecraft Docking: <a href="doc/Cheng_Furey-Soper_Hudson_AA_Sharc_2023.pdf" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                        <li>3. A&A Senior Class Rep - Seattle, WA (August 2023 - Present)</li>
+                        <li style=" padding-left: 20px;">Planning events and improving staff-student communication. Striving to enhance the student experience.</li>
+                        <li style=" padding-left: 20px;">Most recent USAC event flyer: <a href="assets/img/USAC_FLYER.pdf" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                        <li>These projects are in detail in the<a href="current.html"><span class="text-[#99ABFF]" style="text-transform: none;"> Current Work section!</span></a></li>
+                    </ul>
+                </div>
+                <div class="bg-[#212121] rounded-md p-4 mb-8">
+                    <button class="text-[#FE8EA8] font-medium text-lg mb-2 w-full text-left focus:outline-none flex justify-between items-center" style="text-transform: none;" onclick="toggleSection('scholarships')">
+                        Scholarships and Features
+                        <span class="transition-transform transform" id="icon-scholarships">▼</span>
+                    </button>
+                    <ul id="scholarships" class="hidden" style="text-transform: none; list-style-type: disc;">
+                        <li>1. SPACE Lab: Pulsed Plasma Thruster Stand - Seattle, WA (January 2024 - Present)</li>
+                            <li style=" padding-left: 20px;">UW Aero Astro Youtube feature: <a href="https://www.youtube.com/watch?v=Vt_HU2nu_CM" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                            <li style=" padding-left: 20px;">UW Aero Astro Instagram feature: <a href="https://www.instagram.com/p/C7Pih_9y952/?img_index=1" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">Here</span></a></li>
+                        <li>3. Washington NASA Space Grant: March 2024</li>
+                            <li style=" padding-left: 20px;">Selected to be featured on the NASA Space Grant Instagram for Women's History Month.</li>
+                            <li style=" padding-left: 20px;"><a href="assets/img/SG_Feature.png" target="_blank"><span class="text-[#99ABFF]" style="text-transform: none;">View the feature here!</span></a></li>
+                        <li>4. Pacific Northwest Aerospace Alliance (PNAA) Advance 2024 - Lynnwood, WA (February 2024)</li>
+                            <li style=" padding-left: 20px;">Session Title: Next Generation Workforce Panel</li>
+                        <li>5. Scholarships (Does not include all awards)</li> 
+                            <li style=" padding-left: 20px;">UW: NASA Space Grant 2022-2023 and 2023-2024, </li> 
+                            <li style=" padding-left: 20px;">A&A: Robert Max Reynolds Endowed, Joseph F. Sutter Endowed, and Lace Erik</li> 
+                            <li style=" padding-left: 20px;">Boeing Scholarship</li> 
+                            <li style=" padding-left: 20px;">Pierce College: Dean's list (2020-2022)</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+        
     </section>
 
 
 <!-- ::::::::::::::::::: - links section - ::::::::::::::::::: -->
-    <u1>
-    <div class="main-div" id="section-two">
-        <div class="content" id="pan">
-            <h4 class="animate">Current work</h4>
-            <h2 class="main-h2">Software specialist</h2>
-            <a href="current.html">
-                <span class="btn">Learn More</span>
-            </a>
-        </div>
-    </div>
-    <div class="main-div" id="section-three">
-        <div class="content" id="pan">
-            <h4 class="animate">Experiences</h4>
-            <h2 class="main-h2">UW Seattle</h2>
-            <a href="experience.html">
-                <span class="btn">Learn More</span>
-            </a>
-        </div>
-    </div>
-    <div class="main-div" id="section-four">
-        <div class="content" id="pan">
-            <h4 class="animate">Projects</h4>
-            <h2 class="main-h2">UW Seattle</h2>
-            <a href="project.html">
-                <span class="btn">Learn More</span>
-            </a>
-        </div>
-    </div>
-    <div class="main-div" id="section-five">
-        <div class="content" id="last">
-            <h4 class="animate">Written reports</h4>
-            <h2 class="main-h2">UW Seattle</h2>
-            <a href="report.html">
-                <span class="btn">Learn More</span>
-            </a>
-        </div>
-    </div>
-    </u1>
 
+<div class="main-div" id="section-two">
+    <div class="content" id="pan">
+        <h4 class="animate">Current work</h4>
+        <h2 class="main-h2">Software specialist</h2>
+        <a href="current.html">
+            <span class="btn">Learn More</span>
+        </a>
+    </div>
+</div>
+<div class="main-div" id="section-three">
+    <div class="content" id="pan">
+        <h4 class="animate">Experiences</h4>
+        <h2 class="main-h2">UW Seattle</h2>
+        <a href="experience.html">
+            <span class="btn">Learn More</span>
+        </a>
+    </div>
+</div>
+<div class="main-div" id="section-four">
+    <div class="content" id="pan">
+        <h4 class="animate">Projects</h4>
+        <h2 class="main-h2">UW Seattle</h2>
+        <a href="project.html">
+            <span class="btn">Learn More</span>
+        </a>
+    </div>
+</div>
+<div class="main-div" id="section-five">
+    <div class="content" id="last">
+        <h4 class="animate">Written reports</h4>
+        <h2 class="main-h2">UW Seattle</h2>
+        <a href="report.html">
+            <span class="btn">Learn More</span>
+        </a>
+    </div>
+</div>
 
 <!--:::::::::::::::::-Contact section-::::::::::::::::-->
     <section class="bg-[#000000] p-6 mx-auto pb-10 pt-10 lg:px-14 lg:pt-16 lg:pb-16" id="contact">
@@ -331,6 +402,12 @@
                 <h3 class="sm:text-2xl text-lg mb-3 sr01">Thank you so much for checking out</h3>
                 <h3 class="text-2xl font-bold mb-3 sr02">my portfolio!</h3>
                 <div class="flex justify-center my-8 text-[#FE8EA8]">
+                    <a href="doc/Felicity_C_Resume.pdf" target="_blank" class="bg-[#212121] border-[#fff] flex justify-center items-center border rounded-lg px-10 py-5 mx-2 sr04">
+                        <span class="w-7 md:w-8 mr-2"><i class="fas fa-file"></i></span>
+                        <div class="text-left">
+                            <p class="text-xs text-[#fff]">Download my CV!</p>
+                        </div>
+                    </a>
                 </div>
                 <div class="text-center">
                     <div class="contact-box max-w-max mx-auto rounded-lg border-2 border-[#FE8EA8] p-6 bg-[rgba(254, 142, 168, 0.1)]">
@@ -373,6 +450,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js"></script>
         <!---main js--->
         <script src="assets/js/js.js"></script>
+        <script src="assets/js/blog.js"></script>
         <script src="assets/js/photos.js"></script>
         <script src="assets/js/nav.js"></script>
         <script src="assets/js/skilltog.js"></script>
