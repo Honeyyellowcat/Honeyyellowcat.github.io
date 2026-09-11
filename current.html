@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Experience</title>
+    <meta name="description" content="Flight Dynamics Operations Engineer at Amazon Leo (formerly Project Kuiper) — Felicity Cundiff." />
     <!-- Icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -20,88 +21,83 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html" aria-current="page">Experience</a></li>
+                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Experiences Section -->
-    <section class="bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5 lg:pb-15" id="experiences">
+    <!-- Experience Section -->
+    <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5 lg:pb-15" id="experience">
         <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
             <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
                 My
-                <span class="text-pink">Current Work</span>
+                <span class="text-pink">Experience</span>
             </h2>
         </div>
-        
-        <div class="max-w-7xl mt-4 relative mx-auto">
-            <div class="container flex flex-col justify-center p-4 mx-auto">
-                <div class="grid gap-8 sm:grid-cols-1 lg:grid-cols-2"> 
-                    
-                    <div class="portal-card">
-                        <a href="experience5.html">
-                            <img id="clickableImage1" class="object-cover w-full rounded aspect-square" src="images/AMAZON_KUIPER.jpg" onclick="window.location.href = 'experience1.html';" style="cursor: pointer;">
-                            <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
-                                <div class="experience-info">
-                                    <p>Amazon, Project Kuiper: August 2024 - Present</p>
-                                </div>
-                                <div class="experience-overlay">
-                                    <div>
-                                    <p>Amazon: Project Kuiper </p> 
-                                    <p>Redmond, WA</p>
-                                    <p>August 2024 - Present</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>Operated and monitored multiple satellites simultaneously across prelaunch, launch, and post-launch phases, managing complex real-time system telemetry, coordinating with propulsion and guidance teams, and ensuring precise orbital insertion and constellation alignment.</li>
-                                    </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="portal-card">
-                        <a href="project5.html">
-                            <img id="clickableImage1" class="object-cover w-full rounded aspect-square" src="assets/img/ADP_1.jpg" onclick="window.location.href = 'experience1.html';" style="cursor: pointer;">
-                            <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
-                                <div class="experience-info">
-                                    <p>Aerospace Design Project: December 2022 - Present</p>
-                                </div>
-                                <div class="experience-overlay">
-                                    <div>
-                                    <p>Aerospace Design Project </p> 
-                                    <p>Seattle, WA</p>
-                                    <p>December 2022 - Present</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>3D printing of designs, development, and construction of airfoils</li>
-                                    </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+
+        <div class="max-w-4xl mt-4 relative mx-auto px-4">
+            <div class="bg-[#111] rounded-2xl overflow-hidden text-[#FDFCF3]">
+                <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="w-full h-64 md:h-80 object-cover">
+                <div class="p-8 md:p-12 text-center">
+                    <h3 class="text-2xl md:text-4xl font-bold text-pink mb-1">Flight Dynamics Operations Engineer</h3>
+                    <p class="text-[#FE8EA8] text-lg mb-6">Amazon Leo (formerly Project Kuiper) &middot; August 2024&ndash;Present</p>
+                    <p class="max-w-2xl mx-auto mb-8 leading-relaxed">
+                        I support the operational safety of a satellite constellation, focused on real-time constellation health, pre-launch readiness, and time-critical flight dynamics across the mission lifecycle.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 text-left max-w-2xl mx-auto">
+                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Pre-Launch Readiness</p>
+                            <p class="text-xs text-gray-400">Primary ownership</p>
+                        </div>
+                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Constellation Health &amp; Safety</p>
+                            <p class="text-xs text-gray-400">Real-time operational monitoring</p>
+                        </div>
+                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Conjunction Assessment</p>
+                            <p class="text-xs text-gray-400">Risk analysis</p>
+                        </div>
+                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Orbital &amp; Constellation Operations</p>
+                        </div>
+                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3 sm:col-span-2">
+                            <p class="text-sm font-semibold text-pink">Cross-Functional Coordination</p>
+                            <p class="text-xs text-gray-400">Flight and propulsion teams</p>
+                        </div>
                     </div>
 
+                    <a href="experience5.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-10 py-4 text-lg hover:bg-[#EC297B] transition">
+                        View Full Experience &rarr;
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <footer>
-        <nav class="foot-nav">
-            <ul>
-                <li>
-                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
-                    <a href="tel:+12063533425">(206) 353-3425</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a> 
-                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </footer>
+</div><!-- /.subpage-shell -->
+    <script src="assets/js/subpage-nav.js"></script>
 </body>
 </html>

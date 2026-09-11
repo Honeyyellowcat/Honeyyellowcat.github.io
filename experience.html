@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felicity: Experience</title>
+    <title>Felicity: Education & Technical Background</title>
+    <meta name="description" content="Education and technical background — Felicity Cundiff, Aeronautics & Astronautics." />
     <!-- Icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -17,145 +18,153 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Page-specific layout (this page only, not global) -->
+    <style>
+        .edu-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        @media (min-width: 1024px) {
+            .edu-container {
+                padding: 0 32px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html">Experience</a></li>
+                    <li><a href="experience.html" aria-current="page">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Experiences Section -->
-    <section class="bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="experiences">
+    <!-- Education & Technical Background Section -->
+    <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="education">
         <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
             <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
-                My <span class="text-pink">Experiences</span>
+                Education &amp;
+                <span class="text-pink">Technical Background</span>
             </h2>
         </div>
-        
-        <div class="max-w-7xl mt-4 relative mx-auto">
-            <div class="container flex flex-col justify-center p-4 mx-auto">
-                <div class="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">     
-                    <div class="portal-card">
-                        <a href="experience5.html">
-                            <img id="clickableImage1" class="object-cover w-full rounded aspect-square" src="images/AMAZON_KUIPER.jpg" onclick="window.location.href = 'experience1.html';" style="cursor: pointer;">
-                            <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
-                                <div class="experience-info">
-                                    <p>Amazon, Project Kuiper: August 2024 - Present</p>
-                                </div>
-                                <div class="experience-overlay">
-                                    <div>
-                                    <p>Amazon: Project Kuiper </p> 
-                                    <p>Redmond, WA</p>
-                                    <p>August 2024 - Present</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>Operated and monitored multiple satellites simultaneously across prelaunch, launch, and post-launch phases, managing complex real-time system telemetry, coordinating with propulsion and guidance teams, and ensuring precise orbital insertion and constellation alignment.</li>
-                                    </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="portal-card">
-                        <a href="experience4.html">
-                            <img class="object-cover rounded aspect-square" src="assets/img/PP_1.jpg" alt="SPACE Lab">
-                            <div class="experience-info">
-                                <p>SPACE Lab: January 2024 - June 2024</p>
-                            </div>
-                            <div class="experience-overlay">
-                                <div>
-                                    <p>SPACE Lab:</p>
-                                    <p>Pulsed Plasma Thruster Stand</p>
-                                    <p>University of Washington Seattle, WA</p>
-                                    <p>January 2024 - Present</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>Python-based data acquisition, calibrating the thrust stand system</li>
-                                        <li>Embedded serial communication setup with Arduino UNO</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div> 
-                    <div class="portal-card">
-                        <a href="experience3.html">
-                            <img class="object-cover rounded aspect-square" src="assets/img/air.jpg" alt="Nonlinear Dynamics & Control Lab">
-                            <div class="experience-info">
-                                <p>Nonlinear Dynamics & Control Lab: January 2024 - June 2024</p>
-                            </div>
-                            <div class="experience-overlay">
-                                <div>
-                                    <p>Nonlinear Dynamics & Control Lab:</p>
-                                    <p>University of Washington Seattle, WA</p>
-                                    <p>January 2024 - Present</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>Python-based data acquisition, calibrating the thrust stand system</li>
-                                        <li>Embedded serial communication setup with Arduino UNO</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="portal-card">
-                        <a href="experience2.html">
-                            <img class="object-cover rounded aspect-square" src="assets/img/CBHT_1.jpg" alt="Cryogenic Boiling: Heat Transfer">
-                            <div class="experience-info">
-                                <p>Cryogenic Boiling: March 2023 - June 2023</p>
-                            </div>
-                            <div class="experience-overlay">
-                                <div>
-                                    <p>Cryogenic Boiling: Heat Transfer</p>
-                                    <p>University of Washington Seattle, WA</p>
-                                    <p>March 2023 - June 2023</p>
-                                    <p>Essential responsibilities:</p>
-                                    <p>Uncovered: Boiling characteristics, rapid cool-down times, and heat transfer dynamics by immersing aluminum cylinders, along with precise quantitative data on heat transfer during liquid nitrogen quenching</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="portal-card">
-                        <a href="experience1.html">
-                            <img class="object-cover rounded aspect-square" src="assets/img/NASA_1.jpg" alt="NASA ARTEMIS">
-                            <div class="experience-info">
-                                <p>NASA ARTEMIS: January 2022 - June 2022</p>
-                            </div>
-                            <div class="experience-overlay">
-                                <div>
-                                    <p>NASA ARTEMIS</p>
-                                    <p>Pierce College Puyallup, WA</p>
-                                    <p>University of Washington Seattle, WA</p>
-                                    <p>January 2022 - June 2022</p>
-                                    <p>Essential responsibilities:</p>
-                                    <ul>
-                                        <li>I managed supplies and led coding for UW's M01-Skylight-Entry rover, integrating 3D-printed parts and Raspberry Pi for terrain navigation and real-time imaging, collaborating closely with teammates for seamless competition performance.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
 
-                </div>
+        <div class="edu-container mt-4 relative text-[#FDFCF3]">
+
+            <!-- 1. University of Washington -->
+            <div class="bg-[#111] rounded-xl p-8 md:p-10 mb-14 border-l-4 border-[#FE8EA8]">
+                <h3 class="text-2xl md:text-3xl font-bold text-pink mb-2">University of Washington</h3>
+                <p class="text-base text-[#FE8EA8] mb-4">B.S., Aeronautics &amp; Astronautics</p>
+                <p class="text-base leading-relaxed mb-5">Coursework and lab work in propulsion, space systems, and embedded systems.</p>
+                <p class="text-sm text-gray-400 leading-relaxed">NASA Space Grant Consortium (2022&ndash;2024) &middot; UW Technical Award for Innovation (SPACE Lab PPT Thrust Stand) &middot; A&amp;A Endowed Scholarships (Lace Erik, Robert Max Reynolds, Joseph F. Sutter) &middot; Boeing Scholarship &middot; Pierce College Dean's List</p>
             </div>
+
+            <!-- 2. Featured Technical Experience -->
+            <h3 class="text-xl md:text-2xl font-bold text-pink mb-6 uppercase tracking-wide">Featured Technical Experience</h3>
+            <div class="grid gap-8 md:grid-cols-2 mb-14">
+                <a href="experience4.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img src="assets/img/PP_1.jpg" alt="SPACE Lab Pulsed Plasma Thruster Stand" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink mb-1">SPACE Lab</h3>
+                        <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Pulsed Plasma Thruster Stand</p>
+                        <p class="text-base text-gray-300 leading-relaxed">Python-based data acquisition and calibration for a spacecraft thruster test stand; embedded serial communication with Arduino UNO for motor control.</p>
+                        <span class="text-[#99ABFF] text-base font-semibold inline-block mt-4">View project &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="experience3.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden hover:-translate-y-1 transition duration-300">
+                    <div class="aspect-[16/10] overflow-hidden">
+                        <img src="assets/img/air.jpg" alt="Nonlinear Dynamics and Control Lab robot arm" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-pink mb-1">NDCL</h3>
+                        <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Nonlinear Dynamics and Control Lab &mdash; Blue Origin RPO</p>
+                        <p class="text-base text-gray-300 leading-relaxed">Supported development of a dual-arm robotic testbed for autonomous spacecraft docking research, using AprilTag fiducial markers for precision tracking.</p>
+                        <span class="text-[#99ABFF] text-base font-semibold inline-block mt-4">View project &rarr;</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 3. Additional Technical Work -->
+            <h3 class="text-xl md:text-2xl font-bold text-pink mb-6 uppercase tracking-wide">Additional Technical Work</h3>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-14">
+                <a href="experience1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">NASA ARTEMIS Challenge</h4>
+                    <p class="text-sm text-gray-400">Rover navigation coding</p>
+                </a>
+                <a href="experience2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Cryogenic Boiling</h4>
+                    <p class="text-sm text-gray-400">Heat transfer research</p>
+                </a>
+                <a href="project6.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Satellite Orbit Simulation</h4>
+                    <p class="text-sm text-gray-400">Python orbital mechanics</p>
+                </a>
+                <a href="project5.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Aerospace Design Project</h4>
+                    <p class="text-sm text-gray-400">Airfoil design &amp; simulation</p>
+                </a>
+                <a href="project4.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Rocket Design</h4>
+                    <p class="text-sm text-gray-400">Two-stage liquid rocket motor</p>
+                </a>
+                <a href="project3.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Finite Wing Analysis</h4>
+                    <p class="text-sm text-gray-400">Kirsten Wind Tunnel testing</p>
+                </a>
+                <a href="project2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Drag on Bluff Bodies</h4>
+                    <p class="text-sm text-gray-400">Wind tunnel drag testing</p>
+                </a>
+                <a href="project1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">Propeller Performance</h4>
+                    <p class="text-sm text-gray-400">Wind tunnel performance testing</p>
+                </a>
+                <a href="project-git.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                    <h4 class="text-base font-semibold text-pink">GitHub Projects</h4>
+                    <p class="text-sm text-gray-400">Coding projects &amp; experiments</p>
+                </a>
+            </div>
+
+            <!-- 4. Coursework & Reports -->
+            <h3 class="text-lg font-semibold text-gray-400 mb-4 uppercase tracking-wide">Coursework &amp; Reports</h3>
+            <div class="flex flex-wrap gap-x-8 gap-y-3 text-base mb-3">
+                <a href="Report4.html" class="text-[#99ABFF] hover:underline">Aeroengine Design</a>
+                <a href="Report3.html" class="text-[#99ABFF] hover:underline">Plasma Waves and Turbulence</a>
+                <a href="Report2.html" class="text-[#99ABFF] hover:underline">Vortex Panel Project</a>
+                <a href="Report1.html" class="text-[#99ABFF] hover:underline">Arduino Setup and Ohm's Law</a>
+            </div>
+            <p class="text-base pb-12">
+                <a href="report.html" class="text-gray-400 hover:text-[#FE8EA8] transition">View all reports &rarr;</a>
+            </p>
+
         </div>
     </section>
-    <footer>
-        <nav class="foot-nav">
-            <ul>
-                <li>
-                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
-                    <a href="tel:+12063533425">(206) 353-3425</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a> 
-                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </footer>
+</div><!-- /.subpage-shell -->
+    <script src="assets/js/subpage-nav.js"></script>
 </body>
 </html>

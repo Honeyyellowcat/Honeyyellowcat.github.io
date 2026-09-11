@@ -1,0 +1,299 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felicity: Satellite Orbit Simulation</title>
+    <meta name="description" content="Python satellite orbit simulation project — Felicity Cundiff, Aeronautics & Astronautics." />
+    <!-- Icon and Font -->
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="assets/img/F.png" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Parallax JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html">Experience</a></li>
+                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper subpage-main">
+        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading"> Project</h1>
+        <div class="image-container">
+            <img src="assets/img/orbit/satellite-orbiting.jpg" alt="Satellite orbit simulation visualization">
+        </div>
+        <div class="text-container">
+            <h2 class="text-3xl text-pink">Summary:</h2>
+            <p>In my personal project focused on Aerospace Design in Seattle, WA.This project aims to create a comprehensive simulation environment for satellite orbits using Python, with a focus on visualizing orbital parameters and paths in both 2D and 3D. The simulation leverages libraries such as <strong>NumPy</strong> and <strong>matplotlib</strong> for numerical calculations and plotting.</p>
+            <h3 class="text-2xl text-pink">Current Progress:</h3>
+            <ul>
+                <li>Calculation of orbital parameters including semi-major axis and eccentricity based on given apoapsis and periapsis altitudes.</li>
+                <li>Generation of position and velocity vectors using Keplerian orbital elements.</li>
+                <li>Visualization of the satellite's orbital plane in 2D and its orbital path in 3D.</li>
+                <li>Animation of the satellite's movement along its orbit in both 2D and 3D views.</li>
+            </ul>
+
+            <div class="shadow-box">
+                <div class="image-wrapper">
+                    <img src="assets/img/Pendulum Steady State Response Testing.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">9.8 mN, 19.6 mN, 29.4 mN forces applied to the pendulum and steady state deflection was measured
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/Pendulum Response Modeling.png" alt="Space Team 2" class="rounded-image">
+                    <div class="caption">Pendulum becomes unstable at approximately 1.375 kg of load
+                        </div>
+                </div>
+            </div>
+
+            <div class="text-container">
+                <h3 class="text-2xl text-pink">Main Code Implementation:</h3> 
+                <pre class="code-box small">
+                <code>
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from mpl_toolkits.mplot3d import Axes3D
+from satellite_orbit import orbital_parameters, true_anomaly, position_velocity, plot_orbit, plot_planet, plot_planet_2d
+from satellite_parameters import print_orbital_parameters
+
+# Constants
+RADIUS_PLANET = 600_000  # meters
+ALTITUDE_APOAPS = 82_109  # meters
+ALTITUDE_PERIAPS = 79_987.1  # meters
+
+# Compute orbital parameters
+a, e = orbital_parameters(ALTITUDE_APOAPS, ALTITUDE_PERIAPS)
+nu = true_anomaly()
+
+# Print orbital parameters
+print_orbital_parameters(a, e, np.radians(53), np.radians(0), np.radians(0), nu[0])
+
+# Position and velocity vectors
+x, y, z = position_velocity(a, e, nu)
+
+# Create figure and subplots
+fig = plt.figure(figsize=(16, 8))
+fig.patch.set_facecolor('#2E2E2E')
+
+# Create 2D and 3D subplots
+ax1 = fig.add_subplot(121)
+ax2 = fig.add_subplot(122, projection='3d')
+
+# Orbital Plane Plot
+plot_orbit(ax1, x, y, np.zeros_like(x), '#FF69B4')
+plot_planet_2d(ax1, RADIUS_PLANET, '#FFC0CB')
+ax1.set_title('Orbital Plane', fontsize=15, color='white')
+ax1.set_xlabel('X (m)', fontsize=12, color='white')
+ax1.set_ylabel('Y (m)', fontsize=12, color='white')
+ax1.set_facecolor('#2E2E2E')
+ax1.grid(True, color='gray', linestyle='--', linewidth=0.5)
+ax1.tick_params(colors='white')
+
+# 3D Plot
+plot_orbit(ax2, x, y, z, '#FF69B4')
+plot_planet(ax2, RADIUS_PLANET, '#FFC0CB')
+ax2.set_title('3D Orbital Path', fontsize=15, color='white')
+ax2.set_xlabel('X (m)', fontsize=12, color='white')
+ax2.set_ylabel('Y (m)', fontsize=12, color='white')
+ax2.set_zlabel('Z (m)', fontsize=12, color='white')
+ax2.set_facecolor('#2E2E2E')
+
+# Hide the panes and border around the 3D plot
+ax2.xaxis.pane.fill = False
+ax2.yaxis.pane.fill = False
+ax2.zaxis.pane.fill = False
+ax2.xaxis.pane.set_edgecolor('none')
+ax2.yaxis.pane.set_edgecolor('none')
+ax2.zaxis.pane.set_edgecolor('none')
+
+# Hide the grid frame and white bars
+ax2.grid(color='gray', linestyle='--', linewidth=0.5)
+ax2.tick_params(colors='white')
+
+# Adjust subplot parameters to add more padding below and to the right
+fig.subplots_adjust(left=0.05, right=0.85, top=0.95, bottom=0.10, wspace=0.3)
+
+# Initialize satellite position for animation
+satellite, = ax1.plot([], [], '*', color='#FF1493', markersize=15, label='Satellite')
+satellite_3d, = ax2.plot([], [], [], '*', color='#FF1493', markersize=15, label='Satellite')
+
+def init():
+    satellite.set_data([], [])
+    satellite_3d.set_data([], [])
+    satellite_3d.set_3d_properties([])
+    return satellite, satellite_3d
+
+def update(frame):
+    angle = frame / 100 * 2 * np.pi
+    x_sat = a * (1 - e**2) / (1 + e * np.cos(angle)) * np.cos(angle)
+    y_sat = a * (1 - e**2) / (1 + e * np.cos(angle)) * np.sin(angle)
+    z_sat = 0  # For a circular orbit in the orbital plane
+
+    satellite.set_data(x_sat, y_sat)
+    satellite_3d.set_data(x_sat, y_sat)
+    satellite_3d.set_3d_properties(z_sat)
+    
+    return satellite, satellite_3d
+
+ani = FuncAnimation(fig, update, frames=np.arange(0, 100), init_func=init, blit=True, interval=50)
+
+plt.show()
+                </code>
+                </pre>
+            </div>
+            
+            <div class="text-container">
+                <h3 class="text-2xl text-pink">Satellite Orbit Code:</h3> 
+                <pre class="code-box small">
+                <code>
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Constants
+G = 6.67e-11  
+MASS_PLANET = 5.2915158e22 
+MU = G * MASS_PLANET 
+
+def orbital_parameters(altitude_ap, altitude_pe):
+    radius_planet = 600_000  # meters
+    RA = radius_planet + altitude_ap
+    RP = radius_planet + altitude_pe
+    a = (RA + RP) / 2.0
+    e = (RA - RP) / (RA + RP)
+    return a, e
+
+def true_anomaly(steps=100):
+    return np.linspace(0, 2 * np.pi, steps)
+
+def orbital_elements(a, e, nu):
+    P = a * (1 - e ** 2)
+    R = P / (1 + e * np.cos(nu))
+    return R
+
+def position_velocity(a, e, nu):
+    R = orbital_elements(a, e, nu)
+    H = np.sqrt(a * MU * (1 - e ** 2))
+    x = R * np.cos(nu)
+    y = R * np.sin(nu)
+    z = np.zeros_like(nu)  
+    return x, y, z
+
+def plot_orbit(ax, x, y, z, color):
+    ax.plot(x, y, z, color=color)
+
+def plot_ground_track(ax, x, y, color):
+    ax.plot(x, y, color=color)
+
+def plot_planet(ax, radius, color):
+    u, v = np.mgrid[0:2 * np.pi:20j, 0:np.pi:10j]
+    xsph = radius * np.cos(u) * np.sin(v)
+    ysph = radius * np.sin(u) * np.sin(v)
+    zsph = radius * np.cos(v)
+    ax.plot_surface(xsph, ysph, zsph, color=color, alpha=0.6)
+    
+def plot_planet_2d(ax, radius, color):
+    circle = plt.Circle((0, 0), radius, color=color, fill=True, alpha=0.6)
+    ax.add_patch(circle)
+
+                </code>
+                </pre>
+            </div>
+
+            <div class="text-container">
+                <h3 class="text-2xl text-pink">Satellite Parameters Code:</h3> 
+                <pre class="code-box small">
+                <code>
+import numpy as np
+from satellite_orbit import orbital_parameters, true_anomaly
+
+def print_orbital_parameters(a, e, i, omega, Omega, nu):
+    print(f"Orbital Parameters:")
+    print(f"Semi-Major Axis (a): {a:.2f} meters")
+    print(f"Eccentricity (e): {e:.4f}")
+    print(f"Inclination (i): {np.degrees(i):.2f} degrees")
+    print(f"Argument of Periapsis (ω): {np.degrees(omega):.2f} degrees")
+    print(f"Longitude of Ascending Node (Ω): {np.degrees(Omega):.2f} degrees")
+    print(f"True Anomaly (ν): {np.degrees(nu):.2f} degrees")
+
+def main():
+    ALTITUDE_APOAPS = 550 * 1_000  # meters
+    ALTITUDE_PERIAPS = 550 * 1_000  # meters
+    i = np.radians(53)  # Inclination
+    omega = np.radians(0)  # Argument of Periapsis
+    Omega = np.radians(0)  # Longitude of Ascending Node
+
+    a, e = orbital_parameters(ALTITUDE_APOAPS, ALTITUDE_PERIAPS)
+    nu = np.linspace(0, 2 * np.pi, 1)[0]  # Choose a sample true anomaly for demonstration
+
+    print_orbital_parameters(a, e, i, omega, Omega, nu)
+
+if __name__ == "__main__":
+    main()
+                </code>
+                </pre>
+            </div>
+
+        <h3 class="text-2xl text-pink">Ongoing Work</h3>
+            <p>Currently, I am working on the following enhancements:</p>
+            <ul>
+                <li>Implementing perturbation models to account for gravitational influences from other celestial bodies, atmospheric drag, and solar radiation pressure.</li>
+                <li>Developing ground track visualizations to show the satellite's path over the Earth's surface.</li>
+                <li>Incorporating real-time Two-Line Element (TLE) data for accurate satellite tracking and simulation.</li>
+                <li>Optimizing the animation performance for smoother real-time visualization.</li>
+            </ul>
+    
+        <h3 class="text-2xl text-pink">Future Plans</h3>
+            <p>Planned future developments for the project include:</p>
+            <ul>
+                <li>Integrating more advanced orbital mechanics models such as J2 perturbation and lunar/solar effects.</li>
+                <li>Adding interactive features for user-defined orbital parameter inputs and real-time simulation adjustments.</li>
+                <li>Expanding the simulation to include multiple satellites and potential collision detection.</li>
+                <li>Enhancing the visualization with more detailed planet models and satellite rendering.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+</div><!-- /.subpage-shell -->
+    
+
+    <!---main js--->
+    <script src="assets/js/codebox.js"></script>
+    <script src="assets/js/photos2.js"></script>
+    <script src="assets/js/tablink.js"></script>
+    <script src="assets/js/subpage-nav.js"></script>
+</body>
+</html>

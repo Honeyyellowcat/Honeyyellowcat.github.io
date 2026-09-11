@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: NDCL</title>
+    <meta name="description" content="Nonlinear Dynamics and Control Lab: Blue Origin RPO research — Felicity Cundiff, Aeronautics & Astronautics." />
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -20,17 +21,26 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="current.html">Current Work</a></li>
-                <li><a href="experience.html">Experiences</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html">Experience</a></li>
+                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="wrapper">
+    <div class="wrapper subpage-main">
         <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Nonlinear Dynamics and Control Lab: Blue Origin RPO</h1>
         <div class="image-container">
             <img src="assets/img/NDCL_2.jpg" alt="Pulsed Plasma Thruster Stand">
@@ -86,10 +96,6 @@
                     <li>- A script is developed to rotate a Blender-made object and capture pictures at fixed intervals.</li>
                 </ul>
                 <div class="shadow-box">
-                    <div class="image-wrapper">
-                        <video src="assets/img/robot3.mov" autoplay loop muted class="rounded-image"></video>
-                        <div class="caption"></div>
-                    </div>
                     <div class="image-wrapper">
                         <img src="assets/img/blender2.png" alt="Space Team 2" class="rounded-image">
                         <div class="caption"></div>
@@ -153,26 +159,25 @@
             <li>- Shadow obfuscation can degrade the performance of AprilTag detection.</li>
         </ul>
 	
-        <footer>
-            <nav class="foot-nav">
-                <ul>
-                    <li>
-                        <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
-                        <a href="tel:+12063533425">(206) 353-3425</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/felicity-cundiff/">Linkedin</a>
-                        <a href="https://github.com/Honeyyellowcat">Github</a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </div>
+        </div>
+        </div>
+        <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+</div><!-- /.subpage-shell -->
 
-    
+
         <!---main js--->
         <script src="assets/js/codebox.js"></script>
         <script src="assets/js/photos2.js"></script>
         <script src="assets/js/tablink.js"></script>
+    <script src="assets/js/subpage-nav.js"></script>
 </body>
 </html>
+

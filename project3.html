@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Finite Wing</title>
+    <meta name="description" content="Finite Wing Analysis in the Kirsten Wind Tunnel — Felicity Cundiff, Aeronautics & Astronautics." />
     <!-- Icon and Font -->
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -20,29 +21,39 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project.html">Projects </a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html">Experience</a></li>
+                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="wrapper">
+    <div class="wrapper subpage-main">
         <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Aerospace Laboratory I: Finite Wing Analysis in the Kirsten Wind Tunnel (KWT)</h1>
         <div class="image-container">
-            <img src="assets/img/WT_2.jpg">
+            <img src="assets/img/WT_2.jpg" alt="Finite wing analysis in the Kirsten Wind Tunnel">
         </div>
         <div class="text-container">
             <h2 class="text-3xl text-pink">Summary: </h2>
             <p>The experiment investigates propeller geometry and pitch influence on performance metrics. It compares four propellers in a 3x3 wind tunnel and discusses limitations.</p>
             <!-- Button to open PDF -->
-            <p class="text-2xl">1. Finite Wings Report: <a href="doc/Finite_Wings.pdf" target="_blank">Here</a></p>
+            <p class="text-2xl">1. Finite Wings Report: <a href="doc/SpaceLab/CDR.pdf" target="_blank">Here</a></p>
             <h2 class="text-2xl">Abstract:</h2>
             <ul>
                 <li>- Explored propeller geometry and pitch influence on performance metrics.</li>
-                <li>- Found performance metrics depend on propeller geometry and advance ratio.</li> 
+                <li>- Found performance metrics depend on propeller geometry and advance ratio.</li>
                 <li>- Highlighted the need for further analysis on propeller design optimization.</li>
             </ul>
 
@@ -72,13 +83,6 @@
                 <li>- Thrust trends deviated from expectations, possibly due to data inaccuracies.</li>
                 <li>- Efficiency and torque data showed unexpected patterns, requiring further investigation.</li>
                 <li>- Limitations of the experiment, including potentiometer and propeller dimensions, were discussed.</li>
-          
-                <div class="shadow-box">
-                  <div class="image-wrapper">
-                    <img src="assets/img/wing.png" alt="Rover Frame Design" class="rounded-image">
-                    <div class="caption"></div>
-                  </div>
-                </div>
             </ul>
 
             <h2 class="text-2xl text-pink">Conclusion:</h2>
@@ -118,23 +122,20 @@
         </div>
     </section>
 
-	<footer>
-        <nav class="foot-nav">
-            <ul>
-                <li>
-                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
-                    <a href="tel:+12063533425">(206) 353-3425</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a> 
-                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
-                </li>
-            </ul>
-        </nav>
+	<footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </footer>
+</div><!-- /.subpage-shell -->
 
 
         <!---main js--->
         <script src="assets/js/photos2.js"></script>
+    <script src="assets/js/subpage-nav.js"></script>
 </body>
 </html>

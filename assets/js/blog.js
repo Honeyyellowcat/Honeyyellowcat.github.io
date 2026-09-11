@@ -22,47 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
       title="LinkedIn Post"></iframe>`;
   }
 
-  loadLinkedInPost(currentIndex);
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % postUrls.length;
+  if (linkedinRotator) {
     loadLinkedInPost(currentIndex);
-  }, 5000);
 
-
-  // -------- Blog Slider Controls --------
-  const slider = document.getElementById('blog-slider');
-  const wrapper = document.getElementById('blog-slider-wrapper');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-  let scrollPosition = 0;
-
-  function getPanelWidth() {
-    const panel = slider.querySelector('.panel');
-    return panel ? panel.offsetWidth + 32 : 0; // gap-8 = 2rem = 32px
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % postUrls.length;
+      loadLinkedInPost(currentIndex);
+    }, 5000);
   }
-
-  function updateSlider() {
-    slider.style.transform = `translateX(-${scrollPosition}px)`;
-  }
-
-  nextBtn.addEventListener('click', () => {
-    const panelWidth = getPanelWidth();
-    const maxScroll = slider.scrollWidth - wrapper.offsetWidth;
-
-    if (scrollPosition < maxScroll) {
-      scrollPosition = Math.min(scrollPosition + panelWidth, maxScroll);
-      updateSlider();
-    }
-  });
-
-  prevBtn.addEventListener('click', () => {
-    const panelWidth = getPanelWidth();
-
-    if (scrollPosition > 0) {
-      scrollPosition = Math.max(scrollPosition - panelWidth, 0);
-      updateSlider();
-    }
-  });
 });

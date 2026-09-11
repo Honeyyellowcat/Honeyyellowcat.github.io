@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felicity: Project</title>
+    <meta name="description" content="Aerospace engineering projects — Felicity Cundiff, Aeronautics & Astronautics." />
     <!-- Icons -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -20,16 +21,27 @@
 </head>
 
 <body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="subpage-shell">
+    <header class="subpage-header">
+        <div class="subpage-header-inner">
+            <a href="index.html" class="subpage-logo">Felicity Cundiff</a>
+            <button type="button" class="subpage-menu-btn" id="subpageMenuBtn" aria-expanded="false" aria-controls="subpageNav" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+            <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="current.html">Experience</a></li>
+                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Experiences Section -->
-    <section class="bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="experiences">
+    <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="experiences">
         <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
             <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
                 My
@@ -43,7 +55,7 @@
                     
                     <div class="portal-card">
                         <a href="project5.html">
-                            <img id="clickableImage1" class="object-cover w-full rounded aspect-square" src="assets/img/ADP_1.jpg" onclick="window.location.href = 'experience1.html';" style="cursor: pointer;">
+                            <img class="object-cover w-full rounded aspect-square" src="assets/img/ADP_1.jpg" alt="Aerospace Design Project airfoil">
                             <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
                                 <div class="experience-info">
                                     <p>Aerospace Design Project: December 2022 - Present</p>
@@ -65,7 +77,7 @@
 
                     <div class="portal-card">
                         <a href="project4.html">
-                            <img id="clickableImage2" class="object-cover w-full rounded aspect-square" src="assets/img/RP_1.jpg" onclick="window.location.href = 'assets/experiences/experience2.html';" style="cursor: pointer;">
+                            <img class="object-cover w-full rounded aspect-square" src="assets/img/RP_1.jpg" alt="NovaTech Space Systems rocket design">
                             <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
                                 <div class="experience-info">
                                     <p>NovaTech Space Systems: January 2024 - March 2024</p>
@@ -91,7 +103,7 @@
 
                     <div class="portal-card">
                         <a href="project3.html">
-                            <img id="clickableImage3" class="object-cover w-full rounded aspect-square" src="assets/img/WT_4.jpg" onclick="window.location.href = 'assets/experiences/experience2.html';" style="cursor: pointer;">
+                            <img class="object-cover w-full rounded aspect-square" src="assets/img/WT_4.jpg" alt="Finite wing analysis in the Kirsten Wind Tunnel">
                             <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
                                 <div class="experience-info">
                                     <p>Aerospace Laboratory I: January 2023 - March 2023</p>
@@ -116,7 +128,7 @@
 
                     <div class="portal-card">
                         <a href="project2.html">
-                            <img id="clickableImage4" class="object-cover w-full rounded aspect-square" src="assets/img/DBB_1.jpg" onclick="window.location.href = 'assets/experiences/experience3.html';" style="cursor: pointer;">
+                            <img class="object-cover w-full rounded aspect-square" src="assets/img/DBB_1.jpg" alt="Drag on bluff bodies wind tunnel test">
                             <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
                                 <div class="experience-info">
                                     <p>Aerospace Laboratory I: January 2023 - March 2023</p>
@@ -142,7 +154,7 @@
 
                     <div class="portal-card">
                         <a href="project1.html">
-                            <img id="clickableImage5" class="object-cover w-full rounded aspect-square" src="assets/img/PP_1.jpg" onclick="window.location.href = 'assets/experiences/experience4.html';" style="cursor: pointer;">
+                            <img class="object-cover w-full rounded aspect-square" src="assets/img/PP_1.jpg" alt="Propeller performance wind tunnel test">
                             <div class="absolute inset-0 flex items-center justify-center opacity-50 bg-gray-900 text-white hover:opacity-75 transition-opacity duration-300">
                                 <div class="experience-info">
                                     <p>Aerospace Laboratory I: January 2023 - March 2023</p>
@@ -170,20 +182,17 @@
         </div>
     </section>
 
-    <footer>
-        <nav class="foot-nav">
-            <ul>
-                <li>
-                    <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a>
-                    <a href="tel:+12063533425">(206) 353-3425</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/felicity-cundiff/">LinkedIn</a> 
-                    <a href="https://github.com/Honeyyellowcat">GitHub</a>
-                </li>
-            </ul>
-        </nav>
+    <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
     </footer>
+</div><!-- /.subpage-shell -->
+    <script src="assets/js/subpage-nav.js"></script>
 </body>
 </html>
 

@@ -5,31 +5,47 @@ const menu_show_button = document.getElementById("nav-toggle");
 const menu_hide_button = document.getElementById("menu_hide_btn");
 const show_menu = "show_menu";
 
-menu_show_button.addEventListener("click", funShow);
-menu_hide_button.addEventListener("click", funHide);
+if (nav_menu && menu_show_button && menu_hide_button) {
+    menu_show_button.addEventListener("click", funShow);
+    menu_hide_button.addEventListener("click", funHide);
+
+    // Close the mobile menu after a nav link is selected. Uses the same
+    // position-based show_menu class as the open/close buttons above —
+    // never toggles display:none, so it can't hide the persistent desktop nav.
+    const menuLinks = nav_menu.querySelectorAll("a");
+    menuLinks.forEach(function (link) {
+        link.addEventListener("click", funHide);
+    });
+}
 
 function funShow() {
-    nav_menu.classList.add(show_menu);
+    if (nav_menu) nav_menu.classList.add(show_menu);
 }
 
 function funHide() {
-    nav_menu.classList.remove(show_menu);
+    if (nav_menu) nav_menu.classList.remove(show_menu);
 }
 
 //----- active menu li a -----//
-// Get all sections that have an ID defined 
-const sections = document.getElementsByTagName("section[id]");
-//add an event listener listening for scroll 
-window.addEventListener("scroll", navHighlighter);
+// Only the homepage's own in-page anchor targets (not every element with an id)
+const homepageAnchorIDs = ["home", "about", "experience", "education", "contact"];
+const sections = Array.from(document.querySelectorAll(homepageAnchorIDs.map(id => `#${id}`).join(", ")));
+
+if (sections.length > 0) {
+    window.addEventListener("scroll", navHighlighter);
+}
+
 function navHighlighter() {
     //Get current scroll position
     let scrollY = window.pageYOffset;
 
-    // now we loop thru sections to get height, top and id valuers for each 
+    // now we loop thru sections to get height, top and id valuers for each
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionID = current.getAttribute("id");
+        const sectionID = current.getAttribute("id");
+        const link = document.querySelector(`.nav_menu a[href*="${sectionID}"]`);
+        if (!link) return;
 
         /*
         -if out current schroll position enters the space where current section on screen is, add
@@ -39,9 +55,9 @@ function navHighlighter() {
         (scrollY >= sectionTop) &&
         (scrollY <= sectionTop + sectionHeight)
         ) {
-            document.querySelector(`.nav__menu a[href*=" + sectionID + "]`).classList.add("active-link");
+            link.classList.add("active-link");
         } else {
-            document.querySelector(`.nav__menu a[href*=" + sectionID + "]`).classList.remove("active-link");
+            link.classList.remove("active-link");
         }
     });
 };
@@ -101,16 +117,9 @@ var swiper = new Swiper(".slide-content", {
 
 //---- parallex effect ---//
 var scene = document.getElementById('scene');
-var parallex = new Parallax(scene);
-
-var scene = document.getElementById('scene2');
-var parallex = new Parallax(scene2);
-
-var scene = document.getElementById('scene3');
-var parallex = new Parallax(scene3);
-
-var scene = document.getElementById('scene4');
-var parallex = new Parallax(scene4);
+if (scene) {
+    var parallex = new Parallax(scene);
+}
 
 //-- animation ---//
 const sr = ScrollReveal({
