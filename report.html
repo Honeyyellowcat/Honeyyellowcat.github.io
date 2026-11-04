@@ -31,115 +31,81 @@
             <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
                     <li><a href="current.html">Experience</a></li>
                     <li><a href="experience.html">Education</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="report.html" aria-current="page">Reports</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
   <!--:::::::::::::::::-Reports section-::::::::::::::::-->
-  <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="experiences">
-    <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
-        <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
-            My 
-            <span class="text-pink">Reports</span>
-            <span class="absolute left-2/4 top-2/4 text-5xl md:text-6xl lg:text-8xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">Reports</span>
-        </h2>
-    </div>
-    
-    <div class="max-w-7xl mt-4 relative mx-auto">
-        <div class="container flex flex-col justify-center p-4 mx-auto">
-            <div class="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
+  <section class="subpage-main bg-[#000000] mx-auto px-6 pb-10 pt-12 lg:px-8 lg:pb-14 lg:pt-16" id="reports">
+    <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto text-[#FDFCF3]">
 
-                <div class="portal-card">
-                    <a href="Report4.html">
-                        <img class="object-cover w-full rounded aspect-square" src="assets/img/AB_1.png" alt="Aeroengine design gas turbine core">
-                        <div class="experience-info">
-                            <p>Aeroengine Design: January 2024 - March 2024</p>
-                        </div>
-                        <div class="experience-overlay">
-                            <div>
-                                <p>Aeroengine Design </p> 
-                                <p>University of Washington Seattle, WA</p>
-                                <p>January 2024 - March 2024</p>
-                                <p>Essential responsibilities:</p>
-                                <ul>
-                                    <li>Design a gas turbine engine core comprising a compressor, combustor, and turbine. 
-                                        Key objectives include optimizing performance, managing costs, and meeting specified 
-                                        mass flow rates under defined inlet conditions. Tools like COMPR, TURBN, and CEARUN 
-                                        are utilized for detailed analysis.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+        <div class="relative text-center mb-10 lg:mb-12">
+            <span class="hidden lg:block absolute z-[-1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" id="reportScene" aria-hidden="true">
+                <span class="block opacity-[0.06] blur-3xl rounded-full bg-[#FE8EA8] w-[32rem] h-[32rem]" data-depth="0.25"></span>
+            </span>
+            <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Reports</p>
+            <h1 class="text-[#FE8EA8] font-bold uppercase text-3xl md:text-5xl mb-4">My Reports</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Written technical reports from coursework at the University of Washington, covering design, analysis, and lab procedure.
+            </p>
+        </div>
+
+        <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+            <a href="Report4.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/img/AB_1.png" alt="Aeroengine design gas turbine core" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="portal-card">
-                    <a href="Report3.html">
-                        <img class="object-cover w-full rounded aspect-square" src="assets/img/Plas_1.jpg" alt="Plasma waves and turbulence Langmuir probe experiment">
-                        <div class="experience-info">
-                            <p>Quantum Mechanics in Aerospace: January 2024 - March 2024</p>
-                        </div>
-                        <div class="experience-overlay">
-                            <div>
-                                <p>Investigating Plasma Waves and <br> Turbulence in Space Plasma Using Langmuir Probes</p> 
-                                <p>University of Washington Seattle, WA</p>
-                                <p>January 2024 - March 2024</p>
-                                <p>Essential responsibilities:</p>
-                                <ul>
-                                    <li>Explore space plasma dynamics with Langmuir probes
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-pink mb-1">Aeroengine Design</h2>
+                    <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Designed a gas turbine engine core &mdash; compressor, combustor, and turbine &mdash; optimizing performance, cost, and mass flow rate using COMPR, TURBN, and CEARUN.</p>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
                 </div>
-                <div class="portal-card">
-                    <a href="Report2.html">
-                        <img class="object-cover w-full rounded aspect-square" src="assets/img/air.jpg" alt="Vortex panel airfoil analysis">
-                        <div class="experience-info">
-                            <p>Vortex Panel Project: January 2024 - March 2024</p>
-                        </div>
-                        <div class="experience-overlay">
-                            <div>
-                                <p>Vortex Panel Project</p> 
-                                <p>University of Washington Seattle, WA</p>
-                                <p>January 2024 - March 2024</p>
-                                <p>Essential responsibilities:</p>
-                                <ul>
-                                    <li>Analyzed four airfoils (NACA 0010, NACA 1410, NACA 2410, and NACA 6409) using MATLAB and XFOIL, focusing on viscous effects and generating plots to assess their aerodynamic performance.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+            </a>
+
+            <a href="Report3.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/img/Plas_1.jpg" alt="Plasma waves and turbulence Langmuir probe experiment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="portal-card">
-                    <a href="Report1.html">
-                        <img class="object-cover w-full rounded aspect-square" src="assets/img/AS_1.jpg" alt="Arduino setup and Ohm's Law experiment">
-                        <div class="experience-info">
-                            <p>Aerospace Instrumental: September 2022 - December 2022</p>
-                        </div>
-                        <div class="experience-overlay">
-                            <div>
-                                <p>Arduino Setup and Ohm's Law</p> 
-                                <p>Aerospace Instrumental</p>
-                                <p>University of Washington Seattle, WA</p>
-                                <p>September 2022 - December 2022</p>
-                                <p>Essential responsibilities:</p>
-                                <ul>
-                                    <li>Ohm's Law, measuring V, I, and R, noting voltage values within resistor tolerances, 
-                                        yet uncovering discrepancies, meticulously analyzing uncertainties, and utilizing 
-                                        Matlab to control an LED, enhancing experimental skills.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </a>
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-pink mb-1">Plasma Waves &amp; Turbulence</h2>
+                    <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Investigated plasma waves and turbulence in space plasma, exploring space plasma dynamics using Langmuir probes.</p>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
                 </div>
-            </div>
+            </a>
+
+            <a href="Report2.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/img/air.jpg" alt="Vortex panel airfoil analysis" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-pink mb-1">Vortex Panel Project</h2>
+                    <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Analyzed four airfoils (NACA 0010, 1410, 2410, and 6409) using MATLAB and XFOIL, focusing on viscous effects and aerodynamic performance.</p>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                </div>
+            </a>
+
+            <a href="Report1.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+                <div class="aspect-[16/10] overflow-hidden">
+                    <img src="assets/img/AS_1.jpg" alt="Arduino setup and Ohm's Law experiment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h2 class="text-lg font-bold text-pink mb-1">Arduino Setup &amp; Ohm&rsquo;s Law</h2>
+                    <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Aerospace Instrumental &middot; Sep&ndash;Dec 2022</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-4">Measured voltage, current, and resistance against Ohm&rsquo;s Law, analyzing tolerance discrepancies and using MATLAB to control an LED.</p>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                </div>
+            </a>
+
         </div>
     </div>
 </section>
@@ -155,5 +121,17 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script>
+        // Restrained mouse-responsive glow behind the page heading.
+        // Desktop only (the element itself is hidden below lg), and skipped
+        // entirely when the visitor has requested reduced motion.
+        (function () {
+            var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var reportScene = document.getElementById('reportScene');
+            if (reportScene && !reduceMotion && window.Parallax) {
+                new Parallax(reportScene);
+            }
+        })();
+    </script>
 </body>
 </html>

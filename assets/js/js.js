@@ -28,7 +28,7 @@ function funHide() {
 
 //----- active menu li a -----//
 // Only the homepage's own in-page anchor targets (not every element with an id)
-const homepageAnchorIDs = ["home", "about", "experience", "education", "contact"];
+const homepageAnchorIDs = ["home", "about", "work", "contact"];
 const sections = Array.from(document.querySelectorAll(homepageAnchorIDs.map(id => `#${id}`).join(", ")));
 
 if (sections.length > 0) {
@@ -63,7 +63,9 @@ function navHighlighter() {
 };
 
 //----Sliders---//
-var swiper = new Swiper(".slide-content", {
+// Guard against initializing Swiper when no .slide-content element is on
+// the page (true on the current homepage) — avoids a console error on load.
+var swiper = document.querySelector(".slide-content") ? new Swiper(".slide-content", {
     slidesPerView: 1, 
     spaceBetween: 40,
     effect: "coverflow",
@@ -113,7 +115,7 @@ var swiper = new Swiper(".slide-content", {
             }
         },
     }
-});
+}) : null;
 
 //---- parallex effect ---//
 var scene = document.getElementById('scene');

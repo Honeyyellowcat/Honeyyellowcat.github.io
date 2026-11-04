@@ -18,19 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Page-specific layout (this page only, not global) -->
-    <style>
-        .edu-container {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        @media (min-width: 1024px) {
-            .edu-container {
-                padding: 0 32px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -44,37 +31,42 @@
             <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
                     <li><a href="current.html">Experience</a></li>
                     <li><a href="experience.html" aria-current="page">Education</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="report.html">Reports</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Education & Technical Background Section -->
-    <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5" id="education">
-        <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
-            <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
-                Education &amp;
-                <span class="text-pink">Technical Background</span>
-            </h2>
-        </div>
+    <section class="subpage-main bg-[#000000] mx-auto px-6 pb-10 pt-12 lg:px-8 lg:pb-14 lg:pt-16" id="education">
+        <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto text-[#FDFCF3]">
 
-        <div class="edu-container mt-4 relative text-[#FDFCF3]">
+            <div class="relative text-center mb-12 lg:mb-16">
+                <span class="hidden lg:block absolute z-[-1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" id="eduScene" aria-hidden="true">
+                    <span class="block opacity-[0.06] blur-3xl rounded-full bg-[#FE8EA8] w-[32rem] h-[32rem]" data-depth="0.25"></span>
+                </span>
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Education</p>
+                <h1 class="text-[#FE8EA8] font-bold uppercase text-3xl md:text-5xl mb-4">Education &amp; Technical Background</h1>
+                <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    B.S., Aeronautics &amp; Astronautics from the University of Washington, with hands-on research across propulsion, autonomous systems, and spacecraft design.
+                </p>
+            </div>
 
             <!-- 1. University of Washington -->
-            <div class="bg-[#111] rounded-xl p-8 md:p-10 mb-14 border-l-4 border-[#FE8EA8]">
+            <div class="bg-[#111] rounded-xl p-8 md:p-10 border-l-4 border-[#FE8EA8]">
                 <h3 class="text-2xl md:text-3xl font-bold text-pink mb-2">University of Washington</h3>
                 <p class="text-base text-[#FE8EA8] mb-4">B.S., Aeronautics &amp; Astronautics</p>
                 <p class="text-base leading-relaxed mb-5">Coursework and lab work in propulsion, space systems, and embedded systems.</p>
                 <p class="text-sm text-gray-400 leading-relaxed">NASA Space Grant Consortium (2022&ndash;2024) &middot; UW Technical Award for Innovation (SPACE Lab PPT Thrust Stand) &middot; A&amp;A Endowed Scholarships (Lace Erik, Robert Max Reynolds, Joseph F. Sutter) &middot; Boeing Scholarship &middot; Pierce College Dean's List</p>
             </div>
 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+
             <!-- 2. Featured Technical Experience -->
             <h3 class="text-xl md:text-2xl font-bold text-pink mb-6 uppercase tracking-wide">Featured Technical Experience</h3>
-            <div class="grid gap-8 md:grid-cols-2 mb-14">
+            <div class="grid gap-8 md:grid-cols-2">
                 <a href="experience4.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden hover:-translate-y-1 transition duration-300">
                     <div class="aspect-[16/10] overflow-hidden">
                         <img src="assets/img/PP_1.jpg" alt="SPACE Lab Pulsed Plasma Thruster Stand" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -83,7 +75,7 @@
                         <h3 class="text-xl font-bold text-pink mb-1">SPACE Lab</h3>
                         <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Pulsed Plasma Thruster Stand</p>
                         <p class="text-base text-gray-300 leading-relaxed">Python-based data acquisition and calibration for a spacecraft thruster test stand; embedded serial communication with Arduino UNO for motor control.</p>
-                        <span class="text-[#99ABFF] text-base font-semibold inline-block mt-4">View project &rarr;</span>
+                        <span class="text-[#FE8EA8] text-base font-semibold inline-block mt-4">View project &rarr;</span>
                     </div>
                 </a>
 
@@ -95,63 +87,85 @@
                         <h3 class="text-xl font-bold text-pink mb-1">NDCL</h3>
                         <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Nonlinear Dynamics and Control Lab &mdash; Blue Origin RPO</p>
                         <p class="text-base text-gray-300 leading-relaxed">Supported development of a dual-arm robotic testbed for autonomous spacecraft docking research, using AprilTag fiducial markers for precision tracking.</p>
-                        <span class="text-[#99ABFF] text-base font-semibold inline-block mt-4">View project &rarr;</span>
+                        <span class="text-[#FE8EA8] text-base font-semibold inline-block mt-4">View project &rarr;</span>
                     </div>
                 </a>
             </div>
 
-            <!-- 3. Additional Technical Work -->
-            <h3 class="text-xl md:text-2xl font-bold text-pink mb-6 uppercase tracking-wide">Additional Technical Work</h3>
-            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mb-14">
-                <a href="experience1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+
+            <!-- 3. Additional Technical Experience -->
+            <h3 id="additional-experience" class="text-xl md:text-2xl font-bold text-pink mb-3 uppercase tracking-wide scroll-mt-16">Additional Technical Experience</h3>
+            <p class="text-gray-400 mb-6 max-w-2xl leading-relaxed">
+                Additional hands-on engineering experience from coursework, competitions, and independent projects.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <a href="experience1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">NASA ARTEMIS Challenge</h4>
-                    <p class="text-sm text-gray-400">Rover navigation coding</p>
+                    <p class="text-sm text-gray-400">Led rover navigation coding</p>
                 </a>
-                <a href="experience2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="experience2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Cryogenic Boiling</h4>
-                    <p class="text-sm text-gray-400">Heat transfer research</p>
+                    <p class="text-sm text-gray-400">Conducted heat-transfer testing</p>
                 </a>
-                <a href="project6.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project6.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Satellite Orbit Simulation</h4>
-                    <p class="text-sm text-gray-400">Python orbital mechanics</p>
+                    <p class="text-sm text-gray-400">Built a Python orbital-mechanics simulation</p>
                 </a>
-                <a href="project5.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project5.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Aerospace Design Project</h4>
-                    <p class="text-sm text-gray-400">Airfoil design &amp; simulation</p>
+                    <p class="text-sm text-gray-400">Designed &amp; simulated an airfoil</p>
                 </a>
-                <a href="project4.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project4.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Rocket Design</h4>
-                    <p class="text-sm text-gray-400">Two-stage liquid rocket motor</p>
+                    <p class="text-sm text-gray-400">Designed a two-stage liquid rocket motor</p>
                 </a>
-                <a href="project3.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project3.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Finite Wing Analysis</h4>
-                    <p class="text-sm text-gray-400">Kirsten Wind Tunnel testing</p>
+                    <p class="text-sm text-gray-400">Wind-tunnel tested a finite wing at the Kirsten Wind Tunnel</p>
                 </a>
-                <a href="project2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project2.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Drag on Bluff Bodies</h4>
-                    <p class="text-sm text-gray-400">Wind tunnel drag testing</p>
+                    <p class="text-sm text-gray-400">Measured drag in wind-tunnel testing</p>
                 </a>
-                <a href="project1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project1.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">Propeller Performance</h4>
-                    <p class="text-sm text-gray-400">Wind tunnel performance testing</p>
+                    <p class="text-sm text-gray-400">Tested propeller performance in a wind tunnel</p>
                 </a>
-                <a href="project-git.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] transition">
+                <a href="project-git.html" class="block w-full bg-[#111] rounded-lg px-5 py-4 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
                     <h4 class="text-base font-semibold text-pink">GitHub Projects</h4>
-                    <p class="text-sm text-gray-400">Coding projects &amp; experiments</p>
+                    <p class="text-sm text-gray-400">Additional coding projects &amp; experiments</p>
                 </a>
             </div>
 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+
             <!-- 4. Coursework & Reports -->
-            <h3 class="text-lg font-semibold text-gray-400 mb-4 uppercase tracking-wide">Coursework &amp; Reports</h3>
-            <div class="flex flex-wrap gap-x-8 gap-y-3 text-base mb-3">
-                <a href="Report4.html" class="text-[#99ABFF] hover:underline">Aeroengine Design</a>
-                <a href="Report3.html" class="text-[#99ABFF] hover:underline">Plasma Waves and Turbulence</a>
-                <a href="Report2.html" class="text-[#99ABFF] hover:underline">Vortex Panel Project</a>
-                <a href="Report1.html" class="text-[#99ABFF] hover:underline">Arduino Setup and Ohm's Law</a>
-            </div>
-            <p class="text-base pb-12">
-                <a href="report.html" class="text-gray-400 hover:text-[#FE8EA8] transition">View all reports &rarr;</a>
+            <h3 class="text-xl md:text-2xl font-bold text-pink mb-3 uppercase tracking-wide">Coursework &amp; Reports</h3>
+            <p class="text-gray-400 mb-6 max-w-2xl leading-relaxed">
+                Written technical reports from coursework, covering design, analysis, and lab procedure.
             </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+                <a href="Report4.html" class="group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:border-[#FE8EA8]/40 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
+                    <i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i>
+                    <span class="text-sm font-semibold text-white group-hover:text-pink transition">Aeroengine Design</span>
+                </a>
+                <a href="Report3.html" class="group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:border-[#FE8EA8]/40 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
+                    <i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i>
+                    <span class="text-sm font-semibold text-white group-hover:text-pink transition">Plasma Waves and Turbulence</span>
+                </a>
+                <a href="Report2.html" class="group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:border-[#FE8EA8]/40 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
+                    <i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i>
+                    <span class="text-sm font-semibold text-white group-hover:text-pink transition">Vortex Panel Project</span>
+                </a>
+                <a href="Report1.html" class="group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:border-[#FE8EA8]/40 hover:bg-[#1a1a1a] hover:-translate-y-0.5 transition duration-200">
+                    <i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i>
+                    <span class="text-sm font-semibold text-white group-hover:text-pink transition">Arduino Setup and Ohm&rsquo;s Law</span>
+                </a>
+            </div>
+            <a href="report.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-sm hover:bg-[#EC297B] transition">
+                View All Reports &rarr;
+            </a>
 
         </div>
     </section>
@@ -166,5 +180,17 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script>
+        // Restrained mouse-responsive glow behind the page heading.
+        // Desktop only (the element itself is hidden below lg), and skipped
+        // entirely when the visitor has requested reduced motion.
+        (function () {
+            var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var eduScene = document.getElementById('eduScene');
+            if (eduScene && !reduceMotion && window.Parallax) {
+                new Parallax(eduScene);
+            }
+        })();
+    </script>
 </body>
 </html>

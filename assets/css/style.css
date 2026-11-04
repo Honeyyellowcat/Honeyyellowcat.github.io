@@ -746,12 +746,6 @@ body {
 }
 
 
-/* General styling for the sections */
-section {
-  padding: 4rem 1rem;
-  margin-bottom: 2rem;
-}
-
 .about-section {
   background-color: #000000;
 }
@@ -799,12 +793,6 @@ button span.rotate {
   top: 0;
   left: 0;
 }
-
-        /* General styling for the sections */
-        section {
-          padding: 4rem 1rem;
-          margin-bottom: 2rem;
-      }
 
       .about-section {
           background-color: #000000;
@@ -1113,11 +1101,37 @@ button span.rotate {
 
 @media (min-width: 768px) {
   .about-gallery {
-    width: 420px;
+    width: 440px;
     flex-shrink: 0;
   }
 
   .about-gallery-thumbs {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-gallery {
+    width: 480px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .about-gallery {
+    width: 520px;
+  }
+}
+
+/* Site-wide reduced-motion support: visitors who've asked their OS/browser
+   to minimize motion get near-instant transitions/animations instead of
+   none at all, so state changes are still perceivable. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

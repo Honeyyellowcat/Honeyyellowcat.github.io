@@ -29,7 +29,7 @@
   <body>
     <!--:::::::::::::::::::::-Header-::::::::::::::::::::-->
     <header class="w-full fixed top-0 left-0 bg-[#000000] z-[999] flex justify-between items-center h-16 lg:px-0 mpx-4">
-      <a class="text-[#FE8EA8] block md:hidden" href="#" id="menuOpen">
+      <a class="text-[#FE8EA8] block md:hidden" href="#home" id="menuOpen">
           <img src="assets/img/felicity.png" class="h-7 sm:h-9" alt="Felicity Cundiff logo">
       </a>
       <button class="text-[#FE8EA8] cursor-pointer block md:hidden" id="nav-toggle" aria-controls="nav-menu" aria-label="Toggle navigation menu">
@@ -45,7 +45,7 @@
                   <i class="fa-solid fa-xmark"></i>
               </button>
               <div>
-                  <a href="#" class="flex items-center">
+                  <a href="#home" class="flex items-center">
                       <img src="assets/img/felicity.png" class="h-6 sm:h-9" alt="Felicity Cundiff logo">
                   </a>
               </div>
@@ -53,27 +53,22 @@
               <div class="nav_menu justify-between item-center w-full md:flec md:w-auto md:order-1">
                   <ul class="flex flex-col p-4 mt-4 md:flex-row md:mt-0 md:text-base md:font-medium">
                       <li class="my-4 mx-1 md:my-0">
-                          <a href="#home" class="block md:my-1 md:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
+                          <a href="#home" class="block md:my-1 md:px-2 lg:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
                               Home
                           </a>
                       </li>
                       <li class="my-4 mx-1 md:my-0">
-                          <a href="#about" class="block md:my-1 md:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
+                          <a href="#about" class="block md:my-1 md:px-2 lg:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
                               About  
                           </a>
                       </li>
                       <li class="my-4 mx-1 md:my-0">
-                          <a href="#experience" class="block md:my-1 md:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
-                              Experience
+                          <a href="#work" class="block md:my-1 md:px-2 lg:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
+                              Explore My Work
                           </a>
                       </li>
                       <li class="my-4 mx-1 md:my-0">
-                          <a href="#education" class="block md:my-1 md:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
-                              Education
-                          </a>
-                      </li>
-                      <li class="my-4 mx-1 md:my-0">
-                          <a href="#contact" class="block md:my-1 md:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
+                          <a href="#contact" class="block md:my-1 md:px-2 lg:px-4 text-[#FE8EA8] md:hover:bg[#EC297B] md:hover:bg-opacity-[0.161] md:hover:text-[#EC297B] hover:text-[#EC297B] rounded">
                               Contact
                           </a>
                       </li>
@@ -84,24 +79,33 @@
     </header>
 
     <!--::::::::::::::::::- Hero Section -::::::::::::::::::-->
-    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-20 lg:pt-36 overflow-hidden scroll-mt-16" id="home" style="height: 900px;">
+    <section class="lg:bg-[url('./assets/img/bag.png')] bg-[#000000] relative mx-auto bg-center pt-24 lg:pt-36 pb-16 lg:pb-0 overflow-hidden scroll-mt-16 min-h-[640px] lg:min-h-[900px]" id="home">
       <div class="max-w-7xl relative flex justify-center mx-auto flex-col-reverse lg:flex-row lg:justify-between">
-          <div class="flex flex-col mt-8 justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-              <h1 class="text-2xl font-normal leading-none lg:text-5xl text-[#fff] sr01">
+          <div class="flex flex-col mt-8 justify-center p-6 text-center rounded-sm lg:max-w-lg xl:max-w-2xl lg:text-left relative">
+              <span class="hidden lg:block absolute z-[-1] opacity-10 select-none pointer-events-none -top-10 left-0 scene" id="scene" aria-hidden="true">
+                  <span class="block text-[#FE8EA8] font-bold uppercase text-7xl xl:text-8xl whitespace-nowrap" data-depth="0.40">Felicity</span>
+              </span>
+              <span class="block mx-auto lg:mx-0 text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3 sr01">
+                  Amazon Leo &middot; Project Kuiper
+              </span>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-normal leading-tight lg:text-5xl xl:text-6xl text-[#fff] sr01">
                 Flight Dynamics Operations Engineer
             </h1>
-            <span class="mt-3 mg:mx-0 mx-auto w-24 h-3px bg-[#000000] rounded sr01"></span>
-            <p class="mt-3 lg:mb-8 text-base md:text-lg text-[#FE8EA8] sr01">
+            <span class="mt-4 mx-auto lg:mx-0 block w-16 h-[3px] bg-[#FE8EA8] rounded sr01"></span>
+            <p class="mt-4 lg:mb-8 text-base md:text-lg text-[#FE8EA8] sr01">
                 Real-time constellation safety, conjunction assessment, and pre-launch readiness at Amazon Leo (formerly Project Kuiper).
             </p>
+            <div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-2 sr01">
+                <a href="current.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 lg:px-8 lg:py-3.5 text-base lg:text-lg hover:bg-[#EC297B] transition">
+                    View My Experience
+                </a>
+                <a href="#contact" class="inline-block border border-[#FE8EA8] text-[#FE8EA8] font-semibold rounded-lg px-6 py-3 lg:px-8 lg:py-3.5 text-base lg:text-lg hover:bg-[#EC297B] hover:border-[#EC297B] hover:text-black transition">
+                    Get in Touch
+                </a>
+            </div>
           </div>
-          <div class="lg:block hidden absolute">
-              <span class="absolute opacity-10 -top-36 scene" id="scene">
-                  <h1 class="text-[#FE8EA8] font-bold uppercase text-[18rem]" data-depth="0.40"></h1>
-              </span>
-          </div>
-          <div class="flex item-center relative z-10 justify-center mt-0 mr-0 lg:mt-8 h-72 sm:h-80 first-letter lg:h-[42rem] sr01">
-              <img src="assets/img/me.png" class="h-72 sm:h-80 lg:h-[42rem] object-cover sr03" alt="Felicity Cundiff">
+          <div class="flex items-center justify-center relative z-10 mt-0 mr-0 lg:mt-8 sr01">
+              <img src="assets/img/me.png" class="w-72 h-72 sm:w-80 sm:h-80 lg:w-[42rem] lg:h-[42rem] aspect-square object-contain sr03" alt="Felicity Cundiff">
           </div>
           <div class="absolute flex left-0 right-0 top-auto lg:top-0 lg:left-auto lg:-right-32 bottom-0 justify-center item-center gap-4 lg:rotate-90">
               <span class="text-[#FE8EA8] text-sm font-semibold tracking-widest w-max">Connect with me!</span>
@@ -119,15 +123,16 @@
     </section>
 
     <!-- :::::::::::::::::::- About Section -::::::::::::::::::-->
-    <section class="about-section bg-[#000000] p-6 mx-auto py-16 lg:px-14 lg:py-24 border-t border-white/10 scroll-mt-16" id="about">
-        <div class="flex justify-center text-center mb-16 mt-4 mx-auto">
-            <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-xl md:text-4xl z-10">
+    <section class="about-section relative overflow-hidden bg-[#000000] p-6 mx-auto py-20 lg:px-14 lg:py-28 scroll-mt-16" id="about">
+        <div class="pointer-events-none absolute -top-24 -left-24 w-64 h-64 lg:w-96 lg:h-96 rounded-full bg-[#FE8EA8] opacity-[0.04] blur-3xl" aria-hidden="true"></div>
+        <div class="flex justify-center text-center mb-16 mt-4 mx-auto relative z-10">
+            <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-2xl md:text-5xl z-10">
                 About <span class="text-[#FE8EA8]">Me</span>
-                <span class="absolute left-2/4 top-2/4 text-5xl md:text-6xl lg:text-8xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">About</span>
+                <span class="absolute left-2/4 top-2/4 text-5xl md:text-7xl lg:text-9xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">About</span>
             </h2>
         </div>
-        <div class="max-w-4xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
                 <div class="about-gallery">
                     <div class="about-gallery-frame">
                         <img id="profile-image" src="assets/img/me_1.jpg" alt="Felicity Cundiff">
@@ -135,11 +140,11 @@
                     <div class="about-gallery-thumbs" id="about-gallery-thumbs"></div>
                 </div>
                 <div class="text-center md:text-left">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Flight Dynamics Operations Engineer</h3>
-                    <p class="leading-7 text-base text-gray-300 mb-6 max-w-md">Supporting Amazon Leo (formerly Project Kuiper) across real-time constellation safety, conjunction assessment, and pre-launch readiness.</p>
-                    <div class="border-t border-white/10 pt-4">
-                        <p class="text-sm font-semibold text-gray-300">B.S., Aeronautics &amp; Astronautics</p>
-                        <p class="text-sm text-gray-500">University of Washington</p>
+                    <h3 class="text-2xl md:text-4xl font-bold text-white mb-4">Flight Dynamics Operations Engineer</h3>
+                    <p class="leading-7 md:leading-8 text-base md:text-lg text-gray-300 mb-6 max-w-lg">Supporting Amazon Leo (formerly Project Kuiper) across real-time constellation safety, conjunction assessment, and pre-launch readiness.</p>
+                    <div class="border-t border-white/10 pt-5">
+                        <p class="text-sm md:text-base font-semibold text-gray-300">B.S., Aeronautics &amp; Astronautics</p>
+                        <p class="text-sm md:text-base text-gray-500">University of Washington</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +152,7 @@
     </section>
 
     <!-- :::::::::::::::::::- Updates & Features Section -::::::::::::::::::-->
-    <section id="blog" class="bg-[#000000] p-6 py-16 lg:px-14 lg:py-24 border-t border-white/10 relative scroll-mt-16">
+    <section id="blog" class="bg-[#000000] p-6 py-16 lg:px-14 lg:py-24 relative scroll-mt-16">
     <!-- Section Header -->
     <div class="flex justify-center text-center mb-16 mt-4 mx-auto">
         <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-xl md:text-4xl z-10">
@@ -157,20 +162,20 @@
         </h2>
     </div>
     <!-- Cards -->
-    <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="max-w-6xl xl:max-w-7xl mx-auto grid gap-6 lg:gap-8 grid-cols-1 lg:grid-cols-3">
         <!-- Card 1: LinkedIn -->
         <div class="bg-[#111] rounded-2xl overflow-hidden shadow-lg border border-white border-opacity-5 flex flex-col">
             <div class="aspect-[4/3] w-full flex items-center justify-center bg-[#161616]">
                 <i class="fa-brands fa-linkedin text-[#FE8EA8] text-6xl" aria-hidden="true"></i>
             </div>
-            <div class="p-6 text-[#fff] flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl text-[#FE8EA8] mb-2">LinkedIn</h3>
-                <p class="text-base text-gray-300 leading-relaxed flex-grow">
+            <div class="p-6 lg:p-8 text-[#fff] flex flex-col flex-grow">
+                <h3 class="font-semibold text-xl md:text-2xl text-[#FE8EA8] mb-2">LinkedIn</h3>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed flex-grow">
                     Connect with me for updates on my work in flight dynamics and satellite operations.
                 </p>
                 <a href="https://www.linkedin.com/in/felicity-cundiff/"
                     target="_blank" rel="noopener noreferrer"
-                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base hover:underline">
+                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base md:text-lg hover:underline">
                     View Profile &rarr;
                 </a>
             </div>
@@ -178,14 +183,14 @@
         <!-- Card 2: KA-01 Launch -->
         <div class="bg-[#111] rounded-2xl overflow-hidden shadow-lg border border-white border-opacity-5 flex flex-col">
             <img src="assets/img/KA01_Apr28_2025.jpg" alt="KA-01 Launch" class="aspect-[4/3] w-full object-cover">
-            <div class="p-6 text-[#fff] flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl text-[#FE8EA8] mb-2">KA-01 Launch</h3>
-                <p class="text-base text-gray-300 leading-relaxed flex-grow">
+            <div class="p-6 lg:p-8 text-[#fff] flex flex-col flex-grow">
+                <h3 class="font-semibold text-xl md:text-2xl text-[#FE8EA8] mb-2">KA-01 Launch</h3>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed flex-grow">
                     We launched KA-01, the first production satellites for Project Kuiper! Proud to be part of the front-line Flight Dynamics team helping make this mission a success.
                 </p>
                 <a href="https://www.linkedin.com/posts/marcoconcha_projectkuiper-amazon-activity-7322847927846981632-Shml"
                     target="_blank" rel="noopener noreferrer"
-                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base hover:underline">
+                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base md:text-lg hover:underline">
                     View Post &rarr;
                 </a>
             </div>
@@ -193,14 +198,14 @@
         <!-- Card 3: Amazon Leo / Project Kuiper News -->
         <div class="bg-[#111] rounded-2xl overflow-hidden shadow-lg border border-white border-opacity-5 flex flex-col">
             <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo / Project Kuiper News" class="aspect-[4/3] w-full object-cover">
-            <div class="p-6 text-[#fff] flex flex-col flex-grow">
-                <h3 class="font-semibold text-xl text-[#FE8EA8] mb-2">Amazon Leo / Project Kuiper News</h3>
-                <p class="text-base text-gray-300 leading-relaxed flex-grow">
+            <div class="p-6 lg:p-8 text-[#fff] flex flex-col flex-grow">
+                <h3 class="font-semibold text-xl md:text-2xl text-[#FE8EA8] mb-2">Amazon Leo / Project Kuiper News</h3>
+                <p class="text-base md:text-lg text-gray-300 leading-relaxed flex-grow">
                     Stay up-to-date with the latest news on Amazon&rsquo;s Project Kuiper satellite constellation.
                 </p>
                 <a href="https://www.aboutamazon.com/news/tag/project-kuiper"
                     target="_blank" rel="noopener noreferrer"
-                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base hover:underline">
+                    class="mt-4 inline-block text-[#FE8EA8] font-semibold text-base md:text-lg hover:underline">
                     Read More &rarr;
                 </a>
             </div>
@@ -209,37 +214,49 @@
     </section>
 
     <!-- :::::::::::::::::::- Experience & Education photo panels -:::::::::::::::: -->
-    <section class="bg-black p-6 mx-auto py-16 lg:px-14 lg:py-24 border-t border-white/10" id="skills">
+    <section class="bg-[#000000] p-6 mx-auto py-16 lg:px-14 lg:py-24 scroll-mt-16" id="work">
         <div class="flex justify-center text-center mb-16 mt-4 mx-auto">
             <h2 class="text-[#FE8EA8] font-bold select-none relative inline-block uppercase text-xl md:text-4xl z-10">
-                Experience &amp;
-                <span class="text-[#FE8EA8]">Education</span>
-                <span class="absolute left-2/4 top-2/4 text-5xl md:text-6xl lg:text-8xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">Experience</span>
+                Explore My
+                <span class="text-[#FE8EA8]">Work</span>
+                <span class="absolute left-2/4 top-2/4 text-5xl md:text-6xl lg:text-8xl -translate-x-2/4 -translate-y-2/4 z-[-1] opacity-10">Explore</span>
             </h2>
         </div>
 
-        <div class="max-w-6xl mx-auto grid gap-6 md:grid-cols-2">
+        <div class="max-w-6xl xl:max-w-7xl mx-auto grid gap-6 lg:gap-8 grid-cols-1 lg:grid-cols-3">
 
-            <div id="experience" class="group relative rounded-2xl overflow-hidden h-[420px] md:h-[480px] scroll-mt-16">
+            <div id="experience" class="group relative rounded-2xl overflow-hidden h-[400px] md:h-[460px] lg:h-[500px] xl:h-[560px] scroll-mt-16">
                 <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
                 <div class="relative h-full flex flex-col justify-end p-8 md:p-10">
                     <h3 class="text-3xl md:text-4xl font-bold text-pink mb-2">Experience</h3>
                     <p class="text-base md:text-lg text-gray-200 mb-6 max-w-sm leading-relaxed">Flight Dynamics Operations Engineer supporting Amazon Leo (formerly Project Kuiper) &mdash; real-time constellation safety and pre-launch readiness.</p>
-                    <a href="current.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-base hover:bg-[#EC297B] transition self-start">
+                    <a href="current.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 lg:px-7 lg:py-3.5 text-base lg:text-lg hover:bg-[#EC297B] transition self-start">
                         View Experience &rarr;
                     </a>
                 </div>
             </div>
 
-            <div id="education" class="group relative rounded-2xl overflow-hidden h-[420px] md:h-[480px] scroll-mt-16">
+            <div id="education" class="group relative rounded-2xl overflow-hidden h-[400px] md:h-[460px] lg:h-[500px] xl:h-[560px] scroll-mt-16">
                 <img src="assets/img/PP_1.jpg" alt="SPACE Lab Pulsed Plasma Thruster Stand" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
                 <div class="relative h-full flex flex-col justify-end p-8 md:p-10">
                     <h3 class="text-3xl md:text-4xl font-bold text-pink mb-2">Education &amp; Technical Background</h3>
                     <p class="text-base md:text-lg text-gray-200 mb-6 max-w-sm leading-relaxed">B.S., Aeronautics &amp; Astronautics from the University of Washington &mdash; SPACE Lab, NDCL, and additional technical work.</p>
-                    <a href="experience.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-base hover:bg-[#EC297B] transition self-start">
+                    <a href="experience.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 lg:px-7 lg:py-3.5 text-base lg:text-lg hover:bg-[#EC297B] transition self-start">
                         View Education &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div id="reports" class="group relative rounded-2xl overflow-hidden h-[400px] md:h-[460px] lg:h-[500px] xl:h-[560px] scroll-mt-16">
+                <img src="assets/img/AB_1.png" alt="Aeroengine design gas turbine core report" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10"></div>
+                <div class="relative h-full flex flex-col justify-end p-8 md:p-10">
+                    <h3 class="text-3xl md:text-4xl font-bold text-pink mb-2">Reports</h3>
+                    <p class="text-base md:text-lg text-gray-200 mb-6 max-w-sm leading-relaxed">Technical write-ups spanning aeroengine design, controls, and experimental coursework from my B.S. in Aeronautics &amp; Astronautics.</p>
+                    <a href="report.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 lg:px-7 lg:py-3.5 text-base lg:text-lg hover:bg-[#EC297B] transition self-start">
+                        View Reports &rarr;
                     </a>
                 </div>
             </div>
@@ -248,11 +265,14 @@
     </section>
 
 <!--:::::::::::::::::-Contact section-::::::::::::::::-->
-    <section class="bg-[#000000] p-6 mx-auto py-14 lg:px-14 scroll-mt-16" id="contact">
+    <section class="bg-[#000000] p-6 mx-auto py-16 lg:px-14 lg:py-24 scroll-mt-16" id="contact">
         <div class="max-w-xl mx-auto text-center">
             <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Contact</p>
-            <h3 class="text-2xl md:text-3xl font-bold text-[#fff] mb-6">Let&rsquo;s connect</h3>
-            <a href="mailto:felicitycundiff@gmail.com" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-8 py-3 text-base hover:bg-[#EC297B] transition mb-6">
+            <h3 class="text-2xl md:text-4xl font-bold text-[#fff] mb-4">Let&rsquo;s connect</h3>
+            <p class="text-gray-400 text-base md:text-lg mb-8 max-w-md mx-auto leading-relaxed">
+                Always glad to talk flight dynamics, satellite operations, or new opportunities to collaborate.
+            </p>
+            <a href="mailto:felicitycundiff@gmail.com" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-8 py-3 text-base hover:bg-[#EC297B] transition mb-8">
                 felicitycundiff@gmail.com
             </a>
             <div class="flex justify-center gap-6 text-[#FE8EA8] text-2xl">
@@ -261,6 +281,17 @@
             </div>
         </div>
     </section>
+
+    <!--::::::::::::::::::- Footer -::::::::::::::::::-->
+    <footer class="subpage-footer">
+        <div class="subpage-footer-inner">
+            <p>&copy; Felicity Cundiff</p>
+            <div class="subpage-footer-social">
+                <a href="https://www.linkedin.com/in/felicity-cundiff/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://github.com/Honeyyellowcat" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <!---scrollreveal--->
         <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

@@ -31,60 +31,79 @@
             <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
                     <li><a href="current.html" aria-current="page">Experience</a></li>
                     <li><a href="experience.html">Education</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="report.html">Reports</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Experience Section -->
-    <section class="subpage-main bg-[#212121] p-2 mx-auto pb-4 pt-10 lg:pb-14 lg:pt-5 lg:pb-15" id="experience">
-        <div class="flex justify-center text-center mb-10 mt-4 mx-auto">
-            <h2 class="section-title text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">
-                My
-                <span class="text-pink">Experience</span>
-            </h2>
-        </div>
+    <section class="subpage-main bg-[#000000] mx-auto px-6 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16" id="experience">
+        <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto">
+            <div class="text-center mb-12 lg:mb-16">
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Experience</p>
+                <h1 class="text-[#FE8EA8] font-bold uppercase text-3xl md:text-5xl mb-4">My Experience</h1>
+                <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Professional and research experience spanning satellite flight dynamics operations, propulsion test stands, and autonomous spacecraft docking research.
+                </p>
+            </div>
 
-        <div class="max-w-4xl mt-4 relative mx-auto px-4">
-            <div class="bg-[#111] rounded-2xl overflow-hidden text-[#FDFCF3]">
-                <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="w-full h-64 md:h-80 object-cover">
-                <div class="p-8 md:p-12 text-center">
-                    <h3 class="text-2xl md:text-4xl font-bold text-pink mb-1">Flight Dynamics Operations Engineer</h3>
+            <!-- Featured: Amazon Leo -->
+            <div>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-4">Current Role</p>
+
+                <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="w-full h-[300px] object-cover object-center rounded-2xl mb-8">
+
+                <div class="bg-[#111] rounded-xl p-8 md:p-10 border-l-4 border-[#FE8EA8] text-[#FDFCF3] text-center lg:text-left">
+                    <h2 class="text-2xl md:text-4xl font-bold text-pink mb-1">Flight Dynamics Operations Engineer</h2>
                     <p class="text-[#FE8EA8] text-lg mb-6">Amazon Leo (formerly Project Kuiper) &middot; August 2024&ndash;Present</p>
-                    <p class="max-w-2xl mx-auto mb-8 leading-relaxed">
+                    <p class="mb-8 leading-relaxed text-gray-300 lg:max-w-3xl">
                         I support the operational safety of a satellite constellation, focused on real-time constellation health, pre-launch readiness, and time-critical flight dynamics across the mission lifecycle.
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10 text-left max-w-2xl mx-auto">
-                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10 text-left">
+                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
                             <p class="text-sm font-semibold text-pink">Pre-Launch Readiness</p>
                             <p class="text-xs text-gray-400">Primary ownership</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
                             <p class="text-sm font-semibold text-pink">Constellation Health &amp; Safety</p>
                             <p class="text-xs text-gray-400">Real-time operational monitoring</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
                             <p class="text-sm font-semibold text-pink">Conjunction Assessment</p>
                             <p class="text-xs text-gray-400">Risk analysis</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3">
+                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
                             <p class="text-sm font-semibold text-pink">Orbital &amp; Constellation Operations</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-lg px-4 py-3 sm:col-span-2">
+                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3 sm:col-span-2 lg:col-span-1">
                             <p class="text-sm font-semibold text-pink">Cross-Functional Coordination</p>
                             <p class="text-xs text-gray-400">Flight and propulsion teams</p>
                         </div>
                     </div>
 
                     <a href="experience5.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-10 py-4 text-lg hover:bg-[#EC297B] transition">
-                        View Full Experience &rarr;
+                        View Experience &rarr;
                     </a>
                 </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+
+            <!-- Additional Experience -->
+            <div class="border-l-4 border-[#FE8EA8] pl-6 md:pl-8 py-1 md:flex md:items-center md:justify-between md:gap-8">
+                <div>
+                    <h2 class="text-lg md:text-xl font-bold text-pink mb-1">Additional Experience</h2>
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
+                        Research experience in propulsion testing, autonomous spacecraft docking, and related technical work is organized alongside my academic background.
+                    </p>
+                </div>
+                <a href="experience.html#additional-experience" class="mt-4 md:mt-0 inline-block flex-shrink-0 bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-sm md:text-base hover:bg-[#EC297B] transition">
+                    View Additional Experience &rarr;
+                </a>
             </div>
         </div>
     </section>
