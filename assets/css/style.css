@@ -100,6 +100,20 @@
     width: max-content;
   }
 
+  /* Homepage nav links need to fill their row on mobile for a comfortable
+     tap target; the bare .active-link rule above (shared with unrelated
+     tab components elsewhere) would otherwise force them back down to
+     content width whenever the scroll-spy marks one active. Scoped to
+     beat it on specificity without touching the shared rule. */
+  #nav-menu .nav_menu a.active-link {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    #nav-menu .nav_menu a.active-link {
+      width: auto;
+    }
+  }
+
   .btn__hover {
     transition: all 0.475s;
   }
@@ -1061,6 +1075,18 @@ button span.rotate {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Subtle pink-glow hover/focus accent, matching the refined subpages' card
+   treatment. Pure CSS (no motion.js dependency, since the homepage doesn't
+   load it) and additive only -- doesn't touch the sizing/aspect-ratio rules
+   above. */
+.about-gallery-frame {
+  transition: box-shadow 0.3s ease;
+}
+.about-gallery-frame:hover,
+.about-gallery-frame:focus-within {
+  box-shadow: 0 0 0 3px rgba(254, 142, 168, 0.35), 0 20px 40px -20px rgba(254, 142, 168, 0.45);
 }
 
 .about-gallery-thumbs {
