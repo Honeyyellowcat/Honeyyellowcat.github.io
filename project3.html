@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -40,63 +41,96 @@
         </div>
     </header>
 
-    <div class="wrapper subpage-main">
-        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Aerospace Laboratory I: Finite Wing Analysis in the Kirsten Wind Tunnel (KWT)</h1>
-        <div class="image-container">
-            <img src="assets/img/WT_2.jpg" alt="Finite wing analysis in the Kirsten Wind Tunnel">
+    <div class="wrapper subpage-main navbar-gap">
+        <div class="px-5">
+            <a href="experience.html" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Education</span>
+            </a>
+            <div class="mb-10 lg:mb-12 reveal">
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Aerospace Laboratory I</p>
+                <h1 class="text-pink font-bold text-2xl md:text-4xl">Finite Wing Analysis in the Kirsten Wind Tunnel (KWT)</h1>
+            </div>
+            <img src="assets/img/WT_2.jpg" alt="Finite wing analysis in the Kirsten Wind Tunnel" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary: </h2>
-            <p>The experiment investigates propeller geometry and pitch influence on performance metrics. It compares four propellers in a 3x3 wind tunnel and discusses limitations.</p>
-            <!-- Button to open PDF -->
-            <p class="text-2xl">1. Finite Wings Report: <a href="doc/SpaceLab/CDR.pdf" target="_blank">Here</a></p>
-            <h2 class="text-2xl">Abstract:</h2>
-            <ul>
-                <li>- Explored propeller geometry and pitch influence on performance metrics.</li>
-                <li>- Found performance metrics depend on propeller geometry and advance ratio.</li>
-                <li>- Highlighted the need for further analysis on propeller design optimization.</li>
-            </ul>
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary: </h2>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">The experiment investigates propeller geometry and pitch influence on performance metrics. It compares four propellers in a 3x3 wind tunnel and discusses limitations.</p>
 
-            <h2 class="text-2xl text-pink">Introduction:</h2>
-            <ul>
-                <li>- Objective: Measure propeller performance and evaluate pitch influence.</li>
-                <li>- Utilized advanced equipment and a 3’x3’ wind tunnel for controlled airflow.</li>
-                <li>- Experiment involved testing two propeller models at different pressure values.</li>
-            </ul>
+            <div class="flex flex-wrap gap-3 mb-10">
+                <a href="doc/SpaceLab/CDR.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Finite Wings Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+            </div>
 
-            <h2 class="text-2xl text-pink">Theory:</h2>
-            <ul>
-                <li>- Propeller power, efficiency, thrust, and torque equations were explored.</li>
-                <li>- Discussed propeller advance ratio and its impact on efficiency and thrust.</li>
-                <li>- Formulas for thrust and torque coefficients were provided.</li>
-            </ul>
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
 
-            <h2 class="text-2xl text-pink">Methods and Procedure:</h2>
-            <ul>
-                <li>- Experiment conducted in a 3x3 wind tunnel using various equipment.</li>
-                <li>- Data collected included RPM, indicated pressure, drag, torque, and temperature.</li>
-                <li>- Propellers tested at different indicated pressures and RPM ranges.</li>
-            </ul>
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Abstract:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Explored propeller geometry and pitch influence on performance metrics.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Found performance metrics depend on propeller geometry and advance ratio.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Highlighted the need for further analysis on propeller design optimization.</p>
+                </div>
+            </div>
 
-            <h2 class="text-2xl text-pink">Results and Discussion:</h2>
-            <ul>
-                <li>- Thrust trends deviated from expectations, possibly due to data inaccuracies.</li>
-                <li>- Efficiency and torque data showed unexpected patterns, requiring further investigation.</li>
-                <li>- Limitations of the experiment, including potentiometer and propeller dimensions, were discussed.</li>
-            </ul>
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
 
-            <h2 class="text-2xl text-pink">Conclusion:</h2>
-            <ul>
-                <li>- Results were unexpected, possibly due to limitations in experimental setup.</li>
-                <li>- Suggested improvements include digital motor speed control and consistent propeller dimensions.</li>
-                <li>- Highlighted the need for future experiments to isolate propeller geometry and pitch effects.</li>
-            </ul>
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Introduction:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Objective: Measure propeller performance and evaluate pitch influence.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Utilized advanced equipment and a 3’x3’ wind tunnel for controlled airflow.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Experiment involved testing two propeller models at different pressure values.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Theory:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Propeller power, efficiency, thrust, and torque equations were explored.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Discussed propeller advance ratio and its impact on efficiency and thrust.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Formulas for thrust and torque coefficients were provided.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Methods and Procedure:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Experiment conducted in a 3x3 wind tunnel using various equipment.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Data collected included RPM, indicated pressure, drag, torque, and temperature.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Propellers tested at different indicated pressures and RPM ranges.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Results and Discussion:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Thrust trends deviated from expectations, possibly due to data inaccuracies.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Efficiency and torque data showed unexpected patterns, requiring further investigation.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Limitations of the experiment, including potentiometer and propeller dimensions, were discussed.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Conclusion:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Results were unexpected, possibly due to limitations in experimental setup.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Suggested improvements include digital motor speed control and consistent propeller dimensions.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Highlighted the need for future experiments to isolate propeller geometry and pitch effects.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Photo Album Section -->
     <section id="photo-album">
-        <h2>Photo Album</h2>
+        <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Photo Album</h2>
         <div class="photo-grid">
             <div class="photo">
                 <img src="assets/img/WT_1.jpg" alt="Photo 1">
@@ -137,5 +171,6 @@
         <!---main js--->
         <script src="assets/js/photos2.js"></script>
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

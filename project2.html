@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -39,58 +40,76 @@
         </div>
     </header>
 
-    <div class="wrapper subpage-main">
-        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Aerospace Laboratory I: Drag on Bluff Bodies using the 3’ x 3’ wind tunnel</h1>
-        <div class="image-container">
-            <img src="assets/img/DBB_2.jpg" alt="Drag on bluff bodies wind tunnel test">
+    <div class="wrapper subpage-main navbar-gap">
+        <div class="px-5">
+            <a href="experience.html" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Education</span>
+            </a>
+            <div class="mb-10 lg:mb-12 reveal">
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Aerospace Laboratory I</p>
+                <h1 class="text-pink font-bold text-2xl md:text-4xl">Drag on Bluff Bodies using the 3’ x 3’ wind tunnel</h1>
+            </div>
+            <img src="assets/img/DBB_2.jpg" alt="Drag on bluff bodies wind tunnel test" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary:</h2>
-            <ul>
-                <li>- This experiment investigates drag on bluff bodies, analyzing its variation with Reynolds 
-                    number using a 3’ x 3’ wind tunnel. Tests include a balance fairing, 5-inch disk, 5-inch 
-                    sphere, large trip ring, and small trip ring. Results show a clear relationship between 
-                    drag coefficient and Reynolds number for different body shapes, with notable drag buckets. 
-                    Considerations for errors in measurements are discussed, and the study provides insights 
-                    for sports ball design.
-                </li>
-            </ul>
-            <!-- Button to open PDF -->
-            <p class="text-2xl">1. Drag on Bluff Bodies Reports: <a href="doc/Drag_on_Bluff_Bodies.pdf" target="_blank">Here</a></p>
-            <h2 class="text-2xl text-pink">Nomenclature</h2>
-            <ul>
-                <li>𝑝𝑓𝑟𝑜𝑛𝑡 = Pressure on the front surface</li>
-                <li>𝑝𝑏𝑎𝑐𝑘 = Pressure on the back surface</li>
-                <li>𝜌 = Density</li>
-                <li>𝑉 = Velocity</li>
-                <li>𝐿 = Length</li>
-                <li>𝜇 = Viscosity</li>
-                <li>𝐹𝑑 = Drag Force</li>
-                <li>𝐴 = Reference Area</li>
-                <li>𝐶𝐷 = 𝐹𝑑 / (1/2 * 𝜌 * 𝑉^2 * 𝐴)</li>
-                <li>𝑅𝑒 = (𝜌 * 𝑉 * 𝐿) / 𝜇</li>
-                <li>𝐶𝑝 = (𝑝𝑓𝑟𝑜𝑛𝑡 - 𝑝𝑏𝑎𝑐𝑘) / (1/2 * 𝜌 * 𝑉^2)</li>
-                <li>𝑝𝑒𝑟𝑐𝑒𝑛𝑡 𝑒𝑟𝑟𝑜𝑟 = |(𝑒𝑥 𝑝𝑒𝑟𝑖𝑚𝑒𝑛𝑡𝑎𝑙 𝑣𝑎𝑙𝑢𝑒 - 𝑡ℎ𝑒𝑜𝑟𝑒𝑡𝑖𝑐𝑎𝑙 𝑣𝑎𝑙𝑢𝑒) / 𝑡ℎ𝑒𝑜𝑟𝑒𝑡𝑖𝑐𝑎𝑙 𝑣𝑎𝑙𝑢𝑒| * 100</li>
-            </ul>
-            <h2 class="text-2xl text-pink">Results/Discussion</h2>
-            <ul>
-                <li>- The experiment investigates drag on a bluff body, analyzing its variation with Reynolds number 
-                    using a 3’ x 3’ wind tunnel.</li>
-                <li>- Tests include a balance fairing, 5-inch disk, 5-inch sphere, large trip ring, and small trip ring.</li>
-                <li>- Results show a clear relationship between drag coefficient and Reynolds number for different 
-                    body shapes, with notable drag buckets.</li>
-                <li>- Errors in measurements and instrumentation are considered, and the experiment provides insights 
-                    for sports ball design.</li>
-            </ul>
-            <h2 class="text-2xl text-pink">Conclusion</h2>
-            <p>- The experiment aimed to determine the effect of Reynolds number, tripping devices, and flow type on 
-                bluff body drag, contributing significant insights to aeronautical research and design methodologies. 
-                By conducting a series of tests and analyzing the data, we observed clear trends in drag coefficient 
-                variation with Reynolds number, highlighting the importance of shape and flow characteristics in 
-                drag behavior. The identification of drag buckets and their implications for object design, such as 
-                sports balls, underscores the practical applications of our findings. While limitations in velocity 
-                consistency and measurement errors were acknowledged, the overall accuracy and relevance of the experiment's 
-                results remain compelling, offering valuable considerations for future aerodynamic studies and engineering 
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary:</h2>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">- This experiment investigates drag on bluff bodies, analyzing its variation with Reynolds
+                number using a 3’ x 3’ wind tunnel. Tests include a balance fairing, 5-inch disk, 5-inch
+                sphere, large trip ring, and small trip ring. Results show a clear relationship between
+                drag coefficient and Reynolds number for different body shapes, with notable drag buckets.
+                Considerations for errors in measurements are discussed, and the study provides insights
+                for sports ball design.</p>
+
+            <div class="flex flex-wrap gap-3 mb-10">
+                <a href="doc/Drag_on_Bluff_Bodies.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Drag on Bluff Bodies Reports: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Nomenclature</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">𝑝𝑓𝑟𝑜𝑛𝑡 = Pressure on the front surface</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝑝𝑏𝑎𝑐𝑘 = Pressure on the back surface</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝜌 = Density</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝑉 = Velocity</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝐿 = Length</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝜇 = Viscosity</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝐹𝑑 = Drag Force</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝐴 = Reference Area</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝐶𝐷 = 𝐹𝑑 / (1/2 * 𝜌 * 𝑉^2 * 𝐴)</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝑅𝑒 = (𝜌 * 𝑉 * 𝐿) / 𝜇</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝐶𝑝 = (𝑝𝑓𝑟𝑜𝑛𝑡 - 𝑝𝑏𝑎𝑐𝑘) / (1/2 * 𝜌 * 𝑉^2)</p>
+                    <p class="py-3 leading-relaxed text-gray-300">𝑝𝑒𝑟𝑐𝑒𝑛𝑡 𝑒𝑟𝑟𝑜𝑟 = |(𝑒𝑥 𝑝𝑒𝑟𝑖𝑚𝑒𝑛𝑡𝑎𝑙 𝑣𝑎𝑙𝑢𝑒 - 𝑡ℎ𝑒𝑜𝑟𝑒𝑡𝑖𝑐𝑎𝑙 𝑣𝑎𝑙𝑢𝑒) / 𝑡ℎ𝑒𝑜𝑟𝑒𝑡𝑖𝑐𝑎𝑙 𝑣𝑎𝑙𝑢𝑒| * 100</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Results/Discussion</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- The experiment investigates drag on a bluff body, analyzing its variation with Reynolds number
+                        using a 3’ x 3’ wind tunnel.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Tests include a balance fairing, 5-inch disk, 5-inch sphere, large trip ring, and small trip ring.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Results show a clear relationship between drag coefficient and Reynolds number for different
+                        body shapes, with notable drag buckets.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Errors in measurements and instrumentation are considered, and the experiment provides insights
+                        for sports ball design.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Conclusion</h2>
+            <p class="leading-relaxed text-gray-300">- The experiment aimed to determine the effect of Reynolds number, tripping devices, and flow type on
+                bluff body drag, contributing significant insights to aeronautical research and design methodologies.
+                By conducting a series of tests and analyzing the data, we observed clear trends in drag coefficient
+                variation with Reynolds number, highlighting the importance of shape and flow characteristics in
+                drag behavior. The identification of drag buckets and their implications for object design, such as
+                sports balls, underscores the practical applications of our findings. While limitations in velocity
+                consistency and measurement errors were acknowledged, the overall accuracy and relevance of the experiment's
+                results remain compelling, offering valuable considerations for future aerodynamic studies and engineering
                 practices.
             </p>
         </div>
@@ -107,5 +126,6 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

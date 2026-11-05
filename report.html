@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -40,10 +41,14 @@
     </header>
 
   <!--:::::::::::::::::-Reports section-::::::::::::::::-->
-  <section class="subpage-main bg-[#000000] mx-auto px-6 pb-10 pt-12 lg:px-8 lg:pb-14 lg:pt-16" id="reports">
+  <section class="subpage-main navbar-gap bg-[#000000] mx-auto px-6 pb-10 lg:px-8 lg:pb-14" id="reports">
     <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto text-[#FDFCF3]">
 
-        <div class="relative text-center mb-10 lg:mb-12">
+        <a href="index.html" class="back-button group mb-6">
+            <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Home</span>
+        </a>
+
+        <div class="reveal relative text-center mb-10 lg:mb-12">
             <span class="hidden lg:block absolute z-[-1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" id="reportScene" aria-hidden="true">
                 <span class="block opacity-[0.06] blur-3xl rounded-full bg-[#FE8EA8] w-[32rem] h-[32rem]" data-depth="0.25"></span>
             </span>
@@ -54,11 +59,11 @@
             </p>
         </div>
 
-        <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+        <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
 
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
-            <a href="Report4.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+            <a href="Report4.html" class="tilt-card spotlight glow-card reveal group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5">
                 <div class="aspect-[16/10] overflow-hidden">
                     <img src="assets/img/AB_1.png" alt="Aeroengine design gas turbine core" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -66,11 +71,11 @@
                     <h2 class="text-lg font-bold text-pink mb-1">Aeroengine Design</h2>
                     <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
                     <p class="text-sm text-gray-300 leading-relaxed mb-4">Designed a gas turbine engine core &mdash; compressor, combustor, and turbine &mdash; optimizing performance, cost, and mass flow rate using COMPR, TURBN, and CEARUN.</p>
-                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report <span class="arrow" aria-hidden="true">&rarr;</span></span>
                 </div>
             </a>
 
-            <a href="Report3.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+            <a href="Report3.html" class="tilt-card spotlight glow-card reveal group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5">
                 <div class="aspect-[16/10] overflow-hidden">
                     <img src="assets/img/Plas_1.jpg" alt="Plasma waves and turbulence Langmuir probe experiment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -78,11 +83,11 @@
                     <h2 class="text-lg font-bold text-pink mb-1">Plasma Waves &amp; Turbulence</h2>
                     <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
                     <p class="text-sm text-gray-300 leading-relaxed mb-4">Investigated plasma waves and turbulence in space plasma, exploring space plasma dynamics using Langmuir probes.</p>
-                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report <span class="arrow" aria-hidden="true">&rarr;</span></span>
                 </div>
             </a>
 
-            <a href="Report2.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+            <a href="Report2.html" class="tilt-card spotlight glow-card reveal group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5">
                 <div class="aspect-[16/10] overflow-hidden">
                     <img src="assets/img/air.jpg" alt="Vortex panel airfoil analysis" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -90,11 +95,11 @@
                     <h2 class="text-lg font-bold text-pink mb-1">Vortex Panel Project</h2>
                     <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">University of Washington &middot; Jan&ndash;Mar 2024</p>
                     <p class="text-sm text-gray-300 leading-relaxed mb-4">Analyzed four airfoils (NACA 0010, 1410, 2410, and 6409) using MATLAB and XFOIL, focusing on viscous effects and aerodynamic performance.</p>
-                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report <span class="arrow" aria-hidden="true">&rarr;</span></span>
                 </div>
             </a>
 
-            <a href="Report1.html" class="group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5 hover:border-[#FE8EA8]/40 hover:-translate-y-1 transition duration-300">
+            <a href="Report1.html" class="tilt-card spotlight glow-card reveal group block w-full bg-[#111] rounded-xl overflow-hidden border border-white/5">
                 <div class="aspect-[16/10] overflow-hidden">
                     <img src="assets/img/AS_1.jpg" alt="Arduino setup and Ohm's Law experiment" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -102,7 +107,7 @@
                     <h2 class="text-lg font-bold text-pink mb-1">Arduino Setup &amp; Ohm&rsquo;s Law</h2>
                     <p class="text-xs text-[#FE8EA8] mb-3 uppercase tracking-wide">Aerospace Instrumental &middot; Sep&ndash;Dec 2022</p>
                     <p class="text-sm text-gray-300 leading-relaxed mb-4">Measured voltage, current, and resistance against Ohm&rsquo;s Law, analyzing tolerance discrepancies and using MATLAB to control an LED.</p>
-                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report &rarr;</span>
+                    <span class="text-[#FE8EA8] text-sm font-semibold inline-flex items-center gap-1">Read Report <span class="arrow" aria-hidden="true">&rarr;</span></span>
                 </div>
             </a>
 
@@ -121,6 +126,7 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
     <script>
         // Restrained mouse-responsive glow behind the page heading.
         // Desktop only (the element itself is hidden below lg), and skipped

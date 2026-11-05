@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -40,9 +41,13 @@
     </header>
 
     <!-- Experience Section -->
-    <section class="subpage-main bg-[#000000] mx-auto px-6 pb-16 pt-12 lg:px-8 lg:pb-24 lg:pt-16" id="experience">
+    <section class="subpage-main navbar-gap bg-[#000000] mx-auto px-6 pb-16 lg:px-8 lg:pb-24" id="experience">
         <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto">
-            <div class="text-center mb-12 lg:mb-16">
+            <a href="index.html" class="back-button group mb-6">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Home</span>
+            </a>
+
+            <div class="reveal text-center mb-12 lg:mb-16">
                 <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Experience</p>
                 <h1 class="text-[#FE8EA8] font-bold uppercase text-3xl md:text-5xl mb-4">My Experience</h1>
                 <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -51,58 +56,49 @@
             </div>
 
             <!-- Featured: Amazon Leo -->
-            <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-4">Current Role</p>
-
-                <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="w-full h-[300px] object-cover object-center rounded-2xl mb-8">
-
-                <div class="bg-[#111] rounded-xl p-8 md:p-10 border-l-4 border-[#FE8EA8] text-[#FDFCF3] text-center lg:text-left">
+            <div class="spotlight glow-card-accent reveal bg-[#111] rounded-xl overflow-hidden border-l-4 border-[#FE8EA8] text-[#FDFCF3]">
+                <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="w-full h-48 md:h-56 object-cover object-center">
+                <div class="p-8 md:p-10 text-center lg:text-left">
+                    <p class="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">Current Role</p>
                     <h2 class="text-2xl md:text-4xl font-bold text-pink mb-1">Flight Dynamics Operations Engineer</h2>
                     <p class="text-[#FE8EA8] text-lg mb-6">Amazon Leo (formerly Project Kuiper) &middot; August 2024&ndash;Present</p>
                     <p class="mb-8 leading-relaxed text-gray-300 lg:max-w-3xl">
-                        I support the operational safety of a satellite constellation, focused on real-time constellation health, pre-launch readiness, and time-critical flight dynamics across the mission lifecycle.
+                        I support the operational safety of a multi-satellite constellation &mdash; monitoring health in real time, planning and verifying maneuvers, and making time-critical decisions across every mission phase. Beginning with the KA&#8209;03 mission, I also lead my team's portion of prelaunch and launch activities.
                     </p>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-10 text-left">
-                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
-                            <p class="text-sm font-semibold text-pink">Pre-Launch Readiness</p>
-                            <p class="text-xs text-gray-400">Primary ownership</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10 text-left">
+                        <div class="spotlight glow-card border border-white/5 bg-[#1a1a1a] rounded-xl px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Satellite Operations</p>
+                            <p class="text-xs text-gray-400">Orbit determination, conjunction assessment, maneuver planning</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
-                            <p class="text-sm font-semibold text-pink">Constellation Health &amp; Safety</p>
-                            <p class="text-xs text-gray-400">Real-time operational monitoring</p>
+                        <div class="spotlight glow-card border border-white/5 bg-[#1a1a1a] rounded-xl px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Real-Time Decisions</p>
+                            <p class="text-xs text-gray-400">Anomaly triage and risk assessment under pressure</p>
                         </div>
-                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
-                            <p class="text-sm font-semibold text-pink">Conjunction Assessment</p>
-                            <p class="text-xs text-gray-400">Risk analysis</p>
-                        </div>
-                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3">
-                            <p class="text-sm font-semibold text-pink">Orbital &amp; Constellation Operations</p>
-                        </div>
-                        <div class="bg-[#1a1a1a] rounded-xl px-4 py-3 sm:col-span-2 lg:col-span-1">
-                            <p class="text-sm font-semibold text-pink">Cross-Functional Coordination</p>
-                            <p class="text-xs text-gray-400">Flight and propulsion teams</p>
+                        <div class="spotlight glow-card border border-white/5 bg-[#1a1a1a] rounded-xl px-4 py-3">
+                            <p class="text-sm font-semibold text-pink">Launch Leadership</p>
+                            <p class="text-xs text-gray-400">Team lead for prelaunch &amp; launch, beginning with KA&#8209;03</p>
                         </div>
                     </div>
 
-                    <a href="experience5.html" class="inline-block bg-[#FE8EA8] text-black font-semibold rounded-lg px-10 py-4 text-lg hover:bg-[#EC297B] transition">
-                        View Experience &rarr;
+                    <a href="experience5.html" class="group inline-flex items-center gap-1.5 bg-[#FE8EA8] text-black font-semibold rounded-lg px-10 py-4 text-lg hover:bg-[#EC297B] transition">
+                        Explore My Amazon Role <span class="arrow" aria-hidden="true">&rarr;</span>
                     </a>
                 </div>
             </div>
 
-            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent" aria-hidden="true"></div>
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
 
             <!-- Additional Experience -->
-            <div class="border-l-4 border-[#FE8EA8] pl-6 md:pl-8 py-1 md:flex md:items-center md:justify-between md:gap-8">
+            <div class="reveal border-l-4 border-[#FE8EA8] pl-6 md:pl-8 py-1 md:flex md:items-center md:justify-between md:gap-8">
                 <div>
                     <h2 class="text-lg md:text-xl font-bold text-pink mb-1">Additional Experience</h2>
                     <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-xl">
                         Research experience in propulsion testing, autonomous spacecraft docking, and related technical work is organized alongside my academic background.
                     </p>
                 </div>
-                <a href="experience.html#additional-experience" class="mt-4 md:mt-0 inline-block flex-shrink-0 bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-sm md:text-base hover:bg-[#EC297B] transition">
-                    View Additional Experience &rarr;
+                <a href="experience.html#additional-experience" class="group mt-4 md:mt-0 inline-flex items-center gap-1.5 flex-shrink-0 bg-[#FE8EA8] text-black font-semibold rounded-lg px-6 py-3 text-sm md:text-base hover:bg-[#EC297B] transition">
+                    View Additional Experience <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
@@ -118,5 +114,6 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

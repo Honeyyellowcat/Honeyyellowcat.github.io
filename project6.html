@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -40,21 +41,31 @@
         </div>
     </header>
 
-    <div class="wrapper subpage-main">
-        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading"> Project</h1>
-        <div class="image-container">
-            <img src="assets/img/orbit/satellite-orbiting.jpg" alt="Satellite orbit simulation visualization">
+    <div class="wrapper subpage-main navbar-gap">
+        <div class="px-5">
+            <a href="experience.html" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Education</span>
+            </a>
+            <div class="mb-10 lg:mb-12 reveal">
+                <h1 class="text-pink font-bold text-2xl md:text-4xl"> Project</h1>
+            </div>
+            <img src="assets/img/orbit/satellite-orbiting.jpg" alt="Satellite orbit simulation visualization" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary:</h2>
-            <p>In my personal project focused on Aerospace Design in Seattle, WA.This project aims to create a comprehensive simulation environment for satellite orbits using Python, with a focus on visualizing orbital parameters and paths in both 2D and 3D. The simulation leverages libraries such as <strong>NumPy</strong> and <strong>matplotlib</strong> for numerical calculations and plotting.</p>
-            <h3 class="text-2xl text-pink">Current Progress:</h3>
-            <ul>
-                <li>Calculation of orbital parameters including semi-major axis and eccentricity based on given apoapsis and periapsis altitudes.</li>
-                <li>Generation of position and velocity vectors using Keplerian orbital elements.</li>
-                <li>Visualization of the satellite's orbital plane in 2D and its orbital path in 3D.</li>
-                <li>Animation of the satellite's movement along its orbit in both 2D and 3D views.</li>
-            </ul>
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary:</h2>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">In my personal project focused on Aerospace Design in Seattle, WA.This project aims to create a comprehensive simulation environment for satellite orbits using Python, with a focus on visualizing orbital parameters and paths in both 2D and 3D. The simulation leverages libraries such as <strong>NumPy</strong> and <strong>matplotlib</strong> for numerical calculations and plotting.</p>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Current Progress:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6 mb-10">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">Calculation of orbital parameters including semi-major axis and eccentricity based on given apoapsis and periapsis altitudes.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Generation of position and velocity vectors using Keplerian orbital elements.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Visualization of the satellite's orbital plane in 2D and its orbital path in 3D.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Animation of the satellite's movement along its orbit in both 2D and 3D views.</p>
+                </div>
+            </div>
 
             <div class="shadow-box">
                 <div class="image-wrapper">
@@ -258,23 +269,31 @@ if __name__ == "__main__":
                 </pre>
             </div>
 
-        <h3 class="text-2xl text-pink">Ongoing Work</h3>
-            <p>Currently, I am working on the following enhancements:</p>
-            <ul>
-                <li>Implementing perturbation models to account for gravitational influences from other celestial bodies, atmospheric drag, and solar radiation pressure.</li>
-                <li>Developing ground track visualizations to show the satellite's path over the Earth's surface.</li>
-                <li>Incorporating real-time Two-Line Element (TLE) data for accurate satellite tracking and simulation.</li>
-                <li>Optimizing the animation performance for smoother real-time visualization.</li>
-            </ul>
-    
-        <h3 class="text-2xl text-pink">Future Plans</h3>
-            <p>Planned future developments for the project include:</p>
-            <ul>
-                <li>Integrating more advanced orbital mechanics models such as J2 perturbation and lunar/solar effects.</li>
-                <li>Adding interactive features for user-defined orbital parameter inputs and real-time simulation adjustments.</li>
-                <li>Expanding the simulation to include multiple satellites and potential collision detection.</li>
-                <li>Enhancing the visualization with more detailed planet models and satellite rendering.</li>
-            </ul>
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Ongoing Work</h2>
+            <p class="leading-relaxed text-gray-300 mb-2">Currently, I am working on the following enhancements:</p>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6 mb-10">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">Implementing perturbation models to account for gravitational influences from other celestial bodies, atmospheric drag, and solar radiation pressure.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Developing ground track visualizations to show the satellite's path over the Earth's surface.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Incorporating real-time Two-Line Element (TLE) data for accurate satellite tracking and simulation.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Optimizing the animation performance for smoother real-time visualization.</p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Future Plans</h2>
+            <p class="leading-relaxed text-gray-300 mb-2">Planned future developments for the project include:</p>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">Integrating more advanced orbital mechanics models such as J2 perturbation and lunar/solar effects.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Adding interactive features for user-defined orbital parameter inputs and real-time simulation adjustments.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Expanding the simulation to include multiple satellites and potential collision detection.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">Enhancing the visualization with more detailed planet models and satellite rendering.</p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Footer -->
@@ -295,5 +314,6 @@ if __name__ == "__main__":
     <script src="assets/js/photos2.js"></script>
     <script src="assets/js/tablink.js"></script>
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

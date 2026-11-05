@@ -23,6 +23,7 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -41,84 +42,101 @@
         </div>
     </header>
 
-    <div class="wrapper subpage-main">
-        <a href="experience.html" class="inline-block text-[#FE8EA8] text-sm font-semibold hover:underline">&larr; Back to Education</a>
-        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Cryogenic Boiling: Heat Transfer</h1>
-        <div class="image-container">
-            <img src="assets/img/CBHT_2.jpg" alt="Pulsed Plasma Thruster Stand">
+    <div class="wrapper subpage-main navbar-gap">
+        <div class="px-5">
+            <a href="experience.html" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Education</span>
+            </a>
+            <div class="mb-10 lg:mb-12 reveal">
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Cryogenic Boiling</p>
+                <h1 class="text-pink font-bold text-2xl md:text-4xl">Heat Transfer</h1>
+            </div>
+            <img src="assets/img/CBHT_2.jpg" alt="Pulsed Plasma Thruster Stand" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
-        <div class="text-container"><h2 class="text-3xl text-pink">Summary:</h2>
-            <ul>
-                <li>- Investigated the use of liquid nitrogen as a cryogenic fuel, focusing on its low freezing and boiling points, abundance in the atmosphere, and inert nature</li>
-                <li>- Addressed challenges in implementation due to the lack of consistent pool boiling data, crucial for safe storage and usage as a fuel</li>
-                <li>- Conducted experimental research by immersing aluminum cylinders in liquid nitrogen to study boiling characteristics and heat transfer dynamics</li>
-                <li>- Quantitatively measured temperature changes over time using thermocouples, providing insights into rapid cool-down times and heat flux during quenching</li>
-                <li>- Contributed to enhancing understanding of cryogenic propellants for long-term space travel through comparative analysis with existing published data</li>
-            <li class="text-2xl">1. Cryogenic Team Charlie's Final Report: <a href="doc/Cryo-TeamCharlieFinalReport.pdf" target="_blank"><span >Here</span></a></li>
-                <li class="text-2xl">2. Cryogenic Team Charlie's Proposal Report: <a href="doc/Cryo-Proposal.pdf" target="_blank"><span >Here</span></a></li>
-                <li class="text-2xl">3. Cryogenic Team Charlie's Manufacturing Report: <a href="doc/Cryo-ManufacturingPlan.pdf" target="_blank"><span >Here</span></a></li>
-            </ul>
-            <h2 class="text-2xl text-pink">Theory / Analysis</h2>
-            <ul>
-                <li>
-                    This section analyzes heat transfer dynamics and the cooling process of aluminum cylinders in liquid nitrogen.
-                    <ul>
-                        <li>Initial room temperature: 298 K (25°C), liquid nitrogen temperature: 77 K (-196°C).</li>
-                        <li>Biot number (Bi) calculated to assess convective heat transfer's impact using Equation 2.</li>
-                        <li>Biot number of 9 indicates significant convective heat transfer influence.</li>
-                        <li>Using "Heat Transfer: A Practical Approach" by Yunus A. Cengel, the cool-down time is calculated to be about 6.5 minutes.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Calculation details:</strong>
-                    <ul>
-                        <li>Equation 2: Biot number calculation: \( \text{Bi} = \frac{h r}{k} = 9 \) implies \( h = 70015 \, \text{W/m}^2\text{K} \).</li>
-                        <li>Equation 3: Thermal diffusivity (\( \alpha \)): \( \alpha = \frac{k}{\rho c_p} = 9.7 \times 10^{-5} \, \text{m}^2/\text{s} \).</li>
-                        <li>Equation 4: Relationship between temperatures and time constant (\( \tau \)): \( \frac{T_i - T_\infty}{T_s - T_\infty} = A_1 e^{-\lambda_1^2 \tau} \) where \( \tau = 0.18819 \).</li>
-                        <li>Equation 5: Cool-down time calculation: \( t = \frac{\tau V}{\alpha} = 393 \, \text{seconds} \) (approximately 6.5 minutes).</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Insights into cooling dynamics:</strong>
-                    <ul>
-                        <li>Heat conduction and convective heat transfer equations are explored to understand cooling dynamics.</li>
-                        <li>Thermal properties like mass, volume, density, and specific heat capacity of the aluminum cylinder are considered.</li>
-                        <li>Thermal diffusivity (\( \alpha \)) is defined and crucial for determining temperature changes over time.</li>
-                        <li>The mass of the cylinder is calculated: \( m = \rho \pi r^2 L = 5.1835 \, \text{kg} \).</li>
-                        <li>Maximum heat transfer (\( Q_{\text{Max}} \)) is calculated: \( Q_{\text{Max}} = m c_p (T_i - T_\infty) = 674.024 \, \text{kJ} \).</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Experimental validation:</strong>
-                    <ul>
-                        <li>Theoretical predictions based on heat transfer equations are compared with experimental data.</li>
-                        <li>Validates the accuracy of the experimental setup and refines understanding of cooling dynamics.</li>
-                    </ul>
-                </li>
-                <strong>Nomenclature:</strong>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <ul style="flex: 1 0 50%;">
-                        <li><b>Bi:</b> Biot number</li>
-                        <li><b>h:</b> Heat transfer coefficient (W/m²K)</li>
-                        <li><b>k:</b> Thermal conductivity (W/mK)</li>
-                        <li><b>r:</b> Radius (m)</li>
-                        <li><b>\( \alpha \):</b> Thermal diffusivity (m²/s)</li>
-                        <li><b>\( \rho \):</b> Density (kg/m³)</li>
-                        <li><b>c_p:</b> Specific heat capacity (J/kgK)</li>
-                    </ul>
-                    <ul style="flex: 1 0 50%;">
-                        <li><b>T_i:</b> Initial temperature (K)</li>
-                        <li><b>T_\infty:</b> Ambient temperature (K)</li>
-                        <li><b>T_s:</b> Surface temperature (K)</li>
-                        <li><b>\( \tau \):</b> Time constant</li>
-                        <li><b>V:</b> Volume (m³)</li>
-                        <li><b>m:</b> Mass (kg)</li>
-                        <li><b>Q_{\text{Max}}:</b> Maximum heat transfer (kJ)</li>
-                    </ul>
+        <div class="text-container">
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary:</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6 mb-8">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- Investigated the use of liquid nitrogen as a cryogenic fuel, focusing on its low freezing and boiling points, abundance in the atmosphere, and inert nature</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Addressed challenges in implementation due to the lack of consistent pool boiling data, crucial for safe storage and usage as a fuel</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Conducted experimental research by immersing aluminum cylinders in liquid nitrogen to study boiling characteristics and heat transfer dynamics</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Quantitatively measured temperature changes over time using thermocouples, providing insights into rapid cool-down times and heat flux during quenching</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Contributed to enhancing understanding of cryogenic propellants for long-term space travel through comparative analysis with existing published data</p>
                 </div>
-            </ul>
-            
-            
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-10">
+                <a href="doc/Cryo-TeamCharlieFinalReport.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Cryogenic Team Charlie's Final Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+                <a href="doc/Cryo-Proposal.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">2. Cryogenic Team Charlie's Proposal Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+                <a href="doc/Cryo-ManufacturingPlan.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">3. Cryogenic Team Charlie's Manufacturing Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Theory / Analysis</h2>
+            <div class="space-y-10">
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <p class="leading-relaxed text-gray-300 mb-2">
+                        This section analyzes heat transfer dynamics and the cooling process of aluminum cylinders in liquid nitrogen.
+                    </p>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Initial room temperature: 298 K (25°C), liquid nitrogen temperature: 77 K (-196°C).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Biot number (Bi) calculated to assess convective heat transfer's impact using Equation 2.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Biot number of 9 indicates significant convective heat transfer influence.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Using "Heat Transfer: A Practical Approach" by Yunus A. Cengel, the cool-down time is calculated to be about 6.5 minutes.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Calculation details:</h4>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Equation 2: Biot number calculation: \( \text{Bi} = \frac{h r}{k} = 9 \) implies \( h = 70015 \, \text{W/m}^2\text{K} \).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Equation 3: Thermal diffusivity (\( \alpha \)): \( \alpha = \frac{k}{\rho c_p} = 9.7 \times 10^{-5} \, \text{m}^2/\text{s} \).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Equation 4: Relationship between temperatures and time constant (\( \tau \)): \( \frac{T_i - T_\infty}{T_s - T_\infty} = A_1 e^{-\lambda_1^2 \tau} \) where \( \tau = 0.18819 \).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Equation 5: Cool-down time calculation: \( t = \frac{\tau V}{\alpha} = 393 \, \text{seconds} \) (approximately 6.5 minutes).</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Insights into cooling dynamics:</h4>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Heat conduction and convective heat transfer equations are explored to understand cooling dynamics.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Thermal properties like mass, volume, density, and specific heat capacity of the aluminum cylinder are considered.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Thermal diffusivity (\( \alpha \)) is defined and crucial for determining temperature changes over time.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">The mass of the cylinder is calculated: \( m = \rho \pi r^2 L = 5.1835 \, \text{kg} \).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Maximum heat transfer (\( Q_{\text{Max}} \)) is calculated: \( Q_{\text{Max}} = m c_p (T_i - T_\infty) = 674.024 \, \text{kJ} \).</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Experimental validation:</h4>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Theoretical predictions based on heat transfer equations are compared with experimental data.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Validates the accuracy of the experimental setup and refines understanding of cooling dynamics.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Nomenclature:</h4>
+                    <div style="display: flex; flex-wrap: wrap;" class="text-gray-300">
+                        <ul style="flex: 1 0 50%;">
+                            <li><b class="text-pink">Bi:</b> Biot number</li>
+                            <li><b class="text-pink">h:</b> Heat transfer coefficient (W/m²K)</li>
+                            <li><b class="text-pink">k:</b> Thermal conductivity (W/mK)</li>
+                            <li><b class="text-pink">r:</b> Radius (m)</li>
+                            <li><b class="text-pink">\( \alpha \):</b> Thermal diffusivity (m²/s)</li>
+                            <li><b class="text-pink">\( \rho \):</b> Density (kg/m³)</li>
+                            <li><b class="text-pink">c_p:</b> Specific heat capacity (J/kgK)</li>
+                        </ul>
+                        <ul style="flex: 1 0 50%;">
+                            <li><b class="text-pink">T_i:</b> Initial temperature (K)</li>
+                            <li><b class="text-pink">T_\infty:</b> Ambient temperature (K)</li>
+                            <li><b class="text-pink">T_s:</b> Surface temperature (K)</li>
+                            <li><b class="text-pink">\( \tau \):</b> Time constant</li>
+                            <li><b class="text-pink">V:</b> Volume (m³)</li>
+                            <li><b class="text-pink">m:</b> Mass (kg)</li>
+                            <li><b class="text-pink">Q_{\text{Max}}:</b> Maximum heat transfer (kJ)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="shadow-box">
                 <div class="image-wrapper">
                     <img src="assets/img/eq.png" alt="Space Team" class="rounded-image">
@@ -143,116 +161,127 @@
                         </div>
                 </div>
             </div>
-    
-            <h2 class="text-2xl text-pink">Design of Testing Cylinders</h2>
-            <ul>
-                <li>- The focus was on creating an effective yet practical design for testing cylinders. The design needed to provide necessary data for hypothesis evaluation while being feasible for manufacturing.</li>
-                <li>- Two cylinders were designed: Cylinder 1 served as the baseline measurement, while Cylinder 2 measured the heat flux of liquid nitrogen. Thermocouples were inserted into specific points for temperature measurement.</li>
-                <li>- Precise drilling of holes for thermocouple insertion was crucial. Soft jawed clamps and mills were used for accuracy. Cylinder 1 required one hole, while Cylinder 2 needed two holes for thermocouple placement.</li>
-                <li>- The project timeline was divided into design, manufacturing, testing, and analysis phases. Challenges arose in cool-down time calculations, sourcing materials, and unexpected difficulties in manufacturing. Member-specific roles and a detailed budget were outlined, with a focus on conservation due to budget constraints.</li>
-                <li>- Overall, meticulous planning and adaptation were essential to overcome challenges and execute the project within the allotted timeframe and budget.</li>
-            </ul>
-            <div class="shadow-box">
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Design of Testing Cylinders</h2>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                <div class="divide-y divide-white/5">
+                    <p class="py-3 leading-relaxed text-gray-300">- The focus was on creating an effective yet practical design for testing cylinders. The design needed to provide necessary data for hypothesis evaluation while being feasible for manufacturing.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Two cylinders were designed: Cylinder 1 served as the baseline measurement, while Cylinder 2 measured the heat flux of liquid nitrogen. Thermocouples were inserted into specific points for temperature measurement.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Precise drilling of holes for thermocouple insertion was crucial. Soft jawed clamps and mills were used for accuracy. Cylinder 1 required one hole, while Cylinder 2 needed two holes for thermocouple placement.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- The project timeline was divided into design, manufacturing, testing, and analysis phases. Challenges arose in cool-down time calculations, sourcing materials, and unexpected difficulties in manufacturing. Member-specific roles and a detailed budget were outlined, with a focus on conservation due to budget constraints.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Overall, meticulous planning and adaptation were essential to overcome challenges and execute the project within the allotted timeframe and budget.</p>
+                </div>
+            </div>
+            <div class="shadow-box mt-8">
                 <div class="image-wrapper">
                     <img src="assets/img/cryosphere3.png" alt="Space Team" class="rounded-image">
                     <div class="caption">
                         </div>
                 </div>
             </div>
-    
-            <h2 class="text-2xl text-pink">Testing Objectives</h2>
-            <ul>
-                <li>
-                    <strong>Cryogenic Boiling Team 1 (Charlie):</strong>
-                    <ul>
-                        <li>Deepening understanding of liquid nitrogen cooling by placing thermocouples along spheres' radius to measure temperature gradients.</li>
-                        <li>Addressing inconsistency from nitrogen vapor envelope by measuring temperatures within the cylinder's surface plane.</li>
-                        <li>Analyzing temperature gradients across spheres to enhance precision using the heat transfer equation.</li>
-                        <li>Improving uncertainty analysis for cryogenic propellant storage and transfer systems.</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="shadow-box">
-                <div class="image-wrapper">
-                    <img src="assets/img/thermo.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">
-                        </div>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/img/CBHT_5.jpg" alt="Space Team" class="rounded-image">
-                    <div class="caption">
-                        </div>
-                </div>
-            </div>
 
-            <ul>
-                <li>
-                    <strong>Testing Process:</strong>
-                    <ul>
-                        <li>Dipped aluminum cylinders in liquid nitrogen, monitored temperature shifts with thermocouples.</li>
-                        <li>Cylinder 1 focused on core temperature change; Cylinder 2 measured core and surface temperatures.</li>
-                        <li>Monitored temperature gradient and cooling time to 2% of liquid nitrogen's temperature (about 77 Kelvin).</li>
-                        <li>Considered factors like liquid nitrogen temperature, cylinder size, container conditions.</li>
-                        <li>Recorded room temperature, liquid nitrogen depth, and maintained consistent initial volume.</li>
-                        <li>Varied cylinder hole configurations to test impact on cooling rates.</li>
-                        <li>Detailed procedures and parameters in Appendices E and F for further insights.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h2 class="text-2xl text-pink">Results and Discussions</h2>
-            <ul>
-                <li>In this experiment, we explored heat transfer and boiling dynamics at extremely low temperatures using two cylinders:
-                    <ul>
-                        <li>Cylinder 1: Average cooling time of 382 seconds.</li>
-                        <li>Cylinder 2: Average cooling time of 310 seconds, 21% faster than expected.</li>
-                    </ul>
-                </li>
-                <li>The setup differences:
-                    <ul>
-                        <li>Cylinder 1 had a central hole.</li>
-                        <li>Cylinder 2 had an additional hole halfway to the surface.</li>
-                    </ul>This configuration allowed us to observe temperature distribution across the cylinders. Outer regions were cooler than the center, aligning with our predictions despite challenges in equipment and data accuracy, especially during rapid temperature changes (>10 degrees).
-                </li>
-            </ul>
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Testing Objectives</h2>
+            <div class="space-y-10">
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Cryogenic Boiling Team 1 (Charlie):</h4>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Deepening understanding of liquid nitrogen cooling by placing thermocouples along spheres' radius to measure temperature gradients.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Addressing inconsistency from nitrogen vapor envelope by measuring temperatures within the cylinder's surface plane.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Analyzing temperature gradients across spheres to enhance precision using the heat transfer equation.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Improving uncertainty analysis for cryogenic propellant storage and transfer systems.</p>
+                    </div>
+                </div>
                 <div class="shadow-box">
                     <div class="image-wrapper">
-                        <img src="assets/img/3testsoncylinder1.png" alt="Space Team" class="rounded-image">
+                        <img src="assets/img/thermo.png" alt="Space Team" class="rounded-image">
                         <div class="caption">
                             </div>
                     </div>
                     <div class="image-wrapper">
-                        <img src="assets/img/3testsoncylinder2center.png" alt="Space Team" class="rounded-image">
+                        <img src="assets/img/CBHT_5.jpg" alt="Space Team" class="rounded-image">
                         <div class="caption">
                             </div>
                     </div>
                 </div>
-        
-                <h2 class="text-2xl text-pink">Conclusions</h2>
-                <ul>
-                    <li>
-                        The project focused on studying heat transfer and cooling using liquid nitrogen, crucial for handling cryogenic propellants. Researchers:
-                        <ul>
-                            <li> Immersed aluminum cylinders in liquid nitrogen to measure cooling times and heat flow.</li>
-                            <li> Observed one cylinder cooled in 390 seconds, matching expectations.</li>
-                            <li> Found another cylinder, with more measurements, cooled 21% faster, potentially due to surface irregularities.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        Experimental data generally aligned with predictions but showed discrepancies with published sources. Future research suggestions:
-                        <ul>
-                            <li> Use improved equipment and techniques for better accuracy.</li>
-                            <li> Test various shapes and materials to optimize heat transfer.</li>
-                            <li> Refine temperature-to-heat flux calculations for more precise results.</li>
-                            <li> Propose projects to compare different materials and shapes, aiming for clearer data comparisons.</li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h4 class="flex items-center gap-3 text-pink font-bold text-lg md:text-xl mb-3"><span class="inline-block h-5 w-1 rounded-full bg-[#FE8EA8]" aria-hidden="true"></span>Testing Process:</h4>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Dipped aluminum cylinders in liquid nitrogen, monitored temperature shifts with thermocouples.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Cylinder 1 focused on core temperature change; Cylinder 2 measured core and surface temperatures.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Monitored temperature gradient and cooling time to 2% of liquid nitrogen's temperature (about 77 Kelvin).</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Considered factors like liquid nitrogen temperature, cylinder size, container conditions.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Recorded room temperature, liquid nitrogen depth, and maintained consistent initial volume.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Varied cylinder hole configurations to test impact on cooling rates.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Detailed procedures and parameters in Appendices E and F for further insights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Results and Discussions</h2>
+            <div class="space-y-6">
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <p class="leading-relaxed text-gray-300 mb-2">In this experiment, we explored heat transfer and boiling dynamics at extremely low temperatures using two cylinders:</p>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300">Cylinder 1: Average cooling time of 382 seconds.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Cylinder 2: Average cooling time of 310 seconds, 21% faster than expected.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <p class="leading-relaxed text-gray-300 mb-2">The setup differences:</p>
+                    <div class="divide-y divide-white/5 mb-4">
+                        <p class="py-3 leading-relaxed text-gray-300">Cylinder 1 had a central hole.</p>
+                        <p class="py-3 leading-relaxed text-gray-300">Cylinder 2 had an additional hole halfway to the surface.</p>
+                    </div>
+                    <p class="leading-relaxed text-gray-300">This configuration allowed us to observe temperature distribution across the cylinders. Outer regions were cooler than the center, aligning with our predictions despite challenges in equipment and data accuracy, especially during rapid temperature changes (>10 degrees).</p>
+                </div>
+            </div>
+            <div class="shadow-box mt-8">
+                <div class="image-wrapper">
+                    <img src="assets/img/3testsoncylinder1.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/img/3testsoncylinder2center.png" alt="Space Team" class="rounded-image">
+                    <div class="caption">
+                        </div>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Conclusions</h2>
+            <div class="space-y-6">
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <p class="leading-relaxed text-gray-300 mb-2">The project focused on studying heat transfer and cooling using liquid nitrogen, crucial for handling cryogenic propellants. Researchers:</p>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300"> Immersed aluminum cylinders in liquid nitrogen to measure cooling times and heat flow.</p>
+                        <p class="py-3 leading-relaxed text-gray-300"> Observed one cylinder cooled in 390 seconds, matching expectations.</p>
+                        <p class="py-3 leading-relaxed text-gray-300"> Found another cylinder, with more measurements, cooled 21% faster, potentially due to surface irregularities.</p>
+                    </div>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <p class="leading-relaxed text-gray-300 mb-2">Experimental data generally aligned with predictions but showed discrepancies with published sources. Future research suggestions:</p>
+                    <div class="divide-y divide-white/5">
+                        <p class="py-3 leading-relaxed text-gray-300"> Use improved equipment and techniques for better accuracy.</p>
+                        <p class="py-3 leading-relaxed text-gray-300"> Test various shapes and materials to optimize heat transfer.</p>
+                        <p class="py-3 leading-relaxed text-gray-300"> Refine temperature-to-heat flux calculations for more precise results.</p>
+                        <p class="py-3 leading-relaxed text-gray-300"> Propose projects to compare different materials and shapes, aiming for clearer data comparisons.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        
+    </div>
+
 
         <section id="photo-album">
-            <h2>Photo Album</h2>
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Photo Album</h2>
             <div class="photo-grid">
                 <div class="photo">
                     <img src="assets/img/CBHT_3.jpg" alt="Cryogenic boiling test photo 1">
@@ -287,13 +316,14 @@
     </footer>
 </div><!-- /.subpage-shell -->
 
-    
+
 <!-- Load MathJax -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <!---main js--->
-        
+
         <script src="assets/js/photos2.js"></script>
 	    <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

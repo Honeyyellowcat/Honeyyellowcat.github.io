@@ -13,7 +13,7 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css">
     <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Parallax JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- Main CSS -->
@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -40,52 +41,69 @@
         </div>
     </header>
 
-    <div class="wrapper subpage-main">
-        <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading">Aeroengine Design Project</h1>
-        <div class="image-container">
-            <img src="assets/img/AB_2.png" alt="Pulsed Plasma Thruster Stand">
+    <div class="wrapper subpage-main navbar-gap">
+        <div class="px-5">
+            <a href="report.html" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Reports</span>
+            </a>
+            <div class="mb-10 lg:mb-12 reveal">
+                <h1 class="text-pink font-bold text-2xl md:text-4xl">Aeroengine Design Project</h1>
+            </div>
+            <img src="assets/img/AB_2.png" alt="Pulsed Plasma Thruster Stand" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
         <div class="text-container">
-            <h2 class="text-3xl text-pink">Summary</h2>
-            <p>A group of venture capitalists expressed interest in funding a network of small satellites to 
-                provide satellite internet coverage globally. They tasked our team with designing a low-cost 
-                rocket featuring a reusable first stage capable of deploying a single 1,000 kg satellite into 
-                a 500 km altitude low-Earth orbit (LEO). Key design requirements included delivering the payload 
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary</h2>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">A group of venture capitalists expressed interest in funding a network of small satellites to
+                provide satellite internet coverage globally. They tasked our team with designing a low-cost
+                rocket featuring a reusable first stage capable of deploying a single 1,000 kg satellite into
+                a 500 km altitude low-Earth orbit (LEO). Key design requirements included delivering the payload
                 efficiently, minimizing costs, and ensuring reusability of the first stage.</p>
 
-            <!-- Button to open PDF -->
-            <p class="text-2xl">1. Aeroengine Design Report: <a href="doc/AIRBREATHING_PROPULSION_PROJECT.pdf" target="_blank"><span class="text-[#99ABFF]">Here</span></a></p>
-            <h2 class="text-2xl text-pink">Introduction and Background:</h2>
-            <p>The project entails designing a gas turbine engine core for airbreathing propulsion, emphasizing 
-                performance optimization and maintaining acceptable turbine inlet temperatures. The compressor, 
-                combustor, and turbine collectively influence engine efficiency and emissions. Design decisions 
+            <div class="flex flex-wrap gap-3 mb-10">
+                <a href="doc/AIRBREATHING_PROPULSION_PROJECT.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Aeroengine Design Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Introduction and Background:</h2>
+            <p class="leading-relaxed text-gray-300">The project entails designing a gas turbine engine core for airbreathing propulsion, emphasizing
+                performance optimization and maintaining acceptable turbine inlet temperatures. The compressor,
+                combustor, and turbine collectively influence engine efficiency and emissions. Design decisions
                 are justified based on efficiency, cost, and performance at the designated design point.</p>
 
-            <h2 class="text-2xl text-pink">Compressor:</h2>
-            <p>In the compressor design section, maximizing total compressor ratio while considering exit 
-                temperature and efficiency is crucial. Parameters like solidity, inlet angle, and number of 
-                stages significantly impact pressure and temperature behaviors. Analysis justifications involve 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Compressor:</h2>
+            <p class="leading-relaxed text-gray-300">In the compressor design section, maximizing total compressor ratio while considering exit
+                temperature and efficiency is crucial. Parameters like solidity, inlet angle, and number of
+                stages significantly impact pressure and temperature behaviors. Analysis justifications involve
                 equations for total efficiency, specific work, outlet temperature, and pressure.</p>
 
-            <h2 class="text-2xl text-pink">Combustor:</h2>
-            <p>The heart of the engine, the combustor, transforms fuel and air into high-temperature gases. 
-                Analysis involves selecting fuel type, combustion strategy, and equivalence ratio while 
-                maintaining temperature constraints. Plots depict temperature profiles, emissions levels, and 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Combustor:</h2>
+            <p class="leading-relaxed text-gray-300">The heart of the engine, the combustor, transforms fuel and air into high-temperature gases.
+                Analysis involves selecting fuel type, combustion strategy, and equivalence ratio while
+                maintaining temperature constraints. Plots depict temperature profiles, emissions levels, and
                 pressure variations.</p>
 
-            <h2 class="text-2xl text-pink">Turbine:</h2>
-            <p>Efficient operation, cost minimization, and compressor-turbine matching are focal points in 
-                turbine design. Plots illustrate pressure, temperature, efficiency, work output, and mass flow 
-                rate across turbine stages. Considerations include work output, turbine efficiency, and mass 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Turbine:</h2>
+            <p class="leading-relaxed text-gray-300">Efficient operation, cost minimization, and compressor-turbine matching are focal points in
+                turbine design. Plots illustrate pressure, temperature, efficiency, work output, and mass flow
+                rate across turbine stages. Considerations include work output, turbine efficiency, and mass
                 flow rate calculations to ensure optimal turbine performance.</p>
 
-            <h2 class="text-2xl text-pink">Aeroengine Design Project Conclusion:</h2>
-            <p>The project provides insights into gas turbine engine core design and analysis, addressing 
-                specific requirements and constraints. Leveraging analytical tools and thorough evaluations, 
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Aeroengine Design Project Conclusion:</h2>
+            <p class="leading-relaxed text-gray-300">The project provides insights into gas turbine engine core design and analysis, addressing
+                specific requirements and constraints. Leveraging analytical tools and thorough evaluations,
                 the project aims to enhance engine efficiency, performance, and cost-effectiveness.</p>
         </div>
     </div>
-    
+
     <footer class="subpage-footer">
         <div class="subpage-footer-inner">
             <p>&copy; Felicity Cundiff &middot; <a href="mailto:felicitycundiff@gmail.com">felicitycundiff@gmail.com</a></p>
@@ -97,5 +115,6 @@
     </footer>
 </div><!-- /.subpage-shell -->
     <script src="assets/js/subpage-nav.js"></script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

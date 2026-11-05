@@ -18,29 +18,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Page-specific layout (this page only, not global) -->
-    <style>
-        .exp5-container {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        @media (min-width: 1024px) {
-            .exp5-container {
-                padding: 0 32px;
-            }
-        }
-        .exp5-container .padded-heading {
-            padding: 0;
-            text-align: left;
-        }
-        .exp5-container > .text-container {
-            padding: 0;
-        }
-    </style>
 </head>
 
 <body>
+    <script>document.documentElement.classList.add('js');</script>
     <div class="subpage-shell">
     <header class="subpage-header">
         <div class="subpage-header-inner">
@@ -57,56 +38,113 @@
                 </ul>
             </nav>
         </div>
-    </header><div class="wrapper subpage-main exp5-container">
-    <a href="current.html" class="inline-block text-[#FE8EA8] text-sm font-semibold hover:underline mt-8">&larr; Back to Experience</a>
-    <h1 class="text-pink font-bold select-none uppercase text-3xl md:text-5xl lg:text-6xl padded-heading mt-3">
-        Flight Dynamics Operations Engineer
-    </h1>
-    <p class="text-[#FE8EA8] text-lg mt-1 mb-6">Amazon Leo (formerly Project Kuiper) &middot; August 2024&ndash;Present</p>
+    </header>
 
-    <div class="image-container rounded-2xl overflow-hidden">
-        <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite">
-    </div>
+    <!-- Experience Detail Section -->
+    <section class="subpage-main navbar-gap bg-[#000000] mx-auto px-6 pb-16 lg:px-8 lg:pb-24" id="experience-detail">
+        <div class="w-full lg:w-[90vw] max-w-[1800px] mx-auto text-[#FDFCF3]">
 
-<div class="text-container">
-    <!-- Summary -->
-    <h2 class="text-3xl text-pink mb-4">Summary</h2>
-    <p class="mb-6">
-        I support the operational safety of a satellite constellation — from pre-launch readiness through launch, ascent, and constellation operations — in a time-critical environment. I own pre-launch readiness for my team and support real-time operational decisions informed by conjunction assessment and risk analysis, alongside flight and propulsion teams.
-    </p>
+            <a href="current.html" id="backLink" class="back-button group mb-8">
+                <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span id="backLabel">Back to Experience</span>
+            </a>
 
-    <!-- Core Responsibilities -->
-    <h2 class="text-3xl text-pink mt-6 mb-4">Core Responsibilities</h2>
-    <ul class="list-disc pl-5 space-y-3">
-        <li><span class="font-semibold">Pre-Launch Readiness (Primary Owner)</span> — Own the documentation, procedures, and status reporting used to coordinate and execute pre-launch readiness for the team.</li>
-        <li><span class="font-semibold">Real-Time Risk Assessment</span> — Monitor constellation health and safety in real time; support operational decisions informed by conjunction assessment and risk analysis.</li>
-        <li><span class="font-semibold">Orbital & Constellation Operations</span> — Support orbital maneuvers, station-keeping, trajectory planning, constellation alignment, and end-of-life disposal.</li>
-        <li><span class="font-semibold">Cross-Team Coordination</span> — Work with flight, propulsion, and other teams to evaluate situations and determine the right response.</li>
-        <li><span class="font-semibold">Leadership Communication</span> — Translate technical readiness and status into clear updates for leadership.</li>
-    </ul>
+            <div class="mb-10 lg:mb-12 reveal">
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Current Role</p>
+                <h1 class="text-[#FE8EA8] font-bold text-2xl md:text-4xl mb-2">Flight Dynamics Operations Engineer</h1>
+                <p class="text-[#FE8EA8] text-lg">Amazon Leo (formerly Project Kuiper) &middot; August 2024&ndash;Present</p>
+            </div>
 
-    <!-- Technical Domains -->
-    <h3 class="text-2xl text-pink mt-6 mb-2">Technical Domains</h3>
-    <p class="text-sm md:text-base leading-relaxed mb-8">
-        Flight dynamics operations &middot; Conjunction assessment &middot; Orbital maneuvers &amp; station-keeping &middot; Trajectory planning &middot; Constellation alignment &middot; End-of-life disposal &middot; Real-time risk assessment &middot; Cross-functional coordination &middot; Operational documentation &middot; Programming
-    </p>
-</div>
+            <img src="images/AMAZON_KUIPER.jpg" alt="Amazon Leo satellite" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
 
-<!-- Missions Supported Section -->
-<div class="bg-[#111] p-8 rounded-2xl shadow-lg mb-12 mt-16">
-    <h2 class="text-4xl text-pink font-bold text-center mb-4">Missions Supported</h2>
-    <p class="text-center mb-6">
-        <a href="https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates" target="_blank" class="text-[#FE8EA8] font-semibold hover:underline">
-            View Amazon Leo mission updates &rarr;
-        </a>
-    </p>
-    <p class="text-center text-gray-300 max-w-2xl mx-auto mb-8">
-        Across my broader involvement with the program, I have provided flight dynamics operational support for the following missions.
-    </p>
-    <div id="launch-highlights" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Overview -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-4 uppercase tracking-wide">Overview</h2>
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8 lg:items-start mb-10">
+                <p class="reveal leading-relaxed text-gray-300 mb-6 lg:mb-0 lg:col-span-2">
+                    I operate a fleet of satellites simultaneously, carrying each one through every phase of its mission &mdash; prelaunch, launch, early orbit, orbit-raising, and sustained operations. Because several satellites are often moving through different phases at once, the job is as much about prioritization as it is about flight dynamics: deciding whose needs are most time-critical, then making the real-time call under pressure.
+                </p>
+                <div class="spotlight glow-card reveal border border-[#FE8EA8]/20 rounded-xl px-6 py-5 lg:col-span-1">
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        <span class="font-semibold text-pink">Scope:</span> a live, multi-satellite fleet, across every mission phase, operating around the clock.
+                    </p>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <!-- How the Work Connects -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-4 uppercase tracking-wide">How the Work Connects</h2>
+            <p class="reveal leading-relaxed text-gray-300 lg:max-w-3xl xl:max-w-4xl mb-10">
+                The phases build on each other. Orbit determination establishes where a satellite actually is, which feeds conjunction assessment &mdash; evaluating Conjunction Data Messages (CDMs) to judge collision risk against other objects in orbit. When that risk calls for action, I plan and verify a maneuver before it executes, then confirm the satellite has settled back into station-keeping. Telemetry monitoring and anomaly triage run continuously underneath all of it, so a developing issue gets caught and worked before it affects the fleet.
+            </p>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <!-- Core Responsibilities -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-6 uppercase tracking-wide">Core Responsibilities</h2>
+            <div class="grid gap-6 md:grid-cols-2 mb-10">
+                <div class="spotlight glow-card reveal bg-[#111] border border-white/5 rounded-xl p-6 md:p-7">
+                    <h3 class="text-lg font-bold text-pink mb-3">Flight Dynamics Analysis</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300 leading-relaxed">
+                        <li>Determine and maintain precise orbit knowledge for each satellite.</li>
+                        <li>Evaluate CDMs and assess conjunction risk against other objects in orbit.</li>
+                        <li>Plan orbital maneuvers and verify them before execution.</li>
+                        <li>Confirm station-keeping and assess maneuverability going forward.</li>
+                    </ul>
+                </div>
+                <div class="spotlight glow-card reveal bg-[#111] border border-white/5 rounded-xl p-6 md:p-7">
+                    <h3 class="text-lg font-bold text-pink mb-3">Real-Time Operations</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300 leading-relaxed">
+                        <li>Prioritize anomalies as they surface, triaging by urgency and impact.</li>
+                        <li>Assess risk and make procedural decisions under time pressure.</li>
+                        <li>Coordinate with Guidance, Navigation, and Control (GNC), Propulsion, and Ground Systems.</li>
+                        <li>Work directly with external satellite operators when a shared situation calls for it.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <!-- Leadership -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-4 uppercase tracking-wide">Leadership</h2>
+            <div class="spotlight glow-card-accent reveal border-l-4 border-[#FE8EA8] bg-[#111] rounded-r-xl p-6 md:p-8 mb-10 lg:grid lg:grid-cols-5 lg:gap-8 lg:items-start">
+                <p class="text-gray-300 leading-relaxed mb-4 lg:mb-0 lg:col-span-2">
+                    Beginning with the KA&#8209;03 mission, I lead my team's portion of prelaunch and launch activities.
+                </p>
+                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300 leading-relaxed lg:col-span-3">
+                    <li>Run readiness and system checks ahead of launch.</li>
+                    <li>Update mission parameters and coordinate NORAD ID assignment.</li>
+                    <li>Coordinate regulatory and MECA requirements for the mission.</li>
+                    <li>Assess space-weather conditions and contribute to GO/NO&#8209;GO launch decisions.</li>
+                </ul>
+            </div>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <!-- Distributed Operations -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-4 uppercase tracking-wide">Distributed Operations</h2>
+            <p class="reveal leading-relaxed text-gray-300 lg:max-w-3xl xl:max-w-4xl mb-4">
+                A fleet operating continuously needs continuous coverage. Operations are split across sites, including coverage support from London, with structured handoffs between teams so nothing goes unmonitored between shifts.
+            </p>
+            <p class="reveal text-sm text-gray-500 leading-relaxed lg:max-w-3xl xl:max-w-4xl">
+                <span class="font-semibold text-gray-400">Also:</span> Python automation and operational-procedure development, in support of the responsibilities above.
+            </p>
+
+            <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
+
+            <!-- Missions Supported -->
+            <h2 class="reveal text-xl md:text-2xl font-bold text-pink mb-4 uppercase tracking-wide">Missions Supported</h2>
+            <p class="reveal mb-2">
+                <a href="https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates" target="_blank" class="group inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Amazon Leo mission updates <span class="arrow" aria-hidden="true">&rarr;</span>
+                </a>
+            </p>
+            <p class="reveal text-gray-400 max-w-2xl leading-relaxed mb-8">
+                Across my broader involvement with the program, I have provided flight dynamics operational support for the following missions.
+            </p>
+            <div id="launch-highlights" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         
         <!-- KF‑03 – Oct 13 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KF03_Oct13_2025.jpg" alt="Kuiper KF‑03 Launch Oct 13 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KF‑03 – Oct 13 2025</h3>
@@ -117,14 +155,14 @@
                     Number of satellites: 24.<br>
                     Launch site: Space Launch Complex 40, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.spacex.com/launches/kf-03" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View Article →
+                <a href="https://www.spacex.com/launches/kf-03" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Article <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- KA‑03 – Sep 25 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KA03_Sep25_2025.jpg" alt="Kuiper KA‑03 Launch Sep 25 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KA‑03 – Sep 25 2025</h3>
@@ -135,14 +173,14 @@
                     Number of satellites: 27.<br>
                     Launch site: Space Launch Complex-41, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-3" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View Article →
+                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-3" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Article <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- KF‑02 – Aug 11 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KF02_Aug11_2025.jpg" alt="Kuiper KF‑02 Launch Aug 11 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KF‑02 – Aug 11 2025</h3>
@@ -153,14 +191,14 @@
                     Number of satellites: 24.<br>
                     Launch site: Space Launch Complex 40, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.spacex.com/launches/kf-02" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View Article →
+                <a href="https://www.spacex.com/launches/kf-02" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Article <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- KF‑01 – Jul 16 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KF01_Jul16_2025.jpg" alt="Kuiper KF‑01 Launch Jul 16 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KF‑01 – Jul 16 2025</h3>
@@ -171,14 +209,14 @@
                     Number of satellites: 24.<br>
                     Launch site: Space Launch Complex 40, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.spacex.com/launches/kf-01" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View Article →
+                <a href="https://www.spacex.com/launches/kf-01" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Article <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- KA‑02 – Jun 23 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KA02_Jun23_2025.jpg" alt="Kuiper KA‑02 Launch Jun 23 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KA‑02 – Jun 23 2025</h3>
@@ -189,14 +227,14 @@
                     Number of satellites: 27.<br>
                     Launch site: Space Launch Complex-41, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-2" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View ULA Release →
+                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-2" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View ULA Release <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- KA‑01 – Apr 28 2025 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/KA01_Apr28_2025.jpg" alt="Kuiper KA‑01 Launch Apr 28 2025" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">KA‑01 – Apr 28 2025</h3>
@@ -207,29 +245,29 @@
                     Number of satellites: 27.<br>
                     Launch site: Space Launch Complex-41, Cape Canaveral SFS.
                 </p>
-                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-1" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View ULA Release →
+                <a href="https://www.ulalaunch.com/missions/next-launch/atlas-v-kuiper-1" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View ULA Release <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
         <!-- Protoflight – Oct 6 2023 -->
-        <div class="bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col hover:scale-105 transform transition duration-300">
+        <div class="tilt-card spotlight glow-card reveal bg-[#222] rounded-2xl overflow-hidden shadow-xl flex flex-col">
             <img src="assets/img/protoflight_2023.jpeg" alt="Kuiper Protoflight Launch Oct 6 2023" class="w-full aspect-[4/3] object-cover">
             <div class="p-6 text-[#fff] flex flex-col flex-grow">
                 <h3 class="font-semibold text-2xl text-[#FE8EA8] mb-3">Protoflight – Oct 6 2023</h3>
                 <p class="text-base text-gray-300 mb-4 flex-grow">
                     Two prototype satellites launched to validate systems for Project Kuiper.
                 </p>
-                <a href="https://www.aboutamazon.com/news/innovation-at-amazon/what-is-amazon-project-kuiper" target="_blank" class="mt-auto text-[#FE8EA8] font-semibold hover:underline">
-                    View Article →
+                <a href="https://www.aboutamazon.com/news/innovation-at-amazon/what-is-amazon-project-kuiper" target="_blank" class="group mt-auto inline-flex items-center gap-1 text-[#FE8EA8] font-semibold hover:underline">
+                    View Article <span class="arrow" aria-hidden="true">&rarr;</span>
                 </a>
             </div>
         </div>
 
-    </div>
-</div>
-</div><!-- /.wrapper -->
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="subpage-footer">
@@ -246,5 +284,60 @@
     <!-- Js scripts-->
     <script src="assets/js/blog.js"></script>
     <script src="assets/js/subpage-nav.js"></script>
+    <script>
+        // Referrer-aware back link: send visitors back to whichever portfolio
+        // page they actually came from (with a label matching its section),
+        // instead of blindly using browser history. Direct visits and
+        // arrivals from outside the site keep the static "Back to
+        // Experience" / current.html default already in the markup.
+        (function () {
+            var backLink = document.getElementById('backLink');
+            var backLabel = document.getElementById('backLabel');
+            if (!backLink || !backLabel || !document.referrer) return;
+
+            // Known portfolio pages, mapped to the section a visitor would
+            // recognize them as (matches the subpage nav's own labels).
+            var sectionByPage = {
+                '': 'Home',
+                'index.html': 'Home',
+                'current.html': 'Experience',
+                'experience5.html': 'Experience',
+                'experience.html': 'Education',
+                'experience1.html': 'Education',
+                'experience2.html': 'Education',
+                'experience3.html': 'Education',
+                'experience4.html': 'Education',
+                'project.html': 'Education',
+                'project1.html': 'Education',
+                'project2.html': 'Education',
+                'project3.html': 'Education',
+                'project4.html': 'Education',
+                'project5.html': 'Education',
+                'project6.html': 'Education',
+                'project-git.html': 'Education',
+                'report.html': 'Reports',
+                'report1.html': 'Reports',
+                'report2.html': 'Reports',
+                'report3.html': 'Reports',
+                'report4.html': 'Reports'
+            };
+
+            try {
+                var ref = new URL(document.referrer, window.location.href);
+                var here = window.location;
+                var sameSite = ref.protocol === here.protocol && ref.host === here.host;
+                if (!sameSite) return; // external referrer — keep the static fallback
+
+                var page = ref.pathname.split('/').pop().toLowerCase();
+                var section = sectionByPage[page];
+
+                backLink.href = document.referrer;
+                backLabel.textContent = 'Back to ' + (section || 'Previous Page');
+            } catch (e) {
+                // Malformed referrer URL — keep the static fallback.
+            }
+        })();
+    </script>
+    <script src="assets/js/motion.js"></script>
 </body>
 </html>

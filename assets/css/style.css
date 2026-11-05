@@ -1122,6 +1122,163 @@ button span.rotate {
   }
 }
 
+/* =====================================================================
+   Shared interactive motion — pointer spotlight, glowing hover/focus,
+   card lift/tilt, animated arrows, shimmering dividers, scroll entrances.
+   Used across current.html, experience.html, report.html, experience5.html
+   (and any future subpage). Paired with assets/js/motion.js.
+   ===================================================================== */
+
+/* Scroll-reveal entrances. Scoped under .js so content stays fully visible
+   by default if JavaScript never runs — progressive enhancement, not a
+   dependency. (.js is added by a tiny inline script at the top of <body>.) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Pointer-responsive spotlight on cards/blocks. Mouse/trackpad only (see
+   the hover/pointer:fine gate in motion.js) — on touch devices the
+   spotlight simply never activates; tapping still works normally since it
+   only affects a decorative ::before layer. */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: radial-gradient(280px circle at var(--x, 50%) var(--y, 50%), rgba(254, 142, 168, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.spotlight:hover::before,
+.spotlight:focus-within::before {
+  opacity: 1;
+}
+
+/* Animated border glow + lift on hover/focus, for cards with a plain or
+   transparent border that should visibly brighten to pink. */
+.glow-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+.glow-card:hover,
+.glow-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(254, 142, 168, 0.5);
+  box-shadow: 0 10px 30px -12px rgba(254, 142, 168, 0.35);
+}
+
+/* Same lift + shadow, without touching border-color — for left-accent
+   panels (border-l-4 border-[#FE8EA8]) where a color change would dim an
+   already-solid accent border instead of brightening it. */
+.glow-card-accent {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.glow-card-accent:hover,
+.glow-card-accent:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -12px rgba(254, 142, 168, 0.35);
+}
+
+/* Mission/gallery cards get a touch more character: lift + a hint of tilt.
+   Gated to real mouse/trackpad input so it never fires from a touch tap. */
+@media (hover: hover) and (pointer: fine) {
+  .tilt-card:hover {
+    transform: translateY(-6px) rotate(-0.35deg) scale(1.015);
+  }
+}
+.tilt-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Arrow nudges on hover/focus within a link (pair with class="group" on
+   the link and class="arrow" / "arrow-left" on the arrow glyph). */
+.arrow,
+.arrow-left {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.group:hover .arrow,
+.group:focus-within .arrow {
+  transform: translateX(4px);
+}
+.group:hover .arrow-left,
+.group:focus-within .arrow-left {
+  transform: translateX(-4px);
+}
+
+/* Scoped "back" arrow nudge. Distinct on purpose from .arrow-left above,
+   which is a legacy carousel/thumbnail control (position: absolute; top:
+   50%; left: 10px) elsewhere in this file -- sharing that class name pulls
+   the glyph out of flow and off to wherever 50% of the viewport height
+   happens to land on the page. Use .back-arrow for any inline "back" link
+   nudge instead. */
+.back-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.group:hover .back-arrow,
+.group:focus-within .back-arrow {
+  transform: translateX(-4px);
+}
+
+/* Shared "back" button: dark fill, pink border, rounded, with visible
+   hover/focus states. Pair with class="group" (for .back-arrow's nudge)
+   and an inline .back-arrow + label span. Used on current.html,
+   experience.html, report.html, experience4.html, experience5.html. */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #111;
+  border: 1px solid rgba(254, 142, 168, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: #FE8EA8;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.back-button:hover {
+  background-color: #1a1a1a;
+  border-color: #FE8EA8;
+}
+.back-button:focus-visible {
+  background-color: #1a1a1a;
+  border-color: #FE8EA8;
+  outline: 2px solid #FE8EA8;
+  outline-offset: 2px;
+}
+
+/* Consistent ~24px gap between the navbar and the back button that opens
+   a subpage -- independent of each page's own pt-* padding (which ranged
+   from 32px to 64px and didn't match). Same value on mobile and desktop
+   by design. Opt-in: add alongside subpage-main, doesn't change it. */
+.navbar-gap {
+  padding-top: 1.5rem;
+}
+
+/* Slow shimmer along the pink gradient dividers. */
+.divider-shimmer {
+  background-size: 200% 100%;
+  animation: divider-shimmer 7s linear infinite;
+}
+@keyframes divider-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* Site-wide reduced-motion support: visitors who've asked their OS/browser
    to minimize motion get near-instant transitions/animations instead of
    none at all, so state changes are still perceivable. */
