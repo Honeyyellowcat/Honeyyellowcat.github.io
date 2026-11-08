@@ -32,9 +32,9 @@
             <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
                     <li><a href="current.html">Experience</a></li>
-                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="experience.html" aria-current="page">Education</a></li>
+                    <li><a href="report.html">Reports</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -54,10 +54,10 @@
         </div>
         <div class="text-container">
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary: </h2>
-            <p class="reveal leading-relaxed text-gray-300 mb-6">The experiment investigates propeller geometry and pitch influence on performance metrics. It compares four propellers in a 3x3 wind tunnel and discusses limitations.</p>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">A team investigation in AA 321 Aerospace Laboratory, testing how lift, drag, and pitching moment on a finite wing (NACA 23012, aspect ratio 6) change when circular end caps are added, across two tunnel speeds and an angle-of-attack sweep from &minus;4&deg; to +20&deg; in the Kirsten Wind Tunnel.</p>
 
             <div class="flex flex-wrap gap-3 mb-10">
-                <a href="doc/SpaceLab/CDR.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Finite Wings Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+                <a href="doc/Finite_Wings.pdf" target="_blank" class="glow-card reveal group inline-flex items-center gap-2 bg-[#111] rounded-lg px-4 py-2.5 border border-white/5 hover:bg-[#1a1a1a] transition"><i class="fa-regular fa-file-lines text-[#FE8EA8] text-sm flex-shrink-0" aria-hidden="true"></i><span class="text-sm text-gray-300">1. Finite Wings Report: <span class="text-[#FE8EA8] font-semibold">Here</span><span class="arrow" aria-hidden="true">&rarr;</span></span></a>
             </div>
 
             <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
@@ -65,9 +65,9 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Abstract:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Explored propeller geometry and pitch influence on performance metrics.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Found performance metrics depend on propeller geometry and advance ratio.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Highlighted the need for further analysis on propeller design optimization.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Measured lift, drag, and pitching moment on a NACA 23012 finite wing (aspect ratio 6) in the Kirsten Wind Tunnel, with and without circular end caps.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Found that end caps reduced the drag coefficient across the angle-of-attack range and modestly increased the stall angle, while the lift-curve slope stayed essentially unchanged.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Used surface flow visualization (china clay, black light) to confirm reduced wingtip-vortex turbulence with end caps installed.</p>
                 </div>
             </div>
 
@@ -76,9 +76,9 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Introduction:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Objective: Measure propeller performance and evaluate pitch influence.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Utilized advanced equipment and a 3’x3’ wind tunnel for controlled airflow.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Experiment involved testing two propeller models at different pressure values.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Objective: quantify how finite-span effects (wingtip vortices, induced drag) change a wing's lift, drag, and moment, and how circular end caps mitigate those effects.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Wing: NACA 23012 airfoil, 90 in span, 15 in mean aerodynamic chord, 9.375 ft&sup2; reference area (aspect ratio 6).</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Tested at two indicated pressures (10 psf and 35 psf) across an angle-of-attack sweep from &minus;4&deg; to +20&deg;, with and without end caps.</p>
                 </div>
             </div>
 
@@ -87,9 +87,9 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Theory:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Propeller power, efficiency, thrust, and torque equations were explored.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Discussed propeller advance ratio and its impact on efficiency and thrust.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Formulas for thrust and torque coefficients were provided.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Raw balance readings were resolved into forces with a calibration matrix, then corrected for strut tare and weight tare.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Finite-wing drag was modeled as parasitic drag plus induced drag, C<sub>D</sub> = C<sub>D,p</sub> + C<sub>L</sub>&sup2;/(&pi;&middot;AR&middot;e), where e is the span efficiency factor.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- The 3D lift-curve slope was derived from the 2D slope using the Prandtl lifting-line relation, isolating the lift-slope loss caused by wingtip vortices.</p>
                 </div>
             </div>
 
@@ -98,9 +98,10 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Methods and Procedure:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Experiment conducted in a 3x3 wind tunnel using various equipment.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Data collected included RPM, indicated pressure, drag, torque, and temperature.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Propellers tested at different indicated pressures and RPM ranges.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Measured wing geometry and marked "trip dot" positions before testing; KWT staff calibrated the angle of attack and ran a strut-tare pass.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Swept angle of attack from &minus;4&deg; to +10&deg; in 2&deg; steps, then to +20&deg; in 1&deg; steps, then back down, at each of two indicated pressures (10 psf, 35 psf), with and without the circular end caps.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Ran a china-clay / black-light surface flow visualization at 35 psf to observe wingtip-vortex and separation behavior.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Reduced the DAQ's raw load-cell data in MATLAB: applied the tare corrections, then the force-balance matrix to get corrected lift, drag, and moment.</p>
                 </div>
             </div>
 
@@ -109,9 +110,11 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Results and Discussion:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Thrust trends deviated from expectations, possibly due to data inaccuracies.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Efficiency and torque data showed unexpected patterns, requiring further investigation.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Limitations of the experiment, including potentiometer and propeller dimensions, were discussed.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- At 10&deg; angle of attack, corrected loads were L &asymp; 79.7 lb and D &asymp; 5.2 lb &mdash; close to the KWT staff's reference values; the corrected moment (&asymp; &minus;5.77 lb&middot;ft) deviated by about 6.5 lb&middot;ft from their reference, pointing to a likely error in the moment tare or correction rather than in lift or drag.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- With end caps on (10 psf), span efficiency e &asymp; 1.15 and parasitic drag coefficient C<sub>D,p</sub> &asymp; 0.0225.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- The measured 3D lift-curve slope (&asymp; 0.731) was about 0.026 below the 2D slope (&asymp; 0.757), consistent with the lift loss expected from wingtip vortices on a finite span.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Flow visualization showed visibly more wingtip turbulence without the end caps, supporting the drag and lift-slope trends.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Pitching the wing down from 20&deg; to 15&deg; produced hysteresis, most visible in the 35 psf / end-caps-on case.</p>
                 </div>
             </div>
 
@@ -120,9 +123,8 @@
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Conclusion:</h2>
             <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
                 <div class="divide-y divide-white/5">
-                    <p class="py-3 leading-relaxed text-gray-300">- Results were unexpected, possibly due to limitations in experimental setup.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Suggested improvements include digital motor speed control and consistent propeller dimensions.</p>
-                    <p class="py-3 leading-relaxed text-gray-300">- Highlighted the need for future experiments to isolate propeller geometry and pitch effects.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Circular end caps reduced the drag coefficient across the angle-of-attack range and modestly increased the stall angle, while leaving the lift-curve slope essentially unchanged; the moment coefficient increased with end caps at every angle tested.</p>
+                    <p class="py-3 leading-relaxed text-gray-300">- Practical takeaway: a comparatively small geometry change (end caps) measurably improved finite-wing performance without a full wing redesign &mdash; relevant to low-cost retrofits in real aircraft design.</p>
                 </div>
             </div>
         </div>

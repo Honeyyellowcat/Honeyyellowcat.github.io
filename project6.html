@@ -32,9 +32,9 @@
             <nav class="subpage-nav" id="subpageNav" aria-label="Primary">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
                     <li><a href="current.html">Experience</a></li>
-                    <li><a href="experience.html">Education</a></li>
+                    <li><a href="experience.html" aria-current="page">Education</a></li>
+                    <li><a href="report.html">Reports</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -47,13 +47,34 @@
                 <span class="back-arrow leading-none" aria-hidden="true">&larr;</span><span>Back to Education</span>
             </a>
             <div class="mb-10 lg:mb-12 reveal">
-                <h1 class="text-pink font-bold text-2xl md:text-4xl"> Project</h1>
+                <p class="text-[#FE8EA8] font-semibold uppercase tracking-[0.2em] text-xs mb-3">Independent Project</p>
+                <h1 class="text-pink font-bold text-2xl md:text-4xl">Satellite Orbit Simulation</h1>
             </div>
             <img src="assets/img/orbit/satellite-orbiting.jpg" alt="Satellite orbit simulation visualization" class="reveal w-full h-[300px] object-cover object-center rounded-2xl mb-10">
         </div>
         <div class="text-container">
             <h2 class="reveal text-xl md:text-2xl font-bold text-pink uppercase tracking-wide mb-4">Summary:</h2>
-            <p class="reveal leading-relaxed text-gray-300 mb-6">In my personal project focused on Aerospace Design in Seattle, WA.This project aims to create a comprehensive simulation environment for satellite orbits using Python, with a focus on visualizing orbital parameters and paths in both 2D and 3D. The simulation leverages libraries such as <strong>NumPy</strong> and <strong>matplotlib</strong> for numerical calculations and plotting.</p>
+            <p class="reveal leading-relaxed text-gray-300 mb-6">A personal project building a Python simulation environment for satellite orbits, focused on visualizing orbital parameters and paths in both 2D and 3D. The simulation uses <strong>NumPy</strong> and <strong>matplotlib</strong> for the orbital-mechanics calculations and plotting.</p>
+
+            <div class="grid gap-6 md:grid-cols-2 mb-10">
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h3 class="text-base font-semibold text-pink mb-3 uppercase tracking-wide">What I Built</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300 leading-relaxed">
+                        <li>Wrote the full simulation from scratch in Python (NumPy, matplotlib).</li>
+                        <li>Derived orbital elements (semi-major axis, eccentricity) from apoapsis/periapsis altitude inputs.</li>
+                        <li>Propagated position and velocity vectors across true anomaly using the two-body Keplerian equations.</li>
+                        <li>Built matched 2D orbital-plane and 3D orbital-path views, animated over one full orbit.</li>
+                    </ul>
+                </div>
+                <div class="rounded-xl bg-[#111] border border-white/5 p-5 md:p-6">
+                    <h3 class="text-base font-semibold text-pink mb-3 uppercase tracking-wide">What It Demonstrates</h3>
+                    <ul class="list-disc pl-5 space-y-2 text-sm text-gray-300 leading-relaxed">
+                        <li>Working knowledge of two-body orbital mechanics and Keplerian elements.</li>
+                        <li>Translating orbit geometry into a numerical model and a readable visualization.</li>
+                        <li>Independent, self-directed Python development outside of coursework.</li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="h-px my-10 bg-gradient-to-r from-transparent via-[#FE8EA8]/25 to-transparent divider-shimmer" aria-hidden="true"></div>
 
@@ -67,21 +88,14 @@
                 </div>
             </div>
 
-            <div class="shadow-box">
-                <div class="image-wrapper">
-                    <img src="assets/img/Pendulum Steady State Response Testing.png" alt="Space Team" class="rounded-image">
-                    <div class="caption">9.8 mN, 19.6 mN, 29.4 mN forces applied to the pendulum and steady state deflection was measured
-                        </div>
-                </div>
-                <div class="image-wrapper">
-                    <img src="assets/img/Pendulum Response Modeling.png" alt="Space Team 2" class="rounded-image">
-                    <div class="caption">Pendulum becomes unstable at approximately 1.375 kg of load
-                        </div>
-                </div>
+            <div class="rounded-xl bg-[#111] border border-white/5 p-4 md:p-6 mb-10">
+                <img src="assets/img/orbit/orbit-simulation-plot.png" alt="Simulation output: 2D orbital plane and 3D orbital path around the planet model" class="w-full h-auto rounded-lg">
+                <p class="text-sm text-gray-400 mt-4 leading-relaxed">Simulation output for the sample case in the code below. Inputs are apoapsis/periapsis altitude above the 600 km-radius body (82.1 km and 80.0 km); <code class="text-xs">orbital_parameters()</code> adds the body's radius to convert altitude to distance from its center, giving a semi-major axis &asymp; 681 km (not to be confused with the ~81 km input altitude) and eccentricity &asymp; 0.0016. Left: orbital plane (2D). Right: orbital path (3D), satellite marker shown at periapsis.</p>
             </div>
 
             <div class="text-container">
-                <h3 class="text-2xl text-pink">Main Code Implementation:</h3> 
+                <h3 class="text-2xl text-pink">Main Code Implementation:</h3>
+                <p class="text-xs text-gray-500 mb-2">Click to expand</p>
                 <pre class="code-box small">
                 <code>
 import numpy as np
@@ -178,7 +192,8 @@ plt.show()
             </div>
             
             <div class="text-container">
-                <h3 class="text-2xl text-pink">Satellite Orbit Code:</h3> 
+                <h3 class="text-2xl text-pink">Satellite Orbit Code:</h3>
+                <p class="text-xs text-gray-500 mb-2">Click to expand</p>
                 <pre class="code-box small">
                 <code>
 import numpy as np
@@ -236,7 +251,8 @@ def plot_planet_2d(ax, radius, color):
             </div>
 
             <div class="text-container">
-                <h3 class="text-2xl text-pink">Satellite Parameters Code:</h3> 
+                <h3 class="text-2xl text-pink">Satellite Parameters Code:</h3>
+                <p class="text-xs text-gray-500 mb-2">Click to expand</p>
                 <pre class="code-box small">
                 <code>
 import numpy as np
